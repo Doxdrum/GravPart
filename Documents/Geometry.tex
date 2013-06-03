@@ -337,6 +337,51 @@ The interior product and the Lie derivative satisfy
 \end{align}
 
 
+\begin{WEbox}[frametitle={Geometry of Classical Mechanics},
+  frametitlerule=true,
+  frametitlealignment=\centering,
+  frametitleaboveskip=10pt,]
+  Let $M$ be a $m$-dimensional manifold, and $\Phi^m\equiv T^*M$ be its cotangent bundle (or {\bf phase space}). A {\bf Hamiltonian} on $M$ is a map $\Ha:\Phi^m\to \R$.
+
+  Let $\set{q^\mu,p_\mu}$, with $\mu=1...m$, be  the coordinates on $\Phi^m$. One might define a symplectic form on $\Phi^m$ by
+  \begin{align*}
+    \Lambda^2\(\Phi^m\)\ni \omega = \df p_\mu\w\df q^\mu,
+  \end{align*}
+  and a 1-form $\theta=q^\mu \df p_\mu\in \Lambda^1\(\Phi^m\)$, s.t. $\omega=-\df\theta$.
+  
+  Given a function $f:\Phi^m\to \R$. one might define the {\sc Hamiltonian Vector Field}
+  \begin{align*}
+    X_f = \pder{f}{p_\mu}\pder{}{q^\mu} -\pder{f}{q^\mu}\pder{}{p_\mu}.
+  \end{align*}
+  Then,
+  \begin{align*}
+    i_{X_f}\omega =-\pder{f}{q^\mu}\df q^\mu -\pder{f}{p_\mu}\df p_\mu = -\df f.
+  \end{align*}
+
+  The Hamilton equations,
+  \begin{align*}
+    \dot{q}^\mu =\pder{\Ha}{p_\mu},\quad \dot{p}_\mu =-\pder{\Ha}{q^\mu},
+  \end{align*}
+  can be written as
+  \begin{align*}
+    i_{X_\Ha}\omega = -\pder{\Ha}{q^\mu}\df q^\mu -\pder{\Ha}{p_\mu}\df p_\mu = -\df\Ha,
+  \end{align*}
+  where the identity
+  \begin{align*}
+    X_\Ha &=\pder{\Ha}{p_\mu}\pder{}{q^\mu} -\pder{\Ha}{q^\mu}\pder{}{p_\mu}\\
+    &= \dot{q}^\mu\pder{}{q^\mu} +\dot{p}_\mu\pder{}{p_\mu}\\
+    &= \der{}{t},
+  \end{align*}
+  has been used.
+
+  Also, the action of two interior products on $\omega$ yields the Poisson bracket,
+  \begin{align*}
+    i_{X_f}\(i_{X_g}\omega\) &=-i_{X_f}(\df g) = -i_{X_f}\(\pder{g}{q^\mu}\df q^\mu +\pder{g}{p_\mu}\df p_\mu\)\\
+    &= -\pder{f}{p_\mu}\pder{g}{q^\mu}+\pder{f}{q^\mu}\pder{g}{p_\mu}\\
+    &=\acomm{f}{g}_{P.B.}.
+  \end{align*}
+\end{WEbox}
+
 \begin{WEbox}[frametitle={Gauge Theory (Abelian)},
   frametitlerule=true,
   frametitlealignment=\centering,
