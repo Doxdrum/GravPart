@@ -1,0 +1,88 @@
+\documentclass{usm-thesis}
+
+\input{../../Def.tex}
+%% \usepackage{tikz}
+%% \usetikzlibrary{shapes,snakes}
+%% \usepackage[framemethod=tikz]{mdframed}
+%% \usetikzlibrary{calc}
+
+\definethesis{Notes on Differential Geometry\\and applications to Physics%Here the title
+}{ Oscar Castillo-Felisola  %Here the Author
+}
+
+\hypersetup{pdftitle={Notes on Differential Geometry and applications to Physics},
+pdfauthor={Oscar Castillo-Felisola},}
+
+
+
+
+% Define box and box title style
+\tikzstyle{mybox} = [draw=red, fill=blue!20, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=red, text=white]
+\tikzstyle{WEbox} = [draw=blue, fill=blue!20, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{WEtitle} =[fill=blue, text=white, right=10pt]
+
+
+\begin{document}
+
+%------------------
+%--------- Titlepage
+%------------------
+
+\thesistitlepage{UTFSM--CCTVal
+}{Universidad T\'ecnica Federico Santa Mar\'ia. %The thesis statement
+}{March, 2013 %The date
+}
+
+
+
+\frontmatter
+\pagestyle{special}
+%\committee{Iv\'an Schmidt}{Claudio Dib}{Alfonzo Zerwekh}{Andr\'es Anabal\'on}{Valparaiso, September 2011}
+
+\tableofcontents
+
+
+\chapter*{}
+\vspace{12cm}
+\begin{flushright}
+ {\LARGE To my wife }\\ Gabriela (Gabo) Vald\'es. 
+\end{flushright}
+
+
+%\input{Documents/Acknowledgements.tex}
+
+
+%------------------
+%--------- Body
+%------------------
+
+\mainmatter
+\pagestyle{main}
+
+\input{Documents/Geometry.tex}
+
+
+
+
+%\appendix
+
+
+
+%------------------
+%--------- Final part
+%------------------
+
+\backmatter
+
+
+\nocite{IAS1,IAS2,Gilmore,Curtis,Bertlmann,Arnold,Freed, Nakahara,SUGRA-book,WeinbergQFT1,WeinbergQFT2,WeinbergQFT3,CCSZ}
+
+\bibliographystyle{unsrt}
+\bibliography{../../References.bib}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+
+\end{document}
