@@ -21,6 +21,8 @@ A $m$-dimensional {\sc Manifold} is a (topological) space which at each point lo
   A {\sc Manifold}, $M$, is a topological space homeomorphic to $\R^m$.
 \end{Def}
 
+
+
 Examples of manifolds are  the body of a cylinder,  the spheres ($S^m$), the torus ($T^m$).
 \begin{center}
   \begin{tabular}{cc}
@@ -294,8 +296,45 @@ which is extended naturally to type $\binom{0}{p}$-tensors (and to differential 
 \end{WEbox}
 
 
-\subsection{Inner Product and Lie Derivative}
+\subsection{Interior Product and Lie Derivative}
 
+The interior product is  a map
+\begin{align}
+  i:TM\times \Lambda^p(M)\to \Lambda^{p-1}(M),
+\end{align}
+or usually denoted
+\begin{align}
+  i_X:\Lambda^p(M)\to \Lambda^{p-1}(M),
+\end{align}
+defined by
+\begin{align}
+  i_X\omega(V_1,\cdots,V_{p-1})=\omega(X,V_1,\cdots,V_{p-1}).
+\end{align}
+In components it can be written as
+\begin{align}
+  i_X\omega &= \frac{1}{(p-1)!}X^\nu \omega_{\nu,\mu_2,\cdots,\mu_{p}}\;\df x^{\mu_2}\w\cdots\w\df x^{\mu_p}\\
+  &= \frac{1}{p!}\sum_{s=1}^p X^{\mu_s} \omega_{\mu_1,\cdots,\mu_s,\cdots,\mu_{p}}\;\df x^{\mu_2}\w\cdots\w\widehat{\df x}^{\mu_s}\w\cdots\w\df x^{\mu_p}.\notag
+\end{align}
+
+
+Using the exterior derivative and the interior product, one can construct the operator $\df i_x+i_X \df$. This operator can be applied to 1-forms,
+\begin{align}
+  \(\df i_x+i_X \df\)\omega &=\df(X^\mu\omega_\mu) +i_x\(\pa{\mu}\omega_\nu \df x^\mu\w\df x^\nu\)\notag\\
+  &=\(\pa{\nu}X^\mu\)\omega_\mu\df x^\nu +X^\mu\(\pa{\nu}\omega_\mu\)\df x^\nu +X^\mu\(\pa{\mu}\omega_\nu-\pa{\nu}\omega_\mu\)\df x^\nu\notag\\
+  &=\[\omega(\pa{\nu}X^\mu)+X^\mu(\pa{\mu}\omega_\nu)\]\df x^\nu,
+\end{align}
+which is nothing but the Lie derivative of a differential 1-form,
+\begin{align}
+  \Li_X\omega = \(\df i_x+i_X \df\)\omega.
+\end{align}
+The above expression is general for differential forms of any order.
+
+The interior product and the Lie derivative satisfy
+\begin{align}
+  i_X\(\omega\w\eta\)&=\(i_X\omega\)\w\eta+(-1)^{\abs{\omega}}\omega\w\(i_X\eta\)\\
+  i_X^2&=0\\
+  \Li_X i_X\omega &= i_X\Li_X\omega.
+\end{align}
 
 
 \begin{WEbox}[frametitle={Gauge Theory (Abelian)},
