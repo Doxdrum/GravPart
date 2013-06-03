@@ -21,7 +21,7 @@
 \RequirePackage[Lenny]{fncychap}
 \RequirePackage[linktocpage,colorlinks=true,urlcolor=green,linkcolor=blue,citecolor=red]{hyperref}
 %% \hypersetup{linktocpage}
-%% \RequirePackage{subfigure}
+\RequirePackage{subfigure}
 \RequirePackage{centernot}
 %% \RequirePackage{wrapfig}
 %% \RequirePackage{fancybox}

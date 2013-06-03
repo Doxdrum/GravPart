@@ -22,10 +22,25 @@ A $m$-dimensional {\sc Manifold} is a (topological) space which at each point lo
 \end{Def}
 
 Examples of manifolds are  the body of a cylinder,  the spheres ($S^m$), the torus ($T^m$).
+\begin{center}
+  \begin{tabular}{cc}
+    \includegraphics[scale=.4]{Pict/Sphere.pdf}  & \includegraphics[scale=.4]{Pict/Torus.pdf}
+  \end{tabular}
+\end{center}
+%% \begin{figure}[H]
+%%   \begin{center}
+%%      \includegraphics[scale=.4]{Pict/Sphere.pdf} 
+%%      \includegraphics[scale=.4]{Pict/Torus.pdf}
+%%   \end{center}
+%%   \caption{Examples of manifolds}
+%% \end{figure}
+
 
 More illustrative is an example of a non-manifold, such as the body of a cone. A cone is not a manifold because the neighbourhood of the apex looks not line $\R^2$.
 
 \section{Geometrical Objects on Manifolds}
+
+One knows how to define 
 
 \subsection{Vectors}
 
@@ -631,6 +646,21 @@ Also, a manifold is said to have constant curvature if its curvature 2-form is
 \end{align}
 for a constant value $\kappa$.
 
+\begin{Ebox}
+  \begin{itemize}
+  \item Show that in vacuum, i.e., $T_{\mu\nu}=0$, Einstein's equations (without cosmological constant) might be written as
+    \begin{align}
+      \Ri_{\mu\nu}=0.
+    \end{align}
+  \item Show that in general, Einstein's equations  (without cosmological constant) might be written as
+    \begin{align}
+      \Ri_{\mu\nu}= T_{\mu\nu}-\frac{1}{D-2}g_{\mu\nu} T,
+    \end{align}
+    where $T$ is the trace of the Stress-Energy tensor,  and  $D$ is the spacetime dimension. These equations are known as Einstein's equations in the form of Ricci.
+  \item Derive the Einstein's equations in the form of Ricci, when the cosmological constant does not vanish.
+  \end{itemize}
+\end{Ebox}
+
 
 
 %%%%%%%%%%%%%%%%%% ANOTHER LECTURE
@@ -731,17 +761,23 @@ From the first S.E.
   \therefore\quad \(\df\spif{a}{b}\)\w\vif{b}-\spif{a}{b}\w\df\vif{b} =& \df\Tf{a}\\
   \(\Rif{a}{b}-\spif{a}{c}\w\spif{c}{b}\)\w\vif{b}-\spif{a}{c}\w\df\vif{c}=&\df\Tf{a}\\
   \Rif{a}{b}\w\vif{b}-\spif{a}{c}\w\(\spif{c}{b}\w\vif{b}+\df\vif{c}\)=&\df\Tf{a}\\
-  \Rif{a}{b}\w\vif{b}-\spif{a}{c}\w\Tf{c}=&\df\Tf{a}\\
-  \Rif{a}{b}\w\vif{b}=&\df\Tf{a}+\spif{a}{c}\w\Tf{c}\\
-  \Rif{a}{b}\w\vif{b}=&\cdf\Tf{a}
+  \Rif{a}{b}\w\vif{b}-\spif{a}{c}\w\Tf{c}=&\df\Tf{a},
+  %  \Rif{a}{b}\w\vif{b}=&\cdf\Tf{a}
 \end{align*}
+then,
+\begin{align}
+  \Rif{a}{b}\w\vif{b}=&\df\Tf{a}+\spif{a}{c}\w\Tf{c}.
+\end{align}
 
 
 From the second S.E.
 \begin{align*}
   \df\(\df\spif{a}{b}+\spif{a}{c}\w\spif{c}{b}\) =& \df\Rif{a}{b}\\
   \therefore\quad \(\df\spif{a}{c}\)\w\spif{c}{b}-\spif{a}{c}\w\(\df\spif{c}{b}\) =& \df\Rif{a}{b}\\
-  \Rif{a}{c}\w\spif{c}{b}-\spif{a}{c}\w\Rif{c}{b} =& \df\Rif{a}{b}\\
-  \df\Rif{a}{b} + \spif{a}{c}\w\Rif{c}{b} - \Rif{a}{c}\w\spif{c}{b}   =& 0,
+  \Rif{a}{c}\w\spif{c}{b}-\spif{a}{c}\w\Rif{c}{b} =& \df\Rif{a}{b},%\\
 \end{align*}
+i.e.,
+\begin{align}
+  \df\Rif{a}{b} + \spif{a}{c}\w\Rif{c}{b} - \Rif{a}{c}\w\spif{c}{b}   =& 0.
+\end{align}
 
