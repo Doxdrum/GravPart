@@ -825,7 +825,7 @@ Additionally, there are spaces with ``cosmological constant'', $\Lambda$, and th
 
 A manifold whose Ricci tensor is proportional to the metric is said to be an Einstein manifold,
 \begin{align}
-  \Ri_{\mu\nu} = \kappa g_{\mu\nu}.
+  \Ri_{\mu\nu} = \kappa g_{\mu\nu}.\label{def-const-curv}
 \end{align}
 
 Also, a manifold is said to have constant curvature if its curvature 2-form is
@@ -885,13 +885,90 @@ In the sense of the previous lesson, the torsion 2-form, $\Tf{a}$, and the curva
 \item The components of the torsion and curvature 2-forms are given by
   \begin{align}
     \tor_\mu{}^\lambda{}_\nu \;\df x^\mu\w\df x^\nu &= \tor_a{}^c{}_b \vin{\lambda}{c}\;\vif{a}\w\vif{b},\\
-    \Rif{a}{b} &= \frac{1}{2}\Ri^a{}_{b\mu\nu}\;\df x^\mu\w\df x^\nu.
+    \Rif{a}{b} &= \frac{1}{2}\Ri^a{}_{b\mu\nu}\;\df x^\mu\w\df x^\nu.\label{def-curv-comp}
   \end{align}
 \end{itemize}
 
+\begin{WEbox}[frametitle={Curvature of the 2-sphere},
+  frametitlerule=true,
+  frametitlealignment=\centering,
+  frametitleaboveskip=10pt,]
+  A 2-sphere  with radius $R$  has a line element given by
+  \begin{align}
+    ds^2(g) = R^2\(\df \theta\otimes\df \theta+\sin^2(\theta)\df\phi\otimes\df\phi\),
+  \end{align}
+  which can be written in terms of vielbeins as
+  \begin{align}
+    ds^2(g) = \delta_{ij}\vif{i}\otimes\vif{j},
+  \end{align}
+  with $$\vif{1}=R\df\theta\text{ and }\vif{2}=R\sin(\theta)\df\phi.$$
+
+  Using the first structure equation one gets,
+  \begin{align}
+    \df\vif{2} &= R\cos(\theta)\df\theta\w\df\phi\notag\\
+    &= -R\cos(\theta)\df\phi\w\df\theta\notag\\
+    &= -\cos(\theta)\df\phi\w\vif{1},
+  \end{align}
+  then
+  \begin{align}
+    \spif{2}{1} = \cos(\theta)\df\phi.
+  \end{align}
+
+  From the second structure equation, one obtains the only non-vanishing component of the 2-form curvature
+  \begin{align}
+    \Rif{2}{1} = -\Rif{1}{2} = \df\spif{2}{1} = -\sin(\theta)\df\theta\w\df\phi.
+  \end{align}
+  It follows from the last equation that
+  \begin{align}
+    \Rif{12}{} = \frac{1}{R^2}\vif{1}\w\vif{2},\label{curv-2sphere}
+  \end{align}
+  then, the 2-sphere is a manifold with constant curvature, as in Eq. \eqref{def-const-curv}, with (Gau\ss{}ian) curvature $\kappa=\frac{1}{R^2}$.
+
+  From Eqs. \eqref{def-curv-comp} and \eqref{curv-2sphere}, one obtains the non-vanishing component of the Riemann tensor,
+  \begin{align}
+    \Ri_{\theta\phi}{}^1{}_2 = \sin(\theta)\quad\Rightarrow\quad \Ri_{\theta\phi}{}^\theta{}_\phi = \sin^2(\theta).
+  \end{align}
+  Now, using the metric to raising and lowering indeces, and contracting, the Ricci and Ricci scalar are obtained,
+  \begin{align}
+    \Ri_{\theta\theta}&= 1, & \Ri_{\phi\phi}&= \sin^2(\theta),\notag\\
+    \Ri&= \frac{2}{R^2}. & &
+  \end{align}
+
+  Finally, note that the 2-sphere is an Einstein manifold, since
+  \begin{align}
+    \Ri_{\mu\nu} = \frac{1}{R^2}g_{\mu\nu}.
+  \end{align}
+\end{WEbox}
+
+\begin{WEbox}[frametitle={Curvature of the 2-hyperboloid},
+  frametitlerule=true,
+  frametitlealignment=\centering,
+  frametitleaboveskip=10pt,]
+  The line element of a 2-hyperboloid is very similar to the one on the 2-sphere,
+  \begin{align}
+    ds^2(g) = R^2\(\df \theta\otimes\df \theta+\sinh^2(\theta)\df\phi\otimes\df\phi\),
+  \end{align}
+  then, the calculation of the curvature can be followed straightforward from the previous example. Thus, only the results are show,
+  \begin{align}
+    \vif{1}&= R\df\theta & \vif{2} &= R\sinh(\theta)\df\phi\\
+    \spif{2}{1}&= \cosh(\theta)\df\phi & \Rif{2}{1} &= \sinh(\theta)\df\theta\w\df\phi\\
+    \Ri_{\phi\theta}{}^2{}_1 &= -\sinh(\theta) & \Ri_{\phi\theta}{}^\phi{}_\theta&= -1\\
+    \Ri_{\theta\theta}&= -1 & \Ri_{\phi\phi}&= -\sinh^2(\theta).
+  \end{align}
+  The Ricci scalar is 
+  \begin{align*}
+    \Ri = -\frac{2}{R^2},
+  \end{align*}
+  and the hyperboloid is a manifold of constant curvature,
+  \begin{align*}
+    \Rif{12}{} = -\frac{1}{R^2}\vif{1}\w\vif{2},
+  \end{align*}
+  i.e., the Gau\ss{}ian curvature of the hyperboloid is $\kappa=-\frac{1}{R^2}$.
+\end{WEbox}
+
 \begin{WEbox}
   The curvature of the Anti de Sitter ($AdS$) spacetime is calculated, using Cartan's formalism.
-
+  
   The metric of the $AdS$ spacetime is 
   \begin{align}
     ds^2(g) = \frac{1}{z^2}\(-\df t\otimes\df t +\df x\otimes\df x+\df y\otimes\df y+\df z\otimes\df z\),
