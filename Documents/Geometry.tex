@@ -883,6 +883,9 @@ In the sense of the previous lesson, the torsion 2-form, $\Tf{a}$, and the curva
 \begin{itemize}
 \item In general relativity, the torsion vanishes. Therefore, the first Cartan's structure equation (\ref{firstSE}), yields an explicit expression for the spin connection as a function of the vielbein. This is equivalent to the well-known expression of the Levi-Civita connection $\Gamma_\mu{}^\lambda{}_\nu$ as a function of the metric and its derivatives.
 \item The components of the torsion and curvature 2-forms are given by
+%%%%
+%% Change the eq. of the torsion (to be the equiv of the curvature
+%%%%
   \begin{align}
     \tor_\mu{}^\lambda{}_\nu \;\df x^\mu\w\df x^\nu &= \tor_a{}^c{}_b \vin{\lambda}{c}\;\vif{a}\w\vif{b},\\
     \Rif{a}{b} &= \frac{1}{2}\Ri^a{}_{b\mu\nu}\;\df x^\mu\w\df x^\nu.\label{def-curv-comp}
@@ -1044,5 +1047,245 @@ From the second S.E.
 i.e.,
 \begin{align}
   \df\Rif{a}{b} + \spif{a}{c}\w\Rif{c}{b} - \Rif{a}{c}\w\spif{c}{b}   =& 0.
+\end{align}
+
+
+\section[Hilbert-Einstein Action]{Hilbert-Einstein Action (\`a la Cartan)}
+
+
+\section{Example of a non-Trivial Calculation}
+
+Consider the metric whose line-element is
+\begin{align*}
+  ds^2(g) = A^2\[-\frac{(p^2\df\tau +\df\sigma)^2}{B^2}+\frac{(\df\tau - q^2\df\sigma)^2}{C^2}+B^2\df q^2 +C^2\df p^2\],
+\end{align*}
+with $A,B,C$ function on $p$ and $q$.
+
+Define,
+\begin{align*}
+  \bs{\tht}^0 &= p^2\df\tau +\df\sigma,\\
+  \bs{\tht}^1 &= \df\tau - q^2\df\sigma.
+\end{align*}
+Then,
+\begin{align*}
+  \df\tau &= \frac{q^2\bs{\tht}^0 +\bs{\tht}^1}{1+p^2q^2},\\
+  \df\sigma &= \frac{\bs{\tht}^0 -p^2\bs{\tht}^1}{1+p^2q^2}.
+\end{align*}
+Additionally,
+\begin{align}
+  \df\bs{\tht}^0 &= \df\(p^2\df\tau +\df\sigma\)\notag\\
+  &= 2p \,\df p\w\df \tau\notag\\
+  &= \frac{2p}{1+p^2q^2}\(q^2\, \df p\w\bs{\tht}^0 +\df p\w\bs{\tht}^1\)\\
+  \df\bs{\tht}^1 &= \df\(\df\tau -q^2\df\sigma\)\notag\\
+  &= -2q \,\df q\w\df \sigma\notag\\
+  &=-\frac{ 2q}{1+p^2q^2}\(\df q\w\bs{\tht}^0 - p^2\,\df q\w\bs{\tht}^1\).
+\end{align}
+
+
+Choosing the vielbeins by,
+\begin{align}
+  \vif{0} &= \frac{A}{B}\,\bs{\tht}^0,\\
+  \vif{1} &= \frac{A}{C}\,\bs{\tht}^1,\\
+  \vif{2} &= AB\,\df q,\\
+  \vif{3} &= AC\,\df p,
+\end{align}
+their exterior derivative are
+\begin{align}
+  \df\vif{0} &= \partial_p\(\frac{A}{B}\)\, \df p\w\bs{\tht}^0 + \partial_q\(\frac{A}{B}\)\, \df q\w\bs{\tht}^0 + \frac{A}{B}\,\df\bs{\tht}^0,\\
+  \df\vif{1} &= \partial_p\(\frac{A}{C}\)\, \df p\w\bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \df q\w\bs{\tht}^1 + \frac{A}{C}\,\df\bs{\tht}^1,\\
+  \df\vif{2} &= \partial_p(AB) \,\df p\w\df q ,\\
+  \df\vif{3} &= \partial_q(AC)\, \df q\w\df p.
+\end{align}
+
+Now, 
+\begin{align}
+  \df\vif{2} &= \partial_p(AB) \,\df p\w\df q \notag\\
+  &= -\partial_p(AB) \,\df q\w\df p \notag\\
+  &= -\frac{\partial_p(AB)}{AC} \,\df q\w\vif{3} \label{DLspi23}\\
+  &= -\spif{2}{a}\w\vif{a},\notag
+\end{align}
+and
+\begin{align}
+  \df\vif{3} &= \partial_q(AC) \,\df q\w\df p \notag\\
+  &= -\partial_q(AC) \,\df p\w\df q \notag\\
+  &= -\frac{\partial_q(AC)}{AB} \,\df p\w\vif{2} \label{DLspi32}\\
+  &= -\spif{3}{a}\w\vif{a}.\notag
+\end{align}
+Note that one needs to combine Eqs. \eqref{DLspi23} and \eqref{DLspi32}, to obtain a consistent spin connection $\spif{23}{}=-\spif{32}{}$. The final result is therefore,
+\begin{align}
+  \spif{2}{3}= \spif{23}{} = -\spif{32}{}=-\spif{3}{2}&= \frac{\partial_p(AB)}{AC} \,\df q - \frac{\partial_q(AC)}{AB} \,\df p \\
+  &= \frac{1}{A^2BC} \[\partial_p(AB)\,\vif{2} - {\partial_q(AC)}\,\vif{3}\].\notag
+\end{align}
+
+From
+\begin{align}
+  \df\vif{0} &= \partial_p\(\frac{A}{B}\)\, \df p\w\bs{\tht}^0 + \partial_q\(\frac{A}{B}\)\, \df q\w\bs{\tht}^0 + \frac{A}{B}\,\df\bs{\tht}^0\notag\\
+  &= -\partial_p\(\frac{A}{B}\)\, \bs{\tht}^0\w\df p - \partial_q\(\frac{A}{B}\)\, \bs{\tht}^0\w\df q + \frac{2p}{1+p^2q^2}\frac{A}{B}\(q^2\, \df p\w\bs{\tht}^0 +\df p\w\bs{\tht}^1\)\notag\\
+  %% &= -\frac{1}{AC}\partial_p\(\frac{A}{B}\)\, \bs{\tht}^0\w\vif{3} - \frac{1}{AB}\partial_q\(\frac{A}{B}\)\, \bs{\tht}^0\w\vif{2} + 2p\frac{A}{B}\,\frac{q^2\, \df p\w\bs{\tht}^0 +\df p\w\bs{\tht}^1}{1+p^2q^2}\notag\\
+  %% &= -\frac{1}{A^2BC}\partial_p\(\frac{A}{B}\)\, \vif{0}\w\vif{3} - \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0}\w\vif{2}\notag \\
+  %% &{\phantom{=\;}} - 2p q^2\frac{A}{B}\,\frac{\bs{\tht}^0\w\df p }{1+p^2q^2}+ 2p\frac{A}{B}\,\frac{\df p\w\bs{\tht}^1}{1+p^2q^2}\notag\\
+  &= -\[\frac{B}{A^2C}\partial_p\(\frac{A}{B}\) + \frac{1}{AC}\,\frac{2p q^2}{1+p^2q^2}  \]\, \vif{0}\w\vif{3} - \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0}\w\vif{2}\notag \\
+  &{\phantom{=\;}} + \frac{2p}{1+p^2q^2}\frac{1}{AB}\;\vif{3}\w\vif{1}\\
+  &= -\spif{0}{a}\w\vif{a},\notag
+\end{align}
+and,
+\begin{align}
+  \df\vif{1} &= \partial_p\(\frac{A}{C}\)\, \df p\w\bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \df q\w\bs{\tht}^1 + \frac{A}{C}\,\df\bs{\tht}^1\notag\\
+  &= \partial_p\(\frac{A}{C}\)\, \df p\w\bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \df q\w\bs{\tht}^1 - \frac{2q}{1+p^2q^2}\frac{A}{C}\, \(\df q\w\bs{\tht}^0 - p^2\,\df q\w\bs{\tht}^1\)\notag\\
+  &= -\frac{1}{A^2}\partial_p\(\frac{A}{C}\)\, \vif{1}\w\vif{3} - \[\frac{C}{A^2B}\partial_q\(\frac{A}{C}\) + \frac{2q p^2}{1+p^2q^2}\frac{1}{AB}\]\,\vif{1}\w\vif{2} \notag\\
+  &{\phantom{=\;}} - \frac{2q}{1+p^2q^2}\frac{1}{AC}\, \vif{2}\w\vif{0} ,\\
+  &= -\spif{1}{a}\w\vif{a},\notag
+\end{align}
+one obtains
+\begin{align}
+  \spif{0}{1} &= - \frac{p}{1+p^2q^2}\frac{1}{AB}\,\vif{3} + f_{01}\\
+  \spif{0}{2} &= \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0} - f_{02}\\
+  \spif{0}{3} &=  \[\frac{B}{A^2C}\partial_p\(\frac{A}{B}\) + \frac{2p q^2}{1+p^2q^2}\frac{1}{AC}\]\, \vif{0} + \frac{p}{1+p^2q^2}\frac{1}{AB}\,\vif{1} - f_{03},\\
+  \spif{1}{0} &= \frac{q}{1+p^2q^2}\frac{1}{AC}\, \vif{2} -f_{10},\\
+  \spif{1}{2} &=\[\frac{C}{A^2B}\partial_q\(\frac{A}{C}\)+\frac{2qp^2}{1+p^2q^2}\frac{1}{AB}\]\,\vif{1} -\frac{q}{1+p^2q^2}\frac{1}{AC}\, \vif{0} - f_{12},\\
+  \spif{1}{3} &= \frac{1}{A^2}\partial_p\(\frac{A}{C}\)\, \vif{1} - f_{13},
+\end{align}
+where the 1-forms $f_{ab}$ will be adjusted to get a consistent set of spin connection 1-forms.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%% ANOTHER LECTURE
+
+\chapter{Kaluza-Klein Reduction on $S^1$}
+
+
+\begin{equation}
+  d\hat{s}^2 = e^{2\alpha\phi}ds^2 + e^{2\beta\phi}\left(d\xi + \Ag\right)^2,
+\end{equation}
+
+\begin{equation}
+\VIF{a} = 
+\begin{cases}
+  \hvif{a} = e^{\alpha\phi} \vif{a}\\
+  \hvif{5} = e^{\beta\phi}\left(\df\xi +\Ag \right)
+\end{cases},
+\end{equation}
+
+From the first Maurer-Cartan equation,
+\begin{equation}
+  \df\VIF{a} + \SPIF{a}{b}\w\VIF{b} = {\bf{T}}^{\hat{a}} = 0,
+\end{equation}
+the spin connection can be calculated.
+
+\begin{align}
+  \df\hvif{5} =& e^{\beta\phi}\left[\beta\df\phi\w\left(\df\xi +\Ag \right) + \df\Ag\right]\nonumber\\
+  =& e^{\beta\phi}\left[-\beta\left(\df\xi +\Ag \right)\w\df\phi + \df\Ag\right]\nonumber\\
+  =& e^{\beta\phi}\left[-\beta\pa{a}\phi\left(\df\xi +\Ag \right)\w\vif{a} + \Fg\right]\nonumber\\
+ =& -\beta e^{-\alpha\phi}\pa{a}\phi\;\hvif{5}\w\hvif{a} -\frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{a b}\;\hvif{b}\w\hvif{a},
+\end{align}
+from where one gets,
+\begin{align}
+  \hspif{5}{a} = \beta e^{-\alpha\phi}\pa{a}\phi\;\hvif{5} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{a b}\;\hvif{b}.
+\end{align}
+
+On the other hand,
+\begin{align}
+  \hspif{a}{b}\w\hvif{b} = -\df\hvif{a} - \hspif{a}{5}\w\hvif{5}.
+\end{align}
+Since,
+\begin{align}
+  \df\hvif{a} 
+  =& e^{\alpha\phi}\left[\alpha\;\df\phi\w\vif{a} +  \df\vif{a}\right]\nonumber\\
+  =& e^{\alpha\phi}\left[-\alpha\;\vif{a}\w\df\phi -  \spif{a}{b}\w\vif{b}\right]\nonumber\\
+  =& -\alpha e^{-\alpha\phi}\pa{b}\phi\;\hvif{a}\w\hvif{b} - \spif{a}{b}\w\hvif{b},
+\end{align}
+then,
+\begin{align}
+  \hspif{a}{b} =& \spif{a}{b} + \alpha e^{-\alpha\phi}\pa{b}\phi\;\hvif{a} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^a{}_{ b}\;\hvif{5}\nonumber\\
+  =& \spif{a}{b} + \alpha e^{-\alpha\phi}\left(\pa{b}\phi\;\hvif{a} - \partial^{a}\phi\;\hvif{c}\eta_{b c}\right) - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^a{}_{ b}\;\hvif{5}.
+\end{align}
+
+Now, the second Maurer-Cartan equation,
+\begin{align}
+  \df\SPIF{a}{b}+\SPIF{a}{c}\w\SPIF{c}{b}=\Rif{a}{b}.
+\end{align}
+
+\begin{align}
+  \df\hspif{5}{a} 
+  =& \beta\;\df\left( e^{-\alpha\phi}\pa{a}\phi\;\hvif{5}\right) + \frac{1}{2}\df\left(e^{(\beta-2\alpha)\phi}\F_{ab}\;\hvif{b}\right)\nonumber\\
+  =& \beta e^{-\alpha\phi}\;\left[-\alpha \pa{a}\phi\;\df\phi\w\hvif{5} +\pa{a}\df\phi\w\hvif{5} + \pa{a}\phi\;\df\hvif{5}\right] + \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F_{ab}\;\df\phi\w\hvif{b} + \df \F_{ab}\w\hvif{b} + \F_{ab}\;\df\hvif{b}\right]\nonumber\\
+  =& \beta e^{-\alpha\phi}\;\left[-\alpha \pa{a}\phi\pa{b}\phi\;\vif{b}\w\hvif{5} +\pa{a}\pa{b}\phi\;\vif{b}\w\hvif{5} + \pa{a}\phi\;\hspif{5}{b}\w\hvif{b}\right] + \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F_{ab}\pa{c}\phi\;\vif{c}\w\hvif{b} + \pa{c} \F_{ab}\;\vif{c}\w\hvif{b} + \F_{ab}\;\hspif{b}{\hat{c}}\w\VIF{c}\right]\nonumber\\
+ =& \beta(\beta-\alpha)e^{-2\alpha\phi}\pa{a}\phi\pa{b}\phi\;\hvif{b}\w\hvif{5} + \beta e^{-2\alpha\phi}\pa{a}\pa{b}\phi\;\hvif{b}\w\hvif{5}  -\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{ab}\pa{c}\phi\;\hvif{b}\w\hvif{c} +\frac{\beta}{2}e^{(\beta-3\alpha)\phi}\pa{a}\phi \F_{bc}\;\hvif{b}\w\hvif{c}\nonumber\\
+ & -\frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F_{ab}\;\hvif{b}\w\hvif{c} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{ab}\; \spif{b}{c}\w\hvif{c},
+\end{align}
+and,
+\begin{align}
+  \hspif{5}{m}\w\hspif{m}{a} =& \left(\beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{5} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}  \right)\w\left(\spif{m}{a} + \alpha e^{-\alpha\phi}\left(\pa{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{c}\eta_{a c}\right) - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^m{}_{ a}\;\hvif{5}  \right)\nonumber\\
+ =& \beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{5}\w\spif{m}{a} + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\;\hvif{5}\w\left(\pa{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{c}\eta_{a c}\right)\nonumber\\
+ & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}\w\spif{m}{a} + \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{m b}\;\hvif{b}\w\left(\pa{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{c}\eta_{a c}\right)\nonumber\\
+ & -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m n}\F^m{}_a\;\hvif{n}\w\hvif{5}.
+\end{align}
+Therefore,
+\begin{align}
+  \hRif{5}{a} =& \left[\beta(\beta-2\alpha)e^{-2\alpha\phi}\pa{a}\phi\pa{b}\phi + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \eta_{a b} + \beta e^{-2\alpha\phi}\pa{a}\pa{b}\phi -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m b}\F^m{}_a\right]\;\hvif{b}\w\hvif{5}\nonumber\\
+ & + \left[-\frac{\beta-2\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{ab}\pa{c}\phi +\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\pa{a}\phi \F_{bc} - \frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F_{ab} - \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\partial^{m}\phi\F_{m b} \eta_{a c}
+\right]\;\hvif{b}\w\hvif{c}\nonumber\\
+  &  %\left[
+- \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{ab}\; \spif{b}{c}\w\hvif{c} - \beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m}{a}\w\hvif{5} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\spif{m}{a}\w\hvif{b}.
+% \right]
+\end{align}
+
+The second term,
+\begin{align}
+  \df\hspif{a}{b} =& \df \spif{a}{b} +\alpha e^{-\alpha\phi}\bigg[-\alpha\pa{b}\phi\;\df\phi\w\hvif{a} + \alpha\partial^a \phi \eta_{bc}\;\df\phi\w\hvif{c} + \pa{b}\df\phi\w\hvif{a} - \eta_{b c}\partial^a\df\phi\w\hvif{c} + \pa{b}\phi\;\df\hvif{a} - \partial^a\phi\eta_{bc}\; \df\hvif{c}\bigg]\nonumber\\
+  & - \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[ (\beta-2\alpha)\F^a{}_b\;\df\phi\w\hvif{5} + \df\F^a{}_b\w\hvif{5} + \F^a{}_b\;\df\hvif{5}\right]\notag\\
+  =& \df\spif{a}{b} + \alpha^2 e^{-2\alpha\phi}\pa{b}\phi\pa{c}\phi\;\hvif{a}\w\hvif{c} - \alpha^2 e^{-2\alpha\phi}\partial^{a}\phi\pa{d}\phi\eta_{bc}\;\hvif{c}\w\hvif{d} - \alpha e^{-2\alpha\phi} \pa{b}\pa{c}\phi\; \hvif{a}\w\hvif{c} + \alpha e^{-2\alpha\phi} \partial^{a}\pa{d}\phi\eta_{bc}\; \hvif{c}\w\hvif{d} - \alpha e^{-\alpha\phi} \pa{b}\phi \;\hspif{a}{\hat{c}}\w\VIF{c}\notag\\
+  & + \alpha e^{-\alpha\phi} \partial^{a}\phi \eta_{bc}\;\hspif{c}{\hat{d}}\w\VIF{d} - \frac{1}{2} e^{(\beta-3\alpha)\phi}(\beta-2\alpha)\F^a{}_b\pa{c}\phi\;\hvif{c}\w\hvif{5} - \frac{1}{2}e^{(\beta-3\alpha)\phi} \pa{c}\F^a{}_b\;\hvif{c}\w\hvif{5} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^a{}_b\;\hspif{5}{c}\w\hvif{c},
+\end{align}
+and,
+\begin{align}
+  \hspif{a}{\hat{c}}\w\hspif{\hat{c}}{b} =& \hspif{a}{5}\w\hspif{5}{b} + \hspif{a}{{c}}\w\hspif{{c}}{b} \notag\\
+  =& -\frac{\beta}{2} e^{(\beta-3\alpha)\phi}\left(\pa{b}\phi \F^a{}_c - \partial^{a}\phi \F_{bc}\right)\;\hvif{c}\w\hvif{5} -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F^a{}_c \F_{bd}\;\hvif{c}\w\hvif{d}\notag\\
+  & + \spif{a}{c}\w\spif{c}{b} + \alpha e^{-\alpha\phi}\left(\pa{b}\phi\;\spif{a}{c}\w\hvif{c} - \partial^c\phi\eta_{bn}\;\spif{a}{c}\w\hvif{n}  \right) -  \alpha e^{-\alpha\phi}\left(\pa{c}\phi\;\spif{c}{b}\w\hvif{a} - \partial^a\phi\eta_{cn}\;\spif{c}{b}\w\hvif{n}  \right)\notag\\
+  & -\frac{1}{2} e^{(\beta-2\alpha)\phi}\F^c{}_b\;\spif{a}{c}\w\hvif{5} + \frac{1}{2} e^{(\beta-2\alpha)\phi}\F^a{}_c\;\spif{c}{b}\w\hvif{5} \notag\\
+  &  + \alpha^2 e^{-2\alpha\phi}\bigg(\pa{b}\phi\pa{c}\phi\;\hvif{a}\w\hvif{c} - \pa{c}\phi\partial^c\phi\eta_{bn}\;\hvif{a}\w\hvif{n}
+   + \partial^a\phi\pa{b}\phi\eta_{cn}\;\hvif{c}\w\hvif{n} + \partial^a\phi\pa{c}\phi\eta_{bn}\;\hvif{c}\w\hvif{n}\bigg)\notag\\
+   & + \frac{1}{2}\alpha e^{(\beta-3\alpha)\phi}\F^a{}_c\left( \pa{b}\phi\;\hvif{c} - \partial^c\phi\eta_{bn}\;\hvif{n}\right)\w\hvif{5} - \frac{1}{2}\alpha e^{(\beta-3\alpha)\phi}\F^c{}_b\left( \pa{c}\phi\;\hvif{a} - \partial^a\phi\eta_{cn}\;\hvif{n}\right)\w\hvif{5}.
+\end{align}
+
+Next, one can write the Lagrangian of the higher dimensional spacetime,
+\begin{align}
+  \Lag_{(D+1)} =& \epsilon_{\hat{a}_1\hat{a}_2\cdots\hat{a}_{D+1}}\hat{\bf{R}}^{\hat{a}_1\hat{a}_2}\w\hvif{\hat{a}_3}\w\cdots\w\hvif{\hat{a}_{D+1}}\notag\\
+  =& 2 \epsilon_{5a_1 a_2\cdots a_{D-1}}\hat{\bf{R}}^{5{a}_1}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}} + (D-1)\epsilon_{a_1 a_2\cdots a_{D}5}\hat{\bf{R}}^{{a}_1{a}_2}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{5}.
+\end{align}
+The first term gives,
+\begin{align}
+  2 \epsilon_{5a_1 a_2\cdots a_{D}}\hat{\bf{R}}^{5{a}_1}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}} 
+  =& 2 \epsilon_{5a_1 a_2\cdots a_{D}}\left[\beta(\beta-2\alpha)e^{-2\alpha\phi}\partial^{a_1}\phi\pa{b}\phi  + \beta e^{-2\alpha\phi}\partial^{a_1}\pa{b}\phi -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m b}\F^{ma_1}\right]\;\hvif{b}\w\hvif{5}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}} \nonumber\\
+  &  + 2 \epsilon_{5a_1 a_2\cdots a_{D}}\alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \;\hvif{a_1}\w\hvif{5}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}}\notag\\
+  & - 2 \epsilon_{5a_1 a_2\cdots a_{D}}\beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m\;a_1}{}\w\hvif{5}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}}.
+\end{align}
+Since,
+\begin{align}
+  \epsilon_{5a_1 a_2\cdots a_{D}}\;\hvif{b}\w\hvif{5}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}} 
+  =& - \epsilon_{5a_1 a_2\cdots a_{D}}\;\hvif{5}\w\hvif{b}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}} \notag\\
+  =& -\sqrt{\hat{g}}\;d^D x\; \;\delta^b_{a_1}\notag\\
+  =& -\sqrt{g}\;d^{D} x\; d\xi\; e^{\left(\beta+ (D)\alpha\right)\phi}\;\delta^b_{a_1},
+\end{align}
+then,
+\begin{align}
+    \epsilon_{5a_1 a_2\cdots a_{D}}\hat{\bf{R}}^{5{a}_1}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}} 
+  =&  -\left[\beta(\beta-2\alpha)e^{-2\alpha\phi}\partial^{a}\phi\pa{a}\phi  + \beta e^{-2\alpha\phi}\Box\phi -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F^2\right]\;\sqrt{g}\;d^{D} x\; d\xi\; e^{\left(\beta+ D\alpha\right)\phi} \nonumber\\
+  &  -  \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \;\sqrt{g}\;d^{D} x\; d\xi\; e^{\left(\beta+ D\alpha\right)\phi}.% \notag\\
+ % & -  \beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m\;a_1}{}\w\hvif{5}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}}
+\end{align}
+
+On the other hand,
+\begin{align}
+  %\epsilon_{a_1 a_2\cdots a_{D}5}
+  \hat{\bf{R}}^{{a}_1{a}_2}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{5} 
+  =& %\epsilon_{a_1 a_2\cdots a_{D}5}
+  {\bf{R}}^{{a}_1{a}_2}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{5} + \alpha^2 e^{-2\alpha\phi}\partial^{a_2}\phi\pa{c}\phi\;\hvif{a_1}\w\hvif{c}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{5} \notag\\
+  & - \alpha e^{-2\alpha\phi} \partial^{a_2}\pa{c}\phi\; \hvif{a_1}\w\hvif{c}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{5}\notag\\
+  & + \frac{1}{4}e^{2(\beta-2\alpha)\phi}\F^{a_1 a_2}\F_{c d}\;\hvif{d}\w\hvif{c}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{5}\notag\\
+  & - \frac{1}{4}e^{2(\beta-2\alpha)\phi}\F^{a_1}{}_c\F^{ a_2}{}_{ d}\;\hvif{c}\w\hvif{d}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{5}\notag\\
+  &
 \end{align}
 
