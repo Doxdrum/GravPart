@@ -151,7 +151,7 @@
 
 
 %---------------- Titlesec 
-\RequirePackage{titlesec}
+\RequirePackage[explicit]{titlesec}
 \renewpagestyle{plain}[\small\sffamily\scshape]{
   \footrule
   \setfoot{\theauthor}{}{\usepage}}

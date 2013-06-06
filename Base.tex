@@ -13,16 +13,13 @@
 \hypersetup{pdftitle={Notes on Differential Geometry and applications to Physics},
 pdfauthor={Oscar Castillo-Felisola},}
 
+\definecolor{cccolor}{rgb}{.67,.7,.67}
 
-
-
-% Define box and box title style
-\tikzstyle{mybox} = [draw=red, fill=blue!20, very thick,
-    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]
-\tikzstyle{WEbox} = [draw=blue, fill=blue!20, very thick,
-    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{WEtitle} =[fill=blue, text=white, right=10pt]
+%% \titleformat{\chapter}[display]
+%%   {\Huge\scshape}
+%%   {\filleft\tikz\node[draw=green!60!black,thick,fill=green!50!black!10,rectangle,rounded corners=6pt] (chap) {\chaptertitlename~\thechapter};}
+%%   {0ex}
+%%   {\colorbox{green!50!black!10}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\vskip1ex#1\vskip1ex}}}
 
 
 \begin{document}
@@ -47,14 +44,16 @@ pdfauthor={Oscar Castillo-Felisola},}
 \newpage
 \vspace*{\stretch{5}}
 %\vfill
-\begin{tabular}{|p{.9\textwidth}|}
- \hline
- This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
- \begin{center}
- \includegraphics[scale=1]{cc-by-sa.png}
- \end{center}\\
- \hline
- \end{tabular}
+%% \begin{tabular}{|p{.9\textwidth}|}
+%%  \hline
+\begin{mdframed}[outerlinecolor=black,outerlinewidth=2pt,linecolor=cccolor,middlelinewidth=3pt,roundcorner=10pt]
+  This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+  \begin{center}
+    \includegraphics[scale=2]{Pict/by-nc-sa.pdf}
+  \end{center}
+\end{mdframed}
+ %% \hline
+ %% \end{tabular}
 %\vstretch{1}
 \vspace*{\stretch{1}}
 
