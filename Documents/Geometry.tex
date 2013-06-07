@@ -1016,9 +1016,9 @@ In the sense of the previous lesson, the torsion 2-form, $\Tf{a}$, and the curva
 \begin{Ebox}
   Consider a Riemannian manifold with a metric whose line element is
   \begin{align}
-    ds^2(g) = -f(r)\df t\otimes \df t+ \frac{1}{f(r)}\df r\otimes\df r+ r^2\(\df\theta\otimes\df\theta+\sin^2(\theta)\df\phi\otimes\df\phi\),
+    ds^2(g) = -e^{2\Xi(r)}\df t\otimes \df t+ e^{-2\Xi(r)}\df r\otimes\df r+ r^2\(\df\theta\otimes\df\theta+\sin^2(\theta)\df\phi\otimes\df\phi\),
   \end{align}
-  Find the function $f(r)$ which solves the Einstein's equation in the vacuum.
+  Find the function $\Xi(r)$ which solves the Einstein's equation in the vacuum.
 \end{Ebox}
 
 \section{Playing with the Structure Equations}
@@ -1052,6 +1052,25 @@ i.e.,
 
 \section[Hilbert-Einstein Action]{Hilbert-Einstein Action (\`a la Cartan)}
 
+
+
+\begin{Pro}
+  \begin{align*}
+    S_{gr} = \frac{1}{2\kappa^2}\int\frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\Rif{a_1 a_2}{}\w\vif{a_3}\w\cdots\w\vif{a_D}=\frac{1}{2\kappa^2}\int\dn{D}{x}\abs{e}\Ri.
+  \end{align*}
+\end{Pro}
+
+
+\begin{proof}
+ % \begin{small}
+    \begin{align*}
+      \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\Rif{a_1 a_2}{}\w\vif{a_3}\w\cdots\w\vif{a_D} =& \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\;\vif{c}\w\vif{d}\w\vif{a_3}\w\cdots\w\vif{a_D}\\
+      =& -\frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\;\epsilon^{c d a_3\cdots a_D}dV\\
+      =& \frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\(\delta_{a_1}^c\delta_{a_2}^d -\delta_{a_1}^d\delta_{a_2}^c \)\,dV\\
+      =& \dn{D}{x}\abs{e}\Ri
+    \end{align*}
+  %\end{small}
+\end{proof}
 
 \section{Example of a non-Trivial Calculation}
 
