@@ -40,6 +40,50 @@ Examples of manifolds are  the body of a cylinder,  the spheres ($S^m$), the tor
 
 More illustrative is an example of a non-manifold, such as the body of a cone. A cone is not a manifold because the neighbourhood of the apex looks not line $\R^2$.
 
+%% \begin{center}
+%%   \begin{tikzpicture}
+%%     %% Define the height (\h) 
+%%     %% and angle (\th) of the cone
+%%     \pgfmathsetmacro{\h}{3}
+%%     \pgfmathsetmacro{\th}{60}
+
+%%     %% Define the origin of coordinates
+%%     \coordinate (O) at (0,0);
+%%     %% Define the ``corners'' of the cone
+%%     \coordinate (a) at (0,0);
+
+%%     %% Drawing the external line of cone
+%%     %\draw ({-sin(\th)},0) -- (0,\h) -- ({sin(\th)},0);
+
+%%     %% Draw the curve
+%%     \draw (0,\h) -- ({sin(\th)},0) arc (
+%%   \end{tikzpicture}
+%% \end{center}
+\begin{center}
+  \begin{tikzpicture}[scale=1.5,
+      spy using outlines={circle, magnification=6, size=2.5cm,connect spies}] 
+
+    \pgfmathsetmacro{\a}{3}
+    \pgfmathsetmacro{\b}{5}
+    \pgfmathsetmacro{\th}{30}
+    \pgfmathsetmacro{\ph}{atan(\a * tan(\th) / \b)}
+    \pgfmathsetmacro{\r}{\a * tan(\th)}
+    \pgfmathsetmacro{\h}{sqrt(\a*\a +\r*\r)}
+    \pgfmathsetmacro{\H}{sqrt(\b*\b +\r*\r)}
+
+    \coordinate (O) at (0,0);
+    \coordinate (X) at (0,{\b-\a});
+
+    \draw[thick,dashed] (X)  +(270+\th:\h) arc (90-\ph:90+\ph:\H);
+    \shadedraw[left color=blue, right color= blue!60!black, middle color=blue!60!white, shading angle={90-\th}, opacity=.7] (X) -- +(270-\th:\h) arc (270-\ph:270+\ph:\H) --cycle;
+    
+    %({2*\b},0) arc (90-\ph:90+\ph:\H);
+    %\draw[dashed] (\b,0) -- (\b,2);
+
+    \spy on (X) in node at (5,1);
+  \end{tikzpicture}
+\end{center}
+
 \section{Geometrical Objects on Manifolds}
 
 One knows how to define 
@@ -147,7 +191,7 @@ The vector space of differential forms of order $p$ on a manifold $M$ is denoted
 
 The exterior product is a map 
 \begin{align}
-  \w:\Lambda^p(M)\times\Lambda^q(M) \to \Lambda{p+q}(M)
+  \w:\Lambda^p(M)\times\Lambda^q(M) \to \Lambda^{p+q}(M)
 \end{align}
 defined by
 \begin{align}
