@@ -27,7 +27,8 @@
 %% \RequirePackage{fancybox}
 \RequirePackage{array}
 \RequirePackage{xcolor}
-%% \RequirePackage{tikz}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
 %% \RequirePackage{bclogo}
 %% \RequirePackage[framemethod=tikz]{mdframed}
 
@@ -68,14 +69,14 @@
 
 
   \vspace*{\stretch{1}}
-  \HRule
+  \putline%\HRule
   \begin{center}%
 %    \vspace*{\frontmattertitleskip}%
 %    \begin{doublespace}%
       {\Huge\bf{\@thesistitle}}%
 %    \end{doublespace}%
   \end{center}
-  \HRule
+  \putline%\HRule
     \vspace*{\stretch{1}}%
     \begin{center}
       {{\Large\bf{\@thesisauthor}} \\ {{#1}}}%	
@@ -165,6 +166,20 @@
   \sethead[\chaptertitle][][]{}{}{\sectiontitle}
   \footrule
   \setfoot[\usepage][][]{\theauthor}{}{\usepage}}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+   \@chapapp{} \thechapter\par\nobreak
+   {\Huge \scshape \bfseries #1\vadjust{\putline}\par\nobreak}%
+   \vspace{40pt}
+  }}
+\makeatother
+\newcommand{\putline}{%
+  \kern10pt %%% <-- adjust here
+  \hbox{\tikz \shade[left color=blue!20,right color=blue, shading angle=45] (0,0) rectangle (\textwidth,5pt);}%
+}
 %\renewcommand{\thechapter}{\Roman{chapter}}
 %\titleformat{\chapter}[display]
 %   {\normalfont\Large\filcenter\sffamily}
