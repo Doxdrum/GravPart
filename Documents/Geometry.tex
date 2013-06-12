@@ -484,9 +484,62 @@ A bundle is a geometric structure composed by two manifolds $E$ (the bundle) and
   
   In this case, $E=M\times F$ globally, then the bundle is called {\sc Trivial}.
 \item If one takes an interval $I\subset \R$, the ``finite'' cylinder is a trivial bundle $E=I\times S^1$ or $E=S^1\times I$.
-\item The simplest non-trivial bundle is a M\"obius strip, which is a bundle $E$ locally homeomorphic to $S^1\times I$, but is not globally $S^1\times I$ because there is a ``twist'' ( a bit more formally there is a $Z_2$-action on the fibre.
+  %% \begin{center}
+  %%   \begin{tikzpicture}[rotate=90]
+      
+  %%     \begin{axis}[
+  %%         hide axis,
+  %%         view={40}{40}
+  %%       ]
+  %%       \addplot3 [
+  %%         surf, shader=faceted interp,
+  %%         point meta=x,
+  %%         colormap/greenyellow,
+  %%         samples=40,
+  %%         samples y=5,
+  %%         z buffer=sort,
+  %%         domain=0:360,
+  %%         y domain=-0.5:0.5
+  %%       ] (
+  %%                 {cos(x)},
+  %%                 {sin(x)},
+  %%                 {0.5*y});
+  %%       \addplot3 coordinates {(0,0,-3) (0,3,0)};
+  %%     \end{axis}
+  %%   \end{tikzpicture}
+  %% \end{center}
+\item The simplest non-trivial bundle is a M\"obius strip, which is a bundle $E$ locally homeomorphic to $S^1\times I$, but is not globally $S^1\times I$ because there is a ``twist'' (a bit more formally there is a $Z_2$-action on the fibre).
   \begin{center}
     \begin{tikzpicture}
+      \begin{axis}[
+          hide axis,
+          view={40}{40}
+        ]
+        \addplot3 [
+          surf, shader=faceted interp,
+          point meta=x,
+          colormap/greenyellow,
+          samples=40,
+          samples y=5,
+          z buffer=sort,
+          domain=0:360,
+          y domain=-0.5:0.5
+        ] (
+                  {cos(x)},
+                  {sin(x)},
+                  {0.5*y});
+        \addplot3 [
+          samples=50,
+          domain=-145:190, % The domain needs to be adjusted manually, depending on the camera angle, unfortunately
+          samples y=0,
+          thick
+        ] (
+                  {cos(x)},
+                  {sin(x)},
+                  {0}); 
+      \end{axis}
+      \end{tikzpicture}
+      \begin{tikzpicture}
       \begin{axis}[
           hide axis,
           view={40}{40}
@@ -1227,6 +1280,7 @@ where the 1-forms $f_{ab}$ will be adjusted to get a consistent set of spin conn
 
 \chapter{Kaluza-Klein Reduction on $S^1$}
 
+\nocite{PopeKK}
 
 \begin{equation}
   d\hat{s}^2 = e^{2\alpha\phi}ds^2 + e^{2\beta\phi}\left(d\xi + \Ag\right)^2,
