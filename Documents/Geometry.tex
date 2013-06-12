@@ -1281,31 +1281,35 @@ Now, the second Maurer-Cartan equation,
 \begin{align}
   \df\hspif{D a}{} 
   =& \beta\;\df\left( e^{-\alpha\phi}\pau{a}\phi\;\hvif{D}\right) + \frac{1}{2}\df\left(e^{(\beta-2\alpha)\phi}\F^a{}_{b}\;\hvif{b}\right)\nonumber\\
-  =& \beta e^{-\alpha\phi}\;\left[-\alpha \pa{a}\phi\;\df\phi\w\hvif{D} +\pa{a}\df\phi\w\hvif{D} + \pa{a}\phi\;\df\hvif{D}\right]\notag\\
-  & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F_{ab}\;\df\phi\w\hvif{b} + \df \F_{ab}\w\hvif{b} + \F_{ab}\;\df\hvif{b}\right]\nonumber\\
-  =& \beta e^{-\alpha\phi}\;\left[-\alpha \pa{a}\phi\pa{b}\phi\;\vif{b}\w\hvif{D} +\pa{a}\pa{b}\phi\;\vif{b}\w\hvif{D} + \pa{a}\phi\;\hspif{D}{b}\w\hvif{b}\right] \notag\\
-  &+ \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F_{ab}\pa{c}\phi\;\vif{c}\w\hvif{b} + \pa{c} \F_{ab}\;\vif{c}\w\hvif{b} + \F_{ab}\;\hspif{b}{\hat{c}}\w\VIF{c}\right]\nonumber\\
- =& \beta(\beta-\alpha)e^{-2\alpha\phi}\pa{a}\phi\pa{b}\phi\;\hvif{b}\w\hvif{D} + \beta e^{-2\alpha\phi}\pa{a}\pa{b}\phi\;\hvif{b}\w\hvif{D}  \notag\\
- &-\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{ab}\pa{c}\phi\;\hvif{b}\w\hvif{c} +\frac{\beta}{2}e^{(\beta-3\alpha)\phi}\pa{a}\phi \F_{bc}\;\hvif{b}\w\hvif{c}\nonumber\\
- & -\frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F_{ab}\;\hvif{b}\w\hvif{c} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{ab}\; \spif{b}{c}\w\hvif{c},
+  =& \beta e^{-\alpha\phi}\;\left[-\alpha \pau{a}\phi\;\df\phi\w\hvif{D} +\pau{a}\df\phi\w\hvif{D} + \pau{a}\phi\;\df\hvif{D}\right]\notag\\
+  & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F^a{}_{b}\;\df\phi\w\hvif{b} + \df \F^a{}_{b}\w\hvif{b} + \F^a{}_{b}\;\df\hvif{b}\right]\nonumber\\
+  =& \beta e^{-\alpha\phi}\;\left[-\alpha \pau{a}\phi\pa{b}\phi\;\vif{b}\w\hvif{D} +\pau{a}\pa{b}\phi\;\vif{b}\w\hvif{D} + \pau{a}\phi\;\hspif{D}{b}\w\hvif{b}\right] \notag\\
+  &+ \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F^a{}_b\pa{c}\phi\;\vif{c}\w\hvif{b} + \pa{c} \F^a{}_b\;\vif{c}\w\hvif{b} + \F^a{}_b\;\hspif{b}{\hat{c}}\w\VIF{c}\right]\nonumber\\
+ =& \beta(\beta-\alpha)e^{-2\alpha\phi}\pau{a}\phi\pa{b}\phi\;\hvif{b}\w\hvif{D} + \beta e^{-2\alpha\phi}\pau{a}\pa{b}\phi\;\hvif{b}\w\hvif{D}  \notag\\
+ &-\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\F^a{}_b\pa{c}\phi\;\hvif{b}\w\hvif{c} +\frac{\beta}{2}e^{(\beta-3\alpha)\phi}\pau{a}\phi \F_{bc}\;\hvif{b}\w\hvif{c}\nonumber\\
+ & -\frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F^a{}_b\;\hvif{b}\w\hvif{c} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^a{}_b\; \spif{b}{c}\w\hvif{c},
 \end{align}
 and,
 \begin{align}
-  \hspif{D}{m}\w\hspif{m}{a} =& \left(\beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{D} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}  \right)\w\notag\\
-  &{}\;\left(\spif{m}{a} + \alpha e^{-\alpha\phi}\left(\pa{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{c}\eta_{a c}\right) - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^m{}_{ a}\;\hvif{D}  \right)\nonumber\\
- =& \beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{D}\w\spif{m}{a} + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\;\hvif{D}\w\left(\pa{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{c}\eta_{a c}\right)\nonumber\\
- & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}\w\spif{m}{a} + \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{m b}\;\hvif{b}\w\left(\pa{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{c}\eta_{a c}\right)\nonumber\\
- & -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m n}\F^m{}_a\;\hvif{n}\w\hvif{D}.
+  \hspif{D}{m}\w\hspif{m a}{} =& \left(\beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{D} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}  \right)\w\notag\\
+  &{}\;\left(\spif{m a}{} + \alpha e^{-\alpha\phi}\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right) - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^{m a}\;\hvif{D}  \right)\nonumber\\
+ =& \beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{D}\w\spif{m a}{} + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\;\hvif{D}\w\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right)\nonumber\\
+ & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}\w\spif{m a}{} + \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{m b}\;\hvif{b}\w\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right)\nonumber\\
+ & -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m n}\F^{m a}\;\hvif{n}\w\hvif{D}.
 \end{align}
 Therefore,
 \begin{align}
-  \hRif{D}{a} =& \left.\bigg[\beta(\beta-2\alpha)e^{-2\alpha\phi}\pa{a}\phi\pa{b}\phi + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \eta_{a b} \right.\notag\\
-    &\quad\left.+ \beta e^{-2\alpha\phi}\pa{a}\pa{b}\phi -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m b}\F^m{}_a\right]\;\hvif{b}\w\hvif{D}\nonumber\\
- & + \left[-\frac{\beta-2\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{ab}\pa{c}\phi +\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\pa{a}\phi \F_{bc}\right.\notag\\
-    &\quad\left. - \frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F_{ab} - \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\partial^{m}\phi\F_{m b} \eta_{a c}
-\right]\;\hvif{b}\w\hvif{c}\nonumber\\
-  &  %\left[
-- \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{ab}\; \spif{b}{c}\w\hvif{c} - \beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m}{a}\w\hvif{D} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\spif{m}{a}\w\hvif{b}.
+  \hRif{D a}{} =& - \frac{1}{2}e^{(\beta-2\alpha)\phi}\(\F_{bc}\spif{ba}{} + \F^a{}_{b}\; \spif{b}{c}\)\w\hvif{c} + \beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m a}{}\w\hvif{D} \notag\\
+  & + \[\beta e^{-2\alpha\phi}\big((\beta-2\alpha)\pa{b}\phi\pau{a}\phi + \pa{b}\pau{a}\phi\big) -\frac{1}{4} e^{2(\beta-2\alpha)\phi}\F_{cb}\F^{ca} \]\hvif{b}\w\hvif{D}\notag\\
+  & + \frac{e^{(\beta-3\alpha)\phi}}{2}\bigg[ (\beta-\alpha)\big(\pau{a}\phi\F_{mb} +\pa{m}\phi\F^a{}_b  \big) + \pa{m}\F^a{}_b \bigg] \hvif{m}\w\hvif{b} \notag\\
+  & +\alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \;\hvif{a}\w\hvif{D} -\frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\pau{b}\phi\F_{bc}\;\hvif{c}\w\hvif{a}
+%% =& \left.\bigg[\beta(\beta-2\alpha)e^{-2\alpha\phi}\pa{a}\phi\pa{b}\phi + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \eta_{a b} \right.\notag\\
+%%     &\quad\left.+ \beta e^{-2\alpha\phi}\pa{a}\pa{b}\phi -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m b}\F^m{}_a\right]\;\hvif{b}\w\hvif{D}\nonumber\\
+%%  & + \left[-\frac{\beta-2\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{ab}\pa{c}\phi +\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\pa{a}\phi \F_{bc}\right.\notag\\
+%%     &\quad\left. - \frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F_{ab} - \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\partial^{m}\phi\F_{m b} \eta_{a c}
+%% \right]\;\hvif{b}\w\hvif{c}\nonumber\\
+%%   &  %\left[
+%% - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{ab}\; \spif{b}{c}\w\hvif{c} - \beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m}{a}\w\hvif{D} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\spif{m}{a}\w\hvif{b}.
 % \right]
 \end{align}
 
