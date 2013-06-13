@@ -1,10 +1,9 @@
 \documentclass{usm-thesis}
 
 \input{../../Def.tex}
-%% \usepackage{tikz}
 \usetikzlibrary{spy}
-%% \usepackage[framemethod=tikz]{mdframed}
-%% \usetikzlibrary{calc}
+\usepackage[nodayofweek]{datetime}
+
 
 \definethesis{Notes on Differential Geometry\\and applications to Physics%Here the title
 }{ Oscar Castillo-Felisola  %Here the Author
@@ -34,7 +33,7 @@
 
 \thesistitlepage{UTFSM--CCTVal
 }{Universidad T\'ecnica Federico Santa Mar\'ia. %The thesis statement
-}{March, 2013 %The date
+}{\today %The date
 }
 
 
@@ -79,7 +78,12 @@
 \mainmatter
 \pagestyle{main}
 
-\input{Documents/Geometry.tex}
+\input{Documents/CalcManifolds.tex}
+\input{Documents/ExtCalculus.tex}
+\input{Documents/BundleConnection.tex}
+\input{Documents/RiemManifolds.tex}
+\input{Documents/CartanFormalism.tex}
+\input{Documents/KKonS1.tex}
 
 
 
