@@ -1,0 +1,261 @@
+%%%%%%%%%%%%%%%%%% RIEMANNIAN MANIFOLDS
+
+\chapter{Riemannian Manifolds}
+
+\section{The metric}
+
+\begin{Def}[Riemannian Metric]
+  Let $M$ be a differential manifold. A {\sc Riemannian metric}, $g$ on $M$ is a symmetric, non-degenerated $\binom{0}{2}$-tensor, i.e.,
+  \begin{align}
+    g(X,Y) &= g(Y,X)\\
+    g(X,X) &= 0\quad\text{iff }X=0.\label{riem-cond}
+  \end{align}
+\end{Def}
+
+If the metric satisfies the condition
+\begin{align}
+  g(X,Y) = 0\quad \forall X\;\Rightarrow\; Y=0.\label{sriem-cond}
+\end{align}
+instead of Eq. (\ref{riem-cond}), the metric is said to be semi-Riemannian.
+
+Given a set of coordinated on $M$, the metric is expressed as 
+\begin{align}
+  g_p = g_{\mu\nu}(p)\;\df x^\mu\otimes\df x^\nu,
+\end{align}
+with
+\begin{align}
+  g_{\mu\nu}(p) = g_p\(\partial_\mu,\partial_\nu\).
+\end{align}
+
+The metric can be seen as a map
+\begin{align}
+  g_p:T_pM\times T_pM &\to \R,\\
+  g_p:T_pM &\to T^*_pM,
+\end{align}
+and its inverse, $g^{-1}$, similarly yields
+\begin{align}
+  g^{-1}_p:T^*_pM\times T^*_pM &\to \R,\\
+  g^{-1}_p:T^*_pM &\to T_pM.
+\end{align}
+
+In index notation, the inverse metric is denoted with upper indices, i.e., 
+\begin{align}
+  \(g^{-1}\)_{\mu\nu} = g^{\mu\nu},
+\end{align}
+such that,
+\begin{align}
+  g_{\mu\nu}g^{\nu\lambda} = \delta_\mu^\lambda.
+\end{align}
+
+One might consider metrics compatible with the connection, 
+\begin{align}
+  \nabla_X g = 0,\quad \forall\,X\in TM.
+\end{align}
+
+\begin{Ebox}
+  Use the {\bf metric compatibility} condition, to find a expression for the (general) connection in terms of the metric and the skew-symmetric part of the $\Gamma$'s.
+\end{Ebox}
+
+
+\section{Metric Structure and Impact on Differential Forms}
+
+It has been pointed out before that the only geometrical object one can integrate on an orientable $m$-dimensional manifold is a $m$-form. However, on Riemannian manifolds, were the metric defines a volume form, one in accustomed to integrate functions.
+
+The link between the two notions is made by defining a new sort of differential operator, called the {\bf Hodge star}, as follows
+\begin{align}
+  *:C^\infty\(\Lambda^p(M)\)\to C^\infty\(\Lambda^{m-p}(M)\)
+\end{align}
+such that, for $\alpha,\beta\in C^\infty\(\Lambda^p(M)\)$,
+\begin{align}
+  \bk{\alpha}{\beta}=\int \alpha\w *\beta= \int_M (\alpha,\beta)dV_g = \int\,\dn{m}{x}\sqrt{g}\,\alpha_{a_1\cdots a_p}\beta_{b_1\cdots b_p}g^{a_1 b_1}\cdots g^{a_p b_p}.\label{HodgeDef}
+\end{align}
+
+
+\begin{Ebox}
+  \begin{itemize}
+  \item Use Eq. (\ref{HodgeDef}) to find the action of $*$ on the basis of differential forms.
+  \item Show that the double action of the Hodge star is proportional to the unit, i.e.,
+    \begin{align*}
+      *^2\alpha \simeq \alpha
+    \end{align*}
+  \end{itemize}
+\end{Ebox}
+      
+
+Using this, a formal  dual of the differential operator $\df$ can be defined,
+\begin{align}
+  \dfd:\Lambda^p(M)\to\Lambda^{p-1}(M),
+\end{align}
+such that (on compact manifolds)
+\begin{align}
+  \bk{\dfd \alpha_{(p+1)}}{\beta_{(p)}}=\bk{\alpha_{(p+1)}}{\df\beta_{(p)}}.
+\end{align}
+The operator $\dfd$ is called co-differential, and it is nilpotent as its partner $\df$, i.e., $\df^2 ={\dfd}^2=0$. Also, a differential form is said to be co-closed is $\dfd\alpha=0$ and co-exact if $\alpha=\dfd\beta$, thus, $\dfd$ defines a complex, and a homology.
+
+
+\begin{Ebox}
+  Use the symmetric properties of the product of forms and the ``idempotence'' of the Hodge star operation, to find an expression of the co-differential operator in terms of $\df$ and $*$.
+\end{Ebox}
+     
+
+
+Using the differential and co-differential operators on forms, the Laplacian on differential forms can be defined by,
+\begin{align}
+  \Delta:C^\infty\(\Lambda^p(M)\) &\to C^\infty\(\Lambda^p(M)\)\\
+  \Delta&= \df\dfd+\dfd\df
+\end{align}
+A form satisfying $\Delta\alpha=0$ is said to be an {\bf Harmonic Form}.
+
+\begin{Thm}
+  On a compact, oriented Riemannian manifold one can define the space of harmonic forms by
+  \begin{align}
+    \Ha^k = \Ker\(\Delta:C^\infty\(\Lambda^p(M)\) \to C^\infty\(\Lambda^p(M)\)\),
+  \end{align}
+  then it follows that for every $\alpha\in \Ha^k$, $\alpha$ is closed and co-closed. 
+\end{Thm}
+\begin{proof}
+  Since $\Delta\alpha=0$, then
+  \begin{align}
+    0=\bk{\alpha}{\Delta\alpha}&=\bk{\alpha}{\df\dfd\alpha}+ \bk{\alpha}{\dfd\df\alpha}\\
+    &=\bk{\dfd\alpha}{\dfd\alpha}+ \bk{\df\alpha}{\df\alpha}\\
+    &= \norm{\dfd\alpha}^2+ \norm{\df\alpha}^2.
+  \end{align}
+  Since the sum of positive quantities vanishes, each quantity must vanish separately. Therefore,
+  \begin{align}
+    \df\alpha=\dfd\alpha=0.
+  \end{align}
+\end{proof}
+
+
+\section{Defining Actions in Physics}
+
+Now the machinery for constructing physical actions has been presented. Thus in this section, different actions will be shown.
+
+%In the lectures a part of the Abelian gauge theories was worked out, therefore it will be presented as first example.
+
+\subsection{Classical (non-relativistic) Point Particle}
+
+In classical physics the observed quantities are coordinates in $\R^3$, $x^i$ with $i=1,2,3$, denoting the position of a particle, while the only parameter is the time,  $t\in \R$.
+
+Therefore, a classical, non-relativistic, massive, point-particle is described by a map $x:\R\to\R^3$. In the language of bundles, $x$ is a section on a fibre bundle, $E\xrightarrow{~\pi~}M$, where the base manifold is the $\R$ (the time manifold), and its fibre is $\R^3$. Additionally, on the fibre an inner product is defined, $\bk{\bullet}{\bullet}$.
+
+
+
+
+\subsection{Electromagnetic Action}
+
+The electromagnetic action is a theory of a connection $\Af{1}$, with values on an Abelian gauge group ($U(1)$). The fundamental object for constructing the action is the field strength, $\FF{2}=\df\Af{1}$, which is gauge invariant.
+
+Using differential forms the action is,
+\begin{align}
+  \int\Lag[\Af{1}] = -\frac{1}{2}\int \FF{2}\w *\FF{2}+\int \Af{1}\w*J
+\end{align}
+
+
+\begin{Ebox}
+  \begin{itemize}
+  \item Use the properties of the exterior differentiation to find the equation of motion of the field $\Af{1}$.
+  \item Write the equations in components, then use the definitions of $\vec{E}$ and $\vec{B}$ to find the usual Maxwell equations.
+  \item Use the nilpotence of $\df$ (or $\dfd$) to find the continuity equation of $J$.
+  \item Show that the Lorentz condition $\partial_\mu A^\mu$ is expressed as $\df*\Af{1}$.
+  \end{itemize}
+\end{Ebox}
+     
+
+
+\subsection{Non-Abelian Gauge Theories}
+
+In order to go beyond the Abelian gauge theories, it is useful to give geometrical interpretation to the fields.
+
+As all of the physical theories, a gauge theory lies on a Minkowski spacetime, $M$, and the fields transform as irreps of the Lorentz group. In the case of a gauge boson,  $\Af{1}$, the field transforms under the (co)vector representation, therefore $\Af{1}$ is a section on the cotangent bundle ($T^*M$).
+
+Additionally, the field transforms as a connection under gauge transformations of a group $G$. Then, the field is also a section of the principal bundle $P(M,G)$, specifically $\Af{1}$ is a section on the associated bundle $P(M,G)\times_{Ad_G}\frak{g}$.
+
+Since the field is not invariant, the Lagrangian density must be made invariant. Then, an inner product on $\frak{g}$ should be considered, denoted $\vev{\bullet}$.
+
+Finally, the Lagrangian density is
+\begin{align}
+  \Lag[\Af{1}] =-\frac{1}{2} \vev{\FF{2}\w*\FF{2}},
+\end{align}
+where $\FF{2}$ is the curvature of the connection $\Af{1}$, defined by the ``twisted'' exterior derivative $\df_{\Af{1}}= \df +\Af{1}$,
+\begin{align}
+  \FF{2}= \df_{\Af{1}}\Af{1}= \df\Af{1} +\frac{1}{2}\Af{1}\w\Af{1}
+\end{align}
+
+
+\begin{WEbox}[frametitle={Equations of Motion for Yang-Mills Theories},
+  frametitlerule=true,
+  frametitlealignment=\centering,
+  frametitleaboveskip=10pt,]
+  In order to find the equation of motion of a Yang-Mills theory, one might use the fact that the ``twist'' derivative, $\df_{\Af{1}}$, acts on charged fields, then
+  \begin{align*}
+    \int \Lag[\Af{1}] &=-\frac{1}{2}\int \vev{\FF{2}\w*\FF{2}}\\
+    &=-\frac{1}{2}\int \df_{\Af{1}}\vev{\Af{1}\w*\FF{2}}-\frac{1}{2}\int \vev{\Af{1}\w\df_{\Af{1}}*\FF{2}}\\
+    &=-\frac{1}{2}\int \df\vev{\Af{1}\w*\FF{2}}-\frac{1}{2}\int \vev{\Af{1}\w\df_{\Af{1}}*\FF{2}},
+  \end{align*}
+  the first term vanishes for fields with compact support (or manifolds without boundaries), then, the equation of motion is 
+  \begin{align*}
+    \dfd_{\Af{1}}\FF{2} =0.
+  \end{align*}
+\end{WEbox}
+   
+
+
+
+
+\section{General Relativity Tensors}
+
+The formulation of General Relativity (GR) lies on the absence of torsion, therefore the only geometrical tensor which measures the lack of Euclidean structures on $M$ is the curvature.
+
+Roughly speaking the goal of GR is to associate the gravitational interaction to the geometrical deformation of the manifold. Therefore, one must mix objects with the geometrical information of the manifold with the object containing the matter distribution. The former is related with the Riemann tensor, while the later is the stress-energy tensor. Immediately, one notes that the rank of these tensors is not compatible, thus some arrange must be done.
+
+Using the curvature tensor, other simplified tensors can be constructed
+\begin{align}
+  \Ric(X,Y) &= \bk{\df x^\mu}{R(\partial_\mu,Y)X}\\
+  \Ri &= g^{\mu \nu}\Ric(\partial_\mu,\partial_\nu).
+\end{align}
+Since in most cases the stress-energy tensor is symmetric, it seems that Einstein's first proposal for the equations of gravity were
+\begin{align}
+  \Ri_{\mu\nu}=T_{\mu\nu},
+\end{align}
+but the R.H.S. of the equation was covariantly constant, while the L.H.S. was not. Thus, a covariantly constant construction made up with ``curvature'' tensors was
+\begin{align}
+  G_{\mu\nu} = \Ri_{\mu\nu}-\frac{1}{2}g_{\mu\nu}\Ri,
+\end{align}
+this tensor is known as Einstein tensor, ans the equation of gravity are written as,
+\begin{align}
+  G_{\mu\nu}= T_{\mu\nu}.
+\end{align}
+Additionally, there are spaces with ``cosmological constant'', $\Lambda$, and the Einstein's equations for this kind of spacetimes are
+\begin{align}
+  \Ri_{\mu\nu}-\frac{1}{2}g_{\mu\nu}\Ri + \Lambda g_{\mu\nu}= T_{\mu\nu}.
+\end{align}
+
+A manifold whose Ricci tensor is proportional to the metric is said to be an Einstein manifold,
+\begin{align}
+  \Ri_{\mu\nu} = \kappa g_{\mu\nu}.\label{def-const-curv}
+\end{align}
+
+Also, a manifold is said to have constant curvature if its curvature 2-form is
+\begin{align}
+  \Rif{ab}{} = \kappa\vif{a}\w\vif{b},
+\end{align}
+for a constant value $\kappa$.
+
+\begin{Ebox}
+  \begin{itemize}
+  \item Show that in vacuum, i.e., $T_{\mu\nu}=0$, Einstein's equations (without cosmological constant) might be written as
+    \begin{align}
+      \Ri_{\mu\nu}=0.
+    \end{align}
+  \item Show that in general, Einstein's equations  (without cosmological constant) might be written as
+    \begin{align}
+      \Ri_{\mu\nu}= T_{\mu\nu}-\frac{1}{D-2}g_{\mu\nu} T,
+    \end{align}
+    where $T$ is the trace of the Stress-Energy tensor,  and  $D$ is the spacetime dimension. These equations are known as Einstein's equations in the form of Ricci.
+  \item Derive the Einstein's equations in the form of Ricci, when the cosmological constant does not vanish.
+  \end{itemize}
+\end{Ebox}
+
+
+

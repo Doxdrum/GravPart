@@ -1,0 +1,314 @@
+%%%%%%%%%%%%%%%%%% ANOTHER LECTURE
+
+\chapter{Cartan Calculations in (semi)Riemannian Geometry}
+
+Before continuing, a change of notation will be made. Although this can be confusing, the previous notation is used often by mathematicians, while the following is used by physicist.
+
+\section{Frame Fields in (semi)Riemannian Geometry}
+
+%Before continuing, a change of notation will be made. Although this can be confusing, the previous notation is used often by mathematicians, while the following is used by physicist.
+
+Let $M$ be a manifold, and $g$ a (semi)Riemannian metric defined on $M$. Then the line element for the metric $g$ is
+\begin{align}
+  ds^2(g) = g_{\mu\nu}\df x^\mu \otimes\df x^\nu.
+\end{align}
+Nonetheless, the information about the metric structure of the manifold can be translate to the languages of frames,
+\begin{align}
+  ds^2(g) &= g_{\mu\nu}\df x^\mu \otimes\df x^\nu\\
+  &= \eta_{ab} \vi{a}{\mu}\vi{b}{\nu}\df x^\mu \otimes\df x^\nu\\
+  &=\eta_{ab}\vif{a}\otimes\vif{b}.
+\end{align}
+Therefore, the vielbein, $\vif{a}$, is the fields equivalent to the metric tensor. In order to complete the structure, one needs information about the transport of geometrical objects lying on bundles based on $M$. That information is encoded on the spin connection, $\spif{a}{b}$. Using these quantities one finds  the generalisation of the structure equations of Cartan,
+\begin{align}
+  \df\vif{a} +\spif{a}{b}\w\vif{b} &= \Tf{a},\label{firstSE}\\
+  \df\spif{a}{c}+\spif{a}{b}\w\spif{b}{c} &= \Rif{a}{c}\label{secondSE}.
+\end{align}
+In the sense of the previous lesson, the torsion 2-form, $\Tf{a}$, and the curvature 2-form,$\Rif{a}{c}$, measure the impossibility of endow an Euclidean structure on $M$.
+
+\subsection*{Remarks on the Structure Equations}
+
+\begin{itemize}
+\item In general relativity, the torsion vanishes. Therefore, the first Cartan's structure equation (\ref{firstSE}), yields an explicit expression for the spin connection as a function of the vielbein. This is equivalent to the well-known expression of the Levi-Civita connection $\Gamma_\mu{}^\lambda{}_\nu$ as a function of the metric and its derivatives.
+\item The components of the torsion and curvature 2-forms are given by
+%%%%
+%% Change the eq. of the torsion (to be the equiv of the curvature
+%%%%
+  \begin{align}
+    \tor_\mu{}^\lambda{}_\nu \;\df x^\mu\w\df x^\nu &= \tor_a{}^c{}_b \vin{\lambda}{c}\;\vif{a}\w\vif{b},\\
+    \Rif{a}{b} &= \frac{1}{2}\Ri^a{}_{b\mu\nu}\;\df x^\mu\w\df x^\nu.\label{def-curv-comp}
+  \end{align}
+\end{itemize}
+
+\begin{WEbox}[frametitle={Curvature of the 2-sphere},
+  frametitlerule=true,
+  frametitlealignment=\centering,
+  frametitleaboveskip=10pt,]
+  A 2-sphere  with radius $R$  has a line element given by
+  \begin{align}
+    ds^2(g) = R^2\(\df \theta\otimes\df \theta+\sin^2(\theta)\df\phi\otimes\df\phi\),
+  \end{align}
+  which can be written in terms of vielbeins as
+  \begin{align}
+    ds^2(g) = \delta_{ij}\vif{i}\otimes\vif{j},
+  \end{align}
+  with $$\vif{1}=R\df\theta\text{ and }\vif{2}=R\sin(\theta)\df\phi.$$
+
+  Using the first structure equation one gets,
+  \begin{align}
+    \df\vif{2} &= R\cos(\theta)\df\theta\w\df\phi\notag\\
+    &= -R\cos(\theta)\df\phi\w\df\theta\notag\\
+    &= -\cos(\theta)\df\phi\w\vif{1},
+  \end{align}
+  then
+  \begin{align}
+    \spif{2}{1} = \cos(\theta)\df\phi.
+  \end{align}
+
+  From the second structure equation, one obtains the only non-vanishing component of the 2-form curvature
+  \begin{align}
+    \Rif{2}{1} = -\Rif{1}{2} = \df\spif{2}{1} = -\sin(\theta)\df\theta\w\df\phi.
+  \end{align}
+  It follows from the last equation that
+  \begin{align}
+    \Rif{12}{} = \frac{1}{R^2}\vif{1}\w\vif{2},\label{curv-2sphere}
+  \end{align}
+  then, the 2-sphere is a manifold with constant curvature, as in Eq. \eqref{def-const-curv}, with (Gau\ss{}ian) curvature $\kappa=\frac{1}{R^2}$.
+
+  From Eqs. \eqref{def-curv-comp} and \eqref{curv-2sphere}, one obtains the non-vanishing component of the Riemann tensor,
+  \begin{align}
+    \Ri_{\theta\phi}{}^1{}_2 = \sin(\theta)\quad\Rightarrow\quad \Ri_{\theta\phi}{}^\theta{}_\phi = \sin^2(\theta).
+  \end{align}
+  Now, using the metric to raising and lowering indeces, and contracting, the Ricci and Ricci scalar are obtained,
+  \begin{align}
+    \Ri_{\theta\theta}&= 1, & \Ri_{\phi\phi}&= \sin^2(\theta),\notag\\
+    \Ri&= \frac{2}{R^2}. & &
+  \end{align}
+
+  Finally, note that the 2-sphere is an Einstein manifold, since
+  \begin{align}
+    \Ri_{\mu\nu} = \frac{1}{R^2}g_{\mu\nu}.
+  \end{align}
+\end{WEbox}
+
+\begin{WEbox}[frametitle={Curvature of the 2-hyperboloid},
+  frametitlerule=true,
+  frametitlealignment=\centering,
+  frametitleaboveskip=10pt,]
+  The line element of a 2-hyperboloid is very similar to the one on the 2-sphere,
+  \begin{align}
+    ds^2(g) = R^2\(\df \theta\otimes\df \theta+\sinh^2(\theta)\df\phi\otimes\df\phi\),
+  \end{align}
+  then, the calculation of the curvature can be followed straightforward from the previous example. Thus, only the results are show,
+  \begin{align}
+    \vif{1}&= R\df\theta & \vif{2} &= R\sinh(\theta)\df\phi\\
+    \spif{2}{1}&= \cosh(\theta)\df\phi & \Rif{2}{1} &= \sinh(\theta)\df\theta\w\df\phi\\
+    \Ri_{\phi\theta}{}^2{}_1 &= -\sinh(\theta) & \Ri_{\phi\theta}{}^\phi{}_\theta&= -1\\
+    \Ri_{\theta\theta}&= -1 & \Ri_{\phi\phi}&= -\sinh^2(\theta).
+  \end{align}
+  The Ricci scalar is 
+  \begin{align*}
+    \Ri = -\frac{2}{R^2},
+  \end{align*}
+  and the hyperboloid is a manifold of constant curvature,
+  \begin{align*}
+    \Rif{12}{} = -\frac{1}{R^2}\vif{1}\w\vif{2},
+  \end{align*}
+  i.e., the Gau\ss{}ian curvature of the hyperboloid is $\kappa=-\frac{1}{R^2}$.
+\end{WEbox}
+
+\begin{WEbox}
+  The curvature of the Anti de Sitter ($AdS$) spacetime is calculated, using Cartan's formalism.
+  
+  The metric of the $AdS$ spacetime is 
+  \begin{align}
+    ds^2(g) = \frac{1}{z^2}\(-\df t\otimes\df t +\df x\otimes\df x+\df y\otimes\df y+\df z\otimes\df z\),
+  \end{align}
+  then the vielbeins are
+  \begin{align}
+    \vif{0} &= \frac{\df t}{z}, & \vif{1} &= \frac{\df x}{z},\notag\\
+    \vif{2} &= \frac{\df y}{z}, & \vif{3} &= \frac{\df z}{z},
+  \end{align}
+  then,
+  \begin{align}
+    \df\vif{0}&=-\frac{1}{z^2}\df z\w\df t & \df\vif{1}&=-\frac{1}{z^2}\df z\w\df x\notag\\
+    &= \frac{1}{z}\df t\w\vif{3} & &= \frac{1}{z}\df x\w\vif{3}\\
+    \df\vif{2}&=-\frac{1}{z^2}\df z\w\df y & \df\vif{3}&=0\notag \\
+    &= \frac{1}{z}\df y\w\vif{3} & & \notag
+  \end{align}
+  therefore,
+  \begin{align}
+    \spif{0}{3} = -\frac{1}{z}\df t,\quad \spif{1}{3}=-\frac{1}{z}\df x,\quad \spif{2}{3} = -\frac{1}{z}\df y.
+  \end{align}
+  Now, using the second structure equation, Eq. (\ref{secondSE}), it follows that
+  \begin{align}
+    \Rif{0}{3} &= \df\spif{0}{3} = \frac{1}{z^2}\df z\w\df t &  \Rif{1}{3} &= \df\spif{1}{3} = \frac{1}{z^2}\df z\w\df x \notag\\
+    \Rif{2}{3} &= \df\spif{2}{3} = \frac{1}{z^2}\df z\w\df y &  \Rif{0}{1} &= \spif{0}{3}\w\spif{3}{1} = -\frac{1}{z^2}\df t\w\df x \\
+    \Rif{0}{2} &= \spif{0}{3}\w\spif{3}{2} = -\frac{1}{z^2}\df t\w\df y & \Rif{1}{2} &= \spif{1}{3}\w\spif{3}{2} = -\frac{1}{z^2}\df x\w\df y.\notag
+  \end{align}
+  
+  Now, the non-vanishing components of the Riemann tensor are,
+  \begin{align}
+    \Ri^t{}_{ztz} &= -\frac{1}{z^2} & \Ri^x{}_{zxz} &= -\frac{1}{z^2}\notag\\
+    \Ri^y{}_{zyz} &= -\frac{1}{z^2} & \Ri^t{}_{xtx} &= -\frac{1}{z^2}\\
+    \Ri^t{}_{yty} &= -\frac{1}{z^2} & \Ri^x{}_{yxy} &= -\frac{1}{z^2}\notag\\
+  \end{align}
+  and finally, the Ricci tensor is
+  \begin{align}
+    \Ri_{\mu\nu} = -3 g_{\mu\nu}.
+  \end{align}
+
+  The $AdS$ spacetime is an example of an Einstein space, or in other words it is a solution of Einstein's equations with cosmological constant, $\Lambda=-3$.
+\end{WEbox}
+
+\begin{Ebox}
+  Consider a Riemannian manifold with a metric whose line element is
+  \begin{align}
+    ds^2(g) = -e^{2\Xi(r)}\df t\otimes \df t+ e^{-2\Xi(r)}\df r\otimes\df r+ r^2\(\df\theta\otimes\df\theta+\sin^2(\theta)\df\phi\otimes\df\phi\),
+  \end{align}
+  Find the function $\Xi(r)$ which solves the Einstein's equation in the vacuum.
+\end{Ebox}
+
+\section{Playing with the Structure Equations}
+
+From the first S.E.
+\begin{align*}
+  \df\(\df\vif{a}+\spif{a}{b}\w\vif{b}\) =& \df\Tf{a}\\
+  \therefore\quad \(\df\spif{a}{b}\)\w\vif{b}-\spif{a}{b}\w\df\vif{b} =& \df\Tf{a}\\
+  \(\Rif{a}{b}-\spif{a}{c}\w\spif{c}{b}\)\w\vif{b}-\spif{a}{c}\w\df\vif{c}=&\df\Tf{a}\\
+  \Rif{a}{b}\w\vif{b}-\spif{a}{c}\w\(\spif{c}{b}\w\vif{b}+\df\vif{c}\)=&\df\Tf{a}\\
+  \Rif{a}{b}\w\vif{b}-\spif{a}{c}\w\Tf{c}=&\df\Tf{a},
+  %  \Rif{a}{b}\w\vif{b}=&\cdf\Tf{a}
+\end{align*}
+then,
+\begin{align}
+  \Rif{a}{b}\w\vif{b}=&\df\Tf{a}+\spif{a}{c}\w\Tf{c}.
+\end{align}
+
+
+From the second S.E.
+\begin{align*}
+  \df\(\df\spif{a}{b}+\spif{a}{c}\w\spif{c}{b}\) =& \df\Rif{a}{b}\\
+  \therefore\quad \(\df\spif{a}{c}\)\w\spif{c}{b}-\spif{a}{c}\w\(\df\spif{c}{b}\) =& \df\Rif{a}{b}\\
+  \Rif{a}{c}\w\spif{c}{b}-\spif{a}{c}\w\Rif{c}{b} =& \df\Rif{a}{b},%\\
+\end{align*}
+i.e.,
+\begin{align}
+  \df\Rif{a}{b} + \spif{a}{c}\w\Rif{c}{b} - \Rif{a}{c}\w\spif{c}{b}   =& 0.
+\end{align}
+
+
+\section[Hilbert-Einstein Action]{Hilbert-Einstein Action (\`a la Cartan)}
+
+
+
+\begin{Pro}
+  \begin{align*}
+    S_{gr} = \frac{1}{2\kappa^2}\int\frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\Rif{a_1 a_2}{}\w\vif{a_3}\w\cdots\w\vif{a_D}=\frac{1}{2\kappa^2}\int\dn{D}{x}\abs{e}\Ri.
+  \end{align*}
+\end{Pro}
+
+
+\begin{proof}
+ % \begin{small}
+    \begin{align*}
+      \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\Rif{a_1 a_2}{}\w\vif{a_3}\w\cdots\w\vif{a_D} =& \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\;\vif{c}\w\vif{d}\w\vif{a_3}\w\cdots\w\vif{a_D}\\
+      =& -\frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\;\epsilon^{c d a_3\cdots a_D}dV\\
+      =& \frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\(\delta_{a_1}^c\delta_{a_2}^d -\delta_{a_1}^d\delta_{a_2}^c \)\,dV\\
+      =& \dn{D}{x}\abs{e}\Ri
+    \end{align*}
+  %\end{small}
+\end{proof}
+
+\section{Example of a non-Trivial Calculation}
+
+Consider the metric whose line-element is
+\begin{align*}
+  ds^2(g) = A^2\[-\frac{(p^2\df\tau +\df\sigma)^2}{B^2}+\frac{(\df\tau - q^2\df\sigma)^2}{C^2}+B^2\df q^2 +C^2\df p^2\],
+\end{align*}
+with $A,B,C$ function on $p$ and $q$.
+
+Define,
+\begin{align*}
+  \bs{\tht}^0 &= p^2\df\tau +\df\sigma,\\
+  \bs{\tht}^1 &= \df\tau - q^2\df\sigma.
+\end{align*}
+Then,
+\begin{align*}
+  \df\tau &= \frac{q^2\bs{\tht}^0 +\bs{\tht}^1}{1+p^2q^2},\\
+  \df\sigma &= \frac{\bs{\tht}^0 -p^2\bs{\tht}^1}{1+p^2q^2}.
+\end{align*}
+Additionally,
+\begin{align}
+  \df\bs{\tht}^0 &= \df\(p^2\df\tau +\df\sigma\)\notag\\
+  &= 2p \,\df p\w\df \tau\notag\\
+  &= \frac{2p}{1+p^2q^2}\(q^2\, \df p\w\bs{\tht}^0 +\df p\w\bs{\tht}^1\)\\
+  \df\bs{\tht}^1 &= \df\(\df\tau -q^2\df\sigma\)\notag\\
+  &= -2q \,\df q\w\df \sigma\notag\\
+  &=-\frac{ 2q}{1+p^2q^2}\(\df q\w\bs{\tht}^0 - p^2\,\df q\w\bs{\tht}^1\).
+\end{align}
+
+
+Choosing the vielbeins by,
+\begin{align}
+  \vif{0} &= \frac{A}{B}\,\bs{\tht}^0,\\
+  \vif{1} &= \frac{A}{C}\,\bs{\tht}^1,\\
+  \vif{2} &= AB\,\df q,\\
+  \vif{3} &= AC\,\df p,
+\end{align}
+their exterior derivative are
+\begin{align}
+  \df\vif{0} &= \partial_p\(\frac{A}{B}\)\, \df p\w\bs{\tht}^0 + \partial_q\(\frac{A}{B}\)\, \df q\w\bs{\tht}^0 + \frac{A}{B}\,\df\bs{\tht}^0,\\
+  \df\vif{1} &= \partial_p\(\frac{A}{C}\)\, \df p\w\bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \df q\w\bs{\tht}^1 + \frac{A}{C}\,\df\bs{\tht}^1,\\
+  \df\vif{2} &= \partial_p(AB) \,\df p\w\df q ,\\
+  \df\vif{3} &= \partial_q(AC)\, \df q\w\df p.
+\end{align}
+
+Now, 
+\begin{align}
+  \df\vif{2} &= \partial_p(AB) \,\df p\w\df q \notag\\
+  &= -\partial_p(AB) \,\df q\w\df p \notag\\
+  &= -\frac{\partial_p(AB)}{AC} \,\df q\w\vif{3} \label{DLspi23}\\
+  &= -\spif{2}{a}\w\vif{a},\notag
+\end{align}
+and
+\begin{align}
+  \df\vif{3} &= \partial_q(AC) \,\df q\w\df p \notag\\
+  &= -\partial_q(AC) \,\df p\w\df q \notag\\
+  &= -\frac{\partial_q(AC)}{AB} \,\df p\w\vif{2} \label{DLspi32}\\
+  &= -\spif{3}{a}\w\vif{a}.\notag
+\end{align}
+Note that one needs to combine Eqs. \eqref{DLspi23} and \eqref{DLspi32}, to obtain a consistent spin connection $\spif{23}{}=-\spif{32}{}$. The final result is therefore,
+\begin{align}
+  \spif{2}{3}= \spif{23}{} = -\spif{32}{}=-\spif{3}{2}&= \frac{\partial_p(AB)}{AC} \,\df q - \frac{\partial_q(AC)}{AB} \,\df p \\
+  &= \frac{1}{A^2BC} \[\partial_p(AB)\,\vif{2} - {\partial_q(AC)}\,\vif{3}\].\notag
+\end{align}
+
+From
+\begin{align}
+  \df\vif{0} &= \partial_p\(\frac{A}{B}\)\, \df p\w\bs{\tht}^0 + \partial_q\(\frac{A}{B}\)\, \df q\w\bs{\tht}^0 + \frac{A}{B}\,\df\bs{\tht}^0\notag\\
+  &= -\partial_p\(\frac{A}{B}\)\, \bs{\tht}^0\w\df p - \partial_q\(\frac{A}{B}\)\, \bs{\tht}^0\w\df q + \frac{2p}{1+p^2q^2}\frac{A}{B}\(q^2\, \df p\w\bs{\tht}^0 +\df p\w\bs{\tht}^1\)\notag\\
+  %% &= -\frac{1}{AC}\partial_p\(\frac{A}{B}\)\, \bs{\tht}^0\w\vif{3} - \frac{1}{AB}\partial_q\(\frac{A}{B}\)\, \bs{\tht}^0\w\vif{2} + 2p\frac{A}{B}\,\frac{q^2\, \df p\w\bs{\tht}^0 +\df p\w\bs{\tht}^1}{1+p^2q^2}\notag\\
+  %% &= -\frac{1}{A^2BC}\partial_p\(\frac{A}{B}\)\, \vif{0}\w\vif{3} - \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0}\w\vif{2}\notag \\
+  %% &{\phantom{=\;}} - 2p q^2\frac{A}{B}\,\frac{\bs{\tht}^0\w\df p }{1+p^2q^2}+ 2p\frac{A}{B}\,\frac{\df p\w\bs{\tht}^1}{1+p^2q^2}\notag\\
+  &= -\[\frac{B}{A^2C}\partial_p\(\frac{A}{B}\) + \frac{1}{AC}\,\frac{2p q^2}{1+p^2q^2}  \]\, \vif{0}\w\vif{3} - \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0}\w\vif{2}\notag \\
+  &{\phantom{=\;}} + \frac{2p}{1+p^2q^2}\frac{1}{AB}\;\vif{3}\w\vif{1}\\
+  &= -\spif{0}{a}\w\vif{a},\notag
+\end{align}
+and,
+\begin{align}
+  \df\vif{1} &= \partial_p\(\frac{A}{C}\)\, \df p\w\bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \df q\w\bs{\tht}^1 + \frac{A}{C}\,\df\bs{\tht}^1\notag\\
+  &= \partial_p\(\frac{A}{C}\)\, \df p\w\bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \df q\w\bs{\tht}^1 - \frac{2q}{1+p^2q^2}\frac{A}{C}\, \(\df q\w\bs{\tht}^0 - p^2\,\df q\w\bs{\tht}^1\)\notag\\
+  &= -\frac{1}{A^2}\partial_p\(\frac{A}{C}\)\, \vif{1}\w\vif{3} - \[\frac{C}{A^2B}\partial_q\(\frac{A}{C}\) + \frac{2q p^2}{1+p^2q^2}\frac{1}{AB}\]\,\vif{1}\w\vif{2} \notag\\
+  &{\phantom{=\;}} - \frac{2q}{1+p^2q^2}\frac{1}{AC}\, \vif{2}\w\vif{0} ,\\
+  &= -\spif{1}{a}\w\vif{a},\notag
+\end{align}
+one obtains
+\begin{align}
+  \spif{0}{1} &= - \frac{p}{1+p^2q^2}\frac{1}{AB}\,\vif{3} + f_{01}\\
+  \spif{0}{2} &= \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0} - f_{02}\\
+  \spif{0}{3} &=  \[\frac{B}{A^2C}\partial_p\(\frac{A}{B}\) + \frac{2p q^2}{1+p^2q^2}\frac{1}{AC}\]\, \vif{0} + \frac{p}{1+p^2q^2}\frac{1}{AB}\,\vif{1} - f_{03},\\
+  \spif{1}{0} &= \frac{q}{1+p^2q^2}\frac{1}{AC}\, \vif{2} -f_{10},\\
+  \spif{1}{2} &=\[\frac{C}{A^2B}\partial_q\(\frac{A}{C}\)+\frac{2qp^2}{1+p^2q^2}\frac{1}{AB}\]\,\vif{1} -\frac{q}{1+p^2q^2}\frac{1}{AC}\, \vif{0} - f_{12},\\
+  \spif{1}{3} &= \frac{1}{A^2}\partial_p\(\frac{A}{C}\)\, \vif{1} - f_{13},
+\end{align}
+where the 1-forms $f_{ab}$ will be adjusted to get a consistent set of spin connection 1-forms.
