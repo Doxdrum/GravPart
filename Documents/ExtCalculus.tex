@@ -13,9 +13,9 @@ Since differential form are tensor, the basis could be the same than for tensors
 \end{align*}
 however, since forms are totally antisymmetric, it is more appealing to define an antisymmetric product of the basis. This new product is called ``wedge'' product ($\w$), and is defined by
 \begin{align}
-  \df x^\mu\w\df x^\nu &= \df x^\mu\otimes\df x^\nu-\df x^\nu\otimes \df x^\mu\\
+  \df\; x^\mu\w\df\; x^\nu &= \df\; x^\mu\otimes\df\; x^\nu-\df\; x^\nu\otimes \df\; x^\mu\\
  &\vdots\\
-  \df x^{\mu_1}\w\cdots\w\df x^{\mu_p}&= \sum_{\text{perm.}}(-1)^{\abs{\sigma}}\df x^{\sigma(\mu_1)}\otimes\cdots\otimes\df x^{\sigma(\mu_p)}
+  \df\; x^{\mu_1}\w\cdots\w\df\; x^{\mu_p}&= \sum_{\text{perm.}}(-1)^{\abs{\sigma}}\df\; x^{\sigma(\mu_1)}\otimes\cdots\otimes\df\; x^{\sigma(\mu_p)}
 \end{align}
 
 The vector space of differential forms of order $p$ on a manifold $M$ is denoted by $\Omega^p(M)$ or $\Lambda^p(M)$. Moreover, if $\dim(M)=m$, then
@@ -53,11 +53,11 @@ As stated previously, although the derivative transforms like a 1-form, the deri
 
 In the same way, one defines an exterior derivative which maps $p$-forms into $(p+1)$-forms,
 \begin{align}
-  \df : \Lambda^p(M)\to\lambda^{p+1}(M),
+  \df\; : \Lambda^p(M)\to\lambda^{p+1}(M),
 \end{align}
 defined as follows. Let $\omega$ be a differential $p$-form on $M$, then
 \begin{align}
-  \df\omega\(X_1,\cdots,X_{p+1}\) &= \sum_{i=1}^p (-1)^{i+1}X_i\[\omega\(X_1,\cdots,\hat{X}_i,\cdots,X_{p+1}\)\]\\
+  \df\;\omega\(X_1,\cdots,X_{p+1}\) &= \sum_{i=1}^p (-1)^{i+1}X_i\[\omega\(X_1,\cdots,\hat{X}_i,\cdots,X_{p+1}\)\]\\
   &\phantom{ ==}\sum_{i<j} (-1)^{i+j}\omega\(\comm{X_i}{X_j},X_1,\cdots,\hat{X}_i,\cdots\hat{X}_i,\cdots,X_{p+1}\).\notag
 \end{align}
 
@@ -65,21 +65,21 @@ defined as follows. Let $\omega$ be a differential $p$-form on $M$, then
   \begin{itemize}
   \item Show by explicit calculation that
     \begin{align}
-      \df\omega_{(1)}(X,Y) = X[\omega(Y)]-Y[\omega(X)]-\omega(\comm{X}{Y}).
+      \df\;\omega_{(1)}(X,Y) = X[\omega(Y)]-Y[\omega(X)]-\omega(\comm{X}{Y}).
     \end{align}
   \item Show that if $\omega$ is a differential $p$-form with components
     \begin{align}
-      \omega = \frac{1}{p!}\omega_{\mu_1\cdots\mu_p}\;\df x^{\mu_1}\w\cdots\w\df x^{\mu_p},
+      \omega = \frac{1}{p!}\omega_{\mu_1\cdots\mu_p}\;\df\; x^{\mu_1}\w\cdots\w\df\; x^{\mu_p},
     \end{align}
     then its exterior derivative yields,
     \begin{align}
-      \df\omega = \frac{1}{p!}\pa{\nu}\omega_{\mu_1\cdots\mu_p}\;\df x^\nu\w\df x^{\mu_1}\w\cdots\w\df x^{\mu_p}.
+      \df\;\omega = \frac{1}{p!}\pa{\nu}\omega_{\mu_1\cdots\mu_p}\;\df\; x^\nu\w\df\; x^{\mu_1}\w\cdots\w\df\; x^{\mu_p}.
     \end{align}
   \end{itemize}
 \end{Ebox}
 
 
-It follows from the definition of the exterior derivative, that the double action of $\df$ vanishes, i.e., $\df^2=0$. This property is known as {\bf nilpotency}.
+It follows from the definition of the exterior derivative, that the double action of $\df\;$ vanishes, i.e., $\df\;^2=0$. This property is known as {\bf nilpotency}.
 
 
 
@@ -97,30 +97,30 @@ It follows from the definition of the exterior derivative, that the double actio
   
   Let $f\in\Lambda^0(\R^3) $, then the exterior derivative of $f$ yields
   \begin{align}
-    \df f= \frac{\partial f}{\partial x}\df x +\frac{\partial f}{\partial y}\df y +\frac{\partial f}{\partial z}\df z,
+    \df\; f= \frac{\partial f}{\partial x}\df\; x +\frac{\partial f}{\partial y}\df\; y +\frac{\partial f}{\partial z}\df\; z,
   \end{align}
   which is the equivalent of the gradient operation.
   
-  Let $\omega\in \Lambda^1(\R^3)$ with components $\omega = \omega_x\df x+\omega_y\df y+\omega_z\df z$, then its exterior derivative yields,
+  Let $\omega\in \Lambda^1(\R^3)$ with components $\omega = \omega_x\df\; x+\omega_y\df\; y+\omega_z\df\; z$, then its exterior derivative yields,
   \begin{align}
-    \df\omega &= \(\partial_x\omega_y-\partial_y\omega_x\)\df x\w\df y +\(\partial_y\omega_z-\partial_z\omega_y\)\df y\w\df z\notag\\
-    &\phantom{==}+\(\partial_z\omega_x-\partial_x\omega_z\)\df z\w\df x, 
+    \df\;\omega &= \(\partial_x\omega_y-\partial_y\omega_x\)\df\; x\w\df\; y +\(\partial_y\omega_z-\partial_z\omega_y\)\df\; y\w\df\; z\notag\\
+    &\phantom{==}+\(\partial_z\omega_x-\partial_x\omega_z\)\df\; z\w\df\; x, 
   \end{align}
   which is the equivalent of the curl of $\omega$.
 
-  Let $\omega\in \Lambda^2(\R^3)$ with components $\omega = \omega_{xy}\df x\w\df y+\omega_{yz}\df y\w\df z+\omega_{zx}\df z\w\df x$, then its exterior derivative yields,
+  Let $\omega\in \Lambda^2(\R^3)$ with components $\omega = \omega_{xy}\df\; x\w\df\; y+\omega_{yz}\df\; y\w\df\; z+\omega_{zx}\df\; z\w\df\; x$, then its exterior derivative yields,
   \begin{align}
-    \df \omega = \(\partial_x\omega_{yz}+\partial_y\omega_{zx}+\partial_z\omega_{xy}\)\df x\w\df y\w \df z,
+    \df\; \omega = \(\partial_x\omega_{yz}+\partial_y\omega_{zx}+\partial_z\omega_{xy}\)\df\; x\w\df\; y\w \df\; z,
   \end{align}
   which is the equivalent of the divergence of $\omega$.
 
-  Finally, for $\omega\in\Lambda^3(\R^3)$, then $\df\omega=0$ due to the nilpotency of $\df$.
+  Finally, for $\omega\in\Lambda^3(\R^3)$, then $\df\;\omega=0$ due to the nilpotency of $\df\;$.
 
 
-  Now, if one would like to compare with some differential properties on vector calculus, from the nilpotence of $\df$, it follows that
+  Now, if one would like to compare with some differential properties on vector calculus, from the nilpotence of $\df\;$, it follows that
   \begin{align}
-    \df(\df f) =0\quad&\Rightarrow \quad \vec{\nabla}\times \vec{\nabla}f =0,\\
-    \df\(\df\omega_{(1)}\)=0 \quad&\Rightarrow\quad  \vec{\nabla}\cdot\( \vec{\nabla}\times \vec{\omega}\)=0.
+    \df\;(\df\; f) =0\quad&\Rightarrow \quad \vec{\nabla}\times \vec{\nabla}f =0,\\
+    \df\;\(\df\;\omega_{(1)}\)=0 \quad&\Rightarrow\quad  \vec{\nabla}\cdot\( \vec{\nabla}\times \vec{\omega}\)=0.
   \end{align}
 \end{WEbox}
 
@@ -140,7 +140,7 @@ which is extended naturally to type $\binom{0}{p}$-tensors (and to differential 
   \begin{itemize}
   \item Show that
     \begin{align}
-      f^*\(\df\omega\) =\df\(f^*\omega\).
+      f^*\(\df\;\omega\) =\df\;\(f^*\omega\).
     \end{align}
     \item Show that
     \begin{align}
@@ -156,26 +156,26 @@ which is extended naturally to type $\binom{0}{p}$-tensors (and to differential 
   frametitleaboveskip=10pt,]
   The exterior derivative operator induces a sequence, {\it a.k.a.} a complex,
   \begin{align}
-    0\stackrel{~i~}{\hookrightarrow }\Lambda^0(M) \xrightarrow{~\df~}\Lambda^1(M) \xrightarrow{~\df~}\cdots\xrightarrow{~\df~} \Lambda^{m-1}(M) \xrightarrow{~\df~}\Lambda^m(M) \xrightarrow{~\df~} 0,
+    0\stackrel{~i~}{\hookrightarrow }\Lambda^0(M) \xrightarrow{~\df\;~}\Lambda^1(M) \xrightarrow{~\df\;~}\cdots\xrightarrow{~\df\;~} \Lambda^{m-1}(M) \xrightarrow{~\df\;~}\Lambda^m(M) \xrightarrow{~\df\;~} 0,
   \end{align}
   called the {\bf de Rham complex}.
 
   Defining,
   \begin{itemize}
-  \item A form, $\omega$, is said to be closed if $\df\omega =0$.
-  \item A form, $\omega$, is said to be exact if $\omega =\df\xi$.
+  \item A form, $\omega$, is said to be closed if $\df\;\omega =0$.
+  \item A form, $\omega$, is said to be exact if $\omega =\df\;\xi$.
   \end{itemize}
 
-  Due to the nilpotency of $\df$, it follows that,
+  Due to the nilpotency of $\df\;$, it follows that,
   {\small
   \begin{align*}
-    \Im\(\df:C^\infty\(\Lambda^{p-1}(M)\)\to C^\infty\(\Lambda^{p}(M)\)\)\subset\Ker\(\df:C^\infty\(\Lambda^{p}(M)\)\to C^\infty\(\Lambda^{p+1}(M)\) \).
+    \Im\(\df\;:C^\infty\(\Lambda^{p-1}(M)\)\to C^\infty\(\Lambda^{p}(M)\)\)\subset\Ker\(\df\;:C^\infty\(\Lambda^{p}(M)\)\to C^\infty\(\Lambda^{p+1}(M)\) \).
   \end{align*}
   }
 
   Therefore, the {\bf $\mathbf{p}$-th de Rham Cohomology group}, $H^p(M)$, is defined by
   \begin{align*}
-    H^p(M)\equiv \frac{\Ker\(\df:C^\infty\(\Lambda^{p}(M)\)\to C^\infty\(\Lambda^{p+1}(M)\) \)}{\Im\(\df:C^\infty\(\Lambda^{p-1}(M)\)\to C^\infty\(\Lambda^{p}(M)\)\)}.
+    H^p(M)\equiv \frac{\Ker\(\df\;:C^\infty\(\Lambda^{p}(M)\)\to C^\infty\(\Lambda^{p+1}(M)\) \)}{\Im\(\df\;:C^\infty\(\Lambda^{p-1}(M)\)\to C^\infty\(\Lambda^{p}(M)\)\)}.
   \end{align*}
 \end{WEbox}
 
@@ -196,20 +196,20 @@ defined by
 \end{align}
 In components it can be written as
 \begin{align}
-  i_X\omega &= \frac{1}{(p-1)!}X^\nu \omega_{\nu,\mu_2,\cdots,\mu_{p}}\;\df x^{\mu_2}\w\cdots\w\df x^{\mu_p}\\
-  &= \frac{1}{p!}\sum_{s=1}^p X^{\mu_s} \omega_{\mu_1,\cdots,\mu_s,\cdots,\mu_{p}}\;\df x^{\mu_2}\w\cdots\w\widehat{\df x}^{\mu_s}\w\cdots\w\df x^{\mu_p}.\notag
+  i_X\omega &= \frac{1}{(p-1)!}X^\nu \omega_{\nu,\mu_2,\cdots,\mu_{p}}\;\df\; x^{\mu_2}\w\cdots\w\df\; x^{\mu_p}\\
+  &= \frac{1}{p!}\sum_{s=1}^p X^{\mu_s} \omega_{\mu_1,\cdots,\mu_s,\cdots,\mu_{p}}\;\df\; x^{\mu_2}\w\cdots\w\widehat{\df\; x}^{\mu_s}\w\cdots\w\df\; x^{\mu_p}.\notag
 \end{align}
 
 
-Using the exterior derivative and the interior product, one can construct the operator $\df i_x+i_X \df$. This operator can be applied to 1-forms,
+Using the exterior derivative and the interior product, one can construct the operator $\df\; i_x+i_X \df\;$. This operator can be applied to 1-forms,
 \begin{align}
-  \(\df i_x+i_X \df\)\omega &=\df(X^\mu\omega_\mu) +i_x\(\pa{\mu}\omega_\nu \df x^\mu\w\df x^\nu\)\notag\\
-  &=\(\pa{\nu}X^\mu\)\omega_\mu\df x^\nu +X^\mu\(\pa{\nu}\omega_\mu\)\df x^\nu +X^\mu\(\pa{\mu}\omega_\nu-\pa{\nu}\omega_\mu\)\df x^\nu\notag\\
-  &=\[\omega(\pa{\nu}X^\mu)+X^\mu(\pa{\mu}\omega_\nu)\]\df x^\nu,
+  \(\df\; i_x+i_X \df\;\)\omega &=\df\;(X^\mu\omega_\mu) +i_x\(\pa{\mu}\omega_\nu \df\; x^\mu\w\df\; x^\nu\)\notag\\
+  &=\(\pa{\nu}X^\mu\)\omega_\mu\df\; x^\nu +X^\mu\(\pa{\nu}\omega_\mu\)\df\; x^\nu +X^\mu\(\pa{\mu}\omega_\nu-\pa{\nu}\omega_\mu\)\df\; x^\nu\notag\\
+  &=\[\omega(\pa{\nu}X^\mu)+X^\mu(\pa{\mu}\omega_\nu)\]\df\; x^\nu,
 \end{align}
 which is nothing but the Lie derivative of a differential 1-form,
 \begin{align}
-  \Li_X\omega = \(\df i_x+i_X \df\)\omega.
+  \Li_X\omega = \(\df\; i_x+i_X \df\;\)\omega.
 \end{align}
 The above expression is general for differential forms of any order.
 
@@ -229,9 +229,9 @@ The interior product and the Lie derivative satisfy
 
   Let $\set{q^\mu,p_\mu}$, with $\mu=1...m$, be  the coordinates on $\Phi^m$. One might define a symplectic form on $\Phi^m$ by
   \begin{align*}
-    \Lambda^2\(\Phi^m\)\ni \omega = \df p_\mu\w\df q^\mu,
+    \Lambda^2\(\Phi^m\)\ni \omega = \df\; p_\mu\w\df\; q^\mu,
   \end{align*}
-  and a 1-form $\theta=q^\mu \df p_\mu\in \Lambda^1\(\Phi^m\)$, s.t. $\omega=-\df\theta$.
+  and a 1-form $\theta=q^\mu \df\; p_\mu\in \Lambda^1\(\Phi^m\)$, s.t. $\omega=-\df\;\theta$.
   
   Given a function $f:\Phi^m\to \R$. one might define the {\sc Hamiltonian Vector Field}
   \begin{align*}
@@ -239,7 +239,7 @@ The interior product and the Lie derivative satisfy
   \end{align*}
   Then,
   \begin{align*}
-    i_{X_f}\omega =-\pder{f}{q^\mu}\df q^\mu -\pder{f}{p_\mu}\df p_\mu = -\df f.
+    i_{X_f}\omega =-\pder{f}{q^\mu}\df\; q^\mu -\pder{f}{p_\mu}\df\; p_\mu = -\df\; f.
   \end{align*}
 
   The Hamilton equations,
@@ -248,7 +248,7 @@ The interior product and the Lie derivative satisfy
   \end{align*}
   can be written as
   \begin{align*}
-    i_{X_\Ha}\omega = -\pder{\Ha}{q^\mu}\df q^\mu -\pder{\Ha}{p_\mu}\df p_\mu = -\df\Ha,
+    i_{X_\Ha}\omega = -\pder{\Ha}{q^\mu}\df\; q^\mu -\pder{\Ha}{p_\mu}\df\; p_\mu = -\df\;\Ha,
   \end{align*}
   where the identity
   \begin{align*}
@@ -260,7 +260,7 @@ The interior product and the Lie derivative satisfy
 
   Also, the action of two interior products on $\omega$ yields the Poisson bracket,
   \begin{align*}
-    i_{X_f}\(i_{X_g}\omega\) &=-i_{X_f}(\df g) = -i_{X_f}\(\pder{g}{q^\mu}\df q^\mu +\pder{g}{p_\mu}\df p_\mu\)\\
+    i_{X_f}\(i_{X_g}\omega\) &=-i_{X_f}(\df\; g) = -i_{X_f}\(\pder{g}{q^\mu}\df\; q^\mu +\pder{g}{p_\mu}\df\; p_\mu\)\\
     &= -\pder{f}{p_\mu}\pder{g}{q^\mu}+\pder{f}{q^\mu}\pder{g}{p_\mu}\\
     &=\acomm{f}{g}_{P.B.}.
   \end{align*}
@@ -272,29 +272,29 @@ The interior product and the Lie derivative satisfy
   frametitleaboveskip=10pt,]
   Let $M$ be a four-dimensional, flat, Lorentzian spacetime endowed with a Minkowski metric, $\eta=\diag(-1,1,1,1)$, and $A_\mu = (-\phi,\vec{A})$ be a four-vector on $T^*M$. One can construct the 1-form 
   \begin{align}
-    A = -\phi\df t +A_i\df x^i.
+    A = -\phi\df\; t +A_i\df\; x^i.
   \end{align}
 
   Define the 2-form, $F$ as the exterior derivative of $A$,
   \begin{align}
-    F &= \df A\\
-    &= -\partial_i\phi\;\df x^i\w\df t +\partial_t A_i\;\df t\w\df x^i + \partial_i A_j\;\df x^i\w\df x^j\\
-    &= \(\partial_i\phi+\partial_t A_i\)\;\df t\w\df x^i+ \partial_i A_j\;\df x^i\w\df x^j\\
-    &= -\df t\w \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
+    F &= \df\; A\\
+    &= -\partial_i\phi\;\df\; x^i\w\df\; t +\partial_t A_i\;\df\; t\w\df\; x^i + \partial_i A_j\;\df\; x^i\w\df\; x^j\\
+    &= \(\partial_i\phi+\partial_t A_i\)\;\df\; t\w\df\; x^i+ \partial_i A_j\;\df\; x^i\w\df\; x^j\\
+    &= -\df\; t\w \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
   \end{align}
   where the differential forms $\mathbf{E}$ and $\mathbf{B}$ are the associated to the electric and magnetic field.
   
-  Now, the nilpotency of $\df$ implies that,
+  Now, the nilpotency of $\df\;$ implies that,
   \begin{align}
-    \df F = \df\df A =0,
+    \df\; F = \df\;\df\; A =0,
   \end{align}
   while on the other hand, 
   \begin{align}
-    \df F = \df t\w \df_s\mathbf{E}_{(1)} +\df_t\mathbf{B}_{(2)}+\df_s\mathbf{B}_{(2)},\label{MaxdF}
+    \df\; F = \df\; t\w \df\;_s\mathbf{E}_{(1)} +\df\;_t\mathbf{B}_{(2)}+\df\;_s\mathbf{B}_{(2)},\label{MaxdF}
   \end{align}
-  where $\df_t$ and $\df_s$ are the exterior derivative on the time and space respectively.
+  where $\df\;_t$ and $\df\;_s$ are the exterior derivative on the time and space respectively.
   
-  Since the basis elements $\df t$ and $\df x^i$ are linearly independent, it follows that components containing projections along the time are independent of those lying only on the space. Thus, Eq. (\ref{MaxdF}), decompose into two independent equations,
+  Since the basis elements $\df\; t$ and $\df\; x^i$ are linearly independent, it follows that components containing projections along the time are independent of those lying only on the space. Thus, Eq. (\ref{MaxdF}), decompose into two independent equations,
   \begin{align}
     \partial_t \vec{B} +\vec{\nabla}\cdot\vec{E} &=0,\notag\\
     \vec{\nabla}\cdot\vec{B}&=0,\label{MaxBianchi}
@@ -303,9 +303,9 @@ The interior product and the Lie derivative satisfy
 
   When a change can be made to the geometrical object, $A$ in this case, and the physical fields (what can be measured) do not vary, $\vec{E}$ and $\vec{B}$, the theory is said to posses a  {\bf gauge  invariance}.
 
-  The electromagnetic theory is a gauge theory. Note that the electric and magnetic fields enters through $F$, not through $A$. Thus, if one changes $A\mapsto A+\df f$, the $F$ field do not changes,
+  The electromagnetic theory is a gauge theory. Note that the electric and magnetic fields enters through $F$, not through $A$. Thus, if one changes $A\mapsto A+\df\; f$, the $F$ field do not changes,
   \begin{align}
-    F\to F' = \df A' = \df\( A+\df f\) = \df A = F.
+    F\to F' = \df\; A' = \df\;\( A+\df\; f\) = \df\; A = F.
   \end{align}
 
   In order to conclude, it is worth to remark that the physical observables of the electromagnetic theory, $\vec{E}$ and $\vec{B}$, lie in a close form, $F$, but are defined up to a gauge transformation, i.e., $A$ is unique up to an exact form. Therefore, the physical states live in the second cohomological group of the Minkowski space, $H^2\(\R^{1,3}\)$.

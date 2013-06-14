@@ -20,7 +20,7 @@ instead of Eq. (\ref{riem-cond}), the metric is said to be semi-Riemannian.
 
 Given a set of coordinated on $M$, the metric is expressed as 
 \begin{align}
-  g_p = g_{\mu\nu}(p)\;\df x^\mu\otimes\df x^\nu,
+  g_p = g_{\mu\nu}(p)\;\df\; x^\mu\otimes\df\; x^\nu,
 \end{align}
 with
 \begin{align}
@@ -82,19 +82,19 @@ such that, for $\alpha,\beta\in C^\infty\(\Lambda^p(M)\)$,
 \end{Ebox}
       
 
-Using this, a formal  dual of the differential operator $\df$ can be defined,
+Using this, a formal  dual of the differential operator $\dfd\;$ can be defined,
 \begin{align}
-  \dfd:\Lambda^p(M)\to\Lambda^{p-1}(M),
+  \dfd\;:\Lambda^p(M)\to\Lambda^{p-1}(M),
 \end{align}
 such that (on compact manifolds)
 \begin{align}
-  \bk{\dfd \alpha_{(p+1)}}{\beta_{(p)}}=\bk{\alpha_{(p+1)}}{\df\beta_{(p)}}.
+  \bk{\dfd\; \alpha_{(p+1)}}{\beta_{(p)}}=\bk{\alpha_{(p+1)}}{\df\;\beta_{(p)}}.
 \end{align}
-The operator $\dfd$ is called co-differential, and it is nilpotent as its partner $\df$, i.e., $\df^2 ={\dfd}^2=0$. Also, a differential form is said to be co-closed is $\dfd\alpha=0$ and co-exact if $\alpha=\dfd\beta$, thus, $\dfd$ defines a complex, and a homology.
+The operator $\dfd\;$ is called co-differential, and it is nilpotent as its partner $\df\;$, i.e., $\df\;^2 ={\dfd\;}^2=0$. Also, a differential form is said to be co-closed is $\dfd\;\alpha=0$ and co-exact if $\alpha=\dfd\;\beta$, thus, $\dfd\;$ defines a complex, and a homology.
 
 
 \begin{Ebox}
-  Use the symmetric properties of the product of forms and the ``idempotence'' of the Hodge star operation, to find an expression of the co-differential operator in terms of $\df$ and $*$.
+  Use the symmetric properties of the product of forms and the ``idempotence'' of the Hodge star operation, to find an expression of the co-differential operator in terms of $\df\;$ and $*$.
 \end{Ebox}
      
 
@@ -102,7 +102,7 @@ The operator $\dfd$ is called co-differential, and it is nilpotent as its partne
 Using the differential and co-differential operators on forms, the Laplacian on differential forms can be defined by,
 \begin{align}
   \Delta:C^\infty\(\Lambda^p(M)\) &\to C^\infty\(\Lambda^p(M)\)\\
-  \Delta&= \df\dfd+\dfd\df
+  \Delta&= \df\dfd\;+\dfd\;\df
 \end{align}
 A form satisfying $\Delta\alpha=0$ is said to be an {\bf Harmonic Form}.
 
@@ -116,13 +116,13 @@ A form satisfying $\Delta\alpha=0$ is said to be an {\bf Harmonic Form}.
 \begin{proof}
   Since $\Delta\alpha=0$, then
   \begin{align}
-    0=\bk{\alpha}{\Delta\alpha}&=\bk{\alpha}{\df\dfd\alpha}+ \bk{\alpha}{\dfd\df\alpha}\\
-    &=\bk{\dfd\alpha}{\dfd\alpha}+ \bk{\df\alpha}{\df\alpha}\\
-    &= \norm{\dfd\alpha}^2+ \norm{\df\alpha}^2.
+    0=\bk{\alpha}{\Delta\alpha}&=\bk{\alpha}{\df\dfd\;\alpha}+ \bk{\alpha}{\dfd\;\df\;\alpha}\\
+    &=\bk{\dfd\;\alpha}{\dfd\;\alpha}+ \bk{\df\;\alpha}{\df\;\alpha}\\
+    &= \norm{\dfd\;\alpha}^2+ \norm{\df\;\alpha}^2.
   \end{align}
   Since the sum of positive quantities vanishes, each quantity must vanish separately. Therefore,
   \begin{align}
-    \df\alpha=\dfd\alpha=0.
+    \df\;\alpha=\dfd\;\alpha=0.
   \end{align}
 \end{proof}
 
@@ -144,7 +144,7 @@ Therefore, a classical, non-relativistic, massive, point-particle is described b
 
 \subsection{Electromagnetic Action}
 
-The electromagnetic action is a theory of a connection $\Af{1}$, with values on an Abelian gauge group ($U(1)$). The fundamental object for constructing the action is the field strength, $\FF{2}=\df\Af{1}$, which is gauge invariant.
+The electromagnetic action is a theory of a connection $\Af{1}$, with values on an Abelian gauge group ($U(1)$). The fundamental object for constructing the action is the field strength, $\FF{2}=\df\;\Af{1}$, which is gauge invariant.
 
 Using differential forms the action is,
 \begin{align}
@@ -156,8 +156,8 @@ Using differential forms the action is,
   \begin{itemize}
   \item Use the properties of the exterior differentiation to find the equation of motion of the field $\Af{1}$.
   \item Write the equations in components, then use the definitions of $\vec{E}$ and $\vec{B}$ to find the usual Maxwell equations.
-  \item Use the nilpotence of $\df$ (or $\dfd$) to find the continuity equation of $J$.
-  \item Show that the Lorentz condition $\partial_\mu A^\mu$ is expressed as $\df*\Af{1}$.
+  \item Use the nilpotence of $\df\;$ (or $\dfd\;$) to find the continuity equation of $J$.
+  \item Show that the Lorentz condition $\partial_\mu A^\mu$ is expressed as $\df\;*\Af{1}$.
   \end{itemize}
 \end{Ebox}
      
@@ -177,9 +177,9 @@ Finally, the Lagrangian density is
 \begin{align}
   \Lag[\Af{1}] =-\frac{1}{2} \vev{\FF{2}\w*\FF{2}},
 \end{align}
-where $\FF{2}$ is the curvature of the connection $\Af{1}$, defined by the ``twisted'' exterior derivative $\df_{\Af{1}}= \df +\Af{1}$,
+where $\FF{2}$ is the curvature of the connection $\Af{1}$, defined by the ``twisted'' exterior derivative $\df\;_{\Af{1}}= \df\; +\Af{1}$,
 \begin{align}
-  \FF{2}= \df_{\Af{1}}\Af{1}= \df\Af{1} +\frac{1}{2}\Af{1}\w\Af{1}
+  \FF{2}= \df\;_{\Af{1}}\Af{1}= \df\;\Af{1} +\frac{1}{2}\Af{1}\w\Af{1}
 \end{align}
 
 
@@ -187,15 +187,15 @@ where $\FF{2}$ is the curvature of the connection $\Af{1}$, defined by the ``twi
   frametitlerule=true,
   frametitlealignment=\centering,
   frametitleaboveskip=10pt,]
-  In order to find the equation of motion of a Yang-Mills theory, one might use the fact that the ``twist'' derivative, $\df_{\Af{1}}$, acts on charged fields, then
+  In order to find the equation of motion of a Yang-Mills theory, one might use the fact that the ``twist'' derivative, $\df\;_{\Af{1}}$, acts on charged fields, then
   \begin{align*}
     \int \Lag[\Af{1}] &=-\frac{1}{2}\int \vev{\FF{2}\w*\FF{2}}\\
-    &=-\frac{1}{2}\int \df_{\Af{1}}\vev{\Af{1}\w*\FF{2}}-\frac{1}{2}\int \vev{\Af{1}\w\df_{\Af{1}}*\FF{2}}\\
-    &=-\frac{1}{2}\int \df\vev{\Af{1}\w*\FF{2}}-\frac{1}{2}\int \vev{\Af{1}\w\df_{\Af{1}}*\FF{2}},
+    &=-\frac{1}{2}\int \df\;_{\Af{1}}\vev{\Af{1}\w*\FF{2}}-\frac{1}{2}\int \vev{\Af{1}\w\df\;_{\Af{1}}*\FF{2}}\\
+    &=-\frac{1}{2}\int \df\;\vev{\Af{1}\w*\FF{2}}-\frac{1}{2}\int \vev{\Af{1}\w\df\;_{\Af{1}}*\FF{2}},
   \end{align*}
   the first term vanishes for fields with compact support (or manifolds without boundaries), then, the equation of motion is 
   \begin{align*}
-    \dfd_{\Af{1}}\FF{2} =0.
+    \dfd\;_{\Af{1}}\FF{2} =0.
   \end{align*}
 \end{WEbox}
    
@@ -211,7 +211,7 @@ Roughly speaking the goal of GR is to associate the gravitational interaction to
 
 Using the curvature tensor, other simplified tensors can be constructed
 \begin{align}
-  \Ric(X,Y) &= \bk{\df x^\mu}{R(\partial_\mu,Y)X}\\
+  \Ric(X,Y) &= \bk{\df\; x^\mu}{R(\partial_\mu,Y)X}\\
   \Ri &= g^{\mu \nu}\Ric(\partial_\mu,\partial_\nu).
 \end{align}
 Since in most cases the stress-energy tensor is symmetric, it seems that Einstein's first proposal for the equations of gravity were
