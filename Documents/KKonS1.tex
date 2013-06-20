@@ -1,8 +1,14 @@
 %%%%%%%%%%%%%%%%%% ANOTHER LECTURE
 
-\chapter{Kaluza-Klein Reduction on $S^1$}
+\chapter{Kaluza-Klein Reduction}
 
-\nocite{PopeKK}
+The Kaluza-Klein program aims to obtain the $d$-dimensional theory obtained by reducing a $D$-dimensional one. The original idea was to obtain 4-dimensional gravity and electrodynamics, from 5-dimensional gravity... All of it in the context of general relativity.
+
+In the following the dimensional reduction of the action of a scalar field on $D+1$-dimension to $D$-dimensions is shown, and later, the reduction of $D+1$-dimensional gravity on a $S^1$.  A nice reference to the program is  \cite{PopeKK}.
+
+\section{Reduction of a Scalar Field}
+
+\section{Kaluza-Klein Reduction on $S^1$}
 
 \begin{equation}
   d\hat{s}^2 = e^{2\alpha\phi}ds^2 + e^{2\beta\phi}\left(d\xi + \Ag\right)^2,
@@ -102,13 +108,53 @@ and
 \begin{align}
   \hspif{a}{c}\w\hspif{c b}{}  =&\quad \spif{a}{c}\w\spif{c b}{} +\frac{1}{2}e^{(\beta-2\alpha)\phi}\(\F^{a}{}_c \spif{cb}{} -\F^{b}{}_c\spif{ca}{}\)\w\hvif{D}\notag\\
   &\quad +\alpha e^{-\alpha\phi}\( \pau{b}\phi\spif{a}{c}\w\hvif{c} -\pau{c}\phi\spif{a}{c}\w\hvif{b} + \pau{c}\phi\spif{b}{c}\w\hvif{a} - \pau{a}\phi\spif{b}{c}\w\hvif{c}  \) \notag\\
-  &\quad +\alpha^2 e^{-2\alpha\phi}\( \pau{b}\phi\pa{c}\phi\hvif{a}\w\hvif{c} -\pau{a}\phi\pa{c}\phi\hvif{b}\w\hvif{b} - \pau{c}\phi\pa{c}\phi\hvif{a}\w\hvif{b}  \) \notag\\
+  &\quad +\alpha^2 e^{-2\alpha\phi}\( \pau{b}\phi\pa{c}\phi\hvif{a}\w\hvif{c} -\pau{a}\phi\pa{c}\phi\hvif{b}\w\hvif{c} - \pau{c}\phi\pa{c}\phi\hvif{a}\w\hvif{b}  \) \notag\\
   &\quad +\frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\[\F^b{}_c\(\pau{c}\phi\hvif{a} - \pau{a}\phi\hvif{c}\)  + \F^a{}_c\(\pau{b}\phi\hvif{c} - \pau{c}\phi\hvif{b}\)   \]\w\hvif{D}.
 \end{align}
 
 Next, one can write the Lagrangian of the higher dimensional spacetime,
 \begin{align}
   \Lag_{(D+1)} =& \frac{\epsilon_{\hat{a}_1\hat{a}_2\cdots\hat{a}_{D+1}}}{(D-1)!}\hRif{\hat{a}_1\hat{a}_2}{}\w\hvif{\hat{a}_3}\w\cdots\w\hvif{\hat{a}_{D+1}}\\
-  =& \frac{2 \epsilon_{D a_1 a_2\cdots a_{D-1}}}{(D-1)!}\hRif{D{a}_1}{}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}}\notag\\
-  &+ \frac{\epsilon_{a_1 a_2\cdots a_{D}D}}{(D-2)!}\hRif{{a}_1{a}_2}{}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{D}.
+  =& \underbrace{2\frac{\epsilon_{D a_1 a_2\cdots a_{D}}}{(D-1)!}\hRif{D{a}_1}{}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}}}_{\text{Term }I}\notag\\
+  &+ \underbrace{\frac{\epsilon_{a_1 a_2\cdots a_{D}D}}{(D-2)!}\hRif{{a}_1{a}_2}{}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{D}}_{\text{Term }II}.
+\end{align}
+Concentrate on the first term,
+\begin{align}
+  I =&\quad 2(-1)^D \frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-1)!}\notag\\
+  &\qquad\bigg\{\[\beta e^{-2\alpha\phi}\big((\beta-2\alpha)\pa{b}\phi\pau{a_1}\phi + \pa{b}\pau{a_1}\phi\big) -\frac{1}{4} e^{2(\beta-2\alpha)\phi}\F_{cb}\F^{ca_1} \]\hvif{b}\notag\\
+  &\qquad + \beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m a_1}{}+\alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \;\hvif{a}\bigg\}\w\hvif{D}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}}\notag\\
+  =&\quad -2\frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-1)!}\notag\\
+  &\qquad\bigg\{\[\beta e^{-2\alpha\phi}\big((\beta-2\alpha)\pa{b}\phi\pau{a_1}\phi + \pa{b}\pau{a_1}\phi\big) -\frac{1}{4} e^{2(\beta-2\alpha)\phi}\F_{cb}\F^{ca_1} \]\hvif{b}\notag\\
+  &\qquad + \beta e^{-\alpha\phi}\pa{m}\phi\;\spif{m a_1}{}+\alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \;\hvif{a}\bigg\}\w\hvif{{a}_2}\w\cdots\w\hvif{{a}_{D}}\w\hvif{D}\notag\\
+  =&\quad -2\frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-1)!} e^{\((D-2)\alpha+\beta\)\phi}\notag\\
+  &\qquad\bigg\{\[\beta \big((\beta-2\alpha)\pa{b}\phi\pau{a_1}\phi + \pa{b}\pau{a_1}\phi\big) -\frac{1}{4} e^{2(\beta-\alpha)\phi}\F_{cb}\F^{ca_1} \]\vif{b}\notag\\
+  &\qquad + \beta \pa{m}\phi\;\(\spi{b}\)^{m a_1}\vif{b}+\alpha\beta \pa{m}\phi\partial^{m}\phi \;\vif{a_1}\bigg\}\w\vif{{a}_2}\w\cdots\w\vif{{a}_{D}}\w\df\;\xi\notag\\
+  =&\quad -2 e^{\((D-2)\alpha+\beta\)\phi}\bigg\{\bigg[\beta \big((\beta-2\alpha)\pa{b}\phi\pau{b}\phi + \pa{b}\pau{b}\phi\big)
+    %% \notag\\
+    %% &\qquad
+-\frac{1}{4} e^{2(\beta-\alpha)\phi}\F_{cb}\F^{cb}+ \beta \pa{m}\phi\;\(\spi{b}\)^{m b} \bigg]\notag\\
+  &\qquad\quad + D \alpha\beta \;\pa{m}\phi\partial^{m}\phi \bigg\}dV_D d\xi
+\end{align}
+
+\begin{align}
+  II =&\quad \frac{\epsilon_{a_1 a_2\cdots a_{D}D}}{(D-2)!}\notag\\
+  &\qquad \bigg\{\Rif{a_1a_2}{} -\alpha e^{-2\alpha\phi}\(\pa{c}\pau{a_2}\phi\hvif{a_1}-\pa{c}\pau{a_1}\phi\hvif{a_2}\)\w\hvif{c}\notag\\
+  &\qquad -\frac{1}{4} e^{2(\beta-2\alpha)\phi}\(\F^{a_1a_2}\F_{mn}+\F^{a_1}{}_m \F^{a_2}{}_n\)\hvif{m}\w\hvif{n}\notag\\
+  &\qquad +\alpha e^{-\alpha\phi}\( \pau{a_2}\phi\spif{a_1}{c}\w\hvif{c} -\pau{c}\phi\spif{a_1}{c}\w\hvif{a_2} + \pau{c}\phi\spif{a_2}{c}\w\hvif{a_1} - \pau{a_1}\phi\spif{a_2}{c}\w\hvif{c}  \) \notag\\
+  &\qquad +\alpha^2 e^{-2\alpha\phi}\( \pau{a_2}\phi\pa{c}\phi\hvif{a_1}\w\hvif{c} -\pau{a_1}\phi\pa{c}\phi\hvif{a_2}\w\hvif{c} - \pau{c}\phi\pa{c}\phi\hvif{a_1}\w\hvif{a_2}  \) \notag\\
+  &\qquad - \alpha e^{-\alpha\phi}\(\pau{a_2}\phi\spif{a_1}{m}-\pau{a_1}\phi\spif{a_2}{m}\)\w\hvif{m}\bigg\}\w\hvif{{a}_3}\w\cdots\w\hvif{{a}_{D}}\w\hvif{D}\notag\\
+  =&\quad \frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-2)!}e^{\((D-2)\alpha+\beta\)\phi}\notag\\
+  &\qquad \bigg\{\Rif{a_1a_2}{} -\alpha \(\pa{c}\pau{a_2}\phi\vif{a_1}-\pa{c}\pau{a_1}\phi\vif{a_2}\)\w\vif{c}\notag\\
+  &\qquad -\frac{1}{4} e^{2(\beta-\alpha)\phi}\(\F^{a_1a_2}\F_{mn}+\F^{a_1}{}_m \F^{a_2}{}_n\)\vif{m}\w\vif{n}\notag\\
+  &\qquad +\alpha \( \pau{a_2}\phi\spif{a_1}{n}\w\vif{n} -\pau{c}\phi\spif{a_1}{c}\w\vif{a_2} + \pau{c}\phi\spif{a_2}{c}\w\vif{a_1} - \pau{a_1}\phi\spif{a_2}{n}\w\vif{n}  \) \notag\\
+  &\qquad +\alpha^2 \( \pau{a_2}\phi\pa{c}\phi\vif{a_1}\w\vif{c} -\pau{a_1}\phi\pa{c}\phi\vif{a_2}\w\vif{c} - \pau{c}\phi\pa{c}\phi\vif{a_1}\w\vif{a_2}  \) \notag\\
+  &\qquad - \alpha \(\pau{a_2}\phi\spif{a_1}{n}-\pau{a_1}\phi\spif{a_2}{n}\)\w\vif{n}\bigg\}\w\vif{{a}_3}\w\cdots\w\vif{{a}_{D}}\w\df\;\xi\notag\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% I'm here %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  =&\quad \frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-2)!}e^{\((D-2)\alpha+\beta\)\phi}\notag\\
+  &\qquad \bigg\{\Rif{a_1a_2}{} -\alpha \(\pa{c}\pau{a_2}\phi\vif{a_1}-\pa{c}\pau{a_1}\phi\vif{a_2}\)\w\vif{c}\notag\\
+  &\qquad  -\frac{1}{4} e^{2(\beta-\alpha)\phi}\(\F^{a_1a_2}\F_{mn}+\F^{a_1}{}_m \F^{a_2}{}_n\)\vif{m}\w\vif{n}\notag\\
+  &\qquad +\alpha \( -\pau{c}\phi\spif{a_1}{c}\w\vif{a_2} + \pau{c}\phi\spif{a_2}{c}\w\vif{a_1}   \) \notag\\
+  &\qquad +\alpha^2 \( \pau{a_2}\phi\pa{c}\phi\vif{a_1}\w\vif{c} -\pau{a_1}\phi\pa{c}\phi\vif{a_2}\w\vif{c} - \pau{c}\phi\pa{c}\phi\vif{a_1}\w\vif{a_2}  \)\bigg\}\w\vif{{a}_3}\w\cdots\w\vif{{a}_{D}}\w\df\;\xi\notag\\
 \end{align}
