@@ -8,27 +8,102 @@ In the following the dimensional reduction of the action of a scalar field on $D
 
 \section{Reduction of a Scalar Field}
 
+On this section the reduction of a massless, real, scalar field is performed on different manifolds. All over the section it is assumed that the total manifold is nothing but a Cartesian product of two other manifolds.
+
+
+
+\subsection{Scalar Field Reduced on $S^1$}
+
 Consider the equation of motion of a massless (real) scalar field $\Phi$ on $D+1$-dimensions, 
 \begin{align}
   \Box^{(D+1)}\Phi =0.
 \end{align}
-If the extra dimension is a $S^1$, one might separate the differential operator into a $D$-dimensional part plus the extra diemension,
+Assume that $M^{D+1}=M^D\times S^1$. Then,  the differential operator can be separated  into a $D$-dimensional part plus the extra dimension,
 \begin{align}
-  \(\Box^{(D)}+\pa{\xi}^2\)\Phi =0.\label{KK-s-eq}
+  \(\Box^{(D)}+\pa{\xi}^2\)\Phi =0.\label{KK-s-eq:s1}
 \end{align}
 
-Now, one propose the Kaluza-Klein ansatz, i.e., the scalar field can be expanded as a series on the basis of harmonic functions on $S^1$,
+Now, one propose the Kaluza-Klein ansatz, i.e., the scalar field can be expanded as a series on the basis of eigenfunctions on $S^1$,
 \begin{align}
-  \Phi(x,\xi) = \sum_n \phi_n(x) e^{\imath \frac{n}{R}\xi},\label{KK-scalar}
+  \Phi(x,\xi) = \sum_n \phi_n(x) e^{\imath \frac{n}{R}\xi},\label{KK-scalar:s1}
 \end{align}
 where $R$ is the radius of the extra dimension.
 
-Substituting the expansion \eqref{KK-scalar} into \eqref{KK-s-eq}, yields
+Substituting the expansion \eqref{KK-scalar:s1} into \eqref{KK-s-eq:s1}, yields
 \begin{align}
-  \[\Box^{(D)}-\(\frac{n}{R}\)^2\]\phi_n(x)=0\qquad \forall\; n\in \Z.
+  \[\Box^{(D)}-\(\frac{n}{R}\)^2\]\phi_n(x)=0\qquad \forall\; n\in \Z.\label{KK-eq-s1}
 \end{align}
 
-The above represent  a tower of infinite massive scalar fields in $D$ dimensions, doubly degenerated, plus a single massless scalar field (corresponding to $n=0$).
+Comparing with the generic Klein-Gordon equation,
+\begin{align}
+  \[\Box^{(D)} - m_{\text{eff}}^2\]\phi=0, \qquad\text{with}\qquad m_{\text{eff}} = \frac{\abs{n}}{R},
+\end{align}
+one concludes that Eq. \eqref{KK-eq-s1}  represents  a tower of infinite massive scalar fields in $D$ dimensions; doubly degenerated because of the blindness on the sign of $n$, plus a single massless scalar field, corresponding to $n=0$.
+
+\begin{center}
+  \begin{tikzpicture}[thick,line cap=round,
+      % Styles
+      axes/.style=,
+      important line/.style={very thick},
+      information text/.style={rounded corners,draw=blue!80!black,fill=blue!10,inner sep=1ex}]
+    
+    \draw (0,0) node[anchor=east] {$m_{\text{eff}} =0$} -- (2,0);
+    \foreach \y in {1,2,...,4}
+    \draw[important line] (0,\y) node[anchor=east] {$m_{\text{eff}} =\frac{\y}{R}$} -- (2,\y);
+    \foreach \y in {1,2,...,4}
+    \node[anchor=west] at (2,\y) {${\small \times}2$};
+
+    \node at (1,5) {$\vdots$};
+
+    \draw[xshift=3.5cm,yshift=2.5cm]
+    node[right,text width=6cm,information text]
+    {The spectrum of a Kaluza-Klein reduction of a real massless scalar field on a $S^1$, is linear and every mode other than the massless is doubly degenerated (corresponding to eigenvalues $\pm n$.};
+  \end{tikzpicture}
+\end{center}
+
+\subsection{Scalar Field Reduced on $S^2$}
+
+One can follow the previous procedure to compute the \KK of a massless real scalar field on $S^2$. Thus, assuming that $M^{D+1}=M^D\times S^2$, the differential operator separates on,
+\begin{align}
+  \(\Box^{(D)}+\Lap\)\Phi =0.\label{KKs-eq:s2}
+\end{align}
+Then, the \KK ansatz is done as an expansion on eigenfunctions of the 2-dimensional Laplacian on spherical coordinates, i.e., spherical harmonics, as
+\begin{align}
+  \Phi(x,\xi) = \sum_{l,m} \phi_{l,m}(x)Y^{lm}(\xi),
+\end{align}
+where $Y^{lm}$ satisfy
+\begin{align}
+  \Lap Y^{lm} = -\frac{l(l+1)}{R^2} Y^{lm}.
+\end{align}
+
+Therefore, Eq. \eqref{KKs-eq:s2} yields
+\begin{align}
+  \[\Box^{(D)}-\frac{l(l+1)}{R^2}\]\phi_{l,m}(x) =0.\label{KK-eq-s2}
+\end{align}
+Eq. \eqref{KK-eq-s2} represents a \KK tower composed by: a single massless scalar field, corresponding to $l=0$; and $(2l+1)$-degenerated massive scalar fields with and effective mass
+\begin{align}
+  m_{\text{eff}} = \frac{\sqrt{l(l+1)}}{R}.
+\end{align}
+
+\begin{center}
+  \begin{tikzpicture}[yscale=.5,thick,line cap=round,
+      % Styles
+      axes/.style=,
+      important line/.style={very thick},
+      information text/.style={rounded corners,draw=blue!80!black,fill=blue!10,inner sep=1ex}]
+
+    \draw (0,0) node[anchor=east] {$m_{\text{eff}} =0$} -- (2,0);
+    \foreach \y/\m in {1/3,2/5,3/7}
+    {
+      \draw[important line] (0,{\y*(\y+1)}) node[anchor=east] {$m_{\text{eff}} =\frac{\pgfmathparse{\y*(\y+1)}\pgfmathresult}{R}$} -- (2,{\y*(\y+1)}) node[anchor=west]  {${\tiny \times}\m$};
+    }
+    \node at (1,14) {$\vdots$};
+
+    \draw[xshift=3.5cm,yshift=6.5cm]
+    node[right,text width=6cm,information text]
+    {The spectrum of a Kaluza-Klein reduction of a real massless scalar field on a $S^2$, is no longer linear and the degeneracy increases with $l$ as $(2l+1)$.};
+  \end{tikzpicture}
+\end{center}
 
 \section{Kaluza-Klein Reduction on $S^1$}
 
