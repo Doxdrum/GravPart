@@ -103,7 +103,6 @@
 \DeclareRobustCommand{\committee}[5]{
 \noindent T\'ITULO DE LA TESIS:
 
-
 \begin{center}
   {\bf \sc \LARGE \thetitle}
 \end{center}
@@ -111,7 +110,6 @@
 \vspace{1.5cm}
 
 \noindent AUTOR:
-
 
 \begin{center}
   {\bf\sc\Large \theauthor}
@@ -149,7 +147,30 @@
 \end{flushright}
 }
 
+\DeclareRobustCommand{\Dedication}[1]{
+  \newpage
+  \vspace*{\stretch{5}}
+  \begin{flushright}
+    #1
+  \end{flushright}
+  \vspace*{\stretch{1}}
+}
 
+\definecolor{cccolor}{rgb}{.67,.7,.67}
+\DeclareRobustCommand{\CC}{
+  \newpage
+  \vspace*{\stretch{5}}
+  
+  \begin{mdframed}[outerlinecolor=black,outerlinewidth=2pt,linecolor=cccolor,middlelinewidth=3pt,roundcorner=10pt]
+    
+    \begin{center}
+      This work is licensed under a \href{http://creativecommons.org/licenses/by-sa/3.0/}{Creative Commons Attribution-ShareAlike 3.0 Unported License}.
+      
+      \includegraphics[scale=2]{Pict/by-nc-sa.pdf}
+    \end{center}
+  \end{mdframed}
+  \vspace*{\stretch{1}}
+}
 
 %---------------- Titlesec 
 \RequirePackage[explicit]{titlesec}

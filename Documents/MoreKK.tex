@@ -18,3 +18,20 @@ From the previous paragraph, the number of massless scalar fields in the lower d
 Nonetheless, the counting is not necessarily right, since the dimensional reduction of $p$-forms on a compact $n$-dimensional manifold yields to all kind of forms from $(p-n)$ to $p$ order.
 
 In the next sections a heuristic way to compute Betti numbers of simple manifold is shown, and the dimensional reduction of a rich theory is considered.
+
+
+\section{Cohomology and Homology}
+
+The cohomology groups are not intuitive to calculate. However, de Rham showed that there is a duality between the cohomology group and the homology group.
+
+
+\begin{Thm}\label{thm:dR}
+  If $M$ is a compact manifold, $H^r (M)$ and
+  $H_r (M)$ are finite dimensional. Moreover the exists a map
+  \begin{align}
+    \Lambda    : H^r (M) \times H_r (M) \to \R,
+  \end{align}
+  which is bilinear and non-degenerate. Thus, $H^ r (M)$ is the dual vector space of $H_r (M)$.
+\end{Thm}
+
+From Thm. \ref{thm:dR}, it follows that $b^r(M)=\dim(H^r(M)) = \dim(H_r(M))$, and the later is nothing but the number of nonequivalent, un-shrinkable, $r$-cycles (modulus $r$-boundaries) defined on $M$.  
