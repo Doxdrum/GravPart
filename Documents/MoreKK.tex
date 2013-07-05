@@ -142,3 +142,42 @@ When a manifold, $M$ is a Cartesian product of other manifolds, say $M_1$ and $M
     b^p(T^n) =\binom{n}{p} = \frac{n!}{p!(n-p)!}.
   \end{align}
 \end{WEbox}
+
+
+\section{Kaluza-Klein spectrum of \M-theory}\
+
+The low energy limit of $\M$-theory is $D=11$ supergravity, when  the spacetime is smooth and large compared with the $11$-dimensional Planck length. So, one can obtain the effective low energy description by consider Kaluza-Klein analysis \cite{Papadopoulos:1995da,Acharya:2004qe}. 
+
+Basically, one will consider the $11$-dimensional background $M^{10,1}$ as a reducible manifolds, $$M^{10,1}=M^{3,1}\times K,$$where $M^{3,1}$ is a maximally symmetric spacetime and $K$ is a compact $7$-dimensional manifold with holonomy group $G_2$.
+
+The only bosonic fields in $D=11$ supergravity are the metric $g$ and the $3$-form $C$. 
+
+\subsection{Expansion of the $C$-form}\
+
+It is  considered that all vacuum expectation value for  the fields vanish, except the one of the metric. Then, considering fluctuations around the vacuum solution, it follows that
+\beq
+C(x,y)=\delta C(x,y).
+\eeq
+Therefore, the equation of motion for $C$, 
+\begin{align}
+  \dfd\;G+\frac{1}{2}G\w G=0,\label{eq:C}
+\end{align}
+where $G=\df\;C$, can be written to first order in $\delta C$ as
+\beq
+\dfd \;G=0.
+\eeq
+As in Maxwell theory, one should impose the gauge condition $\dfd\;C=0$. Since $\La=\acomm{\df\;}{\dfd\;}$, finally the equation of motion is
+\beq
+\La[11] C=0.
+\eeq
+
+Now, splitting $\La[11]=\La[4]+\La[7]$, one notes that for the effective four-dimensional theory, the eigenvalues of $\La[7]$ are like  mass term. Therefore, one proceeds  expanding $C$ in term of the eigen-forms of $K$.
+
+One of the  assumptions of Kaluza-Klein approach is that %as one wants to consider extra dimensions with small radii
+the radii of the extra dimensions is small. Then, the only interesting modes in the low energy four-dimensional theory are  massless states. This is because after compactifying the effective four-dimensional mass depends on radii as $m\sim \frac{1}{R}$, so if $R$ is ``really'' small, roughly speaking if it is of Planck length scale, which is $M_{\text{P}}\sim\SI{e-33}{\cm}$, the massive states are too heavy and they will not be considered in the low energy limit.
+
+This allows  to consider the relevant expansion of $C$ just in terms of the harmonic forms on $K$, as 
+\beq
+C=\phi_I(x)\omega^I(y)+A_\alpha(x)\w\beta^\alpha(y)+\text{ (massive terms)},
+\eeq
+where $\omega^I$ are basis of the harmonic $3$-forms on $K$, and $\beta^\alpha$ are basis of the harmonic $2$-forms on $K$, so $I=1,...,b_3(K)$ and $\alpha=1,...,b_2(K)$, $x$ are coordinates along $M^4$ and $y$ are coordinates along $K$. Since $C$ is odd under parity, $\phi_I$ describe $b_3(K)$ pseudo-scalars. On the other hand, $A_\alpha$ are  1-forms in Minkowski space, so, they are Abelian gauge fields in four-dimensions.
