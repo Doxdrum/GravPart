@@ -16,30 +16,6 @@ A bundle is a geometric structure composed by two manifolds $E$ (the bundle) and
   
   In this case, $E=M\times F$ globally, then the bundle is called {\sc Trivial}.
 \item If one takes an interval $I\subset \R$, the ``finite'' cylinder is a trivial bundle $E=I\times S^1$ or $E=S^1\times I$.
-  %% \begin{center}
-  %%   \begin{tikzpicture}[rotate=90]
-      
-  %%     \begin{axis}[
-  %%         hide axis,
-  %%         view={40}{40}
-  %%       ]
-  %%       \addplot3 [
-  %%         surf, shader=faceted interp,
-  %%         point meta=x,
-  %%         colormap/greenyellow,
-  %%         samples=40,
-  %%         samples y=5,
-  %%         z buffer=sort,
-  %%         domain=0:360,
-  %%         y domain=-0.5:0.5
-  %%       ] (
-  %%                 {cos(x)},
-  %%                 {sin(x)},
-  %%                 {0.5*y});
-  %%       \addplot3 coordinates {(0,0,-3) (0,3,0)};
-  %%     \end{axis}
-  %%   \end{tikzpicture}
-  %% \end{center}
 \item The simplest non-trivial bundle is a M\"obius strip, which is a bundle $E$ locally homeomorphic to $S^1\times I$, but is not globally $S^1\times I$ because there is a ``twist'' (a bit more formally there is a $Z_2$-action on the fibre).
   \begin{center}
     %\tikzsetnextfilename{CylinderMoebius}

@@ -34,4 +34,50 @@ The cohomology groups are not intuitive to calculate. However, de Rham showed th
   which is bilinear and non-degenerate. Thus, $H^ r (M)$ is the dual vector space of $H_r (M)$.
 \end{Thm}
 
-From Thm. \ref{thm:dR}, it follows that $b^r(M)=\dim(H^r(M)) = \dim(H_r(M))$, and the later is nothing but the number of nonequivalent, un-shrinkable, $r$-cycles (modulus $r$-boundaries) defined on $M$.  
+From Thm. \ref{thm:dR}, it follows that $b^r(M)=\dim(H^r(M)) = \dim(H_r(M))$, and the later is nothing but the number of nonequivalent, un-shrinkable, $r$-cycles (modulus $r$-boundaries) defined on $M$.  These $r$-cycles can be count via the homotopy group, $\pi_r(M):S^r\to M$.
+
+
+%% \begin{center}
+%%   \begin{tikzpicture}
+%%     \begin{axis}[
+%%           hide axis,
+%%           view={40}{40}
+%%       ]
+      
+%%       \addplot3 [
+%%         surf, shader=faceted interp,
+%%         point meta=x,
+%%         colormap/greenyellow,
+%%         samples=20,
+%%         samples y=40,
+%%         %z buffer=sort,
+%%         domain=0:180,
+%%         y domain=0:360
+%%       ] (
+%%                 {sin(x)*cos(y)},
+%%                 {sin(x)*sin(y)},
+%%                 {cos(x)}
+%%       );
+      
+%%     \end{axis}
+%%   \end{tikzpicture}
+%% \end{center}
+
+Since the formal theory of this topological invariant is far from the scope of this manuscript, only examples are given in which the $r$-cycles are counted, and finally the {\bf K\"unneth formula} for calculating the Betti numbers of Cartesian products of manifolds is stated.
+
+\subsection{Betti Numbers Though Examples}
+
+Concentrate in the $\pi_0(M)$, for an arbitrary manifold $M$. Since $S^0$ is a point, $b_0(M)$ counts the number of nonequivalent points on $M$, i.e., the number of connected components. Thus,
+\begin{align}
+  b_0(\R^n)=b_0(S^n)=b_0(T^n) &= 1,\\
+  b_0(O(N)) &= 2\qquad\text{for }N>1,
+\end{align}
+in the last line, $O(N)$ is the $N$-th orthogonal group, and the result is 2 because $O(N)$ has two disconnected components: transformations with $\det(M)=1$ and transformations with $\det(M)=-1$.
+
+
+\begin{center}
+  \begin{tikzpicture}
+    \foreach \r in {0,10,...,100}
+    \draw[color=blue!\r!red] (0,0) arc  (-90:270:\r pt);
+  \end{tikzpicture}
+\end{center}
