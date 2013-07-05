@@ -74,10 +74,71 @@ Concentrate in the $\pi_0(M)$, for an arbitrary manifold $M$. Since $S^0$ is a p
 \end{align}
 in the last line, $O(N)$ is the $N$-th orthogonal group, and the result is 2 because $O(N)$ has two disconnected components: transformations with $\det(M)=1$ and transformations with $\det(M)=-1$.
 
+One car restate the geometrical meaning of the zeroth Betti number as follows:
+\begin{itemize}
+\item Imagine a two-dimensional plane.
+\item In order to cut it in two parts, one should take out a one-dimensional sub-manifold which can be closed, essentially $S^1$,  or open $\R^1$.
+\item This taking out is nothing but a (2-1)-dimensional ``hole'' on $\R^2$. Or in other words, this transformed the connected manifold into two disconnected ones.
+\end{itemize}
+Therefore, in general the zeroth Betti number counts how many $(D-1)$-dimensional holes  are in a given manifold.
 
+In  the same spirit than before, one can consider $\pi_1(M)$, the set of maps from $S^1\to M$, and count the number of (independent) non-contractible ones. Below,%In Fig. \ref{fig:shrink}, 
+the contraction  of a (blue) $S^1$ path to a (red) point is shown.
 \begin{center}
-  \begin{tikzpicture}
-    \foreach \r in {0,10,...,100}
-    \draw[color=blue!\r!red] (0,0) arc  (-90:270:\r pt);
+  \begin{center}
+    \begin{tikzpicture}[thick]
+      \foreach \r in {0,10,...,100}
+      \draw[color=blue!\r!red] (0,0) arc  (-90:270:2+.5*\r pt);
+    \end{tikzpicture}
+  \end{center}
+\end{center}
+
+If $M$ is a connected two-dimensional manifold, every circumference should be shrinkable, unless one of the points inside the circumference does not belong to $M$. Therefore,
+\begin{align}
+  b_0(\R^n)=b_0(S^n)&=0,\\
+  b_0\(\R^2-\{0\}\) &= 1.
+\end{align}
+Moreover, if one ``puncture'' the two-dimensional plane $n$ times, then $b_0\(\R^2-n\{0\}\)=n$.
+\begin{center}
+  \begin{tikzpicture}[thick]
+    \coordinate (P) at (8,2);
+    \coordinate (O) at (2,4);
+    %\draw[help lines, color=blue!20,step=1cm] (-.4,-.4) grid (12.3,8.3);
+    \draw[fill=black] (P) circle (.1cm);
+    \foreach \r in {2,12,...,92} {
+      \draw[color=blue!\r!red] (O) arc  (-225:135:.5*\r pt);
+      \draw[color=blue!\r!red] (P) circle (.5*\r pt+.13cm);}
+
+    \node[anchor=south east] at (O) {\bf{\color{red!80!black}Contractible path}};
+    \draw (60:1.7cm) ++(P) node[anchor=south west]   {\bf{\color{blue!80!black} Un-contractible path}};
   \end{tikzpicture}
 \end{center}
+Once more, a puncture on $\R^2$ is a $(D-2)$-dimensional hole. In fact, the first Betti number counts how many (independent) $(D-2)$-dimensional holes are in a given manifold.
+
+The previous analysis can be carry on and on, and one reach the conclusion that the $n$-th Betti number counts how many independent $(D-n-1)$-dimensional holes are in a $D$-dimensional manifold $M$.
+
+
+
+\section{K\"unneth formula}
+
+When a manifold, $M$ is a Cartesian product of other manifolds, say $M_1$ and $M_2$, the topology is determined by the topology of the later. Therefore, their Betti numbers are related. The K\"unneth formula shows that relation,
+\begin{align}
+  b^n\(M=M_1\times M_2\) = \sum_{p+q=n} b^p\(M_1\)\cdot b^q\(M_2\).\label{KunnethForm}
+\end{align}
+
+\begin{WEbox}[frametitle={Betti numbers of a torus ($T^n$)},
+  frametitlerule=true,
+  frametitlealignment=\centering,
+  frametitleaboveskip=10pt,]
+  Given the Betti numbers of the 1-sphere, $S^1$,
+  \begin{align}
+    b^0(S^1) &= 1,\notag\\
+    b^1(S^1) &= 1,
+  \end{align}
+  one can calculate the Betti numbers of $T^n$, since $T^n=\times^n S^1$.
+
+  Using Eq. \eqref{KunnethForm}, it follows that,
+  \begin{align}
+    b^p(T^n) =\binom{n}{p} = \frac{n!}{p!(n-p)!}.
+  \end{align}
+\end{WEbox}
