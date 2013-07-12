@@ -117,7 +117,12 @@ More illustrative is an example of a non-manifold, such as the body of a cone. A
 
 \section{Geometrical Objects on Manifolds}
 
-One knows how to define 
+The trick to define geometrical objects on  manifolds, $M$, is to find a way to assign an analog to the object defined on $\R^m$. This is achieved by the following procedure:
+\begin{itemize}
+\item Given a manifold $M$, set a point $p\in M$ and consider the neighbourhood, $U$, of $p$. The point is represented in the figure below by a black dot, while the neighbourhood $U$ is limited by a dotted circle around $p$.
+\item For each choice of $U$, one can find a map from $M$ to $\R^m$, $\varphi:M\to \R^m$, called a chart on $U$.
+\item Then, the $\varphi$ map helps to associate equivalent geometrical quantities on $M$ to those on $\R^m$.
+\end{itemize}
 \begin{center}
   \begin{tikzpicture}
     \coordinate (P) at (3.5,0);
@@ -126,7 +131,7 @@ One knows how to define
     \draw[fill=black] (P) node[anchor= north west] {$p$} circle (2pt);
     \node[draw, dotted, circle, minimum size=1.2cm,label=120:$U$] (ball) at (P) {};
     \draw[blue,very thick,->] (node cs:name=ball,angle=-20) .. controls +(-20:1cm) and (7.5,1) .. node[midway, above,sloped] {$\varphi$} (9,1);
-    \draw[thick,->] (9.5,0) node[anchor=north] {$\R^2$} -- (12,0);
+    \draw[thick,->] (9.5,0) node[anchor=north] {$\R^m$} -- (12,0);
     \draw[thick,->] (10,-.5) -- (10,2);
     \draw[fill=black] (11,1) node[anchor= north west] {$\varphi(p)$} circle (2pt);
 
@@ -135,7 +140,24 @@ One knows how to define
   \end{tikzpicture}
 \end{center}
 
+From the procedure described, one can guess that a scalar field on $M$ is an assignment of a scalar to every point $p\in M$. The only non-trivial consideration is that the assignation must be consistent, i.e., the scalar should be independent of the chart one choose to map $M$ to $\R^m$. On $S^1$, the ``consistency'' condition is that one you go all around the sphere, the number you get must be the same that the one you begun with.
+
 \subsection{Vectors}
+
+On Euclidean geometry, one defines the ``velocity'' vector as the derivative of the position with respect to the time. This definition can be generalised to every curve, $c$, of a parameter $t$ over the Euclidean space, i.e., $c:\R\to\R^m$ defined by $c: t\to c(t)$.
+
+Moreover, the space the function is mapped to could be a manifold instead of $\R^m$. Therefore, a curve on $M$ is a (continuous) map $c:\R\to M$. This is represented in the figure by the {\color{red} red map}, and its image is the {\color{red} red dotted line}.
+
+Consider a map $f:M\to \R$, and restrict the domain of $f$ to the points $c(t)\in M$. Then the derivative of $f$ yields
+\begin{align}
+  f'\(c(t)\)&= \pder{f}{x^\mu}\pder{x^\mu}{t}\notag\\
+  &= X[f],
+\end{align}
+where $X$ is the object one would like to call a {\bf vector} on $M$, and is defined through
+\begin{align}
+  X\equiv X^\mu \pder{}{x^\mu}= \pder{x^\mu}{t}\pder{}{x^\mu}.
+\end{align}
+The quantities $X^\mu$ are the components of the vector, while $\pder{}{x^\mu}\equiv \pa{\mu}$ are the basis of the vector.
 
 \subsection{One-Forms}
 
