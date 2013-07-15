@@ -79,7 +79,7 @@ Examples of manifolds are  the body of a cylinder,  the spheres ($S^m$), the tor
 %% \end{center}
 \begin{center}
   \begin{tabular}{cc}
-    \includegraphics[scale=.4]{Pict/Sphere.pdf}  & \includegraphics[scale=.4]{Pict/Torus.pdf}
+    \includegraphics[scale=.4]{Pict/Sphere2.pdf}  & \includegraphics[scale=.4]{Pict/Torus.pdf}
   \end{tabular}
 \end{center}
 %% \begin{figure}[H]
@@ -152,16 +152,54 @@ Consider a map $f:M\to \R$, and restrict the domain of $f$ to the points $c(t)\i
 \end{align}
 where $X$ is the object one would like to call a {\bf vector} on $M$, and is defined through
 \begin{align}
-  X\equiv X^\mu \pder{}{x^\mu}= \pder{x^\mu}{t}\pder{}{x^\mu}.\label{def-vector}
+  X\equiv X^\mu \pder{}{x^\mu}= \pder{x^\mu}{t}\pder{}{x^\mu},\label{def-vector}
 \end{align}
+and $x^\mu$ are the coordinated of the point $p$ given by the function $c(t)$.
 The quantities $X^\mu$ are the components of the vector, while $\pder{}{x^\mu}\equiv \pa{\mu}$ are the basis of the vector.
 
-Note that the definition of the vector $X$ through Eq. \eqref{def-vector}, is independent of the function $f$, thus is a well-defines quantity.
+Note that the definition of the vector $X$ through Eq. \eqref{def-vector}, is independent of the function $f$, thus is a well-defines quantity. Additionally, the definition could be done with an arbitrary coordinate system $y^\mu = \Lambda^\mu{}_\nu x^\nu$, and the definition would give the same. Therefore, the components of the vector transforms as the coordinate, while the basis transform with the inverse transformation,
+\begin{align}
+  \pder{}{y^\mu} &= \(\Lambda^{-1}\)_\mu{}^\nu\pder{}{x^\nu},\\
+  {X'}^\mu &= \Lambda^\mu{}_\nu X^\nu.
+\end{align}
+
+From the definition, one expect that the vectors  lie on a tangent space to the point $p$, this space is denoted by $T_p M$. When the manifold is not flat, the tangent spaces  at $p$ and at $q$ are not necessary the same, thus, when one want to specify a vector a total of $2m$ coordinates are needed, $m$ of them to denote the point $p\in M$ and the other $m$ to denote the vector on $T_p M$.
+
+Therefore, in order to define vector fields on $M$, the natural structure to consider is the disjoint union of all the tangent spaces. This structure is call the {\bf tangent bundle}, $TM$, and mathematically is defined as
+\begin{align}
+  TM = \coprod_{p\in M}T_p M.
+\end{align}
+From the above arguments, it is clear that $\dim(TM)=2m$.
 
 
 \subsection{One-Forms}
 
+Given a vector $V\in T_p M$, one might define a linear application $\omega:T_p M\to \R$, in a way that
+\begin{align}
+  V[f] = V^\mu\pa{\mu}f\equiv \bk{\df\;f}{V}\in \R.
+\end{align}
+Above, bracket $\bk{\bullet}{\bullet}$ denotes the inner product, and $\df\,f$ is a {\bf 1-form}, i.e., linear application from a vector into the reals.
+
+The 1-form $\df\,f$ can be expanded in components,
+\begin{align}
+  \df\,f=\pder{f}{x^\mu}\de{x^\mu},
+\end{align}
+with basis of the dual vector space $\de{x^\mu}$. The basis of the dual space can be chosen to satisfy,
+\begin{align}
+  \bk{\de{x^\mu}}{\pa{\nu}} = \delta^\mu_\nu.
+\end{align}
+
+Clearly 1-forms lie on a vector space, $T^*_p M$, called the dual vector space or {\bf cotangent space}. As before, one defines the structure where 1-form fields live, as 
+\begin{align}
+  T^*M = \coprod_{p\in M} T^*_p M,
+\end{align}
+called {\bf cotangent bundle}, just like before, $\dim(T^*M)=2m$.
+
 \subsection{Tensors}
+
+Tensors are multi-linear objects, and they can be expressed in a ``vector basis'' given by the tensor product of basis of either $TM$ or $T^*M$. The tensor product is denoted by $\otimes$, and  it multiplies the basis of ``vector'' spaces in a way they transform independently. 
+
+Tensors are said to be of type $\binom{p}{q}$ if it can be expanded in a basis containing the tensor product of $p$ times the basis of $T_xM$ and $q$ times the basis of $T_x^*M$, i.e.,  $\binom{p}{q}$-tensors lie on $\otimes^p T_x M\otimes^q T_X^*M$. Additionally, the rank of the tensor corresponds to the ``number of indices'', i.e., if $T\in \otimes^p T_x M\otimes^q T_x^*M$ its rank is $p+q$.
 
 \begin{Ebox}
   How do the components of $T$ transform? Where 
@@ -169,6 +207,8 @@ Note that the definition of the vector $X$ through Eq. \eqref{def-vector}, is in
     T= T^{a_1\cdots a_p}{}_{b_1\cdots b_q} \partial_{a_1}\otimes\partial_{a_p}\otimes dx^{b_1}\otimes dx^{b_q}.
   \end{align}
 \end{Ebox}
+
+
 
 \section{Induced Maps and Submanifolds}
 
