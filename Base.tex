@@ -1,18 +1,19 @@
 \documentclass{usm-thesis}
 
-\input{../../Def.tex}
+\input{Def.tex}
 \usetikzlibrary{spy}
 \usetikzlibrary{decorations.pathreplacing}
 \usepackage[nodayofweek]{datetime}
 
 \allowdisplaybreaks
 
-\definethesis{Renormalisation:\\Self-study notes%Here the title
+\definethesis{Aspects of gravity in particle physics%Renormalisation:\\Self-study notes%Here the title
 }{ Oscar Castillo-Felisola  %Here the Author
 }
 
 \hypersetup{
-  pdftitle={Renormalisation: self-study notes},
+  pdftitle={Aspects of gravity in particle physics},
+    %Renormalisation: self-study notes},
   pdfauthor={Oscar Castillo-Felisola},
   pdfkeywords={Differential Geometry,} {General Relativity,} {High Energy Physics.},
   pdfsubject={Mathematical Physics},
@@ -62,14 +63,14 @@
 \mainmatter
 \pagestyle{main}
 
-%% \input{Documents/CalcManifolds.tex}
-%% \input{Documents/ExtCalculus.tex}
+\input{Documents/CalcManifolds.tex}
+\input{Documents/ExtCalculus.tex}
 %% \input{Documents/BundleConnection.tex}
 %% \input{Documents/RiemManifolds.tex}
 %% \input{Documents/CartanFormalism.tex}
 %% \input{Documents/KKonS1.tex}
 %% \input{Documents/MoreKK.tex}
-\input{Documents/RenorNotes.tex}
+%% \input{Documents/RenorNotes.tex}
 
 
 
@@ -84,10 +85,10 @@
 \backmatter
 
 
-%\nocite{IAS1,IAS2,Gilmore,Curtis,Bertlmann,Arnold,Freed, Nakahara,SUGRA-book,WeinbergQFT1,WeinbergQFT2,WeinbergQFT3,CCSZ,Sternberg,Ivey,IASPark1,joyce2000,Joyce2007,CY-friends}
+\nocite{IAS1,IAS2,Gilmore,Curtis,Bertlmann,Arnold,Freed, Nakahara,SUGRA-book,WeinbergQFT1,WeinbergQFT2,WeinbergQFT3,CCSZ,Sternberg,Ivey,IASPark1,joyce2000,Joyce2007,CY-friends}
 
 \bibliographystyle{amsplain}
-\bibliography{../../References.bib}
+\bibliography{References.bib}
 \addcontentsline{toc}{chapter}{\bibname}
 
 
