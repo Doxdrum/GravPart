@@ -20,6 +20,20 @@
   pdflang={English},
 }
 
+\usepackage[%
+  backend      = bibtex,
+  style        = phys,
+  articletitle = false,
+  biblabel     = brackets,
+  chaptertitle = false,
+  sorting      = nyt,
+]{biblatex}
+\addbibresource{References.bib}
+\defbibheading{bibliography}[\refname]{%
+  \chapter*{#1}
+  \markboth{}{}
+}
+
 \definecolor{cccolor}{rgb}{.67,.7,.67}
 
 %% \titleformat{\chapter}[display]
@@ -87,8 +101,11 @@
 
 \nocite{IAS1,IAS2,Gilmore,Curtis,Bertlmann,Arnold,Freed, Nakahara,SUGRA-book,WeinbergQFT1,WeinbergQFT2,WeinbergQFT3,CCSZ,Sternberg,Ivey,IASPark1,joyce2000,Joyce2007,CY-friends}
 
-\bibliographystyle{amsplain}
-\bibliography{References.bib}
+%% \bibliographystyle{amsplain}
+%% \bibliography{References.bib}
+%% \addcontentsline{toc}{chapter}{\bibname}
+
+\printbibliography
 \addcontentsline{toc}{chapter}{\bibname}
 
 
