@@ -200,7 +200,11 @@ called \emph{cotangent bundle}, just like before, $\dim(T^*M)=2m$.
 
 Tensors are multi-linear objects, and they can be expressed in a ``vector basis'' given by the tensor product of basis of either $TM$ or $T^*M$. The tensor product is denoted by $\otimes$, and  it multiplies the basis of ``vector'' spaces in a way they transform independently. 
 
-Tensors are said to be of type $\binom{p}{q}$ if it can be expanded in a basis containing the tensor product of $p$ times the basis of $T_xM$ and $q$ times the basis of $T_x^*M$, i.e.,  $\binom{p}{q}$-tensors lie on $\otimes^p T_x M\otimes^q T_X^*M$. Additionally, the rank of the tensor corresponds to the ``number of indices'', i.e., if $T\in \otimes^p T_x M\otimes^q T_x^*M$ its rank is $p+q$.
+Tensors are said to be of type $\binom{p}{q}$ if it can be expanded in a basis containing the tensor product of $p$ times the basis of $T_xM$ and $q$ times the basis of $T_x^*M$, i.e.,  $\binom{p}{q}$-tensors lie on 
+\begin{equation}
+  \Te[p][q]{M} = \(\otimes^p T_x M\) \otimes \(\otimes^q T_x^*M\).
+\end{equation}
+Additionally, the rank of the tensor corresponds to the ``number of indices'', i.e., if $T \in \Te[p][q]{M} $ its rank is $p+q$.
 
 \begin{Ebox}
   How do the components of $T$ transform? Where 
@@ -228,7 +232,7 @@ is such that,
 for $g$ a function on $N$.
 
 \begin{center}
-  \begin{tikzpicture}[scale=.7]
+  \begin{tikzpicture}%[scale=.8]
     \coordinate (P) at (3.5,0);
     \coordinate (fP) at (12.5,0);
     \coordinate (M) at (3.5cm, 3cm);
@@ -273,6 +277,17 @@ for $g$ a function on $N$.
 \end{center}
 
 \subsection{Pullback Map}
+
+In the same spirit that the differential map, the map between manifolds $f:M\to N$, induces a relation between the cotangent bundles $T^*M$ and $T^*N$. This action is called \emph{pullback} and is denoted by $f^*$, where
+\begin{equation}
+  f^*: T^*_{f(p)}N \to T^*_p M.
+\end{equation}
+
+Since the tangent and cotangent spaces are related by the definition of an inner product, $\bk{\bullet}{\bullet}$, the action of the pullback is defined by 
+\begin{equation}
+  \bk{f^*\omega}{V} = \bk{\omega}{f_*V},
+\end{equation}
+where $V \in TM$ and $\omega \in T^*N$.
 
 \begin{Ebox}
   Let $M$, $N$ and $P$ be manifolds, and $ f:M\to N$, $g:N\to P$,  be maps between manifolds. 

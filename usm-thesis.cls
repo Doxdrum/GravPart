@@ -34,7 +34,7 @@
 \RequirePackage{siunitx}
 %% \RequirePackage{bclogo}
 %% \RequirePackage[framemethod=tikz]{mdframed}
-
+\RequirePackage[english]{babel}
 
 
 \newcommand\HRule{\noindent\rule{\linewidth}{1.5pt}}
