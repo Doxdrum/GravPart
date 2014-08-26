@@ -295,13 +295,22 @@ where $V \in TM$ and $\omega \in T^*N$.
   Show
   \begin{align*}
     (g\circ f)_* &= g_*\circ f_*\\
-    (g\circ f)^* &= g^*\circ f^*
+    (g\circ f)^* &= f^*\circ g^*
   \end{align*}
 \end{Ebox}
 
 \section{Submanifolds}
 
-Submanifolds are restrictions of a manifold, which satisfy the conditions of manifold by themselves.
+Submanifolds are restrictions of a manifold, which satisfy the conditions of manifold by themselves. Submanifolds can be defined as maps, $f:M \to N$.
+
+\begin{Def}[Immersion, embedding, submanifold]
+  Let $f:M\to N$ be a smooth map and let $\dim(M)\leq \dim(N)$.
+  \begin{itemize}
+  \item The map $f$ is called an \emph{immersion} of $M$ into $N$ if its differential map \mbox{$f_*:T_p M\to T_{f(p)}N$} is an injection.
+  \item The map $f$ is called an \emph{embedding} of $M$ into $N$ if $f$ is an injection and an immersion.
+  \end{itemize}
+  If $f$ is an embedding of $M$ into $N$, the image $f(M)\subset N$ is a \emph{submanifold} of $N$.
+\end{Def}
 
 \begin{center}
   \begin{tikzpicture}
@@ -316,10 +325,30 @@ Submanifolds are restrictions of a manifold, which satisfy the conditions of man
 
     \draw[blue,thick] (S) circle [radius=\r cm];
     \node at ($(S)+(75:1.5cm)$) {$S^1$};
-    \draw[thick,<->] (0,4) -- (O) -- (4,0);
-    \draw[blue,thick] (fS) circle [x radius=\rx cm, y radius=\ry cm, rotate=\th];
+    \draw[thick,<->] (0,4) node[anchor=south west] {$\R^2$} -- (O) -- (4,0);
+    \draw[blue,thick] (fS) .. controls (5,6) and (6,1) .. (fS) .. controls (1,3) and (0,-2) .. (fS); %circle [x radius=\rx cm, y radius=\ry cm, rotate=\th];    
 
     \draw[red,very thick,->,bend left=30] ($(S)+(45:1.5cm)$) to  node[midway, above,sloped] {$f$}  ($(fS)+(135:1.5cm)$);
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \coordinate (O) at (0,0);
+    \coordinate (S) at (-4,2);
+    \coordinate (gS) at (3,2);
+
+    \pgfmathsetmacro{\r}{1}
+    \pgfmathsetmacro{\rx}{2}
+    \pgfmathsetmacro{\ry}{1}
+    \pgfmathsetmacro{\th}{30}
+
+    \draw[blue,thick] (S) circle [radius=\r cm];
+    \node at ($(S)+(75:1.5cm)$) {$S^1$};
+    \draw[thick,<->] (0,4) node[anchor=south west] {$\R^2$} -- (O) -- (4,0);
+    \draw[blue,thick] (gS) circle [x radius=\rx cm, y radius=\ry cm, rotate=\th];    
+
+    \draw[red,very thick,->,bend left=30] ($(S)+(45:1.5cm)$) to  node[midway, above,sloped] {$g$}  ($(gS)+(135:1.5cm)$);
   \end{tikzpicture}
 \end{center}
 
