@@ -7,7 +7,7 @@
 A $m$-dimensional {\sc Manifold} is a (topological) space which at each point looks locally like $\R^m$. Note that $m$ is a fixed number, and defines the dimension of the manifold.
 
 \begin{Def}[Manifold]
-  A {\sc Manifold}, $M$, is a topological space homeomorphic to $\R^m$.
+  A {\sc Manifold}\index{Manifold}, $M$, is a topological space homeomorphic to $\R^m$.
 \end{Def}
 
 
@@ -194,17 +194,17 @@ Clearly 1-forms lie on a vector space, $T^*_p M$, called the dual vector space o
 \begin{align}
   T^*M = \coprod_{p\in M} T^*_p M,
 \end{align}
-called \emph{cotangent bundle}, just like before, $\dim(T^*M)=2m$.
+called \emph{cotangent bundle}\index{bundle!cotangent}, just like before, $\dim(T^*M)=2m$.
 
 \subsection{Tensors}
 
-Tensors are multi-linear objects, and they can be expressed in a ``vector basis'' given by the tensor product of basis of either $TM$ or $T^*M$. The tensor product is denoted by $\otimes$, and  it multiplies the basis of ``vector'' spaces in a way they transform independently. 
+Tensors\index{Tensor} are multi-linear objects, and they can be expressed in a ``vector basis'' given by the tensor product of basis of either $TM$ or $T^*M$. The tensor product is denoted by $\otimes$, and  it multiplies the basis of ``vector'' spaces in a way they transform independently. 
 
-Tensors are said to be of type $\binom{p}{q}$ if it can be expanded in a basis containing the tensor product of $p$ times the basis of $T_xM$ and $q$ times the basis of $T_x^*M$, i.e.,  $\binom{p}{q}$-tensors lie on 
+Tensors are said to be of type $\binom{p}{q}$\index{Tensor!type} if it can be expanded in a basis containing the tensor product of $p$ times the basis of $T_xM$ and $q$ times the basis of $T_x^*M$, i.e.,  $\binom{p}{q}$-tensors lie on 
 \begin{equation}
   \Te[p][q]{M} = \(\otimes^p T_x M\) \otimes \(\otimes^q T_x^*M\).
 \end{equation}
-Additionally, the rank of the tensor corresponds to the ``number of indices'', i.e., if $T \in \Te[p][q]{M} $ its rank is $p+q$.
+Additionally, the rank of the tensor\index{Tensor!rank} corresponds to the ``number of indices'', i.e., if $T \in \Te[p][q]{M} $ its rank is $p+q$.
 
 \begin{Ebox}
   How do the components of $T$ transform? Where 
@@ -217,11 +217,11 @@ Additionally, the rank of the tensor corresponds to the ``number of indices'', i
 
 \section{Induced Maps and Submanifolds}
 
-Given a map, $f$, between two manifolds, $f:M\to N$, there are induced maps on all of the geometrical structures defined over them. Below, two important cases are considered, to know, the differential map and the pullback.
+Given a map, $f$, between two manifolds, $f:M\to N$, there are induced maps\index{map!induced} on all of the geometrical structures defined over them. Below, two important cases are considered, to know, the differential map and the pullback.
 
 \subsection{Differential Map}
 
-Let $f$ be a map from $M$ to $N$, $f:M\to N$. Then the differential map, 
+Let $f$ be a map from $M$ to $N$, $f:M\to N$. Then, the \emph{differential map}\index{map!differential} or \emph{push-forward}\index{push-forward}
 \begin{align*}
   f_*:T_p M\to T_{f(p)}N,
 \end{align*}
@@ -278,7 +278,7 @@ for $g$ a function on $N$.
 
 \subsection{Pullback Map}
 
-In the same spirit that the differential map, the map between manifolds $f:M\to N$, induces a relation between the cotangent bundles $T^*M$ and $T^*N$. This action is called \emph{pullback} and is denoted by $f^*$, where
+In the same spirit that the differential map, the map between manifolds $f:M\to N$, induces a relation between the cotangent bundles $T^*M$ and $T^*N$. This action is called \emph{pullback}\index{pullback} and is denoted by $f^*$, where
 \begin{equation}
   f^*: T^*_{f(p)}N \to T^*_p M.
 \end{equation}
@@ -306,10 +306,10 @@ Submanifolds are restrictions of a manifold, which satisfy the conditions of man
 \begin{Def}[Immersion, embedding, submanifold]
   Let $f:M\to N$ be a smooth map and let $\dim(M)\leq \dim(N)$.
   \begin{itemize}
-  \item The map $f$ is called an \emph{immersion} of $M$ into $N$ if its differential map \mbox{$f_*:T_p M\to T_{f(p)}N$} is an injection.
-  \item The map $f$ is called an \emph{embedding} of $M$ into $N$ if $f$ is an injection and an immersion.
+  \item The map $f$ is called an \emph{immersion}\index{immersion} of $M$ into $N$ if its differential map \mbox{$f_*:T_p M\to T_{f(p)}N$} is an injection.
+  \item The map $f$ is called an \emph{embedding}\index{embedding} of $M$ into $N$ if $f$ is an injection and an immersion.
   \end{itemize}
-  If $f$ is an embedding of $M$ into $N$, the image $f(M)\subset N$ is a \emph{submanifold} of $N$.
+  If $f$ is an embedding of $M$ into $N$, the image $f(M)\subset N$ is a \emph{submanifold}\index{submanifold} of $N$.
 \end{Def}
 
 \begin{center}
@@ -360,11 +360,28 @@ From the figures above, one notices that both $f$ and $g$ are immersions of $S^1
 
 \subsubsection*{Pictorial Image}
 
-A vector field is a relation that assign a vector to each point of the space. One can imagine a vector field as the set of velocities of a river basin for a given position. If one throws 
+A vector field is a relation that assign a vector to each point of the space. One can imagine a vector field as the set of velocities of a river basin for a given position. If one throws an almost massless piece of paper, the motion of the paper is determined by the velocities of the neighbourhood at its position.
+
+One could say that the position of the piece of paper at a given time, denoted by $x(t)$, is determined by the (vector field of) velocities of the river, denoted by $X$, as follows
+\begin{equation}
+  \der{x(t)}{t} = X[x(t)].
+\end{equation}
 
 \subsubsection*{Mathematically}
 
-A vector field, $X$,  on a manifold,$M$,  is an element of the tangent bundle$C^\infty(TM)$. Typically, $X$ is said to be a section of $TM$.
+Let $X$ be  vector field  on a manifold $M$, and $\sigma$ a map  \mbox{$\sigma:\R\times M\to M$}, satisfying
+\begin{equation}
+  \der{}{t}\sigma(t,x) = X[\sigma(t,x)],
+  \label{eq:flow}
+\end{equation}
+for every $t\in \R$ and $x\in M$. The map $\sigma$ is said to be the \emph{flow}\index{flow} generated by the vector $X$ on $M$.
+
+From the theory of differential equations, it is evident that to determine a unique solution of Eq.~\eqref{eq:flow}, an initial point, $x_0$, and `time', $t_0$, are needed.
+
+For a fixed point $x_0\in M$, the curve $\sigma(t,x_0)$ is called the \emph{integral curve}\index{curve!integral}
+of $X$ at $x_0$.
+
+
 
 
 \begin{Ebox}
