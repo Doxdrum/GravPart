@@ -4,18 +4,18 @@
 \section{Differential Forms}
 
 \begin{Def}[Differential Forms]
-  A {\sc Differential Form} of order $p$, or $p$-form, is a totally antisymmetric tensor of type $\binom{0}{p}$.
+  A \textsc{\idx{Differential Form}} of order $p$, or $p$-form, is a totally antisymmetric tensor of type $\binom{0}{p}$.
 \end{Def}
 
 Since differential form are tensor, the basis could be the same than for tensors, i.e.,
 \begin{align*}
   \set{\pa{\mu}},\set{\pa{\mu}\otimes\pa{\nu}},\set{\pa{\mu}\otimes\pa{\nu}\otimes\pa{\lambda}},\cdots,
 \end{align*}
-however, since forms are totally antisymmetric, it is more appealing to define an antisymmetric product of the basis. This new product is called ``wedge'' product ($\w$), and is defined by
+however, since forms are totally antisymmetric, it is more appealing to define an antisymmetric product of the basis. This new product is called ``wedge'' product ($\we$), and is defined by
 \begin{align}
-  \df\, x^\mu\w\df\, x^\nu &= \df\, x^\mu\otimes\df\, x^\nu-\df\, x^\nu\otimes \df\, x^\mu\\
+  \de{x}^\mu\we\de{x}^\nu &= \de{x}^\mu\otimes\de{x}^\nu-\de{x}^\nu\otimes \de{x}^\mu\\
  &\vdots\\
-  \df\, x^{\mu_1}\w\cdots\w\df\, x^{\mu_p}&= \sum_{\text{perm.}}(-1)^{\abs{\sigma}}\df\, x^{\sigma(\mu_1)}\otimes\cdots\otimes\df\, x^{\sigma(\mu_p)}
+  \de{x}^{\mu_1}\we\cdots\we\de{x}^{\mu_p}&= \sum_{\text{perm.}}(-1)^{\abs{\sigma}}\de{x}^{\sigma(\mu_1)}\otimes\cdots\otimes\de{x}^{\sigma(\mu_p)}
 \end{align}
 
 The vector space of differential forms of order $p$ on a manifold $M$ is denoted by $\Omega^p(M)$ or $\Lambda^p(M)$. Moreover, if $\dim(M)=m$, then
@@ -31,11 +31,11 @@ The vector space of differential forms of order $p$ on a manifold $M$ is denoted
 
 The exterior product is a map 
 \begin{align}
-  \w:\Lambda^p(M)\times\Lambda^q(M) \to \Lambda^{p+q}(M)
+  \we:\Lambda^p(M)\times\Lambda^q(M) \to \Lambda^{p+q}(M)
 \end{align}
 defined by
 \begin{align}
-  (\omega\w\xi)\(V_1,\cdots,V_{p+q}\) = \frac{1}{p!q!}\sum_{\text{perm.}}(-1)^{\abs{\sigma}}\omega\(V_{\sigma(1)},\cdot,V_{\sigma(p)}\)\xi\(V_{\sigma(p+1)},\cdot,V_{\sigma(p+q)}\)
+  (\omega\we\xi)\(V_1,\cdots,V_{p+q}\) = \frac{1}{p!q!}\sum_{\text{perm.}}(-1)^{\abs{\sigma}}\omega\(V_{\sigma(1)},\cdot,V_{\sigma(p)}\)\xi\(V_{\sigma(p+1)},\cdot,V_{\sigma(p+q)}\)
 \end{align}
 
 This exterior product endows an algebra structure to 
@@ -53,7 +53,7 @@ As stated previously, although the derivative transforms like a 1-form, the deri
 
 In the same way, one defines an exterior derivative which maps $p$-forms into $(p+1)$-forms,
 \begin{align}
-  \df\, : \Lambda^p(M)\to\lambda^{p+1}(M),
+  \df\, : \Lambda^p(M)\to \Lambda^{p+1}(M),
 \end{align}
 defined as follows. Let $\omega$ be a differential $p$-form on $M$, then
 \begin{align}
@@ -69,11 +69,11 @@ defined as follows. Let $\omega$ be a differential $p$-form on $M$, then
     \end{align}
   \item Show that if $\omega$ is a differential $p$-form with components
     \begin{align}
-      \omega = \frac{1}{p!}\omega_{\mu_1\cdots\mu_p}\;\df\, x^{\mu_1}\w\cdots\w\df\, x^{\mu_p},
+      \omega = \frac{1}{p!}\omega_{\mu_1\cdots\mu_p}\;\de{x}^{\mu_1}\we\cdots\we\de{x}^{\mu_p},
     \end{align}
     then its exterior derivative yields,
     \begin{align}
-      \df\,\omega = \frac{1}{p!}\pa{\nu}\omega_{\mu_1\cdots\mu_p}\;\df\, x^\nu\w\df\, x^{\mu_1}\w\cdots\w\df\, x^{\mu_p}.
+      \df\,\omega = \frac{1}{p!}\pa{\nu}\omega_{\mu_1\cdots\mu_p}\;\de{x}^\nu\we\de{x}^{\mu_1}\we\cdots\we\de{x}^{\mu_p}.
     \end{align}
   \end{itemize}
 \end{Ebox}
@@ -92,25 +92,25 @@ It follows from the definition of the exterior derivative, that the double actio
   In three dimensions the maximum order of a differential form is 3. Therefore, the complete set of forms on $\R^3$ is given by
   \begin{align*}
     \Lambda^0(\R^3) &=\F(\R^3), & \Lambda^1(\R^3) &= T^*\R^3\simeq \R^3,\notag\\
-    \Lambda^2(\R^3) &= T^*\R^3\w T^*\R^3\simeq \R^3, & \Lambda^3(\R^3) &=T^*\R^3\w T^*\R^3\w T^*\R^3\simeq\F(\R^3).
+    \Lambda^2(\R^3) &= T^*\R^3\we T^*\R^3\simeq \R^3, & \Lambda^3(\R^3) &=T^*\R^3\we T^*\R^3\we T^*\R^3\simeq\F(\R^3).
   \end{align*}
   
   Let $f\in\Lambda^0(\R^3) $, then the exterior derivative of $f$ yields
   \begin{align}
-    \df\, f= \frac{\partial f}{\partial x}\df\, x +\frac{\partial f}{\partial y}\df\, y +\frac{\partial f}{\partial z}\df\, z,
+    \df\, f= \frac{\partial f}{\partial x}\de{x} +\frac{\partial f}{\partial y}\df\, y +\frac{\partial f}{\partial z}\df\, z,
   \end{align}
   which is the equivalent of the gradient operation.
   
-  Let $\omega\in \Lambda^1(\R^3)$ with components $\omega = \omega_x\df\, x+\omega_y\df\, y+\omega_z\df\, z$, then its exterior derivative yields,
+  Let $\omega\in \Lambda^1(\R^3)$ with components $\omega = \omega_x\de{x}+\omega_y\df\, y+\omega_z\df\, z$, then its exterior derivative yields,
   \begin{align}
-    \df\,\omega &= \(\partial_x\omega_y-\partial_y\omega_x\)\df\, x\w\df\, y +\(\partial_y\omega_z-\partial_z\omega_y\)\df\, y\w\df\, z\notag\\
-    &\phantom{==}+\(\partial_z\omega_x-\partial_x\omega_z\)\df\, z\w\df\, x, 
+    \df\,\omega &= \(\partial_x\omega_y-\partial_y\omega_x\)\de{x}\we\df\, y +\(\partial_y\omega_z-\partial_z\omega_y\)\df\, y\we\df\, z\notag\\
+    &\phantom{==}+\(\partial_z\omega_x-\partial_x\omega_z\)\df\, z\we\de{x}, 
   \end{align}
   which is the equivalent of the curl of $\omega$.
 
-  Let $\omega\in \Lambda^2(\R^3)$ with components $\omega = \omega_{xy}\df\, x\w\df\, y+\omega_{yz}\df\, y\w\df\, z+\omega_{zx}\df\, z\w\df\, x$, then its exterior derivative yields,
+  Let $\omega\in \Lambda^2(\R^3)$ with components $\omega = \omega_{xy}\de{x}\we\df\, y+\omega_{yz}\df\, y\we\df\, z+\omega_{zx}\df\, z\we\de{x}$, then its exterior derivative yields,
   \begin{align}
-    \df\, \omega = \(\partial_x\omega_{yz}+\partial_y\omega_{zx}+\partial_z\omega_{xy}\)\df\, x\w\df\, y\w \df\, z,
+    \df\, \omega = \(\partial_x\omega_{yz}+\partial_y\omega_{zx}+\partial_z\omega_{xy}\)\de{x}\we\df\, y\we \df\, z,
   \end{align}
   which is the equivalent of the divergence of $\omega$.
 
@@ -144,7 +144,7 @@ which is extended naturally to type $\binom{0}{p}$-tensors (and to differential 
     \end{align}
     \item Show that
     \begin{align}
-      f^*\(\omega\w\xi\) = f^*\omega\w f^*\xi.
+      f^*\(\omega\we\xi\) = f^*\omega\we f^*\xi.
     \end{align}
   \end{itemize}
 \end{Ebox}
@@ -196,16 +196,16 @@ defined by
 \end{align}
 In components it can be written as
 \begin{align}
-  i_X\omega &= \frac{1}{(p-1)!}X^\nu \omega_{\nu \mu_2 \cdots\mu_{p}}\;\df\, x^{\mu_2}\w\cdots\w\df\, x^{\mu_p}\\
-  &= \frac{1}{p!}\sum_{s=1}^p X^{\mu_s} \omega_{\mu_1 \cdots\mu_s \cdots \mu_{p}}\;\df\, x^{\mu_2}\w\cdots\w\widehat{\df\, x}^{\mu_s}\w\cdots\w\df\, x^{\mu_p}.\notag
+  i_X\omega &= \frac{1}{(p-1)!}X^\nu \omega_{\nu \mu_2 \cdots\mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\de{x}^{\mu_p}\\
+  &= \frac{1}{p!}\sum_{s=1}^p X^{\mu_s} \omega_{\mu_1 \cdots\mu_s \cdots \mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\widehat{\de{x}}^{\mu_s}\we\cdots\we\de{x}^{\mu_p}.\notag
 \end{align}
 
 
 Using the exterior derivative and the interior product, one can construct the operator $\df\, i_x+i_X \df\,$. This operator can be applied to 1-forms,
 \begin{align}
-  \(\df\, i_x+i_X \df\,\)\omega &=\df\,(X^\mu\omega_\mu) +i_x\(\pa{\mu}\omega_\nu \df\, x^\mu\w\df\, x^\nu\)\notag\\
-  &=\(\pa{\nu}X^\mu\)\omega_\mu\df\, x^\nu +X^\mu\(\pa{\nu}\omega_\mu\)\df\, x^\nu +X^\mu\(\pa{\mu}\omega_\nu-\pa{\nu}\omega_\mu\)\df\, x^\nu\notag\\
-  &=\[\omega(\pa{\nu}X^\mu)+X^\mu(\pa{\mu}\omega_\nu)\]\df\, x^\nu,
+  \(\df\, i_x+i_X \df\,\)\omega &=\df\,(X^\mu\omega_\mu) +i_x\(\pa{\mu}\omega_\nu \de{x}^\mu\we\de{x}^\nu\)\notag\\
+  &=\(\pa{\nu}X^\mu\)\omega_\mu\de{x}^\nu +X^\mu\(\pa{\nu}\omega_\mu\)\de{x}^\nu +X^\mu\(\pa{\mu}\omega_\nu-\pa{\nu}\omega_\mu\)\de{x}^\nu\notag\\
+  &=\[\omega(\pa{\nu}X^\mu)+X^\mu(\pa{\mu}\omega_\nu)\]\de{x}^\nu,
 \end{align}
 which is nothing but the Lie derivative of a differential 1-form,
 \begin{align}
@@ -215,7 +215,7 @@ The above expression is general for differential forms of any order.
 
 The interior product and the Lie derivative satisfy
 \begin{align}
-  i_X\(\omega\w\eta\)&=\(i_X\omega\) \w \eta+(-1)^{\abs{\omega}}\omega \w \(i_X\eta\)\\
+  i_X\(\omega\we\eta\)&=\(i_X\omega\) \we \eta+(-1)^{\abs{\omega}}\omega \we \(i_X\eta\)\\
   i_X^2&=0\\
   \Li_X i_X\omega &= i_X\Li_X\omega.
 \end{align}
@@ -229,7 +229,7 @@ The interior product and the Lie derivative satisfy
 
   Let $\set{q^\mu,p_\mu}$, with $\mu=1...m$, be  the coordinates on $\Phi^m$. One might define a symplectic form on $\Phi^m$ by
   \begin{align*}
-    \Lambda^2\(\Phi^m\)\ni \omega = \df\, p_\mu\w\df\, q^\mu,
+    \Lambda^2\(\Phi^m\)\ni \omega = \df\, p_\mu\we\df\, q^\mu,
   \end{align*}
   and a 1-form $\theta=q^\mu \df\, p_\mu\in \Lambda^1\(\Phi^m\)$, s.t. $\omega=-\df\,\theta$.
   
@@ -272,15 +272,15 @@ The interior product and the Lie derivative satisfy
   frametitleaboveskip=10pt,]
   Let $M$ be a four-dimensional, flat, Lorentzian spacetime endowed with a Minkowski metric, $\eta=\diag(-1,1,1,1)$, and $A_\mu = (-\phi,\vec{A})$ be a four-vector on $T^*M$. One can construct the 1-form 
   \begin{align}
-    A = -\phi\df\, t +A_i\df\, x^i.
+    A = -\phi\df\, t +A_i\de{x}^i.
   \end{align}
 
   Define the 2-form, $F$ as the exterior derivative of $A$,
   \begin{align}
     F &= \df\, A\\
-    &= -\partial_i\phi\;\df\, x^i\w\df\, t +\partial_t A_i\;\df\, t\w\df\, x^i + \partial_i A_j\;\df\, x^i\w\df\, x^j\\
-    &= \(\partial_i\phi+\partial_t A_i\)\;\df\, t\w\df\, x^i+ \partial_i A_j\;\df\, x^i\w\df\, x^j\\
-    &= -\df\, t\w \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
+    &= -\partial_i\phi\;\de{x}^i\we\df\, t +\partial_t A_i\;\df\, t\we\de{x}^i + \partial_i A_j\;\de{x}^i\we\de{x}^j\\
+    &= \(\partial_i\phi+\partial_t A_i\)\;\df\, t\we\de{x}^i+ \partial_i A_j\;\de{x}^i\we\de{x}^j\\
+    &= -\df\, t\we \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
   \end{align}
   where the differential forms $\mathbf{E}$ and $\mathbf{B}$ are the associated to the electric and magnetic field.
   
@@ -290,11 +290,11 @@ The interior product and the Lie derivative satisfy
   \end{align}
   while on the other hand, 
   \begin{align}
-    \df\, F = \df\, t\w \df\,_s\mathbf{E}_{(1)} +\df\,_t\mathbf{B}_{(2)}+\df\,_s\mathbf{B}_{(2)},\label{MaxdF}
+    \df\, F = \df\, t\we \df\,_s\mathbf{E}_{(1)} +\df\,_t\mathbf{B}_{(2)}+\df\,_s\mathbf{B}_{(2)},\label{MaxdF}
   \end{align}
   where $\df\,_t$ and $\df\,_s$ are the exterior derivative on the time and space respectively.
   
-  Since the basis elements $\df\, t$ and $\df\, x^i$ are linearly independent, it follows that components containing projections along the time are independent of those lying only on the space. Thus, Eq. (\ref{MaxdF}), decompose into two independent equations,
+  Since the basis elements $\df\, t$ and $\de{x}^i$ are linearly independent, it follows that components containing projections along the time are independent of those lying only on the space. Thus, Eq. (\ref{MaxdF}), decompose into two independent equations,
   \begin{align}
     \partial_t \vec{B} +\vec{\nabla}\cdot\vec{E} &=0,\notag\\
     \vec{\nabla}\cdot\vec{B}&=0,\label{MaxBianchi}

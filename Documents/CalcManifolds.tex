@@ -135,7 +135,7 @@ From the procedure described, one can guess that a scalar field on $M$ is an ass
 
 On Euclidean geometry, one defines the ``velocity'' vector as the derivative of the position with respect to the time. This definition can be generalised to every curve, $c$, of a parameter $t$ over the Euclidean space, i.e., $c:\R\to\R^m$ defined by $c: t\to c(t)$.
 
-Moreover, the space the function is mapped to could be a manifold instead of $\R^m$. Therefore, a curve on $M$ is a (continuous) map $c:\R\to M$. This is represented in the figure by the {\color{red} red map}, and its image is the {\color{red} red dotted line}.
+Moreover, the space the function is mapped to could be a manifold instead of $\R^m$. Therefore, a \idx{curve} on $M$ is a (continuous) map $c:\R\to M$. This is represented in the figure by the \textcolor{red}{red map}, and its image is the {\color{red} red dotted line}.
 
 \begin{center}
   \begin{tikzpicture}
@@ -164,9 +164,9 @@ Note that the definition of the vector $X$ through Eq.~\eqref{def-vector}, is in
   {X'}^\mu &= \Lambda^\mu{}_\nu X^\nu.
 \end{align}
 
-From the definition, one expect that the vectors  lie on a tangent space to the point $p$, this space is denoted by $T_p M$. When the manifold is not flat, the tangent spaces  at $p$ and at $q$ are not necessary the same, thus, when one want to specify a vector a total of $2m$ coordinates are needed, $m$ of them to denote the point $p\in M$ and the other $m$ to denote the vector on $T_p M$.
+From the definition, one expect that the vectors  lie on a \emph{tangent space}\index{space!tangent} to the point $p$, this space is denoted by $T_p M$. When the manifold is not flat, the tangent spaces  at $p$ and at $q$ are not necessary the same, thus, when one want to specify a vector a total of $2m$ coordinates are needed, $m$ of them to denote the point $p\in M$ and the other $m$ to denote the vector on $T_p M$.
 
-Therefore, in order to define vector fields on $M$, the natural structure to consider is the disjoint union of all the tangent spaces. This structure is call the \emph{tangent bundle}, $TM$, and mathematically is defined as
+Therefore, in order to define vector fields on $M$, the natural structure to consider is the disjoint union of all the tangent spaces. This structure is call the \emph{tangent bundle}\index{bundle!tangent}, $TM$, and mathematically is defined as
 \begin{align}
   TM = \coprod_{p\in M} T_p M.
 \end{align}
@@ -190,7 +190,7 @@ with basis of the dual vector space $\de{x^\mu}$. The basis of the dual space ca
   \bk{\de{x^\mu}}{\pa{\nu}} = \delta^\mu_\nu.
 \end{align}
 
-Clearly 1-forms lie on a vector space, $T^*_p M$, called the dual vector space or \emph{cotangent space}. As before, one defines the structure where 1-form fields live, as 
+Clearly 1-forms lie on a vector space, $T^*_p M$, called the dual vector space or \emph{cotangent space}\index{space!cotangent}. As before, one defines the structure where 1-form fields live, as 
 \begin{align}
   T^*M = \coprod_{p\in M} T^*_p M,
 \end{align}
@@ -209,7 +209,7 @@ Additionally, the rank of the tensor\index{Tensor!rank} corresponds to the ``num
 \begin{Ebox}
   How do the components of $T$ transform? Where 
   \begin{align}
-    T= T^{a_1\cdots a_p}{}_{b_1\cdots b_q} \partial_{a_1}\otimes\partial_{a_p}\otimes dx^{b_1}\otimes dx^{b_q}.
+    T = T^{a_1 \cdots a_p}{}_{b_1 \cdots b_q} \partial_{a_1} \otimes \cdots \otimes \partial_{a_p} \otimes \de{x}^{b_1} \otimes \cdots \otimes \de{x}^{b_q}.
   \end{align}
 \end{Ebox}
 
@@ -403,9 +403,27 @@ of $V$ at $x_0$.
   \end{align*}
   or equivalently (due to the orthogonality of the vector basis),
   \begin{align*}
-    \dot{x}(t) &= -y(t)  \\
-    \dot{y}(t) &= x(t)
+    \dot{x}(t) &= -y(t),  \\
+    \dot{y}(t) &= x(t).
   \end{align*}
+
+  This system of differential equation can be easily solved by writing the second order equivalent differential equation,
+  \begin{equation*}
+    \ddot{x}(t) + x(t) = 0 \quad \Rightarrow \quad x(t) = \mathbb{A} \sin(t) + \mathbb{B} \cos(t),
+  \end{equation*}
+  and additionally, since $\dot{x}(t) = -y(t)$, 
+  \begin{equation*}
+    y(t) = - \mathbb{A} \cos(t) + \mathbb{B} \sin(t).
+  \end{equation*}
+  The only missing step is to impose the initial condition \mbox{$\sigma(0,(x,y)) = (x_0,y_0)$,} and one obtains
+  \begin{align*}
+      x(t) &= x_0 \cos(t) - y_0 \sin(t)  \\
+      y(t) &= y_0 \cos(t) + x_0 \sin(t)
+  \end{align*}
+  or in terms of $\sigma$,
+  \begin{equation*}
+    \sigma(t,(x,y)) = \(-y_0 \sin(t) + x_0 \cos(t)\)\pa{x} + \(y_0 \cos(t) + x_0 \sin(t)\) \pa{y}
+  \end{equation*}
 \end{WEbox}
 
 \begin{Ebox}
@@ -422,6 +440,10 @@ of $V$ at $x_0$.
     V = x\partial_y +y\partial_x.
   \end{align}
 \end{Ebox}
+
+\subsection{Lie Derivative}
+
+It has been argued that (most of the) geometrical objects defined on a manifold, do not exactly lie on the manifold itself but  on tangent spaces, and additionally these spaces are different for each point $p\in M$. Therefore, one can not compare an object defined at $p$ with the equivalent object at $p'$.
 
 \begin{Ebox}
   \begin{itemize}
