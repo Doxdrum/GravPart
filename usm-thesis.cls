@@ -1,6 +1,5 @@
-
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{usm-thesis}[01/08/2010 LaTeX package for USM thesis]
+\ProvidesClass{usm-thesis}[2014/08/01 LaTeX package for USM thesis]
 
 
 %--------- Based on `book' class
@@ -19,7 +18,7 @@
 %% \RequirePackage{pdftricks}
 \RequirePackage{graphicx}
 \RequirePackage[margin=20pt,format=hang,font=small,labelfont=sc,textfont=sl]{caption}
-\RequirePackage[Lenny]{fncychap}
+%% \RequirePackage[Lenny]{fncychap}
 \RequirePackage{xcolor}
 \RequirePackage[linktocpage,colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=red]{hyperref}
 %% \hypersetup{linktocpage}
@@ -31,6 +30,7 @@
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}
 \RequirePackage{pgfplotstable}
+\RequirePackage[framemethod=tikz]{mdframed}
 \RequirePackage{siunitx}
 %% \RequirePackage{bclogo}
 %% \RequirePackage[framemethod=tikz]{mdframed}
@@ -154,22 +154,22 @@
   \newpage
   \vspace*{\stretch{5}}
   \begin{flushright}
-    #1
+    {\Large #1}
   \end{flushright}
   \vspace*{\stretch{1}}
 }
 
 \definecolor{cccolor}{rgb}{.67,.7,.67}
-\DeclareRobustCommand{\CC}{
+\DeclareRobustCommand{\CC}[1][by-sa]{
   \newpage
   \vspace*{\stretch{5}}
   
   \begin{mdframed}[outerlinecolor=black,outerlinewidth=2pt,linecolor=cccolor,middlelinewidth=3pt,roundcorner=10pt]
     
     \begin{center}
-      This work is licensed under a \href{http://creativecommons.org/licenses/by-sa/3.0/}{Creative Commons Attribution-ShareAlike 3.0 Unported License}.
+      This work is licensed under a \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons Attribution-ShareAlike 4.0 International License}.
       
-      \includegraphics[scale=2]{Pict/by-nc-sa.pdf}
+      \includegraphics[scale=2]{Pict/#1.pdf}
     \end{center}
   \end{mdframed}
   \vspace*{\stretch{1}}

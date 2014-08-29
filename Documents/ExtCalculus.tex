@@ -4,18 +4,19 @@
 \section{Differential Forms}
 
 \begin{Def}[Differential Forms]
-  A \textsc{\idx{Differential Form}} of order $p$, or $p$-form, is a totally antisymmetric tensor of type $\binom{0}{p}$.
+  A \textsc{Differential Form} of order $p$, or $p$-form, is a totally antisymmetric tensor of type $\binom{0}{p}$.
 \end{Def}
 
 Since differential form are tensor, the basis could be the same than for tensors, i.e.,
 \begin{align*}
   \set{\pa{\mu}},\set{\pa{\mu}\otimes\pa{\nu}},\set{\pa{\mu}\otimes\pa{\nu}\otimes\pa{\lambda}},\cdots,
 \end{align*}
-however, since forms are totally antisymmetric, it is more appealing to define an antisymmetric product of the basis. This new product is called ``wedge'' product ($\we$), and is defined by
+however, since forms are totally antisymmetric, it is more appealing to define an antisymmetric product of the basis. This new product is called ``wedge'' product \index{product!wedge}
+($\we$), and is defined by
 \begin{align}
   \de{x}^\mu\we\de{x}^\nu &= \de{x}^\mu\otimes\de{x}^\nu-\de{x}^\nu\otimes \de{x}^\mu\\
  &\vdots\\
-  \de{x}^{\mu_1}\we\cdots\we\de{x}^{\mu_p}&= \sum_{\text{perm.}}(-1)^{\abs{\sigma}}\de{x}^{\sigma(\mu_1)}\otimes\cdots\otimes\de{x}^{\sigma(\mu_p)}
+  \de{x}^{\mu_1}\we\cdots\we\de{x}^{\mu_p}&= \sum_{\sigma\in S_p}(-1)^{\abs{\sigma}}\de{x}^{\sigma(\mu_1)}\otimes\cdots\otimes\de{x}^{\sigma(\mu_p)}
 \end{align}
 
 The vector space of differential forms of order $p$ on a manifold $M$ is denoted by $\Omega^p(M)$ or $\Lambda^p(M)$. Moreover, if $\dim(M)=m$, then
@@ -29,18 +30,18 @@ The vector space of differential forms of order $p$ on a manifold $M$ is denoted
 
 \subsection[Exterior Product]{Exterior Product (or wedge product)}
 
-The exterior product is a map 
+The exterior product \index{product!exterior} is a map 
 \begin{align}
-  \we:\Lambda^p(M)\times\Lambda^q(M) \to \Lambda^{p+q}(M)
+  \we:\Lambda^p(M) \times \Lambda^q(M) \to \Lambda^{p+q}(M)
 \end{align}
 defined by
 \begin{align}
-  (\omega\we\xi)\(V_1,\cdots,V_{p+q}\) = \frac{1}{p!q!}\sum_{\text{perm.}}(-1)^{\abs{\sigma}}\omega\(V_{\sigma(1)},\cdot,V_{\sigma(p)}\)\xi\(V_{\sigma(p+1)},\cdot,V_{\sigma(p+q)}\)
+  (\omega\we\xi)\(V_1,\cdots,V_{p+q}\) = \frac{1}{p!q!}\sum_{\sigma\in S_p}(-1)^{\abs{\sigma}}\omega\(V_{\sigma(1)},\cdot,V_{\sigma(p)}\)\xi\(V_{\sigma(p+1)},\cdot,V_{\sigma(p+q)}\)
 \end{align}
 
 This exterior product endows an algebra structure to 
 \begin{align}
-  \Lambda^\bullet(M) \equiv \Lambda^0(M)\oplus\Lambda^1(M)\oplus\cdots\oplus \Lambda^m(M).
+  \Lambda^\bullet(M) \equiv \Lambda^0(M) \oplus \Lambda^1(M) \oplus \cdots \oplus \Lambda^m(M).
 \end{align}
 Clearly,
 \begin{align}
@@ -51,9 +52,10 @@ Clearly,
 
 As stated previously, although the derivative transforms like a 1-form, the derivative of a tensor is not necessarily a tensor. However, it is possible to define a ``covariant'' derivative which maps tensors into tensors.
 
-In the same way, one defines an exterior derivative which maps $p$-forms into $(p+1)$-forms,
+In the same way, one defines an exterior derivative\index{derivative!exterior}
+which maps $p$-forms into $(p+1)$-forms,
 \begin{align}
-  \df\, : \Lambda^p(M)\to \Lambda^{p+1}(M),
+  \df\; : \Lambda^p(M)\to \Lambda^{p+1}(M),
 \end{align}
 defined as follows. Let $\omega$ be a differential $p$-form on $M$, then
 \begin{align}
@@ -79,7 +81,7 @@ defined as follows. Let $\omega$ be a differential $p$-form on $M$, then
 \end{Ebox}
 
 
-It follows from the definition of the exterior derivative, that the double action of $\df\,$ vanishes, i.e., $\df\,^2=0$. This property is known as {\bf nilpotency}.
+It follows from the definition of the exterior derivative, that the double action of $\df\,$ vanishes, i.e., $\df\,^2=0$. This property is known as \emph{\idx{nilpotency}}.
 
 
 
@@ -97,20 +99,20 @@ It follows from the definition of the exterior derivative, that the double actio
   
   Let $f\in\Lambda^0(\R^3) $, then the exterior derivative of $f$ yields
   \begin{align}
-    \df\, f= \frac{\partial f}{\partial x}\de{x} +\frac{\partial f}{\partial y}\df\, y +\frac{\partial f}{\partial z}\df\, z,
+    \df\, f= \frac{\partial f}{\partial x}\de{x} +\frac{\partial f}{\partial y}\de{y} +\frac{\partial f}{\partial z}\de{z},
   \end{align}
   which is the equivalent of the gradient operation.
   
-  Let $\omega\in \Lambda^1(\R^3)$ with components $\omega = \omega_x\de{x}+\omega_y\df\, y+\omega_z\df\, z$, then its exterior derivative yields,
+  Let $\omega\in \Lambda^1(\R^3)$ with components $\omega = \omega_x \de{x} + \omega_y \de{y} + \omega_z \de{z}$, then its exterior derivative yields,
   \begin{align}
-    \df\,\omega &= \(\partial_x\omega_y-\partial_y\omega_x\)\de{x}\we\df\, y +\(\partial_y\omega_z-\partial_z\omega_y\)\df\, y\we\df\, z\notag\\
-    &\phantom{==}+\(\partial_z\omega_x-\partial_x\omega_z\)\df\, z\we\de{x}, 
+    \df\,\omega &= \(\partial_x\omega_y-\partial_y\omega_x\)\de{x}\we\de{y} +\(\partial_y\omega_z-\partial_z\omega_y\)\de{y}\we\de{z}\notag\\
+    &\phantom{==}+\(\partial_z\omega_x-\partial_x\omega_z\)\de{z}\we\de{x}, 
   \end{align}
   which is the equivalent of the curl of $\omega$.
 
-  Let $\omega\in \Lambda^2(\R^3)$ with components $\omega = \omega_{xy}\de{x}\we\df\, y+\omega_{yz}\df\, y\we\df\, z+\omega_{zx}\df\, z\we\de{x}$, then its exterior derivative yields,
+  Let $\omega\in \Lambda^2(\R^3)$ with components $\omega = \omega_{xy}\de{x}\we\de{y}+\omega_{yz}\de{y}\we\de{z}+\omega_{zx}\de{z}\we\de{x}$, then its exterior derivative yields,
   \begin{align}
-    \df\, \omega = \(\partial_x\omega_{yz}+\partial_y\omega_{zx}+\partial_z\omega_{xy}\)\de{x}\we\df\, y\we \df\, z,
+    \df\, \omega = \(\partial_x\omega_{yz}+\partial_y\omega_{zx}+\partial_z\omega_{xy}\)\de{x}\we\de{y}\we \de{z},
   \end{align}
   which is the equivalent of the divergence of $\omega$.
 
