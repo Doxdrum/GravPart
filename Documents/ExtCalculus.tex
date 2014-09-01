@@ -225,25 +225,25 @@ The interior product and the Lie derivative satisfy
 \end{align}
 
 
-\begin{WEbox}[frametitle={Geometry of Classical Mechanics},
+\begin{WEbox}[frametitle={Geometry of Classical Mechanics\index{machanics!classical}},
   frametitlerule=true,
   frametitlealignment=\centering,
   frametitleaboveskip=10pt,]
-  Let $M$ be a $m$-dimensional manifold, and $\Phi^m\equiv T^*M$ be its cotangent bundle (or {\bf phase space}). A {\bf Hamiltonian} on $M$ is a map $\Ha:\Phi^m\to \R$.
+  Let $M$ be a $m$-dimensional manifold, and $\Phi^m\equiv T^*M$ be its cotangent bundle (or \emph{phase space}). A  \emph{\idx{Hamiltonian}} on $M$ is a map $\Ha:\Phi^m\to \R$.
 
-  Let $\set{q^\mu,p_\mu}$, with $\mu=1...m$, be  the coordinates on $\Phi^m$. One might define a symplectic form on $\Phi^m$ by
+  Let $\set{q^\mu,p_\mu}$, with $\mu = 1,\cdots, m$, be  the coordinates on $\Phi^m$. One might define a symplectic form on $\Phi^m$ by
   \begin{align*}
-    \Lambda^2\(\Phi^m\)\ni \omega = \df\, p_\mu\we\df\, q^\mu,
+    \Lambda^2\(\Phi^m\)\ni \omega = \de{p}_\mu \we \de{q}^\mu,
   \end{align*}
-  and a 1-form $\theta=q^\mu \df\, p_\mu\in \Lambda^1\(\Phi^m\)$, s.t. $\omega=-\df\,\theta$.
+  and a 1-form $\theta=q^\mu \de{p}_\mu\in \Lambda^1\(\Phi^m\)$, s.t. $\omega=-\de{\theta}$.
   
-  Given a function $f:\Phi^m\to \R$. one might define the {\sc Hamiltonian Vector Field}
+  Given a function $f:\Phi^m\to \R$, one might define the \textsc{Hamiltonian Vector Field}\index{Hamiltonian!vector field}
   \begin{align*}
     X_f = \pder{f}{p_\mu}\pder{}{q^\mu} -\pder{f}{q^\mu}\pder{}{p_\mu}.
   \end{align*}
   Then,
   \begin{align*}
-    i_{X_f}\omega =-\pder{f}{q^\mu}\df\, q^\mu -\pder{f}{p_\mu}\df\, p_\mu = -\df\, f.
+    i_{X_f}\omega =-\pder{f}{q^\mu}\de{q}^\mu -\pder{f}{p_\mu}\de{p}_\mu = -\de{f}.
   \end{align*}
 
   The Hamilton equations,
@@ -252,7 +252,7 @@ The interior product and the Lie derivative satisfy
   \end{align*}
   can be written as
   \begin{align*}
-    i_{X_\Ha}\omega = -\pder{\Ha}{q^\mu}\df\, q^\mu -\pder{\Ha}{p_\mu}\df\, p_\mu = -\df\,\Ha,
+    i_{X_\Ha}\omega = -\pder{\Ha}{q^\mu}\de{q}^\mu -\pder{\Ha}{p_\mu}\de{p}_\mu = -\de{\Ha},
   \end{align*}
   where the identity
   \begin{align*}
@@ -264,9 +264,9 @@ The interior product and the Lie derivative satisfy
 
   Also, the action of two interior products on $\omega$ yields the Poisson bracket,
   \begin{align*}
-    i_{X_f}\(i_{X_g}\omega\) &=-i_{X_f}(\df\, g) = -i_{X_f}\(\pder{g}{q^\mu}\df\, q^\mu +\pder{g}{p_\mu}\df\, p_\mu\)\\
+    i_{X_f}\(i_{X_g}\omega\) &=-i_{X_f}(\de{g}) = -i_{X_f}\(\pder{g}{q^\mu}\de{q}^\mu +\pder{g}{p_\mu}\de{p}_\mu\)\\
     &= -\pder{f}{p_\mu}\pder{g}{q^\mu}+\pder{f}{q^\mu}\pder{g}{p_\mu}\\
-    &=\acomm{f}{g}_{P.B.}.
+    &= \acomm{f}{g}_{P.B.}.
   \end{align*}
 \end{WEbox}
 
@@ -274,45 +274,46 @@ The interior product and the Lie derivative satisfy
   frametitlerule=true,
   frametitlealignment=\centering,
   frametitleaboveskip=10pt,]
-  Let $M$ be a four-dimensional, flat, Lorentzian spacetime endowed with a Minkowski metric, $\eta=\diag(-1,1,1,1)$, and $A_\mu = (-\phi,\vec{A})$ be a four-vector on $T^*M$. One can construct the 1-form 
+  Let $M$ be a four-dimensional, flat, Lorentzian spacetime endowed with a Minkowski metric\index{gauge!theory (Abelian)}, $\eta=\diag(-1,1,1,1)$, and $A_\mu = (-\phi,\vec{A})$ be a four-vector on $T^*M$. One can construct the 1-form 
   \begin{align}
-    A = -\phi\df\, t +A_i\de{x}^i.
+    A = -\phi\de{t} + A_i\de{x}^i.
   \end{align}
 
   Define the 2-form, $F$ as the exterior derivative of $A$,
   \begin{align}
-    F &= \df\, A\\
-    &= -\partial_i\phi\;\de{x}^i\we\df\, t +\partial_t A_i\;\df\, t\we\de{x}^i + \partial_i A_j\;\de{x}^i\we\de{x}^j\\
-    &= \(\partial_i\phi+\partial_t A_i\)\;\df\, t\we\de{x}^i+ \partial_i A_j\;\de{x}^i\we\de{x}^j\\
-    &= -\df\, t\we \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
+    F &= \de{A}\\
+    &= -\partial_i\phi\;\de{x}^i\we\de{t} +\partial_t A_i\;\de{t}\we\de{x}^i + \partial_i A_j\;\de{x}^i\we\de{x}^j\\
+    &= \(\partial_i\phi+\partial_t A_i\)\;\de{t}\we\de{x}^i+ \partial_i A_j\;\de{x}^i\we\de{x}^j\\
+    &= -\de{t}\we \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
   \end{align}
   where the differential forms $\mathbf{E}$ and $\mathbf{B}$ are the associated to the electric and magnetic field.
   
-  Now, the nilpotency of $\df\,$ implies that,
+  Now, the nilpotency of $\de{\,}$ implies that,
   \begin{align}
-    \df\, F = \df\,\df\, A =0,
+    \de{F} = \de{(\de{A})} = 0,
   \end{align}
   while on the other hand, 
   \begin{align}
-    \df\, F = \df\, t\we \df\,_s\mathbf{E}_{(1)} +\df\,_t\mathbf{B}_{(2)}+\df\,_s\mathbf{B}_{(2)},\label{MaxdF}
+    \de{F} = \de{t}\we \de{_s}\mathbf{E}_{(1)} +\de{_t}\mathbf{B}_{(2)}+\de{_s}\mathbf{B}_{(2)},\label{MaxdF}
   \end{align}
-  where $\df\,_t$ and $\df\,_s$ are the exterior derivative on the time and space respectively.
+  where $\de{_t}$ and $\de{_s}$ are the exterior derivative on the time and space respectively.
   
-  Since the basis elements $\df\, t$ and $\de{x}^i$ are linearly independent, it follows that components containing projections along the time are independent of those lying only on the space. Thus, Eq. (\ref{MaxdF}), decompose into two independent equations,
+  Since the basis elements $\de{t}$ and $\de{x}^i$ are linearly independent, it follows that components containing projections along the time are independent of those lying only on the space. Thus, Eq. \eqref{MaxdF}, decompose into two independent equations,
   \begin{align}
-    \partial_t \vec{B} +\vec{\nabla}\cdot\vec{E} &=0,\notag\\
-    \vec{\nabla}\cdot\vec{B}&=0,\label{MaxBianchi}
+    \partial_t \vec{B} + \vec{\nabla} \cdot \vec{E} &= 0, \notag\\
+    \vec{\nabla} \cdot \vec{B}&=0,
+    \label{MaxBianchi}
   \end{align}
-  where the relation between the exterior derivative on forms and the vector calculus have been used. The Eq. (\ref{MaxBianchi}) are known as the Maxwell equations coming from the Bianchi identity.
+  where the relation between the exterior derivative on forms and the vector calculus have been used. The Eq. \eqref{MaxBianchi} are known as the Maxwell equations coming from the Bianchi identity.
 
-  When a change can be made to the geometrical object, $A$ in this case, and the physical fields (what can be measured) do not vary, $\vec{E}$ and $\vec{B}$, the theory is said to posses a  {\bf gauge  invariance}.
+  When a change can be made to the geometrical object, $A$ in this case, and the physical fields (what can be measured) do not vary, $\vec{E}$ and $\vec{B}$, the theory is said to posses a  \emph{gauge  invariance}\index{gauge!invariance}.
 
-  The electromagnetic theory is a gauge theory. Note that the electric and magnetic fields enters through $F$, not through $A$. Thus, if one changes $A\mapsto A+\df\, f$, the $F$ field do not changes,
+  The electromagnetic theory is a gauge theory. Note that the electric and magnetic fields enters through $F$, not through $A$. Thus, if one changes $A\mapsto A + \de{f}$, the $F$ field do not changes,
   \begin{align}
-    F\to F' = \df\, A' = \df\,\( A+\df\, f\) = \df\, A = F.
+    F \to F' = \de{A'} = \de{\( A + \de{f}\)} = \de{A} = F.
   \end{align}
 
-  In order to conclude, it is worth to remark that the physical observables of the electromagnetic theory, $\vec{E}$ and $\vec{B}$, lie in a close form, $F$, but are defined up to a gauge transformation, i.e., $A$ is unique up to an exact form. Therefore, the physical states live in the second cohomological group of the Minkowski space, $H^2\(\R^{1,3}\)$.
+  In order to conclude, it is worth to remark that the physical observables of the electromagnetic theory, $\vec{E}$ and $\vec{B}$, lie in a close form, $F$, but are defined up to a gauge transformation, i.e., $A$ is unique up to an exact form. Therefore, the physical states live in the second cohomological group of the Minkowski space, $H^2\(\R^{3,1}\)$.
 \end{WEbox}
 
 
