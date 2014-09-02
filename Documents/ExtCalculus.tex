@@ -199,16 +199,17 @@ defined by
   i_X\omega(V_1,\cdots,V_{p-1})=\omega(X,V_1,\cdots,V_{p-1}).
 \end{align}
 In components it can be written as
-\begin{align}
-  i_X\omega &= \frac{1}{(p-1)!}X^\nu \omega_{\nu \mu_2 \cdots\mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\de{x}^{\mu_p}\\
-  &= \frac{1}{p!}\sum_{s=1}^p X^{\mu_s} \omega_{\mu_1 \cdots\mu_s \cdots \mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\widehat{\de{x}}^{\mu_s}\we\cdots\we\de{x}^{\mu_p}.\notag
-\end{align}
-
+\begin{equation}
+  \begin{split}
+    i_X\omega &= \frac{1}{(p-1)!} X^\nu \omega_{\nu \mu_2 \cdots\mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\de{x}^{\mu_p}\\
+    &= \frac{1}{p!} \sum_{s=1}^p (-1)^{s-1} X^{\mu_s} \omega_{\mu_1 \cdots\mu_s \cdots \mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\widehat{\de{x}}^{\mu_s}\we\cdots\we\de{x}^{\mu_p}.
+  \end{split}
+\end{equation}
 
 Using the exterior derivative and the interior product, one can construct the operator \mbox{$\de{i}_x+i_X \de{.}$} This operator can be applied to 1-forms,
 \begin{align}
-  \(\de{i}_x + i_X \de{\,}\)\omega &=\de{(X^\mu\omega_\mu)} +i_x\(\pa{\mu}\omega_\nu \de{x}^\mu\we\de{x}^\nu\)\notag\\
-  &=\(\pa{\nu}X^\mu\)\omega_\mu\de{x}^\nu +X^\mu\(\pa{\nu}\omega_\mu\)\de{x}^\nu +X^\mu\(\pa{\mu}\omega_\nu-\pa{\nu}\omega_\mu\)\de{x}^\nu\notag\\
+  \(\de{i}_X + i_X \de{\,}\)\omega &=\de{(X^\mu\omega_\mu)} + i_X\(\pa{\mu}\omega_\nu \de{x}^\mu\we\de{x}^\nu\)\notag\\
+  &=\(\pa{\nu}X^\mu\)\omega_\mu\de{x}^\nu +X^\mu \(\pa{\nu}\omega_\mu\) \de{x}^\nu + X^\mu \(\pa{\mu}\omega_\nu - \pa{\nu}\omega_\mu\) \de{x}^\nu \notag\\
   &=\[\omega(\pa{\nu}X^\mu)+X^\mu(\pa{\mu}\omega_\nu)\]\de{x}^\nu,
 \end{align}
 which is nothing but the Lie derivative of a differential 1-form,
@@ -231,9 +232,9 @@ The interior product and the Lie derivative satisfy
   frametitleaboveskip=10pt,]
   Let $M$ be a $m$-dimensional manifold, and $\Phi^m\equiv T^*M$ be its cotangent bundle (or \emph{phase space}). A  \emph{\idx{Hamiltonian}} on $M$ is a map $\Ha:\Phi^m\to \R$.
 
-  Let $\set{q^\mu,p_\mu}$, with $\mu = 1,\cdots, m$, be  the coordinates on $\Phi^m$. One might define a symplectic form on $\Phi^m$ by
+  Let $\set{q^\mu,p_\mu}$, with $\mu = 1,\cdots, m$, be  the coordinates on $\Phi^m$. One might define a \idx{symplectic form} on $\Phi^m$ by
   \begin{align*}
-    \Lambda^2\(\Phi^m\)\ni \omega = \de{p}_\mu \we \de{q}^\mu,
+    \Lambda^2\(\Phi^m\) \ni \omega = \de{p}_\mu \we \de{q}^\mu,
   \end{align*}
   and a 1-form $\theta=q^\mu \de{p}_\mu\in \Lambda^1\(\Phi^m\)$, s.t. $\omega=-\de{\theta}$.
   
@@ -262,7 +263,7 @@ The interior product and the Lie derivative satisfy
   \end{align*}
   has been used.
 
-  Also, the action of two interior products on $\omega$ yields the Poisson bracket,
+  Also, the action of two interior products on $\omega$ yields the \idx{Poisson bracket},
   \begin{align*}
     i_{X_f}\(i_{X_g}\omega\) &=-i_{X_f}(\de{g}) = -i_{X_f}\(\pder{g}{q^\mu}\de{q}^\mu +\pder{g}{p_\mu}\de{p}_\mu\)\\
     &= -\pder{f}{p_\mu}\pder{g}{q^\mu}+\pder{f}{q^\mu}\pder{g}{p_\mu}\\
@@ -276,15 +277,15 @@ The interior product and the Lie derivative satisfy
   frametitleaboveskip=10pt,]
   Let $M$ be a four-dimensional, flat, Lorentzian spacetime endowed with a Minkowski metric\index{gauge!theory (Abelian)}, $\eta=\diag(-1,1,1,1)$, and $A_\mu = (-\phi,\vec{A})$ be a four-vector on $T^*M$. One can construct the 1-form 
   \begin{align}
-    A = -\phi\de{t} + A_i\de{x}^i.
+    A = -\phi \de{t} + A_i \de{x}^i.
   \end{align}
 
   Define the 2-form, $F$ as the exterior derivative of $A$,
   \begin{align}
     F &= \de{A}\\
-    &= -\partial_i\phi\;\de{x}^i\we\de{t} +\partial_t A_i\;\de{t}\we\de{x}^i + \partial_i A_j\;\de{x}^i\we\de{x}^j\\
-    &= \(\partial_i\phi+\partial_t A_i\)\;\de{t}\we\de{x}^i+ \partial_i A_j\;\de{x}^i\we\de{x}^j\\
-    &= -\de{t}\we \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
+      &= - \partial_i\phi\;\de{x}^i\we\de{t} + \partial_t A_i\;\de{t}\we\de{x}^i + \partial_i A_j\;\de{x}^i\we\de{x}^j\\
+      &= \(\partial_i\phi+\partial_t A_i\)\;\de{t}\we\de{x}^i+ \partial_i A_j\;\de{x}^i\we\de{x}^j\\
+      &= -\de{t} \we \mathbf{E}_{(1)} +\mathbf{B}_{(2)},
   \end{align}
   where the differential forms $\mathbf{E}$ and $\mathbf{B}$ are the associated to the electric and magnetic field.
   
@@ -313,7 +314,7 @@ The interior product and the Lie derivative satisfy
     F \to F' = \de{A'} = \de{\( A + \de{f}\)} = \de{A} = F.
   \end{align}
 
-  In order to conclude, it is worth to remark that the physical observables of the electromagnetic theory, $\vec{E}$ and $\vec{B}$, lie in a close form, $F$, but are defined up to a gauge transformation, i.e., $A$ is unique up to an exact form. Therefore, the physical states live in the second cohomological group of the Minkowski space, $H^2\(\R^{3,1}\)$.
+  In order to conclude, it is worth to remark that the physical observables of the electromagnetic theory, $\vec{E}$ and $\vec{B}$, lie in a close form, $F$, but are defined up to a gauge transformation, i.e., $A$ is unique up to an exact form. %Therefore, the physical states live in the second cohomological group of the Minkowski space, $H^2\(\R^{3,1}\)$.
 \end{WEbox}
 
 
@@ -322,13 +323,29 @@ The interior product and the Lie derivative satisfy
 \subsection{Lie Groups}
 
 \begin{Def}[Group]
-  A {\sc Group} $G$ is a set of elements, $\{g\}$, together with an operator, $\cdot: G\to G$, satisfying
-  \begin{enumerate}
-  \item Exists an unique identity element, $e$, s.t. $e\cdot g=g\cdot e =g$ for all $g\in G$.
-  \item For every pair $g_1,g_2\in G$, the product $g_1\cdot g_2\equiv g_3$ belongs to $G$.
-  \item Associativity: $g_1\cdot(g_2\cdot g_3)= (g_1\cdot g_2)\cdot g_3$, for all $g_1,g_2,g_3\in G$.
-  \item Exists an inverse $g^{-1}\in G\; \forall g\in G$ s.t. $g\cdot g^{-1}=g^{-1}\cdot g=e$.
-  \end{enumerate}
+  A  \textsc{Group}\index{group} $G$ is a set of elements, $\{g\}$, together with an operator, $\cdot: G \times G \to G$, satisfying
+  \begin{itemize}
+  \item \emph{Identity} Exists an unique identity element, $e$, s.t. $e \cdot g = g \cdot e =g$ for all $g \in G$.
+  \item \emph{Closure} For every pair $g_1, g_2\in G$, the product $g_1\cdot g_2 = g_3$ belongs to $G$.
+  \item \emph{Associativity} $g_1 \cdot (g_2 \cdot g_3) = (g_1 \cdot g_2) \cdot g_3$, for all $g_1$, $g_2$, $g_3$ in $G$.
+  \item \emph{Inverse} Exists a unique inverse $g^{-1} \in G\; \forall g \in G$ s.t. $g \cdot g^{-1} = g^{-1} \cdot g = e$.
+  \end{itemize}
 \end{Def}
 
+\begin{Def}[Lie Group]
+  A \textsc{Lie Group}\index{Lie group}, $G$, is a differential manifold endowed with a group structure
+  \begin{equation}
+    \begin{split}
+      \cdot: G \times G &\to G \\
+      (g_1,g_2) &\mapsto g_1 \cdot g_2
+    \end{split}
+    \quad
+    \text{and}
+    \quad
+    \begin{split}
+      (\ )^{-1}: G &\to G \\
+      g_1 &\mapsto g^{-1}
+    \end{split}
+  \end{equation}
+\end{Def}
 
