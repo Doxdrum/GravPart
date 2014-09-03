@@ -60,7 +60,7 @@ which maps $p$-forms into $(p+1)$-forms,
 defined as follows. Let $\omega$ be a differential $p$-form on $M$, then
 \begin{align}
   \de{\omega}\(X_1,\cdots,X_{p+1}\) &= \sum_{i=1}^p (-1)^{i+1}X_i\[\omega\(X_1,\cdots,\hat{X}_i,\cdots,X_{p+1}\)\]\\
-  &\phantom{ ==}\sum_{i<j} (-1)^{i+j}\omega\(\comm{X_i}{X_j},X_1,\cdots,\hat{X}_i,\cdots\hat{X}_i,\cdots,X_{p+1}\).\notag
+  &\phantom{=} + \sum_{i<j} (-1)^{i+j}\omega\(\comm{X_i}{X_j},X_1,\cdots,\hat{X}_i,\cdots\hat{X}_i,\cdots,X_{p+1}\).\notag
 \end{align}
 
 \begin{Ebox}
@@ -349,3 +349,53 @@ The interior product and the Lie derivative satisfy
   \end{equation}
 \end{Def}
 
+\begin{Exa}
+  \mbox{}
+  \begin{itemize}
+  \item $(\R^>,\cdot)$
+  \item $(\R^n,+)$
+  \item $GL(n;\K)$
+  \end{itemize}
+\end{Exa}
+
+\begin{Thm}\label{thm:LieSubgroup}
+  Every closed subgroup $H$ of a Lie group $G$ is a Lie group.
+\end{Thm}
+
+Accordingly to the Theorem~\ref{thm:LieSubgroup}, the subgroups of $GL(n,\K)$ are Lie groups, for example:
+\begin{equation*}
+  GL(n,\K) \supset SL(n,\K) \supset SU(n,\K).
+\end{equation*}
+
+If $G$ is a Lie group and $H \subset G$, one might define an \emph{equivalence relation}\index{relation!equivalence}, denoted by $\sim$, such that $g \sim g'$ if exists an element $h \in H$ satisfying that $g' = g \cdot h$.
+
+The set of all ``equivalent'' elements is denoted by $[g]$ and is called an \emph{equivalence class}\index{class!equivalence}.
+
+The coset group, $G/H$, is also a manifold called \emph{coset manifold}\index{manifold!coset}. Additionally, if $H$ is a normal subgroup of $G$, then the coset manifold posses a Lie group structure.
+
+
+\subsection{Action of Lie groups on Manifolds}
+
+One might define the action of an element $a \in G$ on a manifold in two ways,
+\begin{equation}
+  \begin{split}
+    L_a g &= a g, \\
+    R_a g &= g a,
+  \end{split}
+\end{equation}
+called the left and right action of $G$ on $M$ respectively.
+
+These maps induce actions on the tangent space of $G$ at $g$, $T_g G$, defined by
+\begin{equation}
+  \begin{split}
+    L_{a*} : T_g G &\to T_{ga} G, \\
+    R_{a*} : T_g G &\to T_{ag} G.
+  \end{split}
+\end{equation}
+
+\begin{Def}
+  A vector field $X$ on $G$, $X \in TG$, is said to be a \emph{left invariant} vector field\index{vector field!left invariant} if
+  \begin{equation}
+    L_{a*} X \bigr|_{g} = X \bigr|_{ag}.
+  \end{equation}
+\end{Def}
