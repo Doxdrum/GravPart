@@ -389,15 +389,45 @@ The coset group, $G/H$, is also a manifold called \emph{coset manifold}\index{ma
 
 \subsection{Action of Lie groups on Manifolds}
 
-One might define the action of an element $a \in G$ on a manifold in two ways,
+The action of a group\index{Lie group!action} on a manifold is a generalisation of the concept of flow.
+\begin{Def}
+  Let $G$ be a Lie group and $M$ be a manifold. The action of $G$ on $M$ is a differential map \mbox{$\sigma: G \times M \to M$} satisfying
+  \begin{align}
+    \sigma(e, p) &= p, \quad \forall p \in M ,\\
+    \sigma(g_1, \sigma(g_2, p )) &= \sigma(g_1 \cdot g_2, p),
+  \end{align}
+  where $e$ is the identity element of $G$, and the dot ($\cdot$) is the group operation of $G$.
+\end{Def}
+
+The action $\sigma$ is said to be 
+\begin{itemize}
+\item Transitive\index{Lie group!action!transitive}: If for all pair of points on $M$, say $p_1$ and $p_2$, there exists an element $g \in G$ such that $\sigma(g, p_1) = p_2$.
+\item Free\index{Lie group!action!free}: If for an element $g \in G$  there exists an $p \in M$ with $\sigma(g, p) = p$ (that is, if $g$ has at least one \idx{fixed point}), then $g$ is the identity.
+\item Effective\index{Lie group!action!effective}: If for any $g \neq e \in G$ there exists an $p \in M$ such that $\sigma(g, p) \neq p$.
+\end{itemize}
+
+Using the concept of action, one can define the \emph{\idx{orbit}} of $p \in M$ under the action of the group $G$, as the subset  $Gp \subset M$ such that
+\begin{equation}
+  Gp = \set{\sigma(g, p) \mid g \in G}.
+\end{equation}
+Also, the \idx{isotropy group} of $p \in M$ is a subgroup $H \subset G$, defined by
+\begin{equation}
+  H(p) = \set{g \in G \mid \sigma(g, p) = p}.
+\end{equation}
+The isotropy group is also known as \emph{little group} or \emph{stabiliser} of $p$.
+
+It is customary, for the sake of notation simplification, to denote the action $\sigma(g, p)$ by $g p$.
+
+One might define the action of an element $g \in G$ on a manifold in two ways,
 \begin{equation}
   \begin{split}
-    L_a g &= a g, \\
-    R_a g &= g a,
+    L_g p &= p g, \\
+    R_g p &= g p,
   \end{split}
 \end{equation}
 called the left and right action of $G$ on $M$ respectively.
 
+%% Moreover, since a Lie group is also a manifold, there is an action of the group on itself.
 These maps induce actions on the tangent space of $G$ at $g$, $T_g G$, defined by
 \begin{equation}
   \begin{split}
