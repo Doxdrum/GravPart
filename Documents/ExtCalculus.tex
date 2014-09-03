@@ -271,10 +271,11 @@ The interior product and the Lie derivative satisfy
   \end{align*}
 \end{WEbox}
 
-\begin{WEbox}[frametitle={Gauge Theory (Abelian)},
-  frametitlerule=true,
-  frametitlealignment=\centering,
-  frametitleaboveskip=10pt,]
+\begin{WEbox}[%
+    frametitle={Gauge Theory (Abelian)},
+    frametitlerule=true,
+    frametitlealignment=\centering,
+    frametitleaboveskip=10pt,]
   Let $M$ be a four-dimensional, flat, Lorentzian spacetime endowed with a Minkowski metric\index{gauge!theory (Abelian)}, $\eta=\diag(-1,1,1,1)$, and $A_\mu = (-\phi,\vec{A})$ be a four-vector on $T^*M$. One can construct the 1-form 
   \begin{align}
     A = -\phi \de{t} + A_i \de{x}^i.
@@ -399,3 +400,25 @@ These maps induce actions on the tangent space of $G$ at $g$, $T_g G$, defined b
     L_{a*} X \bigr|_{g} = X \bigr|_{ag}.
   \end{equation}
 \end{Def}
+
+\begin{WEbox}[%
+    frametitle={Left Invariant Vector Field},
+    frametitlerule=true,
+    frametitlealignment=\centering,
+    frametitleaboveskip=10pt,]
+  Let $M$ be a manifold and $p$ a point on $M$ with coordinates $x$. Let $X = \pa{x}$ be a vector field on $M$, and the group of translations acts on $M$ through 
+  \begin{equation}
+    L_a x = x + a.
+  \end{equation}
+  The induced action on the vector $X$ is
+  \begin{equation}
+    L_{a*} X \bigr|_x = \pder{}{x}(x + a) \pder{}{(x + a)} = \pder{}{(x + a)} = X \bigr|_{x+a},
+  \end{equation}
+  Therefore, $X$ is a left invariant vector field under the action of translations on $M$.
+\end{WEbox}
+
+According to Eq.~\eqref{diff-comm}, if $X$ and $Y$ are left invariant vector fields, it follows that
+\begin{equation}
+  L_{a*} \comm{X}{Y} \bigr|_{g} = \comm{X}{Y} \bigr|_{ag},
+\end{equation}
+\emph{i.e.}, the Lie bracket of left invariant vector fields is a left invariant vector field.
