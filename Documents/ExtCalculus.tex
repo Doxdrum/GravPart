@@ -204,7 +204,12 @@ In components it can be written as
     i_X\omega &= \frac{1}{(p-1)!} X^\nu \omega_{\nu \mu_2 \cdots\mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\de{x}^{\mu_p}\\
     &= \frac{1}{p!} \sum_{s=1}^p (-1)^{s-1} X^{\mu_s} \omega_{\mu_1 \cdots\mu_s \cdots \mu_{p}}\;\de{x}^{\mu_2}\we\cdots\we\widehat{\de{x}}^{\mu_s}\we\cdots\we\de{x}^{\mu_p}.
   \end{split}
+  \label{ext-prod}
 \end{equation}
+
+\begin{Ebox}
+  Prove the equivalence between the two expressions of the interior product in Eq.~\eqref{ext-prod}.
+\end{Ebox}
 
 Using the exterior derivative and the interior product, one can construct the operator \mbox{$\de{i}_x+i_X \de{.}$} This operator can be applied to 1-forms,
 \begin{align}
@@ -220,10 +225,17 @@ The above expression is general for differential forms of any order.
 
 The interior product and the Lie derivative satisfy
 \begin{align}
-  i_X\(\omega\we\eta\)&=\(i_X\omega\) \we \eta+(-1)^{\abs{\omega}}\omega \we \(i_X\eta\)\\
-  (i_X)^2&=0\\
-  \Li_X i_X\omega &= i_X\Li_X\omega.
+  i_X \(\omega \we \eta\) &= \(i_X\omega\) \we \eta + (-1)^{\abs{\omega}} \omega \we \(i_X\eta\)
+  \label{iwedge} \\
+  (i_X)^2 &= 0
+  \label{isquare} \\
+  \Li_X i_X \omega &= i_X \Li_X \omega.
+  \label{iLie}
 \end{align}
+
+\begin{Ebox}
+  Prove the equalities in Eqs.~\eqref{iwedge}, \eqref{isquare} and \eqref{iLie}.
+\end{Ebox}
 
 
 \begin{WEbox}[frametitle={Geometry of Classical Mechanics\index{machanics!classical}},
@@ -417,8 +429,30 @@ These maps induce actions on the tangent space of $G$ at $g$, $T_g G$, defined b
   Therefore, $X$ is a left invariant vector field under the action of translations on $M$.
 \end{WEbox}
 
+\begin{infobox}
+  The action of the Lie group $G$ on a point $g$ in the manifold $G$ is trivially defined by the group operation, and from the axioms of group, the result is a new point on $G$.
+
+  Therefore, left invariant vector fields are vectors which are globally defined on the tangent bundle of the group manifold, $TG$. 
+\end{infobox}
+
 According to Eq.~\eqref{diff-comm}, if $X$ and $Y$ are left invariant vector fields, it follows that
 \begin{equation}
   L_{a*} \comm{X}{Y} \bigr|_{g} = \comm{X}{Y} \bigr|_{ag},
+  \label{left-comm}
 \end{equation}
 \emph{i.e.}, the Lie bracket of left invariant vector fields is a left invariant vector field.
+
+\subsection{Lie Algebra}
+
+Since the set left invariant vector fields, $\mathfrak{g}$, are well defined over $TG$, they serve to define a basis on $TG$. Moreover, it is enough to define them at a single point of the manifold (because they are invariant), say $T_e G$.
+
+One then define an isomorphism between $T_e G$ and $\mathfrak{g}$, and it yields
+\begin{equation*}
+  \dim(\mathfrak{g}) = \dim(G).
+\end{equation*}
+Additionally, from Eq.~\eqref{left-comm}, it follows that $\mathfrak{g}$ is closed under the action of the Lie bracket.
+
+\begin{Def}
+  [Lie Algebra]
+  The set of left invariant vector fields, $\mathfrak{g}$, with the Lie bracket $\comm{\ }{\ }: \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}$ form an algebra called \emph{\idx{Lie algebra}} of the Lie group $G$.
+\end{Def}
