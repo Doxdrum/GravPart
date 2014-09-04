@@ -418,6 +418,9 @@ The isotropy group is also known as \emph{little group} or \emph{stabiliser} of 
 
 It is customary, for the sake of notation simplification, to denote the action $\sigma(g, p)$ by $g p$.
 
+
+\subsection{Lie Algebra}
+
 One might define the action of an element $g \in G$ on a manifold in two ways,
 \begin{equation}
   \begin{split}
@@ -427,7 +430,6 @@ One might define the action of an element $g \in G$ on a manifold in two ways,
 \end{equation}
 called the left and right action of $G$ on $M$ respectively.
 
-%% Moreover, since a Lie group is also a manifold, there is an action of the group on itself.
 These maps induce actions on the tangent space of $G$ at $g$, $T_g G$, defined by
 \begin{equation}
   \begin{split}
@@ -472,7 +474,7 @@ According to Eq.~\eqref{diff-comm}, if $X$ and $Y$ are left invariant vector fie
 \end{equation}
 \emph{i.e.}, the Lie bracket of left invariant vector fields is a left invariant vector field.
 
-\subsection{Lie Algebra}
+
 
 Since the set left invariant vector fields, $\mathfrak{g}$, are well defined over $TG$, they serve to define a basis on $TG$. Moreover, it is enough to define them at a single point of the manifold (because they are invariant), say $T_e G$.
 
@@ -486,3 +488,75 @@ Additionally, from Eq.~\eqref{left-comm}, it follows that $\mathfrak{g}$ is clos
   [Lie Algebra]
   The set of left invariant vector fields, $\mathfrak{g}$, with the Lie bracket $\comm{\ }{\ }: \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}$ form an algebra called \emph{\idx{Lie algebra}} of the Lie group $G$.
 \end{Def}
+
+Consider a set of left invariant vector fields $\mathfrak{g} = \{X_i \bigr|_g\}$. Since the Lie bracket $\comm{X_a}{X_b} \bigr|_g$  is another left invariant vector fields, it lives in $\mathfrak{g}$. Therefore, it should be a linear combination of the basis $\mathfrak{g}$, \emph{i.e.},
+\begin{equation*}
+  \comm{X_a}{X_b} \bigr|_g = C_{ab}{}^c(g)\, X_c \bigr|_g.
+\end{equation*}
+Considering that the left invariant vector fields are well defined globally, the above equation should be independent of the point $g$. Thus,
+\begin{equation*}
+  C_{ab}{}^c(g) = C_{ab}{}^c,
+\end{equation*}
+are in fact constants, know are \emph{\idx{structure constants}} of the Lie group $G$.
+
+The Lie algebra is then characterised by the relations,
+\begin{equation}
+  \comm{X_a}{X_b} = C_{ab}{}^c\, X_c .
+  \label{Lie-alg}
+\end{equation}
+
+
+\subsection{Relation between 1-parameter subgroup and flows}
+
+A curve $\phi: \R \to G$ is called a 1-parameter subgroup of $G$ if
+\begin{equation*}
+  \phi(t) \cdot \phi(s) = \phi(t+s).
+\end{equation*}
+It can be shown, that for a given 1-parameter subgroup $\phi$ of $G$, there exists a vector field $X \in TG$ such that 
+\begin{equation*}
+  \der{}{t} \phi(t) = X[\phi(t)].
+\end{equation*}
+Moreover, $X$ is a left-invariant vector field. It follows from Eq.~\eqref{sol-flow} that
+\begin{equation}
+  \phi_X(t) = \exp(t X).
+\end{equation}
+
+\section{Frames and Structure Equation}
+
+In a few words, the structure equations of Maurer--Cartan are the dual equivalent to the Lie algebra relation [see Eq.~\eqref{Lie-alg}]. However, a detour will be taken to introduce several concepts.
+
+\subsection{Matrix Valued Differential Forms}
+
+\begin{Ebox}
+  Calculate $\de{A^{-1}}$, where $A^{-1}$ is the matrix valued function on $GL(n)$ assigning to each invertible matrix its inverse.
+\end{Ebox}
+
+\subsection{A Primer on Maurer--Cartan Form}
+
+\begin{Ebox}
+  Consider $\Omega \equiv A^{-1} \de{A}$. Show that for a fixed $g\in G$
+  \begin{itemize}
+  \item $L_g^* \Omega = \Omega$.
+  \item $R_g^* \Omega = g\Omega g^{-1}$.
+  \item $\de{\Omega} + \Omega \we \Omega =0$.
+  \end{itemize}
+\end{Ebox}
+
+\subsubsection{Restrictions to a Subgroup of $GL(n)$}
+
+\subsection{Frames}
+
+\subsubsection{Euclidean Frames}
+
+\begin{Ebox}
+  Using
+  \begin{enumerate}
+  \item $\de{e}^a = \Omega^a{}_b e^b$,
+  \item $\de{u} = e^a \theta_a$,
+  \end{enumerate}
+  where the notation was defined on class, derive the Structure Equations for the Euclidean Geometry,
+  \begin{align}
+    \de{\theta}^a + \Omega^a{}_b \we \theta^b &= 0,\\
+    \de{\Omega}^a{}_c + \Omega^a{}_b \we \Omega^b{}_c &= 0.
+  \end{align}
+\end{Ebox}
