@@ -505,6 +505,14 @@ The Lie algebra is then characterised by the relations,
   \label{Lie-alg}
 \end{equation}
 
+\begin{WEbox}
+  Show that the structure constants satisfy 
+  \begin{itemize}
+  \item $C_{ab}{}^c = - C_{ba}{}^c$.
+  \item $C_{ab}{}^d C_{dc}{}^f + C_{bc}{}^d C_{da}{}^f + C_{ca}{}^d C_{db}{}^f = 0$.
+  \end{itemize}
+\end{WEbox}
+
 
 \subsection{Relation between 1-parameter subgroup and flows}
 
@@ -534,8 +542,18 @@ Let $R$ and $S$ be matrix valued $p$-forms, operations on the exterior algebra a
   R &= \(R_{ij}\), \\
   \de{R} &= \( \de{R}_{ij} \), \\
   R \we S &= \( \sum_j R_{ij} \we S_{jk} \),
+  \label{mvdf-w}
 \end{align}
 with $R_{ij}$ and $S_{ij}$ in $\Lambda^p(M)$.
+
+Note that in Eq.~\eqref{mvdf-w}, there is a matrix product, and in a general vector space $\Mat(n)$ the multiplicative inverse is not defined. However, in the restriction $GL(n) \subset \Mat(n)$, it is possible to define the inverse, $R^{-1}$,  of a matrix values differential $p$-form $R$, such that 
+\begin{equation}
+  \begin{split}
+    R &\in \Lambda^{p}(M) \otimes GL(n) \\
+    R^{-1} &\in \Lambda^{p}(M) \otimes GL(n) \\
+    \{ R \we R^{-1}, R^{-1} \we R \} &\in \Lambda^{2p}(M) \otimes \mathds{1}_n.
+  \end{split}
+\end{equation}
 
 \begin{Ebox}
   Calculate $\de{A^{-1}}$, where $A^{-1}$ is the matrix valued function on $GL(n)$ assigning to each invertible matrix its inverse.
@@ -543,16 +561,37 @@ with $R_{ij}$ and $S_{ij}$ in $\Lambda^p(M)$.
 
 \subsection{A Primer on Maurer--Cartan Form}
 
+Let $G = GL(n)$  be the group of invertible, $n$ by $n$ matrices, and $A$ be a matrix valued $0$-form on $\Lambda^0(M) \otimes G$. The construction 
+\begin{equation}
+  \omega = A^{-1} \de{A},
+  \label{MC-form}
+\end{equation}
+is a matrix valued $1$-form, \emph{i.e.}, $\omega \in \Lambda^1(M) \otimes G$.
+
 \begin{Ebox}
-  Consider $\Omega \equiv A^{-1} \de{A}$. Show that for a fixed $g\in G$
+  Consider $\omega = A^{-1} \de{A}$. For a fixed $g \in G$, show that:
   \begin{itemize}
-  \item $L_g^* \Omega = \Omega$.
-  \item $R_g^* \Omega = g\Omega g^{-1}$.
-  \item $\de{\Omega} + \Omega \we \Omega =0$.
+  \item Under left action, $\omega$ is an invariant $1$-form, \emph{i.e.},
+    \begin{equation}
+      L_g^* \omega = \omega.
+    \end{equation}
+  \item Under right action, $\omega$ transforms in the adjoint representation, \emph{i.e.},
+    \begin{equation}
+      R_g^* \omega = g\omega g^{-1}.
+    \end{equation}
+  \item The following relation is satisfied,
+    \begin{equation}
+      \de{\omega} + \omega \we \omega =0.
+      \label{MC-eq-pre}
+    \end{equation}
   \end{itemize}
 \end{Ebox}
 
+The matrix valued $1$-form in Eq.~\eqref{MC-form} is called the \emph{Maurer--Cartan form}\index{Maurer--Cartan!form}, while the relation in Eq.~\eqref{MC-eq-pre} is called the \emph{Maurer--Cartan equation} of structure\index{Maurer--Cartan!equation}.
+
 \subsubsection{Restrictions to a Subgroup of $GL(n)$}
+
+If $H$ is a Lie subgroup of $G$, then $H$ is a (sub)manifold. 
 
 \subsection{Frames}
 
