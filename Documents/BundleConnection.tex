@@ -27,16 +27,16 @@ A \emph{\idx{Bundle}} is a geometric structure composed by two manifolds $E$ (th
 
 In essence there are three types of bundles:
 \begin{description}
-\item [Fibre Bundle] is a general bundle structure, i.e., a manifold which locally looks like a product of a base manifold and the fibre.
-\item [Vector Bundle] A fibre bundle whose fibre is a vector space.
-\item [Principal Bundle] A fibre bundle whose fibre is a manifold with group structure, i.e., the fibre is a Lie group manifold.
+\item [Fibre Bundle]\index{Bundle!fibre} is a general bundle structure, i.e., a manifold which locally looks like a product of a base manifold and the fibre.
+\item [Vector Bundle]\index{Bundle!vector} A fibre bundle whose fibre is a vector space.
+\item [Principal Bundle]\index{Bundle!principal} A fibre bundle whose fibre is a manifold with group structure, i.e., the fibre is a Lie group manifold.
 \end{description}
 
 \subsection{Sections on Bundles}
 
 A \idx{Section}, $\psi$, on a bundle $E \xrightarrow{\pi} M$ is a smooth map from the base manifold to the fibre,
 \begin{align}
-  \psi: M \to F,
+  \psi: M \to F,  
 \end{align}
 such that $\pi \circ \psi = \id_M$.
 
@@ -50,38 +50,38 @@ As stated before, principal bundles are fibre bundles whose fibres are a Lie Gro
 
 The associated bundles are constructed from  principal bundles. Let $P(M,G)$ be a principal bundle, with fibre $F$ admitting and action of the Lie group $G$.
 
-Given a pair $(u,f)$ on $P\times F$, a bundle $\(P\times F\)/G$ can be construct by identifying points related by the action of the group $G$, 
+Given a pair $(u,f)$ on $P \times F$, a bundle $\(P \times F\)/G$ can be construct by identifying points related by the action of the group $G$, 
 \begin{align}
   (u,f)\sim \(u g,g^{-1}f\).
 \end{align}
-This construction is known as {\sc Associated Bundle}.
+This construction is known as \emph{associated bundle}\index{Bundle!associated}.
 
-More generally, the fibre can admit the action of a representation $\rho$ of $G$. In this case, the associated bundle $\(P\times_\rho F\)/G$ is constructed through,
+More generally, the fibre can admit the action of a representation $\rho$ of $G$. In this case, the associated bundle $\(P \times_\rho F\)/G$ is constructed through,
 \begin{align}
-  (u,f)\sim \(u g,\rho\(g^{-1}\)f\).
+  (u,f) \sim \(u g, \rho\(g^{-1}\)f\).
 \end{align}
 
 
 \section{Connections on the Tangent Bundle}
 
-A connection on the tangent bundle is an application $\nabla:TM\times TM\to TM$, defined by
+A connection on the tangent bundle is an application $\nabla: TM \times TM \to TM$, defined by
 \begin{align}
-  \nabla:(X,Y)\to \nabla_X Y,
+  \nabla: (X,Y) \to \nabla_X Y,
 \end{align}
 satisfying 
 \begin{align}
-  \nabla_{fX}Y &=f \nabla_X Y\\
-  \nabla_X fY &= f\nabla_X Y+ Y . X[f],\\
-  \nabla_{X+ Y} Z &= \nabla_X Z+\nabla_Y Z.
+  \nabla_{f X} Y &=f \nabla_X Y\\
+  \nabla_X f Y &= f\nabla_X Y + Y \cdot X[f],\\
+  \nabla_{X + Y} Z &= \nabla_X Z + \nabla_Y Z.
 \end{align}
 
 On a vector basis, 
 \begin{align}
-  \nabla_{\partial_i}\partial_j \equiv \nabla_i\partial_j = \conn{i}{k}{j}\pa{k},
+  \nabla_{\partial_i} \partial_j \equiv \nabla_i \partial_j = \conn{i}{k}{j} \pa{k},
 \end{align}
 then, in components
 \begin{align}
-  \nab{i}Y=\(\pa{i}Y^j+\conn{i}{j}{k}Y^k\)\pa{j}.
+  \nab{i} Y=\(\pa{i} Y^j + \conn{i}{j}{k} Y^k\) \pa{j}.
 \end{align}
 In physics, the term between the brackets is called the covariant derivative of a vector.
 
@@ -89,7 +89,7 @@ In physics, the term between the brackets is called the covariant derivative of 
 \begin{infobox}[frametitle={General Connections}]
   In a general bundle $E$, the connections are applications
   \begin{align*}
-    \nabla:TM\otimes\mathcal{E}\to\mathcal{E},
+    \nabla: TM \otimes \mathcal{E} \to \mathcal{E},
   \end{align*}
   where $\mathcal{E}$ is the space of sections on the bundle $E$.
 \end{infobox}
@@ -98,9 +98,9 @@ In physics, the term between the brackets is called the covariant derivative of 
 
 Let $V$ be a tangent vector to a curve, i.e., 
 \begin{align}
-  V=\frac{d x^\mu}{d t}\(c(t)\)\;\left.\pa{\mu}\right|_{c(t)},
+  V = \der{x^\mu}{ t} \(c(t)\) \;\pa{\mu}\bigr|_{c(t)},
 \end{align}
-then $X\in TM$ is said to be parallel transport along $c(t)$ if
+then $X\in TM$ is said to be parallel transported\index{Parallel transport} along $c(t)$ if
 \begin{align}
   \nabla_V X =0\quad \forall\;t\in I.
 \end{align}
@@ -109,14 +109,14 @@ If the tangent vector to a curve ($V$) satisfies the parallel transport conditio
 \begin{align}
   \nabla_V V =0,
 \end{align}
-then the curve $c(t)$ is called a {\sc Geodesic}.
+then the curve $c(t)$ is called a \emph{\idx{Geodesic}}.
 
 \begin{Ebox}
   \begin{itemize}
   \item Use that
     \begin{align*}
-      \nab{i}\pa{j} &=\conn{i}{k}{j}\pa{k}\\
-      \nab{i}'\pa{j}' &=\(\Ga_{i}'\)^{k}{}_{j}\pa{k}',
+      \nab{i} \pa{j} &= \conn{i}{k}{j} \pa{k}\\
+      \nab{i}' \pa{j}' &= \(\Ga_{i}'\)^{k}{}_{j} \pa{k}',
     \end{align*}
     to find the transformation rule of $\Ga$'s.
   \item Find the action of $\nabla$ on 1-forms and rank two tensors.
@@ -142,7 +142,7 @@ then the curve $c(t)$ is called a {\sc Geodesic}.
 \begin{infobox}[frametitle={NOTE}]
   In general the concept of curvature can be extended to sections on a bundle, where 
   \begin{align*}
-    \nabla:TM\otimes\mathcal{E}\to\mathcal{E},
+    \nabla: TM \otimes \mathcal{E} \to \mathcal{E},
   \end{align*}
   while the torsion cannot, since $X$ and $Y$ are necessarily the same kind of object.
 \end{infobox}

@@ -5,38 +5,44 @@
 \section{The metric}
 
 \begin{Def}[Riemannian Metric]
-  Let $M$ be a differential manifold. A {\sc Riemannian metric}, $g$ on $M$ is a symmetric, non-degenerated $\binom{0}{2}$-tensor, i.e.,
+  Let $M$ be a differential manifold. A \emph{\idx{Riemannian metric}}, $g$ on $M$ is a symmetric, non-degenerated $\binom{0}{2}$-tensor, i.e.,
   \begin{align}
     g(X,Y) &= g(Y,X)\\
-    g(X,X) &= 0\quad\text{iff }X=0.\label{riem-cond}
+    g(X,X) &= 0 \quad \text{iff } X = 0.
+    \label{riem-cond}
   \end{align}
 \end{Def}
 
 If the metric satisfies the condition
 \begin{align}
-  g(X,Y) = 0\quad \forall X\,\Rightarrow\, Y=0.\label{sriem-cond}
+  g(X,Y) = 0 \quad \forall X \, \Rightarrow \, Y = 0.
+  \label{sriem-cond}
 \end{align}
-instead of Eq. (\ref{riem-cond}), the metric is said to be semi-Riemannian.
+instead of Eq.~\eqref{riem-cond}, the metric is said to be semi-Riemannian\index{Semi-Riemaniann metric}.
 
 Given a set of coordinated on $M$, the metric is expressed as 
 \begin{align}
-  g_p = g_{\mu\nu}(p)\,\df\, x^\mu\otimes\df\, x^\nu,
+  g_p = g_{\mu\nu}(p) \, \de{x}^\mu \otimes \de{x}^\nu,
 \end{align}
 with
 \begin{align}
-  g_{\mu\nu}(p) = g_p\(\partial_\mu,\partial_\nu\).
+  g_{\mu\nu}(p) = g_p\(\partial_\mu, \partial_\nu\).
 \end{align}
 
 The metric can be seen as a map
-\begin{align}
-  g_p:T_pM\times T_pM &\to \R,\\
-  g_p:T_pM &\to T^*_pM,
-\end{align}
+\begin{equation}
+  \begin{split}
+    g_p: T_pM \times T_pM &\to \R,\\
+    g_p: T_pM &\to T^*_pM,
+  \end{split}
+\end{equation}
 and its inverse, $g^{-1}$, similarly yields
-\begin{align}
-  g^{-1}_p:T^*_pM\times T^*_pM &\to \R,\\
-  g^{-1}_p:T^*_pM &\to T_pM.
-\end{align}
+\begin{equation}
+  \begin{split}
+    g^{-1}_p: T^*_pM \times T^*_pM &\to \R,\\
+    g^{-1}_p: T^*_pM &\to T_pM.
+  \end{split}
+\end{equation}
 
 In index notation, the inverse metric is denoted with upper indices, i.e., 
 \begin{align}
@@ -49,11 +55,11 @@ such that,
 
 One might consider metrics compatible with the connection, 
 \begin{align}
-  \nabla_X g = 0,\quad \forall\,X\in TM.
+  \nabla_X g = 0, \quad \forall \, X \in TM.
 \end{align}
 
 \begin{Ebox}
-  Use the {\bf metric compatibility} condition, to find a expression for the (general) connection in terms of the metric and the skew-symmetric part of the $\Gamma$'s.
+  Use the \emph{metric compatibility} condition, to find a expression for the (general) connection in terms of the metric and the skew-symmetric part of the $\Gamma$'s.
 \end{Ebox}
 
 
@@ -61,30 +67,33 @@ One might consider metrics compatible with the connection,
 
 It has been pointed out before that the only geometrical object one can integrate on an orientable $m$-dimensional manifold is a $m$-form. However, on Riemannian manifolds, were the metric defines a volume form, one in accustomed to integrate functions.
 
-The link between the two notions is made by defining a new sort of differential operator, called the {\bf Hodge star}, as follows
+The link between the two notions is made by defining a new sort of differential operator, called the \emph{\idx{Hodge star}}, as follows
 \begin{align}
-  *:C^\infty\(\Lambda^p(M)\)\to C^\infty\(\Lambda^{m-p}(M)\)
+  *: C^\infty \(\Lambda^p(M)\) \to C^\infty \(\Lambda^{m-p}(M)\)
 \end{align}
-such that, for $\alpha,\beta\in C^\infty\(\Lambda^p(M)\)$,
+such that, for $\alpha,\beta \in C^\infty \(\Lambda^p(M)\)$,
 \begin{align}
-  \bk{\alpha}{\beta}=\int \alpha\w *\beta= \int_M (\alpha,\beta)dV_g = \int\,\dn{m}{x}\sqrt{g}\,\alpha_{a_1\cdots a_p}\beta_{b_1\cdots b_p}g^{a_1 b_1}\cdots g^{a_p b_p}.\label{HodgeDef}
+  \bk{\alpha}{\beta} = \int \alpha \we * \beta
+  = \int_M (\alpha,\beta) \de{V}_g
+  = \int\,\dn{m}{x}\sqrt{g}\,\alpha_{a_1\cdots a_p}\beta_{b_1\cdots b_p}g^{a_1 b_1}\cdots g^{a_p b_p}.
+  \label{HodgeDef}
 \end{align}
 
 
 \begin{Ebox}
   \begin{itemize}
-  \item Use Eq. (\ref{HodgeDef}) to find the action of $*$ on the basis of differential forms.
+  \item Use Eq.~\eqref{HodgeDef} to find the action of $*$ on the basis of differential forms.
   \item Show that the double action of the Hodge star is proportional to the unit, i.e.,
-    \begin{align*}
-      *^2\alpha \simeq \alpha
-    \end{align*}
+    \begin{equation*}
+      *^2 \alpha \simeq \alpha
+    \end{equation*}
   \end{itemize}
 \end{Ebox}
 
 
 Using this, a formal  dual of the differential operator $\dfd\,$ can be defined,
 \begin{align}
-  \dfd\,:\Lambda^p(M)\to\Lambda^{p-1}(M),
+  \dfd\,: \Lambda^p(M) \to \Lambda^{p-1}(M),
 \end{align}
 such that (on compact manifolds)
 \begin{align}
@@ -94,7 +103,7 @@ The operator $\dfd\,$ is called co-differential, and it is nilpotent as its part
 
 
 \begin{Ebox}
-  Use the symmetric properties of the product of forms and the ``idempotence'' of the Hodge star operation, to find an expression of the co-differential operator in terms of $\df\,$ and $*$.
+  Use the symmetric properties of the product of forms and the ``idempotency'' of the Hodge star operation, to find an expression of the co-differential operator in terms of $\df\,$ and $*$.
 \end{Ebox}
 
 
