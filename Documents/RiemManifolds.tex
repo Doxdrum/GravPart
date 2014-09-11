@@ -202,14 +202,15 @@ where $\Ff[2]$ is the curvature of the connection $\Af[1]$, defined by the ``twi
     frametitleaboveskip=10pt,]
   In order to find the equation of motion of a Yang-Mills theory, one might use the fact that the ``twist'' derivative, $\dif_{\Af}$, acts on charged fields, then
   \begin{align*}
-    \int \Lag[\Af[1]] &=-\frac{1}{2}\int \vev{\Ff[2]\w*\Ff[2]}\\
-    &=-\frac{1}{2}\int \dif_{\Af}\vev{\Af[1]\w*\Ff[2]}-\frac{1}{2}\int \vev{\Af[1]\w\dif_{\Af}*\Ff[2]}\\
-    &=-\frac{1}{2}\int \dif\vev{\Af[1]\w*\Ff[2]}-\frac{1}{2}\int \vev{\Af[1]\w\dif_{\Af}*\Ff[2]},
+    \int \Lag[\Af[1]]
+    &= -\frac{1}{2} \int \vev{ \Ff[2]\we \st \Ff[2] } \\
+    &= -\frac{1}{2} \int \dif_{\Af} \vev{ \Af[1] \we \st \Ff[2] } - \frac{1}{2}\int \vev{ \Af[1] \we \dif_{\Af} \st \Ff[2] } \\
+    &= -\frac{1}{2} \int \dif \vev{ \Af[1] \we \st \Ff[2] } - \frac{1}{2} \int \vev{ \Af[1] \we \dif_{\Af} \st \Ff[2] },
   \end{align*}
   the first term vanishes for fields with compact support (or manifolds without boundaries), then, the equation of motion is 
-  \begin{align*}
+  \begin{equation*}
     \ded_{\Af}\Ff[2] =0.
-  \end{align*}
+  \end{equation*}
 \end{WEbox}
 
 
