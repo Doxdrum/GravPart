@@ -23,8 +23,10 @@ Nonetheless, the information about the metric structure of the manifold can be t
 \end{equation}
 Therefore, the vielbein, $\vif{a}$, is the fields equivalent to the metric tensor. In order to complete the structure, one needs information about the transport of geometrical objects lying on bundles based on $M$. That information is encoded on the spin connection, $\spif{a}{b}$. Using these quantities one finds  the generalisation of the structure equations of Cartan,
 \begin{align}
-  \df \vif{a} + \spif{a}{b} \we \vif{b} &= \Tf{a}, \label{firstSE}\\
-  \df \spif{a}{c} + \spif{a}{b} \we \spif{b}{c} &= \Rif{a}{c} \label{secondSE}.
+  \df \vif{a} + \spif{a}{b} \we \vif{b} &= \Tf{a},
+  \label{firstSE}\\
+  \df \spif{a}{c} + \spif{a}{b} \we \spif{b}{c} &= \Rif{a}{c}
+  \label{secondSE}.
 \end{align}
 In the sense of the previous lesson, the torsion 2-form, $\Tf{a}$, and the curvature 2-form,$\Rif{a}{c}$, measure the impossibility of endow an Euclidean structure on $M$.
 
@@ -126,6 +128,7 @@ i.e.,
   Now, using the metric to raising and lowering indeces, and contracting, the Ricci and Ricci scalar are obtained,
   \begin{align}
     \Ri_{\theta\theta} & = 1, & & & \Ri_{\phi\phi} &= \sin^2(\theta), \\
+    \intertext{and}
     & & \Ri &= \frac{2}{R^2} & & 
   \end{align}
 
@@ -171,28 +174,28 @@ i.e.,
   %% The curvature of the Anti de Sitter ($AdS$) spacetime is calculated, using Cartan's formalism.
   The metric of the $AdS_4$ spacetime is 
   \begin{align}
-    \de{s}^2(g) = \frac{1}{z^2} \( -\de{t}\otimes\de{t} +\de{x}\otimes\de{x}+\de{y}\otimes\de{y}+\de{z}\otimes\de{z}\),
+    \de{s}^2(g) = \frac{1}{z^2} \( -\de{t} \otimes \de{t} + \de{x} \otimes \de{x} + \de{y} \otimes \de{y} + \de{z} \otimes \de{z} \),
   \end{align}
   then the vielbeins are
   \begin{align}
-    \vif{0} &= \frac{\de{t}}{z}, & \vif{1} &= \frac{\de{x}}{z},\notag\\
+    \vif{0} &= \frac{\de{t}}{z}, & \vif{1} &= \frac{\de{x}}{z}, \\
     \vif{2} &= \frac{\de{y}}{z}, & \vif{3} &= \frac{\de{z}}{z},
   \end{align}
   then,
   \begin{align}
-    \df\vif{0}&=-\frac{1}{z^2}\de{z} \we \de{t} & \df\vif{1}&=-\frac{1}{z^2}\de{z} \we \de{x}\notag\\
-    &= \frac{1}{z}\de{t} \we \vif{3} & &= \frac{1}{z}\de{x} \we \vif{3}\\
-    \df\vif{2}&=-\frac{1}{z^2}\de{z} \we \de{y} & \df\vif{3}&=0\notag \\
+    \df\vif{0} &= -\frac{1}{z^2} \de{z} \we \de{t} & \df\vif{1} &= -\frac{1}{z^2} \de{z} \we \de{x} \notag \\
+    &= \frac{1}{z}\de{t} \we \vif{3} & &= \frac{1}{z}\de{x} \we \vif{3} \\
+    \df\vif{2} &= -\frac{1}{z^2} \de{z} \we \de{y} & \df\vif{3} &=0 \notag  \\
     &= \frac{1}{z}\de{y} \we \vif{3} & & \notag
   \end{align}
   therefore,
+  \begin{equation}
+    \spif{0}{3} = -\frac{1}{z} \de{t}, \quad \spif{1}{3} = -\frac{1}{z} \de{x}, \quad \spif{2}{3} = -\frac{1}{z} \de{y}.
+  \end{equation}
+  Now, using the second structure equation, Eq.~\eqref{secondSE}, it follows that
   \begin{align}
-    \spif{0}{3} = -\frac{1}{z}\de{t},\quad \spif{1}{3}=-\frac{1}{z}\de{x},\quad \spif{2}{3} = -\frac{1}{z}\de{y}.
-  \end{align}
-  Now, using the second structure equation, Eq. (\ref{secondSE}), it follows that
-  \begin{align}
-    \Rif{0}{3} &= \df\spif{0}{3} = \frac{1}{z^2}\de{z} \we \de{t} &  \Rif{1}{3} &= \df\spif{1}{3} = \frac{1}{z^2}\de{z} \we \de{x} \notag\\
-    \Rif{2}{3} &= \df\spif{2}{3} = \frac{1}{z^2}\de{z} \we \de{y} &  \Rif{0}{1} &= \spif{0}{3} \we \spif{3}{1} = -\frac{1}{z^2}\de{t} \we \de{x} \\
+    \Rif{0}{3} &= \df \spif{0}{3} = \frac{1}{z^2} \de{z} \we \de{t} &  \Rif{1}{3} &= \df \spif{1}{3} = \frac{1}{z^2} \de{z} \we \de{x} \notag \\
+    \Rif{2}{3} &= \df \spif{2}{3} = \frac{1}{z^2} \de{z} \we \de{y} &  \Rif{0}{1} &= \spif{0}{3} \we \spif{3}{1} = -\frac{1}{z^2} \de{t} \we \de{x} \\
     \Rif{0}{2} &= \spif{0}{3} \we \spif{3}{2} = -\frac{1}{z^2}\de{t} \we \de{y} & \Rif{1}{2} &= \spif{1}{3} \we \spif{3}{2} = -\frac{1}{z^2}\de{x} \we \de{y}.\notag
   \end{align}
   
@@ -213,7 +216,7 @@ i.e.,
 \begin{Ebox}
   Consider a Riemannian manifold with a metric whose line element is
   \begin{align}
-    \de{s}^2(g) = -e^{2\Xi(r)}\de{t}\otimes \de{t}+ e^{-2\Xi(r)}\de{r} \otimes\de{r} + r^2\(\de{\theta}\otimes\de{\theta}+\sin^2(\theta)\de{\phi}\otimes\de{\phi}\),
+    \de{s}^2(g) = -e^{2\Xi(r)} \de{t}\otimes \de{t} + e^{-2\Xi(r)} \de{r} \otimes\de{r} + r^2 \( \de{\theta} \otimes \de{\theta} + \sin^2(\theta) \de{\phi} \otimes \de{\phi} \).
   \end{align}
   Find the function $\Xi(r)$ which solves the Einstein's equation in the vacuum.
 \end{Ebox}
@@ -226,112 +229,131 @@ i.e.,
 
 \begin{Pro}
   \begin{align*}
-    S_{gr} = \frac{1}{2\kappa^2}\int\frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\Rif{a_1 a_2}{} \we \vif{a_3} \we \cdots \we \vif{a_D}=\frac{1}{2\kappa^2}\int\dn{D}{x}\abs{e}\Ri.
+    S_{\text{gr}} = \frac{1}{2\kappa^2} \int \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!} \Rif{a_1 a_2}{} \we \vif{a_3} \we \cdots \we \vif{a_D} = \frac{1}{2\kappa^2} \int \dn{D}{x} \abs{e} \Ri.
   \end{align*}
 \end{Pro}
-
-
 \begin{proof}
- % \begin{small}
-    \begin{align*}
-      \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\Rif{a_1 a_2}{} \we \vif{a_3} \we \cdots \we \vif{a_D} &= \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\;\vif{c} \we \vif{d} \we \vif{a_3} \we \cdots \we \vif{a_D}\\
-      &= -\frac{\epsilon_{a_1\cdots a_D}}{(D-2)!}\frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\;\epsilon^{c d a_3\cdots a_D}dV\\
-      &= \frac{1}{2}\Ri^{a_1 a_2}{}_{cd}\(\delta_{a_1}^c\delta_{a_2}^d -\delta_{a_1}^d\delta_{a_2}^c \)\,dV\\
-      &= \dn{D}{x}\abs{e}\Ri
-    \end{align*}
-  %\end{small}
+  \begin{align*}
+    \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!} \Rif{a_1 a_2}{} \we \vif{a_3} \we \cdots \we \vif{a_D}
+    &=  \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!} \frac{1}{2} \Ri^{a_1 a_2}{}_{cd} \; \vif{c} \we \vif{d} \we \vif{a_3} \we \cdots \we \vif{a_D} \\
+    &= -\frac{\epsilon_{a_1\cdots a_D}}{(D-2)!} \frac{1}{2} \Ri^{a_1 a_2}{}_{cd} \; \epsilon^{c d a_3\cdots a_D} \de{V}\\
+    &=  \frac{1}{2} \Ri^{a_1 a_2}{}_{cd} \( \delta_{a_1}^c \delta_{a_2}^d - \delta_{a_1}^d \delta_{a_2}^c \) \, \de{V}\\
+    &=  \dn{D}{x} \abs{e} \Ri
+  \end{align*}
 \end{proof}
 
 \section{Example of a non-Trivial Calculation}
 
 Consider the metric whose line-element is
-\begin{align*}
-  \de{s}^2(g) = A^2\[-\frac{(p^2\de{\tau} +\de{\sigma})^2}{B^2}+\frac{(\de{\tau} - q^2\de{\sigma})^2}{C^2}+B^2\de{q} ^2 +C^2\de{p} ^2\],
-\end{align*}
-with $A,B,C$ function on $p$ and $q$.
+\begin{equation}
+  \de{s}^2(g) = A^2 \[ - \frac{ (p^2 \de{\tau} + \de{\sigma})^2 }{ B^2 } + \frac{ (\de{\tau} - q^2 \de{\sigma})^2 }{ C^2 } + B^2 \de{q}^2 + C^2 \de{p}^2\],
+\end{equation}
+with $A$, $B$ and $C$ functions depending on $p$ and $q$.
 
 Define,
 \begin{align*}
-  \bs{\tht}^0 &= p^2\de{\tau} +\de{\sigma},\\
-  \bs{\tht}^1 &= \de{\tau} - q^2\de{\sigma}.
+  \bs{\tht}^0 &= p^2 \de{\tau} + \de{\sigma},\\
+  \bs{\tht}^1 &= \de{\tau} - q^2 \de{\sigma}.
 \end{align*}
 Then,
 \begin{align*}
-  \de{\tau} &= \frac{q^2\bs{\tht}^0 +\bs{\tht}^1}{1+p^2q^2},\\
-  \de{\sigma} &= \frac{\bs{\tht}^0 -p^2\bs{\tht}^1}{1+p^2q^2}.
+  \de{\tau} &= \frac{ q^2 \bs{\tht}^0 + \bs{\tht}^1 }{ 1 + p^2 q^2 }, \\
+  \de{\sigma} &= \frac{ \bs{\tht}^0 - p^2 \bs{\tht}^1 }{ 1 + p^2 q^2 }.
 \end{align*}
 Additionally,
 \begin{align}
-  \df\; \bs{\tht}^0 &= \df\(p^2\de{\tau} +\de{\sigma}\)\notag\\
-  &= 2p \,\de{p}  \we \de{\tau}\notag\\
-  &= \frac{2p}{1+p^2q^2}\(q^2\, \de{p}  \we \bs{\tht}^0 +\de{p}  \we \bs{\tht}^1\)\\
-  \df\; \bs{\tht}^1 &= \df\(\de{\tau} -q^2\de{\sigma}\)\notag\\
-  &= -2q \,\de{q}  \we \de{\sigma}\notag\\
-  &=-\frac{ 2q}{1+p^2q^2}\(\de{q}  \we \bs{\tht}^0 - p^2\,\de{q}  \we \bs{\tht}^1\).
+  \df[\bs{\tht}]^0
+  &= \df \( p^2 \de{\tau} + \de{\sigma} \) \notag \\
+  &= 2p \, \de{p}  \we \de{\tau} \notag \\
+  &= \frac{ 2p }{ 1 + p^2 q^2 } \( q^2\, \de{p}  \we \bs{\tht}^0 + \de{p}  \we \bs{\tht}^1 \) \\
+  \df[\bs{\tht}]^1
+  &= \df \( \de{\tau} - q^2 \de{\sigma} \) \notag \\
+  &= -2q \, \de{q}  \we \de{\sigma} \notag \\
+  &= -\frac{ 2q }{ 1 + p^2 q^2 } \( \de{q}  \we \bs{\tht}^0 - p^2 \, \de{q}  \we \bs{\tht}^1 \).
 \end{align}
 
 
 Choosing the vielbeins by,
 \begin{align}
-  \vif{0} &= \frac{A}{B}\,\bs{\tht}^0,\\
-  \vif{1} &= \frac{A}{C}\,\bs{\tht}^1,\\
-  \vif{2} &= AB\,\de{q} ,\\
-  \vif{3} &= AC\,\de{p} ,
+  \vif{0} &= \frac{A}{B} \, \bs{\tht}^0,\\
+  \vif{1} &= \frac{A}{C} \, \bs{\tht}^1,\\
+  \vif{2} &= AB \, \de{q} ,\\
+  \vif{3} &= AC \, \de{p} ,
 \end{align}
 their exterior derivative are
 \begin{align}
-  \df\vif{0} &= \partial_p\(\frac{A}{B}\)\, \de{p}  \we \bs{\tht}^0 + \partial_q\(\frac{A}{B}\)\, \de{q}  \we \bs{\tht}^0 + \frac{A}{B}\,\df\; \bs{\tht}^0,\\
-  \df\vif{1} &= \partial_p\(\frac{A}{C}\)\, \de{p}  \we \bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \de{q}  \we \bs{\tht}^1 + \frac{A}{C}\,\df\; \bs{\tht}^1,\\
-  \df\vif{2} &= \partial_p(AB) \,\de{p}  \we \de{q}  ,\\
-  \df\vif{3} &= \partial_q(AC)\, \de{q}  \we \de{p} .
+  \df\vif{0} &= \partial_p \( \frac{A}{B} \) \, \de{p}  \we \bs{\tht}^0 + \partial_q \( \frac{A}{B} \) \, \de{q}  \we \bs{\tht}^0 + \frac{A}{B} \, \df[\bs{\tht}]^0, \\
+  \df\vif{1} &= \partial_p \( \frac{A}{C} \) \, \de{p}  \we \bs{\tht}^1 + \partial_q \( \frac{A}{C} \) \, \de{q}  \we \bs{\tht}^1 + \frac{A}{C} \, \df[\bs{\tht}]^1, \\
+  \df\vif{2} &= \partial_p(AB) \, \de{p}  \we \de{q}  , \\
+  \df\vif{3} &= \partial_q(AC) \, \de{q}  \we \de{p} .
 \end{align}
 
 Now, 
-\begin{align}
-  \df\vif{2} &= \partial_p(AB) \,\de{p}  \we \de{q}  \notag\\
-  &= -\partial_p(AB) \,\de{q}  \we \de{p}  \notag\\
-  &= -\frac{\partial_p(AB)}{AC} \,\de{q}  \we \vif{3} \label{DLspi23}\\
-  &= -\spif{2}{a} \we \vif{a},\notag
-\end{align}
+\begin{equation}
+  \begin{split}
+    \df\vif{2}
+    &= \partial_p(AB) \,\de{p}  \we \de{q} \\
+    &= -\partial_p(AB) \,\de{q}  \we \de{p} \\
+    &= -\frac{\partial_p(AB)}{AC} \,\de{q}  \we \vif{3} \\
+    &= -\spif{2}{a} \we \vif{a},
+  \end{split}
+  \label{DLspi23}
+\end{equation}
 and
-\begin{align}
-  \df\vif{3} &= \partial_q(AC) \,\de{q}  \we \de{p}  \notag\\
-  &= -\partial_q(AC) \,\de{p}  \we \de{q}  \notag\\
-  &= -\frac{\partial_q(AC)}{AB} \,\de{p}  \we \vif{2} \label{DLspi32}\\
-  &= -\spif{3}{a} \we \vif{a}.\notag
-\end{align}
-Note that one needs to combine Eqs. \eqref{DLspi23} and \eqref{DLspi32}, to obtain a consistent spin connection $\spif{23}{}=-\spif{32}{}$. The final result is therefore,
-\begin{align}
-  \spif{2}{3}= \spif{23}{} = -\spif{32}{}=-\spif{3}{2}&= \frac{\partial_p(AB)}{AC} \,\de{q}  - \frac{\partial_q(AC)}{AB} \,\de{p}  \\
-  &= \frac{1}{A^2BC} \[\partial_p(AB)\,\vif{2} - {\partial_q(AC)}\,\vif{3}\].\notag
-\end{align}
+\begin{equation}
+  \begin{split}
+    \df\vif{3}
+    &=  \partial_q(AC) \, \de{q}  \we \de{p}  \\
+    &= -\partial_q(AC) \, \de{p}  \we \de{q}  \\
+    &= -\frac{\partial_q(AC)}{AB} \, \de{p}  \we \vif{2} \\
+    &= -\spif{3}{a} \we \vif{a}.
+  \end{split}
+  \label{DLspi32}
+\end{equation}
+Note that one needs to combine Eqs.~\eqref{DLspi23} and \eqref{DLspi32}, to obtain a consistent spin connection $\spif{23}{} = -\spif{32}{}$. The final result is therefore,
+\begin{equation}
+  \begin{split}
+    \spif{2}{3}
+    = \spif{23}{}
+    = -\spif{32}{}
+    =-\spif{3}{2}
+    &= \frac{\partial_p(AB)}{AC} \,\de{q}  - \frac{\partial_q(AC)}{AB} \, \de{p}  \\
+    &= \frac{1}{A^2BC} \[ \partial_p(AB) \, \vif{2} - {\partial_q(AC)} \, \vif{3} \].
+  \end{split}
+\end{equation}
 
 From
-\begin{align}
-  \df\vif{0} &= \partial_p\(\frac{A}{B}\)\, \de{p}  \we \bs{\tht}^0 + \partial_q\(\frac{A}{B}\)\, \de{q}  \we \bs{\tht}^0 + \frac{A}{B}\,\df\; \bs{\tht}^0\notag\\
-  &= -\partial_p\(\frac{A}{B}\)\, \bs{\tht}^0 \we \de{p}  - \partial_q\(\frac{A}{B}\)\, \bs{\tht}^0 \we \de{q}  + \frac{2p}{1+p^2q^2}\frac{A}{B}\(q^2\, \de{p}  \we \bs{\tht}^0 +\de{p}  \we \bs{\tht}^1\)\notag\\
-  %% &= -\frac{1}{AC}\partial_p\(\frac{A}{B}\)\, \bs{\tht}^0 \we \vif{3} - \frac{1}{AB}\partial_q\(\frac{A}{B}\)\, \bs{\tht}^0 \we \vif{2} + 2p\frac{A}{B}\,\frac{q^2\, \de{p}  \we \bs{\tht}^0 +\de{p}  \we \bs{\tht}^1}{1+p^2q^2}\notag\\
-  %% &= -\frac{1}{A^2BC}\partial_p\(\frac{A}{B}\)\, \vif{0} \we \vif{3} - \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0} \we \vif{2}\notag \\
-  %% &{\phantom{=\;}} - 2p q^2\frac{A}{B}\,\frac{\bs{\tht}^0 \we \de{p}  }{1+p^2q^2}+ 2p\frac{A}{B}\,\frac{\de{p}  \we \bs{\tht}^1}{1+p^2q^2}\notag\\
-  &= -\[\frac{B}{A^2C}\partial_p\(\frac{A}{B}\) + \frac{1}{AC}\,\frac{2p q^2}{1+p^2q^2}  \]\, \vif{0} \we \vif{3} - \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0} \we \vif{2}\notag \\
-  &{\phantom{=\;}} + \frac{2p}{1+p^2q^2}\frac{1}{AB}\;\vif{3} \we \vif{1}\\
-  &= -\spif{0}{a} \we \vif{a},\notag
-\end{align}
+\begin{equation}
+  \begin{split}
+    \df\vif{0}
+    &= \partial_p \( \frac{A}{B} \) \, \de{p}  \we \bs{\tht}^0 + \partial_q \( \frac{A}{B} \) \, \de{q}  \we \bs{\tht}^0 + \frac{A}{B} \, \df[\bs{\tht}]^0 \\
+    &= -\partial_p \( \frac{A}{B} \) \, \bs{\tht}^0 \we \de{p}  - \partial_q \( \frac{A}{B} \) \, \bs{\tht}^0 \we \de{q}  + \frac{ 2p }{ 1 + p^2 q^2 } \frac{A}{B} \( q^2 \, \de{p}  \we \bs{\tht}^0 + \de{p}  \we \bs{\tht}^1 \) \\
+    %% &= -\frac{1}{AC}\partial_p\(\frac{A}{B}\)\, \bs{\tht}^0 \we \vif{3} - \frac{1}{AB}\partial_q\(\frac{A}{B}\)\, \bs{\tht}^0 \we \vif{2} + 2p\frac{A}{B}\,\frac{q^2\, \de{p}  \we \bs{\tht}^0 +\de{p}  \we \bs{\tht}^1}{1+p^2q^2}\notag\\
+    %% &= -\frac{1}{A^2BC}\partial_p\(\frac{A}{B}\)\, \vif{0} \we \vif{3} - \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0} \we \vif{2}\notag \\
+    %% &{\phantom{=\;}} - 2p q^2\frac{A}{B}\,\frac{\bs{\tht}^0 \we \de{p}  }{1+p^2q^2}+ 2p\frac{A}{B}\,\frac{\de{p}  \we \bs{\tht}^1}{1+p^2q^2}\notag\\
+    &= - \[ \frac{ B }{ A^2 C } \partial_p \( \frac{A}{B} \) + \frac{1}{AC} \, \frac{ 2 p q^2 }{ 1 + p^2 q^2 }  \] \, \vif{0} \we \vif{3} - \frac{1}{A^2} \partial_q \( \frac{A}{B} \) \, \vif{0} \we \vif{2} \\
+    &\quad + \frac{ 2p }{ 1 + p^2 q^2 } \frac{1}{AB} \; \vif{3} \we \vif{1}\\
+    &= -\spif{0}{a} \we \vif{a},
+  \end{split}
+\end{equation}
 and,
-\begin{align}
-  \df\vif{1} &= \partial_p\(\frac{A}{C}\)\, \de{p}  \we \bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \de{q}  \we \bs{\tht}^1 + \frac{A}{C}\,\df\; \bs{\tht}^1\notag\\
-  &= \partial_p\(\frac{A}{C}\)\, \de{p}  \we \bs{\tht}^1 + \partial_q\(\frac{A}{C}\)\, \de{q}  \we \bs{\tht}^1 - \frac{2q}{1+p^2q^2}\frac{A}{C}\, \(\de{q}  \we \bs{\tht}^0 - p^2\,\de{q}  \we \bs{\tht}^1\)\notag\\
-  &= -\frac{1}{A^2}\partial_p\(\frac{A}{C}\)\, \vif{1} \we \vif{3} - \[\frac{C}{A^2B}\partial_q\(\frac{A}{C}\) + \frac{2q p^2}{1+p^2q^2}\frac{1}{AB}\]\,\vif{1} \we \vif{2} \notag\\
-  &{\phantom{=\;}} - \frac{2q}{1+p^2q^2}\frac{1}{AC}\, \vif{2} \we \vif{0} ,\\
-  &= -\spif{1}{a} \we \vif{a},\notag
-\end{align}
+\begin{equation}
+  \begin{split}
+    \df\vif{1}
+    &= \partial_p \( \frac{A}{C} \) \, \de{p}  \we \bs{\tht}^1 + \partial_q \( \frac{A}{C} \) \, \de{q}  \we \bs{\tht}^1 + \frac{A}{C} \, \df[\bs{\tht}]^1 \\
+    &= \partial_p \( \frac{A}{C} \) \, \de{p}  \we \bs{\tht}^1 + \partial_q \( \frac{A}{C} \) \, \de{q}  \we \bs{\tht}^1 - \frac{ 2q }{ 1 + p^2 q^2 } \frac{A}{C} \, \( \de{q}  \we \bs{\tht}^0 - p^2 \, \de{q}  \we \bs{\tht}^1 \) \\
+    &= -\frac{1}{A^2} \partial_p \( \frac{A}{C} \) \, \vif{1} \we \vif{3} - \[ \frac{C}{A^2 B} \partial_q \( \frac{A}{C} \) + \frac{ 2 q p^2 }{ 1 + p^2 q^2 } \frac{1}{AB} \] \, \vif{1} \we \vif{2} \\
+    &\quad - \frac{ 2q }{ 1 + p^2 q^2 } \frac{1}{AC} \, \vif{2} \we \vif{0} , \\
+    &= -\spif{1}{a} \we \vif{a},
+  \end{split}
+\end{equation}
 one obtains
 \begin{align}
-  \spif{0}{1} &= - \frac{p}{1+p^2q^2}\frac{1}{AB}\,\vif{3} + f_{01}\\
-  \spif{0}{2} &= \frac{1}{A^2}\partial_q\(\frac{A}{B}\)\, \vif{0} - f_{02}\\
-  \spif{0}{3} &=  \[\frac{B}{A^2C}\partial_p\(\frac{A}{B}\) + \frac{2p q^2}{1+p^2q^2}\frac{1}{AC}\]\, \vif{0} + \frac{p}{1+p^2q^2}\frac{1}{AB}\,\vif{1} - f_{03},\\
-  \spif{1}{0} &= \frac{q}{1+p^2q^2}\frac{1}{AC}\, \vif{2} -f_{10},\\
-  \spif{1}{2} &=\[\frac{C}{A^2B}\partial_q\(\frac{A}{C}\)+\frac{2qp^2}{1+p^2q^2}\frac{1}{AB}\]\,\vif{1} -\frac{q}{1+p^2q^2}\frac{1}{AC}\, \vif{0} - f_{12},\\
-  \spif{1}{3} &= \frac{1}{A^2}\partial_p\(\frac{A}{C}\)\, \vif{1} - f_{13},
+  \spif{0}{1} &= - \frac{ p }{ 1 + p^2 q^2 } \frac{1}{AB} \, \vif{3} + f_{01}, \\
+  \spif{0}{2} &=   \frac{1}{A^2} \partial_q \( \frac{A}{B} \) \, \vif{0} - f_{02}, \\
+  \spif{0}{3} &=  \[ \frac{B}{A^2 C} \partial_p \( \frac{A}{B} \) + \frac{ 2p q^2 }{ 1 + p^2 q^2 } \frac{1}{AC} \] \, \vif{0} + \frac{ p }{ 1 + p^2 q^2 } \frac{1}{AB} \, \vif{1} - f_{03}, \\
+  \spif{1}{0} &= \frac{ q }{ 1 + p^2 q^2 } \frac{1}{AC} \, \vif{2} - f_{10}, \\
+  \spif{1}{2} &= \[ \frac{ C }{ A^2 B } \partial_q \( \frac{A}{C} \) + \frac{ 2q p^2 }{ 1 + p^2 q^2 } \frac{1}{AB} \] \, \vif{1} - \frac{ q }{ 1 + p^2 q^2 }\frac{1}{AC} \, \vif{0} - f_{12}, \\
+  \spif{1}{3} &= \frac{1}{A^2} \partial_p \( \frac{A}{C} \) \, \vif{1} - f_{13},
 \end{align}
 where the 1-forms $f_{ab}$ will be adjusted to get a consistent set of spin connection 1-forms.
