@@ -2,7 +2,7 @@
 
 \chapter{Kaluza-Klein Reduction}
 
-The Kaluza-Klein program aims to obtain the $d$-dimensional theory obtained by reducing a $D$-dimensional one. The original idea was to obtain 4-dimensional gravity and electrodynamics, from 5-dimensional gravity... All of it in the context of general relativity.
+The Kaluza-Klein program aims to obtain the $d$-dimensional theory obtained by reducing a $D$-dimensional one. The original idea was to obtain four-dimensional gravity and electrodynamics, from five-dimensional gravity... All of it in the context of general relativity.
 
 In the following the dimensional reduction of the action of a scalar field on $D+1$-dimension to $D$-dimensions is shown, and later, the reduction of $D+1$-dimensional gravity on a $S^1$.  A nice reference to the program is  \cite{PopeKK}.
 
@@ -12,33 +12,38 @@ On this section the reduction of a massless, real, scalar field is performed on 
 
 
 
-\subsection{Scalar Field Reduced on $S^1$}\label{sec:KKs:s1}
+\subsection{Scalar Field Reduced on $S^1$}
+\label{sec:KKs:s1}
 
 Consider the equation of motion of a massless (real) scalar field $\Phi$ on $D+1$-dimensions, 
-\begin{align}
-  \Box^{(D+1)}\Phi =0.
-\end{align}
-Assume that $M^{D+1}=M^D\times S^1$. Then,  the differential operator can be separated  into a $D$-dimensional part plus the extra dimension,
-\begin{align}
-  \(\Box^{(D)}+\pa{\xi}^2\)\Phi =0.\label{KK-s-eq:s1}
-\end{align}
+\begin{equation}
+  \Box^{(D+1)} \Phi = 0.
+\end{equation}
+Assume that $M^{D+1} = M^D \times S^1$. Then,  the differential operator can be separated  into a $D$-dimensional part plus the extra dimension,
+\begin{equation}
+  \( \Box^{(D)} + \pa{\xi}^2 \) \Phi = 0.
+  \label{KK-s-eq:s1}
+\end{equation}
 
 Now, one propose the Kaluza-Klein ansatz, i.e., the scalar field can be expanded as a series on the basis of eigenfunctions on $S^1$,
-\begin{align}
-  \Phi(x,\xi) = \sum_n \phi_n(x) e^{\imath \frac{n}{R}\xi},\label{KK-scalar:s1}
-\end{align}
+\begin{equation}
+  \Phi(x,\xi) = \sum_n \phi_n(x) e^{\imath \frac{n}{R}\xi},
+  \label{KK-scalar:s1}
+\end{equation}
 where $R$ is the radius of the extra dimension.
 
-Substituting the expansion \eqref{KK-scalar:s1} into \eqref{KK-s-eq:s1}, yields
-\begin{align}
-  \[\Box^{(D)}-\(\frac{n}{R}\)^2\]\phi_n(x)=0\qquad \forall\; n\in \Z.\label{KK-eq-s1}
-\end{align}
+Substituting the expansion in Eq.~\eqref{KK-scalar:s1} into~\eqref{KK-s-eq:s1}, yields
+\begin{equation}
+  \[ \Box^{(D)} - \( \frac{n}{R} \)^2 \] \phi_n(x) = 0 \qquad \forall \; n \in \Z.
+  \label{KK-eq-s1}
+\end{equation}
 
 Comparing with the generic Klein-Gordon equation,
-\begin{align}
-  \[\Box^{(D)} - m_{\text{eff}}^2\]\phi_n=0, \qquad\text{with}\qquad m_{\text{eff}} = \frac{\abs{n}}{R},\label{KKs-m:s1}
-\end{align}
-one concludes that Eq. \eqref{KK-eq-s1}  represents  a tower of infinite massive scalar fields in $D$ dimensions; doubly degenerated because of the blindness on the sign of $n$, plus a single massless scalar field, corresponding to $n=0$.
+\begin{equation}
+  \[ \Box^{(D)} - m_{\text{eff}}^2 \] \phi_n = 0, \qquad \text{with} \qquad m_{\text{eff}} = \frac{ \abs{n} }{ R },
+  \label{KKs-m:s1}
+\end{equation}
+one concludes that Eq.~\eqref{KK-eq-s1}  represents  a tower of infinite massive scalar fields in $D$ dimensions; doubly degenerated because of the blindness on the sign of $n$, plus a single massless scalar field, corresponding to $n = 0$.
 
 \begin{center}
   \begin{tikzpicture}[thick,line cap=round,
@@ -61,29 +66,33 @@ one concludes that Eq. \eqref{KK-eq-s1}  represents  a tower of infinite massive
   \end{tikzpicture}
 \end{center}
 
-\subsection{Scalar Field Reduced on $S^2$}\label{sec:KKs:s2}
+\subsection{Scalar Field Reduced on $S^2$}
+\label{sec:KKs:s2}
 
-One can follow the previous procedure to compute the \KK of a massless real scalar field on $S^2$. Thus, assuming that $M^{D+1}=M^D\times S^2$, the differential operator separates on,
-\begin{align}
-  \(\Box^{(D)}+\Lap\)\Phi =0.\label{KKs-eq:s2}
-\end{align}
+One can follow the previous procedure to compute the \KK of a massless real scalar field on $S^2$. Thus, assuming that $M^{D+2} = M^D \times S^2$, the differential operator separates on,
+\begin{equation}
+  \( \Box^{(D)} + \Lap \) \Phi = 0.
+  \label{KKs-eq:s2}
+\end{equation}
 Then, the \KK ansatz is done as an expansion on eigenfunctions of the 2-dimensional Laplacian on spherical coordinates, i.e., spherical harmonics, as
-\begin{align}
-  \Phi(x,\xi) = \sum_{l,m} \phi_{l,m}(x)Y^{lm}(\xi),
-\end{align}
+\begin{equation}
+  \Phi(x,\xi) = \sum_{l,m} \phi_{l,m}(x) \, Y^{lm}(\xi),
+\end{equation}
 where $Y^{lm}$ satisfy
-\begin{align}
-  \Lap Y^{lm} = -\frac{l(l+1)}{R^2} Y^{lm}.
-\end{align}
+\begin{equation}
+  \Lap Y^{lm} = -\frac{ l(l+1) }{ R^2 } Y^{lm}.
+\end{equation}
 
-Therefore, Eq. \eqref{KKs-eq:s2} yields
-\begin{align}
-  \[\Box^{(D)}-\frac{l(l+1)}{R^2}\]\phi_{l,m}(x) =0.\label{KK-eq-s2}
-\end{align}
-Eq. \eqref{KK-eq-s2} represents a \KK tower composed by: a single massless scalar field, corresponding to $l=0$; and $(2l+1)$-degenerated massive scalar fields with and effective mass
-\begin{align}
-  m_{\text{eff}} = \frac{\sqrt{l(l+1)}}{R}.\label{KKs-m:s2}
-\end{align}
+Therefore, Eq.~\eqref{KKs-eq:s2} yields
+\begin{equation}
+  \[ \Box^{(D)} - \frac{ l(l+1) }{ R^2 } \] \phi_{l,m}(x) = 0.
+  \label{KK-eq-s2}
+\end{equation}
+Equation~\eqref{KK-eq-s2} represents a \KK tower composed by: a single massless scalar field, corresponding to $l = 0$; and $(2l+1)$-degenerated massive scalar fields with and effective mass
+\begin{equation}
+  m_{\text{eff}} = \frac{ \sqrt{ l(l+1) } }{ R }.
+  \label{KKs-m:s2}
+\end{equation}
 
 \begin{center}
   \begin{tikzpicture}[thick,line cap=round,
@@ -95,38 +104,42 @@ Eq. \eqref{KK-eq-s2} represents a \KK tower composed by: a single massless scala
 
     \draw (0,0) node[anchor=east] {$m_{\text{eff}} =0$} -- (2,0);
     \foreach \y/\m in {1/3,2/5,3/7,4/9,5/11,6/13}
-    {
-      \draw[important line] (0,{sqrt(\y*\y + \y) }) node[anchor=east] {$m_{\text{eff}} =\frac{\pgfmathparse{sqrt(\y*\y + \y) }\pgfmathprintnumber{\pgfmathresult}}{R}$} -- (2,{sqrt(\y*\y + \y) }) node[anchor=west]  {{\tiny $ \times\m$}};
-    }
-    \node at (1,7.5) {$\vdots$};
+             {
+               \draw[important line] (0,{sqrt(\y*\y + \y) }) node[anchor=east] {$m_{\text{eff}} =\frac{\pgfmathparse{sqrt(\y*\y + \y) }\pgfmathprintnumber{\pgfmathresult}}{R}$} -- (2,{sqrt(\y*\y + \y) }) node[anchor=west]  {{\tiny $ \times\m$}};
+             }
+             \node at (1,7.5) {$\vdots$};
 
-    \draw[xshift=3.5cm,yshift=3.5cm]
-    node[right,text width=6cm,information text]
-    {The spectrum of a Kaluza-Klein reduction of a real massless scalar field on a $S^2$, is no longer linear and the degeneracy increases with $l$ as $(2l+1)$.};
+             \draw[xshift=3.5cm,yshift=3.5cm]
+             node[right,text width=6cm,information text]
+             {The spectrum of a Kaluza-Klein reduction of a real massless scalar field on a $S^2$, is no longer linear and the degeneracy increases with $l$ as $(2l+1)$.};
   \end{tikzpicture}
 \end{center}
 
-\subsection{Scalar Field Reduced on $T^2$}\label{sec:KKs:t2}
+\subsection{Scalar Field Reduced on $T^2$}
+\label{sec:KKs:t2}
 
-Once more, inspired in the previous procedure, and using the fact that $T^2=S^1\times S^1$, the differential operator separates on,
-\begin{align}
-  \(\Box^{(D)}+\pa{\xi_1}^2+\pa{\xi_2}^2\)\Phi =0,\label{KKs-eq:t2}
-\end{align}
+Once more, inspired in the previous procedure, and using the fact that $T^2 = S^1 \times S^1$, the differential operator separates on,
+\begin{equation}
+  \( \Box^{(D)} + \pa{\xi_1}^2 + \pa{\xi_2}^2 \) \Phi = 0,
+  \label{KKs-eq:t2}
+\end{equation}
 and the \KK ansatz is
-\begin{align}
-  \Phi(x,\xi) = \sum_{m,n} \phi_{m,n}(x) e^{\imath \(\frac{m}{R_1}\xi_1 + \frac{n}{R_2}\xi_2\)},\label{KK-scalar:t2}
-\end{align}
+\begin{equation}
+  \Phi(x, \xi) = \sum_{m,n} \phi_{m,n}(x) \, e^{\imath \( \frac{m}{R_1} \xi_1 + \frac{n}{R_2} \xi_2 \)},
+  \label{KK-scalar:t2}
+\end{equation}
 where $R_1$ and $R_2$ are the radii of the torus.
 
-Substituting the expansion \eqref{KK-scalar:t2} into \eqref{KKs-eq:t2}, yields
-\begin{align}
-  \[\Box^{(D)}-\(\frac{m}{R_1}\)^2-\(\frac{n}{R_2}\)^2\]\phi_{m,n}(x)=0\qquad \forall\; m,n\in \Z.\label{KK-eq-t2}
-\end{align}
+Substituting the expansion in Eq.~\eqref{KK-scalar:t2} into~\eqref{KKs-eq:t2}, yields
+\begin{equation}
+  \[ \Box^{(D)} - \( \frac{m}{R_1} \)^2 - \( \frac{n}{R_2} \)^2 \] \phi_{m,n}(x)= 0 \qquad \forall \; m, n \in \Z.
+  \label{KK-eq-t2}
+\end{equation}
 
-Eq. \eqref{KK-eq-t2} represents a tower of \KK modes which contains a massless singlet, and infinite massive modes whose degeneracy depend on the relation between the integers $m,n$ and the radii $R_1$ and $R_2$. The effective mass for the \KK modes is
-\begin{align}
+Equation~\eqref{KK-eq-t2} represents a tower of \KK modes which contains a massless singlet, and infinite massive modes whose degeneracy depend on the relation between the integers $m,n$ and the radii $R_1$ and $R_2$. The effective mass for the \KK modes is
+\begin{equation}
   m_{\text{eff}} =  \sqrt{\(\frac{m}{R_1}\)^2+\(\frac{n}{R_2}\)^2}.\label{KKs-m:t2}
-\end{align}
+\end{equation}
 
 \begin{center}
   \begin{tikzpicture}[thick,line cap=round,yscale=2,
@@ -145,26 +158,25 @@ Eq. \eqref{KK-eq-t2} represents a tower of \KK modes which contains a massless s
     \foreach \n in {0,1,2,3}  {
       \foreach \m in {0,1,...,3} {
         \draw[important line,xshift=3*\n cm] (0,{sqrt((\m/\r)^2 + (\n/\R)^2)}) node[anchor=east] {$m_{\text{eff}} = \pgfmathparse{sqrt((\m/\r)^2 + (\n/\R)^2) }\pgfmathprintnumber{\pgfmathresult}$} -- (2,{sqrt((\m/\r)^2 + (\n/\R)^2)});
-        }
-      \draw [decorate,decoration={brace,amplitude=10pt,mirror},ultra thick,color=blue,yshift=-4pt,xshift=3*\n cm] (0,0) -- (2,0) node [black,midway,yshift=-0.6cm] { $n=\n$};
       }
-    
-    
+      \draw [decorate,decoration={brace,amplitude=10pt,mirror},ultra thick,color=blue,yshift=-4pt,xshift=3*\n cm] (0,0) -- (2,0) node [black,midway,yshift=-0.6cm] { $n=\n$};
+    }    
   \end{tikzpicture}
 \end{center}
+
 
 \section{Kaluza-Klein Reduction on $S^1$}
 
 \begin{equation}
-  d\hat{s}^2 = e^{2\alpha\phi}ds^2 + e^{2\beta\phi}\left(d\xi + \Ag\right)^2,
+  \de{\hat{s}}^2 = e^{2\alpha\phi} \de{s}^2 + e^{2\beta\phi} \left( d\xi + \Ag \right)^2,
 \end{equation}
 
 \begin{equation}
-\VIF{a} = 
-\begin{cases}
-  \hvif{a} = e^{\alpha\phi} \vif{a}\\
-  \hvif{D} = e^{\beta\phi}\left(\df\;\xi +\Ag \right)
-\end{cases},
+  \VIF{a} = 
+  \begin{cases}
+    \hvif{a} = e^{\alpha\phi} \vif{a}\\
+    \hvif{D} = e^{\beta\phi}\left(\df\;\xi +\Ag \right)
+  \end{cases},
 \end{equation}
 
 From the first Maurer-Cartan equation,
@@ -176,17 +188,17 @@ the spin connection can be calculated.
   \df\hvif{D} =& e^{\beta\phi}\left[\beta\df\;\phi\w\left(\df\;\xi +\Ag \right) + \df\Ag\right]\nonumber\\
   =& e^{\beta\phi}\left[-\beta\left(\df\;\xi +\Ag \right)\w\df\;\phi + \df\Ag\right]\nonumber\\
   =& e^{\beta\phi}\left[-\beta\pa{a}\phi\left(\df\;\xi +\Ag \right)\w\vif{a} + \Fg\right]\nonumber\\
- =& -\beta e^{-\alpha\phi}\pa{a}\phi\;\hvif{D}\w\hvif{a} -\frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{a b}\;\hvif{b}\w\hvif{a},
+  =& -\beta e^{-\alpha\phi}\pa{a}\phi\;\hvif{D}\w\hvif{a} -\frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{a b}\;\hvif{b}\w\hvif{a},
 \end{align}
 from where one gets,
-\begin{align}
+\begin{equation}
   \hspif{D}{a} = \beta e^{-\alpha\phi}\pa{a}\phi\hvif{D} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{a b}\hvif{b}.
-\end{align}
+\end{equation}
 
 On the other hand,
-\begin{align}
+\begin{equation}
   \hspif{a}{b}\w\hvif{b} = -\df\hvif{a} - \hspif{a}{D}\w\hvif{D}.
-\end{align}
+\end{equation}
 Since,
 \begin{align}
   \df\hvif{a} 
@@ -201,9 +213,9 @@ then,
 \end{align}
 
 Now, the second Maurer-Cartan equation,
-\begin{align}
+\begin{equation}
   \df\SPIF{a}{b}+\SPIF{a}{c}\w\SPIF{c}{b}=\RIF{a}{b}.
-\end{align}
+\end{equation}
 
 \begin{align}
   \df\hspif{D a}{} 
@@ -212,17 +224,17 @@ Now, the second Maurer-Cartan equation,
   & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F^a{}_{b}\;\df\;\phi\w\hvif{b} + \df \F^a{}_{b}\w\hvif{b} + \F^a{}_{b}\;\df\hvif{b}\right]\nonumber\\
   =& \beta e^{-\alpha\phi}\;\left[-\alpha \pau{a}\phi\pa{b}\phi\;\vif{b}\w\hvif{D} +\pau{a}\pa{b}\phi\;\vif{b}\w\hvif{D} + \pau{a}\phi\;\hspif{D}{b}\w\hvif{b}\right] \notag\\
   &+ \frac{1}{2}e^{(\beta-2\alpha)\phi}\left[(\beta-2\alpha)\F^a{}_b\pa{c}\phi\;\vif{c}\w\hvif{b} + \pa{c} \F^a{}_b\;\vif{c}\w\hvif{b} + \F^a{}_b\;\hspif{b}{\hat{c}}\w\VIF{c}\right]\nonumber\\
- =& \beta(\beta-\alpha)e^{-2\alpha\phi}\pau{a}\phi\pa{b}\phi\;\hvif{b}\w\hvif{D} + \beta e^{-2\alpha\phi}\pau{a}\pa{b}\phi\;\hvif{b}\w\hvif{D}  \notag\\
- &-\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\F^a{}_b\pa{c}\phi\;\hvif{b}\w\hvif{c} +\frac{\beta}{2}e^{(\beta-3\alpha)\phi}\pau{a}\phi \F_{bc}\;\hvif{b}\w\hvif{c}\nonumber\\
- & -\frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F^a{}_b\;\hvif{b}\w\hvif{c} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^a{}_b\; \spif{b}{c}\w\hvif{c},
+  =& \beta(\beta-\alpha)e^{-2\alpha\phi}\pau{a}\phi\pa{b}\phi\;\hvif{b}\w\hvif{D} + \beta e^{-2\alpha\phi}\pau{a}\pa{b}\phi\;\hvif{b}\w\hvif{D}  \notag\\
+  &-\frac{\beta-\alpha}{2}e^{(\beta-3\alpha)\phi}\F^a{}_b\pa{c}\phi\;\hvif{b}\w\hvif{c} +\frac{\beta}{2}e^{(\beta-3\alpha)\phi}\pau{a}\phi \F_{bc}\;\hvif{b}\w\hvif{c}\nonumber\\
+  & -\frac{1}{2}e^{(\beta-3\alpha)\phi}\pa{c} \F^a{}_b\;\hvif{b}\w\hvif{c} - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^a{}_b\; \spif{b}{c}\w\hvif{c},
 \end{align}
 and,
 \begin{align}
   \hspif{D}{m}\w\hspif{m a}{} =& \left(\beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{D} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}  \right)\w\notag\\
   &{}\;\left(\spif{m a}{} + \alpha e^{-\alpha\phi}\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right) - \frac{1}{2}e^{(\beta-2\alpha)\phi}\F^{m a}\;\hvif{D}  \right)\nonumber\\
- =& \beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{D}\w\spif{m a}{} + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\;\hvif{D}\w\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right)\nonumber\\
- & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}\w\spif{m a}{} + \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{m b}\;\hvif{b}\w\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right)\nonumber\\
- & -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m n}\F^{m a}\;\hvif{n}\w\hvif{D}.
+  =& \beta e^{-\alpha\phi}\pa{m}\phi\;\hvif{D}\w\spif{m a}{} + \alpha\beta e^{-2\alpha\phi}\pa{m}\phi\;\hvif{D}\w\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right)\nonumber\\
+  & + \frac{1}{2}e^{(\beta-2\alpha)\phi}\F_{m b}\;\hvif{b}\w\spif{m a}{} + \frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\F_{m b}\;\hvif{b}\w\left(\pau{a}\phi\;\hvif{m} - \partial^{m}\phi\;\hvif{a}\right)\nonumber\\
+  & -\frac{1}{4}e^{2(\beta-2\alpha)\phi}\F_{m n}\F^{m a}\;\hvif{n}\w\hvif{D}.
 \end{align}
 Therefore,
 \begin{align}
@@ -275,9 +287,9 @@ Concentrate on the first term,
   &\qquad\bigg\{\[\beta \big((\beta-2\alpha)\pa{b}\phi\pau{a_1}\phi + \pa{b}\pau{a_1}\phi\big) -\frac{1}{4} e^{2(\beta-\alpha)\phi}\F_{cb}\F^{ca_1} \]\vif{b}\notag\\
   &\qquad + \beta \pa{m}\phi\;\(\spi{b}\)^{m a_1}\vif{b}+\alpha\beta \pa{m}\phi\partial^{m}\phi \;\vif{a_1}\bigg\}\w\vif{{a}_2}\w\cdots\w\vif{{a}_{D}}\w\df\;\xi\notag\\
   =&\quad -2 e^{\((D-2)\alpha+\beta\)\phi}\bigg\{\beta \big((\beta-2\alpha)\pa{b}\phi\pau{b}\phi + \pa{b}\pau{b}\phi\big)
-    %% \notag\\
-    %% &\qquad
--\frac{1}{4} e^{2(\beta-\alpha)\phi}\F_{cb}\F^{cb} \notag\\
+  %% \notag\\
+  %% &\qquad
+  -\frac{1}{4} e^{2(\beta-\alpha)\phi}\F_{cb}\F^{cb} \notag\\
   &\qquad\quad + \beta \pa{m}\phi\;\(\spi{b}\)^{m b} + D \alpha\beta \;\pa{m}\phi\partial^{m}\phi \bigg\}\de{V_D}\de{\xi}
 \end{align}
 
@@ -319,10 +331,10 @@ One can choose $\beta=-(D-2)\alpha$, so that the result on the compactification 
   &\qquad + \frac{1}{4} e^{-2(D-1)\alpha\phi}\F_{mn}\F^{mn} \bigg\},%- 2\[(D-1)\alpha +\beta\]\Box\phi - 2\[(D-1)\alpha -\beta\]\pa{m}\phi\(\spi{c}\)^{cm}\bigg\}
 \end{align}
 where the other terms were dropped because are a boundary term. Additionally, in order to get the usual kinetic term for the scalar field, i.e., 
-\begin{align}
+\begin{equation}
   \alpha^2 = \frac{1}{2}\frac{1}{(D-1)(D-2)},
-\end{align}
+\end{equation}
 finally
-\begin{align}
+\begin{equation}
   \Lag_{(D+1)} =\;  \de{V_D}\de{\xi}\bigg\{\Ri - \frac{1}{2}\pau{c}\phi\pa{c}\phi + \frac{1}{4} e^{-2(D-1)\alpha\phi}\F_{mn}\F^{mn} \bigg\}.
-\end{align}
+\end{equation}
