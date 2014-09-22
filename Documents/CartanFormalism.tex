@@ -9,9 +9,9 @@ Before continuing, a change of notation will be made. Although this can be confu
 %Before continuing, a change of notation will be made. Although this can be confusing, the previous notation is used often by mathematicians, while the following is used by physicist.
 
 Let $M$ be a manifold, and $g$ a (semi)Riemannian metric defined on $M$. Then the line element for the metric $g$ is
-\begin{align}
+\begin{equation}
   \de{s}^2(g) = g_{\mu\nu} \de{x}^\mu \otimes \de{x}^\nu.
-\end{align}
+\end{equation}
 Nonetheless, the information about the metric structure of the manifold can be translate to the languages of frames,
 \begin{equation}
   \begin{split}
@@ -60,21 +60,21 @@ From the first S.E.
   %  \Rif{a}{b} \we \vif{b}&=\cdf\Tf{a}
 \end{align*}
 then,
-\begin{align}
+\begin{equation}
   \Rif{a}{b} \we \vif{b}&=\df\Tf{a}+\spif{a}{c} \we \Tf{c}.
-\end{align}
+\end{equation}
 
 
 From the second S.E.
 \begin{align*}
-  \df\(\df\spif{a}{b}+\spif{a}{c} \we \spif{c}{b}\) &= \df\Rif{a}{b}\\
+  \df \( \df \spif{a}{b} + \spif{a}{c} \we \spif{c}{b} \) &= \df\Rif{a}{b} \\
   \therefore \quad
-  \df \Rif{a}{b} &= \(\df\spif{a}{c}\) \we \spif{c}{b}-\spif{a}{c} \we \(\df\spif{c}{b}\) \\
-  \df \Rif{a}{b} &= \Rif{a}{c} \we \spif{c}{b}-\spif{a}{c} \we \Rif{c}{b},
+  \df \Rif{a}{b} &= \( \df \spif{a}{c} \) \we \spif{c}{b} - \spif{a}{c} \we \( \df \spif{c}{b} \) \\
+  \df \Rif{a}{b} &= \Rif{a}{c} \we \spif{c}{b} - \spif{a}{c} \we \Rif{c}{b},
 \end{align*}
 i.e.,
 \begin{align}
-  \df\Rif{a}{b} + \spif{a}{c} \we \Rif{c}{b} - \Rif{a}{c} \we \spif{c}{b}   &= 0.
+  \df\Rif{a}{b} + \spif{a}{c} \we \Rif{c}{b} - \Rif{a}{c} \we \spif{c}{b}  &= 0.
 \end{align}
 
 
@@ -84,13 +84,13 @@ i.e.,
     frametitlealignment=\centering,
     frametitleaboveskip=10pt,]
   A 2-sphere  of radius $R$  has a line element given by
-  \begin{align}
-    \de{s}^2(g) = R^2 \( \de{\theta} \otimes \de{\theta} + \sin^2(\theta) \de{\phi} \otimes \de{\phi}\),
-  \end{align}
+  \begin{equation}
+    \de{s}^2(g) = R^2 \( \de{\theta} \otimes \de{\theta} + \sin^2(\theta) \de{\phi} \otimes \de{\phi} \),
+  \end{equation}
   which can be written in terms of vielbeins as
-  \begin{align}
+  \begin{equation}
     \de{s}^2(g) = \delta_{ij} \; \vif{i} \otimes \vif{j},
-  \end{align}
+  \end{equation}
   with 
   \begin{equation}
     \begin{split}
@@ -102,40 +102,40 @@ i.e.,
   Using the first structure equation one gets,
   \begin{align}
     \df \vif{2}
-    &=  R \cos(\theta) \de{\theta} \we \de{\phi} \notag \\
-    &= -R \cos(\theta) \de{\phi} \we \de{\theta} \notag \\
-    &= - \cos(\theta)  \de{\phi} \we \vif{1},
+    &=  R \cos(\theta) \de{\theta} \we \de{\phi}   \notag \\
+    &= -R \cos(\theta) \de{\phi}   \we \de{\theta} \notag \\
+    &= -  \cos(\theta) \de{\phi}   \we \vif{1},
   \end{align}
   then
-  \begin{align}
+  \begin{equation}
     \spif{2}{1} = \cos(\theta) \de{\phi}.
-  \end{align}
+  \end{equation}
 
   From the second structure equation, one obtains the only non-vanishing component of the 2-form curvature
-  \begin{align}
+  \begin{equation}
     \Rif{2}{1} = -\Rif{1}{2} = \df \spif{2}{1} = - \sin(\theta) \de{\theta} \we \de{\phi}.
-  \end{align}
+  \end{equation}
   It follows from the last equation that
-  \begin{align}
+  \begin{equation}
     \Rif{12}{} = \frac{1}{R^2}\vif{1} \we \vif{2},\label{curv-2sphere}
-  \end{align}
+  \end{equation}
   then, the 2-sphere is a manifold with constant curvature, as in Eq.~\eqref{def-const-curv}, with (Gau\ss{}ian) curvature $\kappa=\frac{1}{R^2}$.
 
   From Eqs.~\eqref{def-curv-comp} and~\eqref{curv-2sphere}, one obtains the non-vanishing component of the Riemann tensor,
-  \begin{align}
-    \Ri_{\theta\phi}{}^1{}_2 = \sin(\theta) \quad \Rightarrow \quad \Ri_{\theta\phi}{}^\theta{}_\phi = \sin^2(\theta).
-  \end{align}
+  \begin{equation}
+    \Ri_{\theta \phi}{}^1{}_2 = \sin(\theta) \quad \Rightarrow \quad \Ri_{\theta \phi}{}^\theta{}_\phi = \sin^2(\theta).
+  \end{equation}
   Now, using the metric to raising and lowering indeces, and contracting, the Ricci and Ricci scalar are obtained,
   \begin{align}
-    \Ri_{\theta\theta} & = 1, & & & \Ri_{\phi\phi} &= \sin^2(\theta), \\
+    \Ri_{\theta \theta} & = 1, & & & \Ri_{\phi \phi} &= \sin^2(\theta), \\
     \intertext{and}
     & & \Ri &= \frac{2}{R^2} & & 
   \end{align}
 
   Finally, note that the 2-sphere is an Einstein manifold, since
-  \begin{align}
+  \begin{equation}
     \Ri_{\mu\nu} = \frac{1}{R^2} g_{\mu\nu}.
-  \end{align}
+  \end{equation}
 \end{WEbox}
 
 \begin{WEbox}[%
@@ -144,9 +144,9 @@ i.e.,
     frametitlealignment=\centering,
     frametitleaboveskip=10pt,]
   The line element of a 2-hyperboloid is very similar to the one on the 2-sphere,
-  \begin{align}
+  \begin{equation}
     \de{s}^2(g) = R^2 \( \de{\theta} \otimes \de{\theta} + \sinh^2(\theta) \de{\phi} \otimes \de{\phi} \),
-  \end{align}
+  \end{equation}
   then, the calculation of the curvature can be followed straightforward from the previous example. Thus, only the results are show,
   \begin{align}
     \vif{1} &= R \de{\theta} & \vif{2} &= R \sinh(\theta) \de{\phi} \\
@@ -155,13 +155,13 @@ i.e.,
     \Ri_{\theta\theta} &= -1 & \Ri_{\phi\phi} &= -\sinh^2(\theta).
   \end{align}
   The Ricci scalar is 
-  \begin{align*}
+  \begin{equation*}
     \Ri = -\frac{2}{R^2},
-  \end{align*}
+  \end{equation*}
   and the hyperboloid is a manifold of constant curvature,
-  \begin{align*}
+  \begin{equation*}
     \Rif{12}{} = -\frac{1}{R^2} \vif{1} \we \vif{2},
-  \end{align*}
+  \end{equation*}
   i.e., the Gau\ss{}ian curvature of the hyperboloid is $\kappa = -\frac{1}{R^2}$.
 \end{WEbox}
 
@@ -173,9 +173,9 @@ i.e.,
     frametitleaboveskip=10pt,]
   %% The curvature of the Anti de Sitter ($AdS$) spacetime is calculated, using Cartan's formalism.
   The metric of the $AdS_4$ spacetime is 
-  \begin{align}
+  \begin{equation}
     \de{s}^2(g) = \frac{1}{z^2} \( -\de{t} \otimes \de{t} + \de{x} \otimes \de{x} + \de{y} \otimes \de{y} + \de{z} \otimes \de{z} \),
-  \end{align}
+  \end{equation}
   then the vielbeins are
   \begin{align}
     \vif{0} &= \frac{\de{t}}{z}, & \vif{1} &= \frac{\de{x}}{z}, \\
@@ -206,18 +206,18 @@ i.e.,
     \Ri^t{}_{yty} &= -\frac{1}{z^2} & \Ri^x{}_{yxy} &= -\frac{1}{z^2}\notag\\
   \end{align}
   and finally, the Ricci tensor is
-  \begin{align}
+  \begin{equation}
     \Ri_{\mu\nu} = -3 g_{\mu\nu}.
-  \end{align}
+  \end{equation}
 
   The $AdS$ spacetime is an example of an Einstein space, or in other words it is a solution of Einstein's equations with cosmological constant, $\Lambda=-3$.
 \end{WEbox}
 
 \begin{Ebox}
   Consider a Riemannian manifold with a metric whose line element is
-  \begin{align}
+  \begin{equation}
     \de{s}^2(g) = -e^{2\Xi(r)} \de{t}\otimes \de{t} + e^{-2\Xi(r)} \de{r} \otimes\de{r} + r^2 \( \de{\theta} \otimes \de{\theta} + \sin^2(\theta) \de{\phi} \otimes \de{\phi} \).
-  \end{align}
+  \end{equation}
   Find the function $\Xi(r)$ which solves the Einstein's equation in the vacuum.
 \end{Ebox}
 
@@ -228,9 +228,9 @@ i.e.,
 
 
 \begin{Pro}
-  \begin{align*}
+  \begin{equation*}
     S_{\text{gr}} = \frac{1}{2\kappa^2} \int \frac{\epsilon_{a_1\cdots a_D}}{(D-2)!} \Rif{a_1 a_2}{} \we \vif{a_3} \we \cdots \we \vif{a_D} = \frac{1}{2\kappa^2} \int \dn{D}{x} \abs{e} \Ri.
-  \end{align*}
+  \end{equation*}
 \end{Pro}
 \begin{proof}
   \begin{align*}
