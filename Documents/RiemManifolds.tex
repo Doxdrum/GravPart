@@ -14,20 +14,20 @@
 \end{Def}
 
 If the metric satisfies the condition
-\begin{align}
+\begin{equation}
   g(X,Y) = 0 \quad \forall X \, \Rightarrow \, Y = 0.
   \label{sriem-cond}
-\end{align}
+\end{equation}
 instead of Eq.~\eqref{riem-cond}, the metric is said to be semi-Riemannian\index{Semi-Riemaniann metric}.
 
 Given a set of coordinated on $M$, the metric is expressed as 
-\begin{align}
+\begin{equation}
   g_p = g_{\mu\nu}(p) \, \de{x}^\mu \otimes \de{x}^\nu,
-\end{align}
+\end{equation}
 with
-\begin{align}
+\begin{equation}
   g_{\mu\nu}(p) = g_p\(\partial_\mu, \partial_\nu\).
-\end{align}
+\end{equation}
 
 The metric can be seen as a map
 \begin{equation}
@@ -45,18 +45,18 @@ and its inverse, $g^{-1}$, similarly yields
 \end{equation}
 
 In index notation, the inverse metric is denoted with upper indices, i.e., 
-\begin{align}
+\begin{equation}
   \(g^{-1}\)_{\mu\nu} = g^{\mu\nu},
-\end{align}
+\end{equation}
 such that,
-\begin{align}
+\begin{equation}
   g_{\mu\nu}g^{\nu\lambda} = \delta_\mu^\lambda.
-\end{align}
+\end{equation}
 
 One might consider metrics compatible with the connection, 
-\begin{align}
+\begin{equation}
   \nabla_X g = 0, \quad \forall \, X \in TM.
-\end{align}
+\end{equation}
 
 \begin{Ebox}
   Use the \emph{metric compatibility} condition, to find a expression for the (general) connection in terms of the metric and the skew-symmetric part of the $\Gamma$'s.
@@ -68,16 +68,16 @@ One might consider metrics compatible with the connection,
 It has been pointed out before that the only geometrical object one can integrate on an orientable $m$-dimensional manifold is a $m$-form. However, on Riemannian manifolds, were the metric defines a volume form, one in accustomed to integrate functions.
 
 The link between the two notions is made by defining a new sort of differential operator, called the \emph{\idx{Hodge star}}, as follows
-\begin{align}
+\begin{equation}
   \st: C^\infty \(\Lambda^p(M)\) \to C^\infty \(\Lambda^{m-p}(M)\)
-\end{align}
+\end{equation}
 such that, for $\alpha,\beta \in C^\infty \(\Lambda^p(M)\)$,
-\begin{align}
+\begin{equation}
   \bk{\alpha}{\beta} = \int \alpha \we \st \beta
   = \int_M (\alpha,\beta) \de{V}_g
   = \int\, \dn{m}{x} \sqrt{g}\, \alpha_{a_1\cdots a_p} \beta_{b_1\cdots b_p} g^{a_1 b_1} \cdots g^{a_p b_p}.
   \label{HodgeDef}
-\end{align}
+\end{equation}
 
 
 \begin{Ebox}
@@ -92,13 +92,13 @@ such that, for $\alpha,\beta \in C^\infty \(\Lambda^p(M)\)$,
 
 
 Using this, a formal  dual of the differential operator $\ded$ can be defined,
-\begin{align}
+\begin{equation}
   \ded: \Lambda^p(M) \to \Lambda^{p-1}(M),
-\end{align}
+\end{equation}
 such that (on compact manifolds)
-\begin{align}
+\begin{equation}
   \bk{\ded \alpha_{(p+1)}}{\beta_{(p)}} = \bk{\alpha_{(p+1)}}{\dif\beta_{(p)}}.
-\end{align}
+\end{equation}
 The operator $\ded$ is called co-differential, and it is nilpotent as its partner $\dif$, i.e., $\dif^2 = {\ded}^2 = 0$. Also, a differential form is said to be co-closed is $\ded \alpha = 0$ and co-exact if $\alpha = \ded \beta$, thus, $\ded$ defines a complex, and a homology.
 
 
@@ -117,9 +117,9 @@ A form satisfying $\Delta \alpha = 0$ is said to be an \emph{Harmonic Form}\inde
 
 \begin{Thm}
   On a compact, oriented Riemannian manifold one can define the space of harmonic forms by
-  \begin{align}
+  \begin{equation}
     \Ha^k(M) = \Ker\(\Delta: C^\infty\(\Lambda^p(M)\) \to C^\infty\(\Lambda^p(M)\)\),
-  \end{align}
+  \end{equation}
   then it follows that for every $\alpha \in \Ha^k(M)$, $\alpha$ is closed and co-closed. 
 \end{Thm}
 \begin{proof}
@@ -133,9 +133,9 @@ A form satisfying $\Delta \alpha = 0$ is said to be an \emph{Harmonic Form}\inde
     \end{split}
   \end{equation}
   Since the sum of positive quantities vanishes, each quantity must vanish separately. Therefore,
-  \begin{align}
+  \begin{equation}
     \dif \alpha = \ded \alpha = 0.
-  \end{align}
+  \end{equation}
 \end{proof}
 
 
@@ -159,9 +159,9 @@ Therefore, a classical, non-relativistic, massive, point-particle is described b
 The electromagnetic action is a theory of a connection $\Af[1]$, with values on an Abelian gauge group ($U(1)$). The fundamental object for constructing the action is the field strength, \mbox{$\Ff[2]=\dif\Af[1]$,} which is gauge invariant.
 
 Using differential forms the action is,
-\begin{align}
+\begin{equation}
   \int \Lag[\Af[1]] = -\frac{1}{2} \int \Ff[2]\we \st \Ff[2] + \int \Af[1]\we \st J
-\end{align}
+\end{equation}
 
 
 \begin{Ebox}
@@ -186,13 +186,13 @@ Additionally, the field transforms as a connection under gauge transformations o
 Since the field is not invariant, the Lagrangian density must be made invariant. Then, an inner product on $\mathfrak{g}$ should be considered, denoted $\vev{\bullet}$.
 
 Finally, the Lagrangian density is
-\begin{align}
+\begin{equation}
   \Lag[\Af[1]] = -\frac{1}{2} \vev{ \Ff[2] \we \st \Ff[2] },
-\end{align}
+\end{equation}
 where $\Ff[2]$ is the curvature of the connection $\Af[1]$, defined by the ``twisted'' exterior derivative $\dif_{\Af}= \dif + \Af[1]$,
-\begin{align}
+\begin{equation}
   \Ff[2] = \dif_{\Af} \Af[1] = \dif\Af[1] + \frac{1}{2} \Af[1] \we \Af[1].
-\end{align}
+\end{equation}
 
 
 \begin{WEbox}[%
@@ -229,43 +229,44 @@ Using the curvature tensor, other simplified tensors can be constructed
   \Ri &= g^{\mu \nu}\Ric(\partial_\mu,\partial_\nu).
 \end{align}
 Since in most cases the stress-energy tensor is symmetric, it seems that Einstein's first proposal for the equations of gravity were
-\begin{align}
-  \Ri_{\mu\nu}=T_{\mu\nu},
-\end{align}
+\begin{equation}
+  \Ri_{\mu \nu} = T_{\mu \nu},
+\end{equation}
 but the R.H.S. of the equation was covariantly constant, while the L.H.S. was not. Thus, a covariantly constant construction made up with ``curvature'' tensors was
-\begin{align}
-  G_{\mu\nu} = \Ri_{\mu\nu}-\frac{1}{2}g_{\mu\nu}\Ri,
-\end{align}
+\begin{equation}
+  G_{\mu \nu} = \Ri_{\mu \nu} - \frac{1}{2} g_{\mu \nu} \Ri,
+\end{equation}
 this tensor is known as Einstein tensor, ans the equation of gravity are written as,
-\begin{align}
-  G_{\mu\nu}= T_{\mu\nu}.
-\end{align}
+\begin{equation}
+  G_{\mu \nu} = T_{\mu \nu}.
+\end{equation}
 Additionally, there are spaces with ``cosmological constant'', $\Lambda$, and the Einstein's equations for this kind of spacetimes are
-\begin{align}
-  \Ri_{\mu\nu}-\frac{1}{2}g_{\mu\nu}\Ri + \Lambda g_{\mu\nu}= T_{\mu\nu}.
-\end{align}
+\begin{equation}
+  \Ri_{\mu \nu} - \frac{1}{2}g_{\mu\nu} \Ri + \Lambda g_{\mu \nu} = T_{\mu \nu}.
+\end{equation}
 
 A manifold whose Ricci tensor is proportional to the metric is said to be an Einstein manifold,
-\begin{align}
-  \Ri_{\mu\nu} = \kappa g_{\mu\nu}.\label{def-const-curv}
-\end{align}
+\begin{equation}
+  \Ri_{\mu\nu} = \kappa g_{\mu \nu}.
+  \label{def-const-curv}
+\end{equation}
 
 Also, a manifold is said to have constant curvature if its curvature 2-form is
-\begin{align}
-  \Rif{ab}{} = \kappa\vif{a}\w\vif{b},
-\end{align}
+\begin{equation}
+  \Rif{ab}{} = \kappa \vif{a}\we \vif{b},
+\end{equation}
 for a constant value $\kappa$.
 
 \begin{Ebox}
   \begin{itemize}
-  \item Show that in vacuum, i.e., $T_{\mu\nu}=0$, Einstein's equations (without cosmological constant) might be written as
-    \begin{align}
-      \Ri_{\mu\nu}=0.
-    \end{align}
+  \item Show that in vacuum, i.e., $T_{\mu \nu} = 0$, Einstein's equations (without cosmological constant) might be written as
+    \begin{equation}
+      \Ri_{\mu \nu} = 0.
+    \end{equation}
   \item Show that in general, Einstein's equations  (without cosmological constant) might be written as
-    \begin{align}
-      \Ri_{\mu\nu}= T_{\mu\nu}-\frac{1}{D-2}g_{\mu\nu} T,
-    \end{align}
+    \begin{equation}
+      \Ri_{\mu \nu} = T_{\mu \nu} - \frac{1}{D-2} g_{\mu \nu} T,
+    \end{equation}
     where $T$ is the trace of the Stress-Energy tensor,  and  $D$ is the spacetime dimension. These equations are known as Einstein's equations in the form of Ricci.
   \item Derive the Einstein's equations in the form of Ricci, when the cosmological constant does not vanish.
   \end{itemize}
