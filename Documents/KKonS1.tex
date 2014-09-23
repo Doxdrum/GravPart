@@ -243,98 +243,145 @@ and,
 Therefore,
 \begin{align}
   \hRif{D a}{}
-  &= - \frac{1}{2} e^{(\beta-2\alpha)\phi} \(\Fg_{bc} \, \spif{ba}{} + \Fg^a{}_{b} \, \spif{b}{c}\) \we \hvif{c} + \beta e^{-\alpha\phi}\pa{m}\phi\,\spif{m a}{} \we \hvif{D} \notag\\
-  &\quad + \[\beta e^{-2\alpha\phi}\Big( (\beta - 2\alpha) \pa{b} \phi \pau{a} \phi + \pa{b} \pau{a} \phi \Big) - \frac{1}{4} e^{ 2 (\beta - 2\alpha) \phi} \Fg_{cb} \Fg^{ca} \] \, \hvif{b} \we \hvif{D}\notag\\
-  &\quad + \frac{ e^{(\beta - 3\alpha) \phi} }{ 2 } \bigg[ (\beta-\alpha)\big(\pau{a}\phi\Fg_{mb} +\pa{m}\phi\Fg^a{}_b  \big) + \pa{m}\Fg^a{}_b \bigg] \hvif{m} \we \hvif{b} \notag\\
-  &\quad + \alpha \beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \,\hvif{a} \we \hvif{D} -\frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\pau{b}\phi\Fg_{bc}\,\hvif{c} \we \hvif{a}
+  &= - \frac{1}{2} e^{(\beta-2\alpha)\phi} \( \Fg_{bc} \, \spif{ba}{} + \Fg^a{}_{b} \, \spif{b}{c} \) \we \hvif{c} + \beta e^{-\alpha\phi} \pa{m} \phi \, \spif{m a}{} \we \hvif{D} \notag \\
+  &\quad + \[ \beta e^{-2\alpha\phi} \Big( (\beta - 2\alpha) \pa{b} \phi \pau{a} \phi + \pa{b} \pau{a} \phi \Big) - \frac{1}{4} e^{ 2 (\beta - 2\alpha) \phi} \Fg_{cb} \Fg^{ca} \] \, \hvif{b} \we \hvif{D} \notag \\
+  &\quad + \frac{ e^{(\beta - 3\alpha) \phi} }{ 2 } \bigg[ (\beta - \alpha) \big( \pau{a} \phi \Fg_{mb} + \pa{m} \phi \Fg^a{}_b \big) + \pa{m} \Fg^a{}_b \bigg] \, \hvif{m} \we \hvif{b} \notag \\
+  &\quad + \alpha \beta e^{-2\alpha\phi} \pa{m} \phi \partial^{m} \phi \, \hvif{a} \we \hvif{D} - \frac{\alpha}{2} e^{(\beta - 3\alpha) \phi} \pau{b} \phi \Fg_{bc} \, \hvif{c} \we \hvif{a}
 \end{align}
 
 The second term,
 \begin{align}
-  \df\hspif{ab}{} &= \df \spif{ab}{} + \df\[\alpha e^{-\alpha\phi}\(\pau{b}\phi\hvif{a}-\pau{a}\phi\hvif{b}\)\]-\frac{1}{2}\df\[e^{(\beta-2\alpha)\phi}\Fg^{ab}\hvif{D}\]\notag\\
-  &= \df \spif{ab}{} + \alpha^2 e^{-2\alpha\phi}\pa{c}\phi\(\pau{b}\phi\hvif{a}-\pau{a}\phi\hvif{b}\) \we \hvif{c}\notag\\
-  &\quad -\alpha e^{-2\alpha\phi}\(\pa{c}\pau{b}\phi\hvif{a}-\pa{c}\pau{a}\phi\hvif{b}\) \we \hvif{c}  + \alpha e^{-\alpha\phi}\(\pau{b}\phi\df\hvif{a}-\pau{a}\phi\df\hvif{b}\)\notag\\
-  &\quad-\frac{1}{2} e^{(\beta-3\alpha)\phi}\[(\beta-2\alpha)\pa{c}\phi \Fg^{ab} + \pa{c}\Fg^{ab}\]\hvif{c} \we \hvif{D}\notag\\
-  &\quad  -\frac{1}{2}e^{(\beta-2\alpha)\phi}\Fg^{ab}\df\hvif{D}\notag\\
-  &= \df \spif{ab}{} -\alpha e^{-2\alpha\phi}\(\pa{c}\pau{b}\phi\hvif{a}-\pa{c}\pau{a}\phi\hvif{b}\) \we \hvif{c} \notag\\
-  &\quad - \alpha e^{-\alpha\phi}\(\pau{b}\phi\spif{a}{m}-\pau{a}\phi\spif{b}{m}\) \we \hvif{m}-\frac{1}{4} e^{2(\beta-2\alpha)\phi}\Fg^{ab}\Fg_{mn}\hvif{m} \we \hvif{n}\\
-  &\quad - \frac{1}{2} e^{(\beta-3\alpha)\phi}\[2(\beta-\alpha)\pa{c}\phi \Fg^{ab} + \pa{c}\Fg^{ab}\]\hvif{c} \we \hvif{D},\notag%\\
+  \df\hspif{ab}{}
+  &= \df \spif{ab}{} + \df \[ \alpha e^{-\alpha\phi} \( \pau{b} \phi \, \hvif{a} - \pau{a} \phi \, \hvif{b} \) \] - \frac{1}{2} \df \[ e^{(\beta - 2\alpha) \phi} \Fg^{ab} \, \hvif{D} \]
+  \notag \\
+  &= \df \spif{ab}{} + \alpha^2 e^{-2\alpha\phi} \pa{c} \phi \( \pau{b} \phi \, \hvif{a} - \pau{a} \phi \, \hvif{b}\) \we \hvif{c}
+  \notag \\
+  &\quad - \alpha e^{-2\alpha\phi} \( \pa{c} \pau{b} \phi \, \hvif{a} - \pa{c} \pau{a} \phi \, \hvif{b}\) \we \hvif{c}  + \alpha e^{-\alpha\phi} \( \pau{b} \phi\, \df \hvif{a} - \pau{a} \phi \, \df \hvif{b} \)
+  \notag \\
+  &\quad - \frac{1}{2} e^{(\beta - 3\alpha) \phi} \[ (\beta - 2\alpha) \pa{c} \phi \Fg^{ab} + \pa{c} \Fg^{ab} \] \, \hvif{c} \we \hvif{D}
+  \notag \\
+  &\quad  - \frac{1}{2} e^{ (\beta - 2\alpha) \phi } \Fg^{ab} \, \df\hvif{D}
+  \notag \\
+  &= \df \spif{ab}{} - \alpha e^{-2\alpha\phi} \( \pa{c} \pau{b} \phi \, \hvif{a} - \pa{c} \pau{a} \phi \, \hvif{b} \) \we \hvif{c}
+  \notag \\
+  &\quad - \alpha e^{-\alpha\phi} \( \pau{b} \phi \, \spif{a}{m} - \pau{a} \phi \, \spif{b}{m} \) \we \hvif{m} - \frac{1}{4} e^{ 2(\beta - 2\alpha) \phi } \Fg^{ab} \Fg_{mn} \, \hvif{m} \we \hvif{n} \\
+  &\quad - \frac{1}{2} e^{ (\beta - 3\alpha) \phi } \[ 2(\beta - \alpha) \pa{c} \phi \Fg^{ab} + \pa{c} \Fg^{ab} \] \, \hvif{c} \we \hvif{D},
+  \notag
 \end{align}
 and 
 \begin{align}
-  \hspif{a}{D} \we \hspif{D b}{} &= -\(  \beta e^{-\alpha\phi}\pau{a}\phi\hvif{D} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\Fg^{a}{}_m\hvif{m} \) \we \( \beta e^{-\alpha\phi}\pau{b}\phi\hvif{D} + \frac{1}{2}e^{(\beta-2\alpha)\phi}\Fg^{b}{}_n\hvif{n} \)\notag\\
-  &= +\frac{\beta}{2}e^{(\beta-3\alpha)\phi}\(\pau{a}\phi \Fg^{b}{}_m -\pau{b}\phi\Fg^{a}{}_m\)\hvif{m} \we \hvif{D}%\notag\\
-  %&\quad 
-  -  \frac{1}{4}e^{2(\beta-2\alpha)\phi}\Fg^{a}{}_m \Fg^{b}{}_n\hvif{m} \we \hvif{n}
+  \hspif{a}{D} \we \hspif{D b}{}
+  &= - \(  \beta e^{-\alpha\phi} \pau{a} \phi \, \hvif{D} + \frac{1}{2} e^{(\beta-2\alpha)\phi} \Fg^{a}{}_m \, \hvif{m} \) \we \( \beta e^{-\alpha\phi} \pau{b} \phi \, \hvif{D} + \frac{1}{2} e^{(\beta - 2\alpha) \phi} \Fg^{b}{}_n \, \hvif{n} \)
+  \notag\\
+  &= + \frac{\beta}{2} e^{ (\beta - 3\alpha) \phi } \( \pau{a} \phi \Fg^{b}{}_m - \pau{b} \phi \Fg^{a}{}_m \) \, \hvif{m} \we \hvif{D}   -  \frac{1}{4} e^{ 2(\beta - 2\alpha) \phi } \Fg^{a}{}_m \Fg^{b}{}_n \, \hvif{m} \we \hvif{n}
 \end{align}
 \begin{align}
-  \hspif{a}{c} \we \hspif{c b}{}  &= \spif{a}{c} \we \spif{c b}{} +\frac{1}{2}e^{(\beta-2\alpha)\phi}\(\Fg^{a}{}_c \spif{cb}{} -\Fg^{b}{}_c\spif{ca}{}\) \we \hvif{D}\notag\\
-  &\quad +\alpha e^{-\alpha\phi}\( \pau{b}\phi\spif{a}{c} \we \hvif{c} -\pau{c}\phi\spif{a}{c} \we \hvif{b} + \pau{c}\phi\spif{b}{c} \we \hvif{a} - \pau{a}\phi\spif{b}{c} \we \hvif{c}  \) \notag\\
-  &\quad +\alpha^2 e^{-2\alpha\phi}\( \pau{b}\phi\pa{c}\phi\hvif{a} \we \hvif{c} -\pau{a}\phi\pa{c}\phi\hvif{b} \we \hvif{c} - \pau{c}\phi\pa{c}\phi\hvif{a} \we \hvif{b}  \) \notag\\
-  &\quad +\frac{\alpha}{2}e^{(\beta-3\alpha)\phi}\[\Fg^b{}_c\(\pau{c}\phi\hvif{a} - \pau{a}\phi\hvif{c}\)  + \Fg^a{}_c\(\pau{b}\phi\hvif{c} - \pau{c}\phi\hvif{b}\)   \] \we \hvif{D}.
+  \hspif{a}{c} \we \hspif{c b}{}
+  &= \spif{a}{c} \we \spif{c b}{} + \frac{1}{2} e^{(\beta-2\alpha)\phi} \( \Fg^{a}{}_c \, \spif{cb}{} - \Fg^{b}{}_c \, \spif{ca}{}\) \we \hvif{D}
+  \notag \\
+  &\quad + \alpha e^{-\alpha\phi} \( \pau{b} \phi \, \spif{a}{c} \we \hvif{c} - \pau{c} \phi \, \spif{a}{c} \we \hvif{b} + \pau{c} \phi \, \spif{b}{c} \we \hvif{a} - \pau{a} \phi \, \spif{b}{c} \we \hvif{c}  \)
+  \notag \\
+  &\quad + \alpha^2 e^{-2\alpha\phi} \( \pau{b} \phi \pa{c} \phi \, \hvif{a} \we \hvif{c} - \pau{a} \phi \pa{c} \phi \, \hvif{b} \we \hvif{c} - \pau{c} \phi \pa{c} \phi \, \hvif{a} \we \hvif{b}  \)
+  \notag \\
+  &\quad + \frac{\alpha}{2} e^{(\beta - 3\alpha) \phi} \[ \Fg^b{}_c \( \pau{c} \phi \, \hvif{a} - \pau{a} \phi \, \hvif{c} \)  + \Fg^a{}_c \( \pau{b} \phi \, \hvif{c} - \pau{c} \phi \, \hvif{b}\) \] \we \hvif{D}.
 \end{align}
 
 Next, one can write the Lagrangian of the higher dimensional spacetime,
 \begin{align}
   \Lag_{(D+1)}
-  &= \frac{\epsilon_{\hat{a}_1\hat{a}_2\cdots\hat{a}_{D+1}}}{(D-1)!}\hRif{\hat{a}_1\hat{a}_2}{} \we \hvif{\hat{a}_3} \we \cdots \we \hvif{\hat{a}_{D+1}}\\
-  &= \underbrace{ 2 \frac{ \epsilon_{D a_1 a_2\cdots a_{D}} }{ (D-1)! } \hRif{D{a}_1}{} \we \hvif{{a}_2} \we \cdots \we \hvif{{a}_{D}} }_{\text{Term }I} \notag \\
-  & \quad + \underbrace{\frac{\epsilon_{a_1 a_2\cdots a_{D}D}}{(D-2)!}\hRif{{a}_1{a}_2}{} \we \hvif{{a}_3} \we \cdots \we \hvif{{a}_{D}} \we \hvif{D}}_{\text{Term }II}.
+  &= \frac{ \epsilon_{\hat{a}_1\hat{a}_2\cdots\hat{a}_{D+1}} }{ (D-1)! } \hRif{\hat{a}_1\hat{a}_2}{} \we \hvif{\hat{a}_3} \we \cdots \we \hvif{\hat{a}_{D+1}} \\[2ex]
+  &= \underbrace{ 2 \frac{ \epsilon_{D a_1 a_2\cdots a_{D}} }{ (D-1)! } \hRif{D{a}_1}{} \we \hvif{{a}_2} \we \cdots \we \hvif{{a}_{D}} }_{\text{Term }I} \notag \\[2ex]
+  & \quad + \underbrace{ \frac{ \epsilon_{a_1 a_2\cdots a_{D}D} }{ (D-2)! } \hRif{{a}_1{a}_2}{} \we \hvif{{a}_3} \we \cdots \we \hvif{{a}_{D}} \we \hvif{D} }_{\text{Term }II}.
 \end{align}
 Concentrate on the first term,
 \begin{align}
-  I &= 2(-1)^D \frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-1)!}\notag\\
-  &\qquad\bigg\{\[\beta e^{-2\alpha\phi}\big((\beta-2\alpha)\pa{b}\phi\pau{a_1}\phi + \pa{b}\pau{a_1}\phi\big) -\frac{1}{4} e^{2(\beta-2\alpha)\phi}\Fg_{cb}\Fg^{ca_1} \]\hvif{b}\notag\\
-  &\qquad + \beta e^{-\alpha\phi}\pa{m}\phi\,\spif{m a_1}{}+\alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \,\hvif{a}\bigg\} \we \hvif{D} \we \hvif{{a}_2} \we \cdots \we \hvif{{a}_{D}}\notag\\
-  &= -2\frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-1)!}\notag\\
-  &\qquad\bigg\{\[\beta e^{-2\alpha\phi}\big((\beta-2\alpha)\pa{b}\phi\pau{a_1}\phi + \pa{b}\pau{a_1}\phi\big) -\frac{1}{4} e^{2(\beta-2\alpha)\phi}\Fg_{cb}\Fg^{ca_1} \]\hvif{b}\notag\\
-  &\qquad + \beta e^{-\alpha\phi}\pa{m}\phi\,\spif{m a_1}{}+\alpha\beta e^{-2\alpha\phi}\pa{m}\phi\partial^{m}\phi \,\hvif{a}\bigg\} \we \hvif{{a}_2} \we \cdots \we \hvif{{a}_{D}} \we \hvif{D}\notag\\
-  &= -2\frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-1)!} e^{\((D-2)\alpha+\beta\)\phi}\notag\\
-  &\qquad\bigg\{\[\beta \big((\beta-2\alpha)\pa{b}\phi\pau{a_1}\phi + \pa{b}\pau{a_1}\phi\big) -\frac{1}{4} e^{2(\beta-\alpha)\phi}\Fg_{cb}\Fg^{ca_1} \]\vif{b}\notag\\
-  &\qquad + \beta \pa{m}\phi\,\(\spi{b}\)^{m a_1}\vif{b}+\alpha\beta \pa{m}\phi\partial^{m}\phi \,\vif{a_1}\bigg\} \we \vif{{a}_2} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]\notag\\
-  &= -2 e^{\((D-2)\alpha+\beta\)\phi}\bigg\{\beta \big((\beta-2\alpha)\pa{b}\phi\pau{b}\phi + \pa{b}\pau{b}\phi\big)
-  %% \notag\\
-  %% &\qquad
-  -\frac{1}{4} e^{2(\beta-\alpha)\phi}\Fg_{cb}\Fg^{cb} \notag\\
-  &\qquad\quad + \beta \pa{m}\phi\,\(\spi{b}\)^{m b} + D \alpha\beta \,\pa{m}\phi\partial^{m}\phi \bigg\}\de{V_D}\de{\xi}
+  I
+  &= 2(-1)^D \frac{ \epsilon_{a_1 a_2\cdots a_{D}} }{ (D-1)! }
+  \notag \\
+  &\qquad \bigg\{ \[ \beta e^{-2\alpha\phi} \big( (\beta - 2\alpha) \pa{b} \phi\pau{a_1} \phi + \pa{b} \pau{a_1} \phi \big) - \frac{1}{4} e^{2(\beta - 2\alpha) \phi} \Fg_{cb} \Fg^{ca_1} \] \, \hvif{b}
+  \notag \\
+  &\qquad + \beta e^{-\alpha\phi} \pa{m} \phi \, \spif{m a_1}{} + \alpha \beta e^{-2\alpha\phi} \pa{m} \phi \partial^{m} \phi \, \hvif{a} \bigg\} \we \hvif{D} \we \hvif{{a}_2} \we \cdots \we \hvif{{a}_{D}}
+  \notag \\
+  &= - 2 \frac{ \epsilon_{a_1 a_2\cdots a_{D}} }{ (D-1)! }
+  \notag \\
+  &\qquad \bigg\{ \[ \beta e^{-2\alpha\phi} \big( (\beta - 2\alpha) \pa{b} \phi \pau{a_1} \phi + \pa{b} \pau{a_1} \phi \big) - \frac{1}{4} e^{ 2(\beta - 2\alpha) \phi } \Fg_{cb} \Fg^{ca_1} \] \, \hvif{b}
+  \notag \\
+  &\qquad + \beta e^{-\alpha\phi} \pa{m}\phi \, \spif{m a_1}{} + \alpha \beta e^{-2\alpha\phi} \pa{m} \phi \partial^{m} \phi \, \hvif{a} \bigg\} \we \hvif{{a}_2} \we \cdots \we \hvif{{a}_{D}} \we \hvif{D}
+  \notag \\
+  &= -2 \frac{ \epsilon_{a_1 a_2\cdots a_{D}} }{ (D-1)! } e^{ \( (D-2) \alpha + \beta \) \phi }
+  \notag \\
+  &\qquad \bigg\{ \[ \beta \big( (\beta - 2\alpha) \pa{b} \phi \pau{a_1} \phi + \pa{b} \pau{a_1} \phi \big) - \frac{1}{4} e^{ 2(\beta - \alpha) \phi } \Fg_{cb} \Fg^{ca_1} \]\, \vif{b}
+  \notag \\
+  &\qquad + \beta \pa{m} \phi \, \(\spi{b}\)^{m a_1} \, \vif{b} + \alpha \beta \pa{m} \phi \partial^{m} \phi \, \vif{a_1} \bigg\} \we \vif{{a}_2} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]
+  \notag \\
+  &= - 2 e^{\( (D-2) \alpha + \beta \) \phi} \bigg\{ \beta \big( (\beta - 2\alpha) \pa{b} \phi \pau{b} \phi + \pa{b} \pau{b} \phi \big)  - \frac{1}{4} e^{ 2(\beta  -\alpha) \phi } \Fg_{cb} \Fg^{cb}
+  \notag \\
+  &\qquad \quad + \beta \pa{m} \phi \, \(\spi{b}\)^{m b} + D \alpha \beta \, \pa{m}\phi \partial^{m}\phi \bigg\} \de{V_D}\de{\xi}
 \end{align}
 
 \begin{align}
-  II &= \frac{\epsilon_{a_1 a_2\cdots a_{D}D}}{(D-2)!}\notag\\
-  &\qquad \bigg\{\Rif{a_1a_2}{} -\alpha e^{-2\alpha\phi}\(\pa{c}\pau{a_2}\phi\hvif{a_1}-\pa{c}\pau{a_1}\phi\hvif{a_2}\) \we \hvif{c}\notag\\
-  &\qquad -\frac{1}{4} e^{2(\beta-2\alpha)\phi}\(\Fg^{a_1a_2}\Fg_{mn}+\Fg^{a_1}{}_m \Fg^{a_2}{}_n\)\hvif{m} \we \hvif{n}\notag\\
-  &\qquad +\alpha e^{-\alpha\phi}\( \pau{a_2}\phi\spif{a_1}{c} \we \hvif{c} -\pau{c}\phi\spif{a_1}{c} \we \hvif{a_2} + \pau{c}\phi\spif{a_2}{c} \we \hvif{a_1} - \pau{a_1}\phi\spif{a_2}{c} \we \hvif{c}  \) \notag\\
-  &\qquad +\alpha^2 e^{-2\alpha\phi}\( \pau{a_2}\phi\pa{c}\phi\hvif{a_1} \we \hvif{c} -\pau{a_1}\phi\pa{c}\phi\hvif{a_2} \we \hvif{c} - \pau{c}\phi\pa{c}\phi\hvif{a_1} \we \hvif{a_2}  \) \notag\\
-  &\qquad - \alpha e^{-\alpha\phi}\(\pau{a_2}\phi\spif{a_1}{m}-\pau{a_1}\phi\spif{a_2}{m}\) \we \hvif{m}\bigg\} \we \hvif{{a}_3} \we \cdots \we \hvif{{a}_{D}} \we \hvif{D}\notag\\
-  &= \frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-2)!}e^{\((D-2)\alpha+\beta\)\phi}\notag\\
-  &\qquad \bigg\{\Rif{a_1a_2}{} -\alpha \(\pa{c}\pau{a_2}\phi\vif{a_1}-\pa{c}\pau{a_1}\phi\vif{a_2}\) \we \vif{c}\notag\\
-  &\qquad -\frac{1}{4} e^{2(\beta-\alpha)\phi}\(\Fg^{a_1a_2}\Fg_{mn}+\Fg^{a_1}{}_m \Fg^{a_2}{}_n\)\vif{m} \we \vif{n}\notag\\
-  &\qquad +\alpha \( \pau{a_2}\phi\spif{a_1}{n} \we \vif{n} -\pau{c}\phi\spif{a_1}{c} \we \vif{a_2} + \pau{c}\phi\spif{a_2}{c} \we \vif{a_1} - \pau{a_1}\phi\spif{a_2}{n} \we \vif{n}  \) \notag\\
-  &\qquad +\alpha^2 \( \pau{a_2}\phi\pa{c}\phi\vif{a_1} \we \vif{c} -\pau{a_1}\phi\pa{c}\phi\vif{a_2} \we \vif{c} - \pau{c}\phi\pa{c}\phi\vif{a_1} \we \vif{a_2}  \) \notag\\
-  &\qquad - \alpha \(\pau{a_2}\phi\spif{a_1}{n}-\pau{a_1}\phi\spif{a_2}{n}\) \we \vif{n}\bigg\} \we \vif{{a}_3} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]\notag\\
-  &= \frac{\epsilon_{a_1 a_2\cdots a_{D}}}{(D-2)!}e^{\((D-2)\alpha+\beta\)\phi} \notag\\
-  &\qquad \bigg\{\Rif{a_1a_2}{}  - \alpha^2 \pau{c}\phi\pa{c}\phi\vif{a_1} \we \vif{a_2} \notag\\
-  &\qquad  -\frac{1}{4} e^{2(\beta-\alpha)\phi}\(\Fg^{a_1a_2}\Fg_{mn}+\Fg^{a_1}{}_m \Fg^{a_2}{}_n\)\vif{m} \we \vif{n}\notag\\
-  &\qquad +\alpha \[\alpha \pau{a_2}\phi\pa{c}\phi - \pa{c}\pau{a_2}\phi - \pau{m}\phi\(\spi{c}\)^{a_2}{}_{m}  \]\vif{a_1} \we \vif{c} \notag\\
-  &\qquad -\alpha \[\alpha \pau{a_1}\phi\pa{c}\phi - \pa{c}\pau{a_1}\phi - \pau{m}\phi\(\spi{c}\)^{a_1}{}_{m}  \]\vif{a_2} \we \vif{c} \bigg\} \we \vif{{a}_3} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]\notag\\
-  &= e^{\((D-2)\alpha+\beta\)\phi}\de{V_D}\de{\xi}\bigg\{\Ri - D(D-1)\alpha^2 \pau{c}\phi\pa{c}\phi - \frac{1}{4} e^{2(\beta-\alpha)\phi}\Fg_{mn}\Fg^{mn}\notag\\
-  &\qquad + 2(D-1)\alpha \big[\alpha \pau{c}\phi\pa{c}\phi - \pa{c}\pau{c}\phi - \pau{m}\phi\(\spi{c}\)^{c}{}_{m}  \big]\bigg\}
+  II
+  &= \frac{ \epsilon_{a_1 a_2\cdots a_{D}D} }{ (D-2)! }
+  \notag \\
+  &\qquad \bigg\{ \Rif{a_1a_2}{} - \alpha e^{-2\alpha\phi} \( \pa{c} \pau{a_2} \phi \, \hvif{a_1} - \pa{c} \pau{a_1} \phi\, \hvif{a_2}\) \we \hvif{c}
+  \notag \\
+  &\qquad - \frac{1}{4} e^{ 2(\beta - 2\alpha) \phi} \( \Fg^{a_1a_2} \Fg_{mn} + \Fg^{a_1}{}_m \Fg^{a_2}{}_n \) \, \hvif{m} \we \hvif{n}
+  \notag \\
+  &\qquad + \alpha e^{-\alpha\phi} \( \pau{a_2} \phi \, \spif{a_1}{c} \we \hvif{c} - \pau{c} \phi \, \spif{a_1}{c} \we \hvif{a_2} + \pau{c} \phi \, \spif{a_2}{c} \we \hvif{a_1} - \pau{a_1} \phi \, \spif{a_2}{c} \we \hvif{c}  \)
+  \notag \\
+  &\qquad + \alpha^2 e^{-2\alpha\phi} \( \pau{a_2} \phi \pa{c} \phi \, \hvif{a_1} \we \hvif{c} - \pau{a_1} \phi \pa{c} \phi \, \hvif{a_2} \we \hvif{c} - \pau{c} \phi \pa{c} \phi \, \hvif{a_1} \we \hvif{a_2}  \)
+  \notag \\
+  &\qquad - \alpha e^{-\alpha\phi} \( \pau{a_2} \phi \, \spif{a_1}{m} - \pau{a_1} \phi \, \spif{a_2}{m}\) \we \hvif{m} \bigg\} \we \hvif{{a}_3} \we \cdots \we \hvif{{a}_{D}} \we \hvif{D}
+  \notag \\
+  &= \frac{ \epsilon_{a_1 a_2\cdots a_{D}} }{ (D-2)! } e^{ \( (D-2)\alpha + \beta \) \phi }
+  \notag \\
+  &\qquad \bigg\{ \Rif{a_1a_2}{} - \alpha \( \pa{c} \pau{a_2} \phi \, \vif{a_1} - \pa{c} \pau{a_1} \phi \, \vif{a_2}\) \we \vif{c}
+  \notag \\
+  &\qquad - \frac{1}{4} e^{ 2(\beta - \alpha) \phi } \( \Fg^{a_1a_2} \Fg_{mn} + \Fg^{a_1}{}_m \Fg^{a_2}{}_n \) \, \vif{m} \we \vif{n}
+  \notag \\
+  &\qquad + \alpha \( \pau{a_2} \phi \, \spif{a_1}{n} \we \vif{n} - \pau{c} \phi \, \spif{a_1}{c} \we \vif{a_2} + \pau{c} \phi \, \spif{a_2}{c} \we \vif{a_1} - \pau{a_1} \phi \, \spif{a_2}{n} \we \vif{n}  \)
+  \notag \\
+  &\qquad + \alpha^2 \( \pau{a_2} \phi \pa{c} \phi \, \vif{a_1} \we \vif{c} - \pau{a_1} \phi \pa{c} \phi \, \vif{a_2} \we \vif{c} - \pau{c} \phi \pa{c} \phi \, \vif{a_1} \we \vif{a_2}  \)
+  \notag \\
+  &\qquad - \alpha \( \pau{a_2} \phi \, \spif{a_1}{n} - \pau{a_1} \phi \, \spif{a_2}{n}\) \we \vif{n} \bigg\} \we \vif{{a}_3} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]
+  \notag \\
+  &= \frac{ \epsilon_{a_1 a_2\cdots a_{D}} }{ (D-2)! } e^{ \( (D-2)\alpha + \beta \) \phi }
+  \notag \\
+  &\qquad \bigg\{ \Rif{a_1a_2}{}  - \alpha^2 \pau{c} \phi \pa{c} \phi \, \vif{a_1} \we \vif{a_2}
+  \notag \\
+  &\qquad  - \frac{1}{4} e^{ 2(\beta - \alpha) \phi } \( \Fg^{a_1a_2} \Fg_{mn} + \Fg^{a_1}{}_m \Fg^{a_2}{}_n \) \vif{m} \we \vif{n}
+  \notag \\
+  &\qquad + \alpha \[ \alpha \pau{a_2} \phi \pa{c} \phi - \pa{c} \pau{a_2} \phi - \pau{m} \phi \(\spi{c}\)^{a_2}{}_{m}  \] \vif{a_1} \we \vif{c}
+  \notag \\
+  &\qquad - \alpha \[ \alpha \pau{a_1} \phi \pa{c} \phi - \pa{c} \pau{a_1} \phi - \pau{m} \phi \(\spi{c}\)^{a_1}{}_{m}  \] \vif{a_2} \we \vif{c} \bigg\} \we \vif{{a}_3} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]
+  \notag \\
+  &= e^{ \( (D-2)\alpha + \beta \) \phi } \de{V_D} \de{\xi} \, \bigg\{ \Ri - D(D-1) \alpha^2 \pau{c} \phi \pa{c} \phi - \frac{1}{4} e^{ 2(\beta - \alpha) \phi } \Fg_{mn} \Fg^{mn}
+  \notag \\
+  &\qquad + 2(D-1) \alpha \big[ \alpha \pau{c} \phi \pa{c} \phi - \pa{c} \pau{c} \phi - \pau{m} \phi \(\spi{c}\)^{c}{}_{m}  \big] \bigg\}
 \end{align}
 
 Therefore,
 \begin{align}
-  \Lag_{(D+1)} &=  e^{\((D-2)\alpha+\beta\)\phi}\de{V_D}\de{\xi}\bigg\{\Ri - D(D-1)\alpha^2 \pau{c}\phi\pa{c}\phi - \frac{1}{4} e^{2(\beta-\alpha)\phi}\Fg_{mn}\Fg^{mn}\notag\\
-  &\qquad + 2(D-1)\alpha \big[\alpha \pau{c}\phi\pa{c}\phi - \pa{c}\pau{c}\phi - \pau{m}\phi\(\spi{c}\)^{c}{}_{m}  \big]\notag\\
-  &\qquad -2\beta \big((\beta-2\alpha)\pa{b}\phi\pau{b}\phi + \pa{b}\pau{b}\phi\big) +\frac{1}{2} e^{2(\beta-\alpha)\phi}\Fg_{cb}\Fg^{cb} \notag\\
-  &\qquad -2 \beta \pa{m}\phi\,\(\spi{b}\)^{m b} -2 D \alpha\beta \, \pa{m}\phi\partial^{m}\phi \bigg\}\notag\\
-  &=  e^{\((D-2)\alpha+\beta\)\phi}\de{V_D}\de{\xi}\bigg\{\Ri - \[(D-1)(D-2)\alpha^2 +2\beta(\beta-2\alpha) + 2D\alpha\beta\]\pau{c}\phi\pa{c}\phi\notag\\
-  &\qquad + \frac{1}{4} e^{2(\beta-\alpha)\phi}\Fg_{mn}\Fg^{mn} - 2\[(D-1)\alpha +\beta\]\Box\phi - 2\[(D-1)\alpha -\beta\]\pa{m}\phi\(\spi{c}\)^{cm}\bigg\}
+  \Lag_{(D+1)}
+  &=  e^{ \( (D-2)\alpha + \beta \) \phi } \de{V_D} \de{\xi} \bigg\{ \Ri - D(D-1) \alpha^2 \pau{c} \phi \pa{c} \phi - \frac{1}{4} e^{ 2(\beta - \alpha) \phi } \Fg_{mn} \Fg^{mn}
+  \notag \\
+  &\qquad + 2(D-1) \alpha \big[ \alpha \pau{c} \phi \pa{c} \phi - \pa{c} \pau{c} \phi - \pau{m} \phi \(\spi{c}\)^{c}{}_{m}  \big]
+  \notag \\
+  &\qquad - 2 \beta \big( (\beta - 2\alpha) \pa{b} \phi \pau{b} \phi + \pa{b}\pau{b} \phi \big) + \frac{1}{2} e^{ 2(\beta - \alpha) \phi } \Fg_{cb} \Fg^{cb}
+  \notag \\
+  &\qquad -2 \beta \pa{m}\phi \, \(\spi{b}\)^{m b} - 2 D \alpha \beta \, \pa{m} \phi \partial^{m} \phi \bigg\}
+  \notag \\
+  &=  e^{ \( (D-2)\alpha + \beta \) \phi } \de{V_D} \de{\xi} \bigg\{ \Ri - \[ (D-1)(D-2) \alpha^2 + 2 \beta (\beta - 2\alpha) + 2 D \alpha \beta \] \pau{c} \phi \pa{c} \phi
+  \notag \\
+  &\qquad + \frac{1}{4} e^{2(\beta-\alpha)\phi} \Fg_{mn} \Fg^{mn} - 2 \[ (D-1) \alpha + \beta \] \Box \phi - 2 \[ (D-1) \alpha - \beta \] \pa{m} \phi \(\spi{c}\)^{cm} \bigg\}
 \end{align}
 
-One can choose $\beta=-(D-2)\alpha$, so that the result on the compactification would give $D$-dimensional gravity on the ``Einstein'' frame, then
+One can choose $\beta = -(D-2) \alpha$, so that the result on the compactification would give $D$-dimensional gravity on the ``Einstein'' frame, then
 \begin{align}
-  \Lag_{(D+1)} &=  \de{V_D}\de{\xi}\bigg\{\Ri - (D-1)(D-2)\alpha^2\pau{c}\phi\pa{c}\phi\notag\\
-  &\qquad + \frac{1}{4} e^{-2(D-1)\alpha\phi}\Fg_{mn}\Fg^{mn} \bigg\},%- 2\[(D-1)\alpha +\beta\]\Box\phi - 2\[(D-1)\alpha -\beta\]\pa{m}\phi\(\spi{c}\)^{cm}\bigg\}
+  \Lag_{(D+1)}
+  &=  \de{V_D} \de{\xi} \bigg\{ \Ri - (D-1)(D-2) \alpha^2 \pau{c} \phi \pa{c} \phi
+  \notag \\
+  &\qquad + \frac{1}{4} e^{-2(D-1)\alpha\phi} \Fg_{mn} \Fg^{mn} \bigg\},%- 2\[(D-1)\alpha +\beta\]\Box\phi - 2\[(D-1)\alpha -\beta\]\pa{m}\phi\(\spi{c}\)^{cm}\bigg\}
 \end{align}
 where the other terms were dropped because are a boundary term. Additionally, in order to get the usual kinetic term for the scalar field, i.e., 
 \begin{equation}
