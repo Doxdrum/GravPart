@@ -22,14 +22,6 @@
 }{Oscar Castillo-Felisola
 }
 
-\hypersetup{
-  pdftitle={Differential Geometry, Gravitation and Particle Physics},
-  pdfauthor={Oscar Castillo-Felisola},
-  pdfkeywords={Differential Geometry,} {General Relativity,} {High Energy Physics.},
-  pdfsubject={Mathematical Physics},
-  pdflang={English},
-}
-
 %% \usepackage[%
 %%   backend      = bibtex,
 %%   style        = phys,
@@ -47,33 +39,28 @@
 
 
 \begin{document}
-\hypersetup{pageanchor=false}
-\pagestyle{empty}
-%------------------
-%--------- Titlepage
-%------------------
-\pdfbookmark{Titlepage}{portada}
+
+\hypersetup{
+  pdftitle={Differential Geometry, Gravitation and Particle Physics},
+  pdfauthor={Oscar Castillo-Felisola},
+  pdfkeywords={Differential Geometry,} {General Relativity,} {High Energy Physics.},
+  pdfsubject={Mathematical Physics},
+  pdflang={English},
+}
+
 \thesistitlepage{UTFSM--CCTVal
 }{Universidad T\'ecnica Federico Santa Mar\'ia. %The thesis statement
 }{\today %The date
 }
 
-\clearpage
-\pdfbookmark{Dedication}{dedication}
+\frontmatter
+
 \Dedication{ {\LARGE To my wife }\\ Gabriela (Gabo) Vald\'es. }
 
 
-\clearpage
-\pdfbookmark{Copyright}{copyright}
 \CC
 
-\frontmatter
-\hypersetup{pageanchor=true}
-\pagestyle{special}
-%\committee{Iv\'an Schmidt}{Claudio Dib}{Alfonzo Zerwekh}{Andr\'es Anabal\'on}{Valparaiso, September 2011}
 
-%\clearpage
-\pdfbookmark{Contents}{}
 \tableofcontents
 
 
@@ -86,7 +73,6 @@
 %------------------
 
 \mainmatter
-\pagestyle{main}
 
 \input{Documents/CalcManifolds.tex}
 \input{Documents/ExtCalculus.tex}
@@ -115,9 +101,6 @@
 \bibliographystyle{utphys}
 \bibliography{References.bib}
 \addcontentsline{toc}{chapter}{\bibname}
-
-%% \printbibliography
-%% \addcontentsline{toc}{chapter}{\bibname}
 
 \printindex
 
