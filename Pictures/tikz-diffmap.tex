@@ -1,0 +1,40 @@
+\coordinate (P) at (3.5,0);
+\coordinate (fP) at (12.5,0);
+\coordinate (M) at (3.5cm, 3cm);
+\coordinate (N) at (12 cm, 3cm);
+
+\draw[draw=black,
+  fill = blue!20,
+  decoration={random steps,segment length=1mm,amplitude=.5pt},
+  decorate]
+(0,0) .. controls (0,1) and
+(1,2) .. (2,2) .. controls (3,1.6) and
+(4,1.6) .. (5,2) ..controls (6,2) and
+(7,1) .. (7,0) ..controls (6.8,-1) and
+(6.1,-2) .. (5,-2) .. controls (3.8,-1.5) and
+(3.1,-1.7) .. (2,-2) ..controls (1,-1.8) and
+(0.2,-1) .. (0,0)  -- cycle;
+
+
+\draw[thick,red, dashed] (2,-1)  ..controls (3,1) and (4,-1) .. (5,1);
+\draw[fill=black] (P) node[anchor= north west] {$p$} circle (2pt);
+\node[draw, dotted, circle, minimum size=1.2cm,label=120:$U$] (ball1) at (P) {};
+
+\draw[draw=black,
+  fill = blue!20,
+  decoration={random steps,segment length=1mm,amplitude=0.8pt},
+  decorate]
+(12,0) ellipse (3.5cm and 2cm);
+\draw[thick,red, dashed] ($(fP) + (-1,-1)$)  ..controls ($(fP) + (-1,0)$) and ($(fP) + (1,0)$) .. ($(fP) + (1,1)$);
+\node[draw, dotted, circle, minimum size=12mm,label=120:$f(U)$] (ball2) at (fP) {};
+\draw[fill=black] (fP) node[anchor= north west] {$f(p)$} circle (2pt);
+
+\node at (M) {$M$};
+\node at (N) {$N$};
+\draw[blue,very thick,->] ($(M) + (.5cm,0)$) -- node[midway, above,sloped] {$f$} ($(N) + (-0.5cm,0)$);
+
+
+\draw[very thick,green!50!black,->] (P) to +(.7,0) node[anchor=west] {$V$};
+\draw[very thick,green!50!black,->] (fP) to +(26:.7cm) node[anchor=south west] {$f_* V$};
+\draw[blue,very thick,->,] (node cs:name=ball1,angle=-20)  to [bend right] node[midway, above,sloped] {$f_*$} (node cs:name=ball2,angle=200);
+

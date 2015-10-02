@@ -1,0 +1,18 @@
+
+\begin{tikzpicture}
+  \coordinate (O) at (0,0);
+  \coordinate (S) at (-4,2);
+  \coordinate (gS) at (3,2);
+
+  \pgfmathsetmacro{\r}{1}
+  \pgfmathsetmacro{\rx}{2}
+  \pgfmathsetmacro{\ry}{1}
+  \pgfmathsetmacro{\th}{30}
+
+  \draw[blue,thick] (S) circle [radius=\r cm];
+  \node at ($(S)+(75:1.5cm)$) {$S^1$};
+  \draw[thick,<->] (0,4) node[anchor=south west] {$\R^2$} -- (O) -- (4,0);
+  \draw[blue,thick] (gS) circle [x radius=\rx cm, y radius=\ry cm, rotate=\th];    
+
+  \draw[red,very thick,->,bend left=30] ($(S)+(45:1.5cm)$) to  node[midway, above,sloped] {$g$}  ($(gS)+(135:1.5cm)$);
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+[thick,line cap=round, axes/.style=,
+important line/.style={very thick},
+information text/.style={rounded corners,draw=blue!80!black,fill=blue!10,inner sep=1ex}]
+  
+  \draw (0,0) node[anchor=east] {$m_{\text{eff}} =0$} -- (2,0);
+  \foreach \y in {1,2,...,4}
+  \draw[very thick] (0,\y) node[anchor=east] {$m_{\text{eff}} =\frac{\y}{R}$} -- (2,\y);
+  \foreach \y in {1,2,...,4}
+  \node[anchor=west] at (2,\y) {{\tiny $ \times 2$}};
+
+  \node at (1,5) {$\vdots$};
+
+  \draw[xshift=3.5cm,yshift=2.5cm]
+  node[right,text width=6cm,rounded corners,draw=blue!80!black,fill=blue!10,inner sep=1ex]
+  {The spectrum of a Kaluza--Klein reduction of a real massless scalar field on a $S^1$, is linear and every mode other than the massless is doubly degenerated (corresponding to eigenvalues $\pm n$.};

@@ -79,13 +79,13 @@ Examples of manifolds are  the body of a cylinder,  the spheres ($S^m$), the tor
 %% \end{center}
 \begin{center}
   \begin{tabular}{cc}
-    \includegraphics[scale=.4]{Pict/Sphere2.pdf}  & \includegraphics[scale=.4]{Pict/Torus.pdf}
+    \includegraphics[scale=.4]{Pictures/Sphere2.pdf}  & \includegraphics[scale=.4]{Pictures/Torus.pdf}
   \end{tabular}
 \end{center}
 %% \begin{figure}[H]
 %%   \begin{center}
-%%      \includegraphics[scale=.4]{Pict/Sphere.pdf} 
-%%      \includegraphics[scale=.4]{Pict/Torus.pdf}
+%%      \includegraphics[scale=.4]{Pictures/Sphere.pdf} 
+%%      \includegraphics[scale=.4]{Pictures/Torus.pdf}
 %%   \end{center}
 %%   \caption{Examples of manifolds}
 %% \end{figure}
@@ -125,9 +125,9 @@ The trick to define geometrical objects on  manifolds, $M$, is to find a way to 
 \end{itemize}
 \begin{center}
   %% \begin{tikzpicture}
-  %%   \input{Pict/tikz-manifold.tex}
+  %%   \input{Pictures/tikz-manifold.tex}
   %% \end{tikzpicture}
-  \includegraphics[scale=1.1]{Pict/tikz-manifold.pdf}
+  \includegraphics[scale=1.1]{Pictures/tikz-manifold.pdf}
 \end{center}
 
 From the procedure described, one can guess that a scalar field on $M$ is an assignment of a scalar to every point $p\in M$. The only non-trivial consideration is that the assignation must be consistent, i.e., the scalar should be independent of the chart one choose to map $M$ to $\R^m$. On $S^1$, the ``consistency'' condition is that one you go all around the sphere, the number you get must be the same that the one you begun with.
@@ -141,11 +141,11 @@ on $M$ is a (continuous) map $c:\R\to M$. This is represented in the figure by t
 
 \begin{center}
   %% \begin{tikzpicture}
-  %%   \input{Pict/tikz-manifold.tex}
+  %%   \input{Pictures/tikz-manifold.tex}
   %%   \draw (1,-3) node[anchor=east] {$\R$} -- (5,-3);
   %%   \draw[very thick, red,->] (3,-2.8) .. controls +(100:1cm) and (1.9,-2.5).. node[anchor=west,near start] {$c(t)$} (2,-1.3);
   %% \end{tikzpicture}
-  \includegraphics[scale=1.1]{Pict/tikz-man-vect.pdf}
+  \includegraphics[scale=1.1]{Pictures/tikz-man-vect.pdf}
 \end{center}
 
 Consider a map $f: M \to \R$, and restrict the domain of $f$ to the points $c(t)\in M$. Then the derivative of $f$ yields
@@ -283,7 +283,7 @@ for $g$ a function on $N$.
   %%   \draw[blue,very thick,->,] (node cs:name=ball1,angle=-20)  to [bend right] node[midway, above,sloped] {$f_*$} (node cs:name=ball2,angle=200);
     
   %% \end{tikzpicture}
-  \includegraphics[scale=1]{Pict/tikz-diffmap.pdf}
+  \includegraphics[scale=1]{Pictures/tikz-diffmap.pdf}
 \end{center}
 
 \subsection{Pullback Map}
@@ -364,8 +364,8 @@ Submanifolds are restrictions of a manifold, which satisfy the conditions of man
 
 %%     \draw[red,very thick,->,bend left=30] ($(S)+(45:1.5cm)$) to  node[midway, above,sloped] {$g$}  ($(gS)+(135:1.5cm)$);
 %%   \end{tikzpicture}
-  \includegraphics[scale=.7]{Pict/tikz-immersion.pdf}
-  \includegraphics[scale=.7]{Pict/tikz-embedding.pdf}
+  \includegraphics[scale=.7]{Pictures/tikz-immersion.pdf}
+  \includegraphics[scale=.7]{Pictures/tikz-embedding.pdf}
 \end{center}
 
 From the figures above, one notices that both $f$ and $g$ are immersions of $S^1$ into $\R^2$ because each  vector on $TS^1$ posses a unique corresponding vector on either $T\R^2$. However, the map $f$ is not an injection because the cross-path in $f(S^1)$ has not a unique point on $S^1$, therefore, $f$ is not an embedding of $S^1$ into $\R^2$. On the other hand, $g$ is an embedding and its image $g(S^1)\subset \R^2$ is a submanifold of $\R^2$.
