@@ -26,15 +26,30 @@ However, when one deals with a theory with gravitational torsion, the Lorentz co
 \begin{equation}
   \spif*{ \hat{a} \hat{b}}{} = 
   \begin{cases}
-    \spif*{a D}{} = \spif.*{a D}{} + \bm{\lambda}^a  + \chi^a \, \vif*{D} \\
-    \spif*{a b}{} = \spif.*{ab}{}  + \bm{\kappa}^{ab} + \psi^{ab} \, \vif*{D}
+    \spif*{a D}{} = \spif.*{a D}{} + \bml^a  + \chi^a \, \vif*{D} \\
+    \spif*{a b}{} = \spif.*{ab}{}  + \bmk^{ab} + \psi^{ab} \, \vif*{D}
   \end{cases}
 \end{equation}
 
-%% \begin{equation*}
-%%   \kf**{a}{b} = \kf.**{a}{b} + \kf-**{a}{b} + \kf,**{a}{b} + \kf*{a}{b} + \kf.*{a}{b} + \kf,*{a}{b} + \kf-*{a}{b} + \kf{a}{b} + \kf.{a}{b} + \kf,{a}{b} + \kf-{a}{b} 
-%% \end{equation*}
+From the spin connection ansatz and using the fact that
+\begin{equation}
+  \df[\vif*{D}] = \beta \, \df[\phi] \we \vif*{D} + e^{\beta \phi} \, \Fg*[2],
+\end{equation}
+one obtains
+\begin{align}
+  \df \spif*{a D}{} &= \df \spif.*{a D}{} + \df \bml^a + e^{\beta \phi} \chi^a \, \Fg*[2] + \left( \df[\chi^a] + \beta \chi^a \, \df[\phi] \right) \we \vif*{D} \\
+  \spif*{a}{m} \we \spif*{m D}{} &= \spif.*{a}{m} \we \spif.*{m D}{} + \spif.*{a}{m} \we \bml^m + \bmk^a{}_m \we \spif.*{m D}{} + \bmk^{a}{}_m \we \bml^m \\
+  & \quad + \chi^m \, \spif.*{a}{m} \we \vif*{D} \\
+  \df \spif*{a b}{} &= \df \spif.*{a b}{} + \df \bmk^{ab} + e^{\beta \phi} \psi^{ab} \, \Fg*[2] + \left( \df[\psi^{ab}] + \beta \psi^{ab} \, \df[\phi] \right) \we \vif*{D} \\
+  &\text{\color{red}{Incomplete equations}}
+\end{align}
 
+\begin{align}
+  \rif*{a D}{} &= \rif.*{a D}{} + \free{\cdf} \bml^a + \bmk^{a}{}_m \bml^m + \bmk^{a}{}_m \spif.*{m D}{} + e^{\beta \phi} \chi^a \, \Fg*[2] \\
+  & \quad + \left( \beta \chi^a \, \df\phi + \free{\cdf} \chi^a + \bmk^a{}_m \chi^m - \psi^a{}_m \, \spif.*{m D}{} - \psi^a{}_m \, \bml^m \right) \we \vif*{D} \notag \\
+  \rif*{a b}{} &= \rif.*{a b}{} + \free{\cdf}\bmk^{ab} + \bmk^a{}_m \bmk^{mb} - \bml^{ab} - 2 \spif.*{[a}{D} \bml^{b]} + e^{\beta \phi} \psi^{ab} \, \Fg*[2] \\
+  & \quad + \left( \free{\cdf}\psi^{ab} + \beta \psi^{ab} \, \df \phi + 2 \psi^{[a}{}_m \, \bmk^{b] m} + 2 \chi^{[a} \, \spif.*{b] D}{} + 2 \chi^{[a} \, \bml^{b]} \right) \we \vif*{D} \notag
+\end{align}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
