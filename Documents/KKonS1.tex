@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%% ANOTHER LECTURE
 
 \chapter{Kaluza--Klein Reduction}
+\label{chap:KKonS1}
 
 The Kaluza--Klein program aims to obtain the $d$-dimensional theory obtained by reducing a $D$-dimensional one. The original idea was to obtain four-dimensional gravity and electrodynamics, from five-dimensional gravity... All of it in the context of general relativity.
 
@@ -167,6 +168,7 @@ Equation~\eqref{KK-eq-t2} represents a tower of \KK modes which contains a massl
 
 
 \section{Kaluza--Klein Reduction on $S^1$}
+\label{sec:KKonS1}
 
 \begin{equation}
   \de{\hat{s}}^2 = e^{2\alpha\phi} \de{s}^2 + e^{2 \beta \phi} \left( \de{\xi} + \Ag[1] \right)^2,
@@ -312,11 +314,11 @@ Concentrate on the first term,
   \notag \\
   &\qquad \bigg\{ \[ \beta \big( (\beta - 2\alpha) \pa{b} \phi \pau{a_1} \phi + \pa{b} \pau{a_1} \phi \big) - \frac{1}{4} e^{ 2(\beta - \alpha) \phi } \Fg_{cb} \Fg^{ca_1} \]\, \vif{b}
   \notag \\
-  &\qquad + \beta \pa{m} \phi \, \(\spi{b}\)^{m a_1} \, \vif{b} + \alpha \beta \pa{m} \phi \partial^{m} \phi \, \vif{a_1} \bigg\} \we \vif{{a}_2} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]
+  &\qquad + \beta \pa{m} \phi \, \(\spc{b}\)^{m a_1} \, \vif{b} + \alpha \beta \pa{m} \phi \partial^{m} \phi \, \vif{a_1} \bigg\} \we \vif{{a}_2} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]
   \notag \\
   &= - 2 e^{\( (D-2) \alpha + \beta \) \phi} \bigg\{ \beta \big( (\beta - 2\alpha) \pa{b} \phi \pau{b} \phi + \pa{b} \pau{b} \phi \big)  - \frac{1}{4} e^{ 2(\beta  -\alpha) \phi } \Fg_{cb} \Fg^{cb}
   \notag \\
-  &\qquad \quad + \beta \pa{m} \phi \, \(\spi{b}\)^{m b} + D \alpha \beta \, \pa{m}\phi \partial^{m}\phi \bigg\} \de{V_D}\de{\xi}
+  &\qquad \quad + \beta \pa{m} \phi \, \(\spc{b}\)^{m b} + D \alpha \beta \, \pa{m}\phi \partial^{m}\phi \bigg\} \de{V_D}\de{\xi}
 \end{align}
 
 \begin{align}
@@ -351,13 +353,13 @@ Concentrate on the first term,
   \notag \\
   &\qquad  - \frac{1}{4} e^{ 2(\beta - \alpha) \phi } \( \Fg^{a_1a_2} \Fg_{mn} + \Fg^{a_1}{}_m \Fg^{a_2}{}_n \) \vif{m} \we \vif{n}
   \notag \\
-  &\qquad + \alpha \[ \alpha \pau{a_2} \phi \pa{c} \phi - \pa{c} \pau{a_2} \phi - \pau{m} \phi \(\spi{c}\)^{a_2}{}_{m}  \] \vif{a_1} \we \vif{c}
+  &\qquad + \alpha \[ \alpha \pau{a_2} \phi \pa{c} \phi - \pa{c} \pau{a_2} \phi - \pau{m} \phi \(\spc{c}\)^{a_2}{}_{m}  \] \vif{a_1} \we \vif{c}
   \notag \\
-  &\qquad - \alpha \[ \alpha \pau{a_1} \phi \pa{c} \phi - \pa{c} \pau{a_1} \phi - \pau{m} \phi \(\spi{c}\)^{a_1}{}_{m}  \] \vif{a_2} \we \vif{c} \bigg\} \we \vif{{a}_3} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]
+  &\qquad - \alpha \[ \alpha \pau{a_1} \phi \pa{c} \phi - \pa{c} \pau{a_1} \phi - \pau{m} \phi \(\spc{c}\)^{a_1}{}_{m}  \] \vif{a_2} \we \vif{c} \bigg\} \we \vif{{a}_3} \we \cdots \we \vif{{a}_{D}} \we \df[\xi]
   \notag \\
   &= e^{ \( (D-2)\alpha + \beta \) \phi } \de{V_D} \de{\xi} \, \bigg\{ \Ri - (D-1)(D-2) \alpha^2 \pau{c} \phi \pa{c} \phi - \frac{3}{4} e^{ 2(\beta - \alpha) \phi } \Fg_{mn} \Fg^{mn}
   \notag \\
-  &\qquad - 2(D-1) \alpha \big[  \pa{c} \pau{c} \phi + \pau{m} \phi \(\spi{c}\)^{c}{}_{m}  \big] \bigg\}
+  &\qquad - 2(D-1) \alpha \big[  \pa{c} \pau{c} \phi + \pau{m} \phi \(\spc{c}\)^{c}{}_{m}  \big] \bigg\}
 \end{align}
 
 Therefore,
@@ -365,13 +367,13 @@ Therefore,
   \Lag_{(D+1)}
   &=  e^{ \( (D-2)\alpha + \beta \) \phi } \de{V_D} \de{\xi} \bigg\{ \Ri - (D-1)(D-2) \alpha^2 \pau{c} \phi \pa{c} \phi - \frac{3}{4} e^{ 2(\beta - \alpha) \phi } \Fg_{mn} \Fg^{mn}
   \notag \\
-  &\qquad - 2(D-1) \alpha \big[ \pa{c} \pau{c} \phi + \pau{m} \phi \(\spi{c}\)^{c}{}_{m}  \big] - 2 \beta \big( (\beta - 2\alpha) \pa{b} \phi \pau{b} \phi + \pa{b}\pau{b} \phi \big)
+  &\qquad - 2(D-1) \alpha \big[ \pa{c} \pau{c} \phi + \pau{m} \phi \(\spc{c}\)^{c}{}_{m}  \big] - 2 \beta \big( (\beta - 2\alpha) \pa{b} \phi \pau{b} \phi + \pa{b}\pau{b} \phi \big)
   \notag \\
-  &\qquad  + \frac{1}{2} e^{ 2(\beta - \alpha) \phi } \Fg_{cb} \Fg^{cb} - 2 \beta \pa{m}\phi \, \(\spi{b}\)^{m b} - 2 D \alpha \beta \, \pa{m} \phi \partial^{m} \phi \bigg\}
+  &\qquad  + \frac{1}{2} e^{ 2(\beta - \alpha) \phi } \Fg_{cb} \Fg^{cb} - 2 \beta \pa{m}\phi \, \(\spc{b}\)^{m b} - 2 D \alpha \beta \, \pa{m} \phi \partial^{m} \phi \bigg\}
   \notag \\
   &=  e^{ \( (D-2)\alpha + \beta \) \phi } \de{V_D} \de{\xi} \bigg\{ \Ri - \[ (D-1)(D-2) \alpha^2 + 2 \beta (\beta - 2\alpha) + 2 D \alpha \beta \] \pau{c} \phi \pa{c} \phi
   \notag \\
-  &\qquad - \frac{1}{4} e^{2(\beta-\alpha)\phi} \Fg_{mn} \Fg^{mn} - 2 \[ (D-1) \alpha + \beta \] \Box \phi - 2 \[ (D-1) \alpha - \beta \] \pa{m} \phi \(\spi{c}\)^{cm} \bigg\}
+  &\qquad - \frac{1}{4} e^{2(\beta-\alpha)\phi} \Fg_{mn} \Fg^{mn} - 2 \[ (D-1) \alpha + \beta \] \Box \phi - 2 \[ (D-1) \alpha - \beta \] \pa{m} \phi \(\spc{c}\)^{cm} \bigg\}
 \end{align}
 
 One can choose $\beta = -(D-2) \alpha$, so that the result on the compactification would give $D$-dimensional gravity on the ``Einstein'' frame, then
@@ -379,7 +381,7 @@ One can choose $\beta = -(D-2) \alpha$, so that the result on the compactificati
   \Lag_{(D+1)}
   &=  \de{V_D} \de{\xi} \bigg\{ \Ri - (D-1)(D-2) \alpha^2 \pau{c} \phi \pa{c} \phi
   \notag \\
-  &\qquad - \frac{1}{4} e^{-2(D-1)\alpha\phi} \Fg_{mn} \Fg^{mn} \bigg\},%- 2\[(D-1)\alpha +\beta\]\Box\phi - 2\[(D-1)\alpha -\beta\]\pa{m}\phi\(\spi{c}\)^{cm}\bigg\}
+  &\qquad - \frac{1}{4} e^{-2(D-1)\alpha\phi} \Fg_{mn} \Fg^{mn} \bigg\},%- 2\[(D-1)\alpha +\beta\]\Box\phi - 2\[(D-1)\alpha -\beta\]\pa{m}\phi\(\spc{c}\)^{cm}\bigg\}
 \end{align}
 where the other terms were dropped because are a boundary term. Additionally, in order to get the usual kinetic term for the scalar field, i.e., 
 \begin{equation}

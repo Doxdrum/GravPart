@@ -2,7 +2,39 @@
 
 \section{Preliminaries}
 
-When one consider spacetimes with torsion, in order to study the dynamics of the geometry, an ansatz for the metric is not enough. In addition an ansatz for the connection is needed.
+%When one consider spacetimes with torsion, in order to study the dynamics of the geometry, an ansatz for the metric is not enough. In addition an ansatz for the connection is needed. However, it was shown that a general connection can be split into a Riemannian part (free of torsion), plus a contribution of the contorsion.
+
+In what follows, in order to distinguish between the Riemannian and non-Riemannian connection. Hereon, quantities with a ring on it are Riemannian, i.e., free of torsion,
+\begin{equation*}
+  \spif**{a}{b} = \spif.**{a}{b} + \kf**{a}{b}.
+\end{equation*}
+Thus, following the computations in Sec.~\ref{sec:KKonS1}, one have that the vielbein choice,
+\begin{equation*}
+  \vif**{a} = 
+  \begin{cases}
+    \vif*{a} = e^{\alpha\phi} \vif{a}\\
+    \vif*{D} = e^{\beta\phi} \left( \df[\xi] + \Ag*[1] \right)
+  \end{cases}
+\end{equation*}
+yield the Riemannian part of the spin connection,
+\begin{align}
+  \spif.*{Da}{} &= \beta e^{-\alpha \phi} \pau{a} \phi \, \vif*{D} + \frac{1}{2} e^{(\beta - 2\alpha) \phi} \Fg^{a}{}_{b} \, \vif*{b}, \\
+  \spif.*{ab}{} &= \spif{ab}{} + 2 \alpha e^{ - \alpha \phi } \pau{[b} \phi \, \vif*{a]} - \frac{1}{2} e^{(\beta - 2\alpha) \phi} \Fg^{a b} \, \vif*{D}.
+\end{align}
+
+However, when one deals with a theory with gravitational torsion, the Lorentz connection is not totally determined by the vielbein. Therefore, an ansatz must be proposed for the former. A general decomposition of the spin connection is of the form
+\begin{equation}
+  \spif*{ \hat{a} \hat{b}}{} = 
+  \begin{cases}
+    \spif*{a D}{} = \spif.*{a D}{} + \bm{\lambda}^a  + \chi^a \, \vif*{D} \\
+    \spif*{a b}{} = \spif.*{ab}{}  + \bm{\kappa}^{ab} + \psi^{ab} \, \vif*{D}
+  \end{cases}
+\end{equation}
+
+%% \begin{equation*}
+%%   \kf**{a}{b} = \kf.**{a}{b} + \kf-**{a}{b} + \kf,**{a}{b} + \kf*{a}{b} + \kf.*{a}{b} + \kf,*{a}{b} + \kf-*{a}{b} + \kf{a}{b} + \kf.{a}{b} + \kf,{a}{b} + \kf-{a}{b} 
+%% \end{equation*}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
