@@ -53,10 +53,33 @@ one obtains
 \end{align}
 from which the curvature two-form is
 \begin{align}
-  \rif*{a D}{} &= \rif.*{a D}{} + \free{\cdf} \bml^a + \bmk^{a}{}_m \bml^m + \bmk^{a}{}_m \spif.*{m D}{} + e^{\beta \phi} \chi^a \, \Fg*[2] \\
-  & \quad + \left( \beta \chi^a \, \df\phi + \free{\cdf} \chi^a + \bmk^a{}_m \chi^m - \psi^a{}_m \, \spif.*{m D}{} - \psi^a{}_m \, \bml^m \right) \vif*{D}, \notag \\
-  \rif*{a b}{} &= \rif.*{a b}{} + \free{\cdf}\bmk^{ab} + \bmk^a{}_m \bmk^{mb} - \bml^{ab} - 2 \spif.*{[a}{D} \bml^{b]} + e^{\beta \phi} \psi^{ab} \, \Fg*[2] \\
-  & \quad + \left( \free{\cdf}\psi^{ab} + \beta \psi^{ab} \, \df \phi + 2 \psi^{[a}{}_m \, \bmk^{b] m} + 2 \chi^{[a} \, \spif.*{b] D}{} + 2 \chi^{[a} \, \bml^{b]} \right) \vif*{D} . \notag
+  \rif*{a b}{} &= \rif.*{a b}{} + \free{\cdf}\bmk^{ab} + \bmk^a{}_m \bmk^{mb} - \bml^{ab} - 2 \spif.*{[a}{D} \bml^{b]} + e^{\beta \phi} \psi^{ab} \, \Fg*[2] \label{Rwtab} \\
+  & \quad + \left( \free{\cdf}\psi^{ab} + \beta \psi^{ab} \, \df \phi + 2 \psi^{[a}{}_m \, \bmk^{b] m} + 2 \chi^{[a} \, \spif.*{b] D}{} + 2 \chi^{[a} \, \bml^{b]} \right) \vif*{D}  \notag \\
+  \rif*{a D}{} &= \rif.*{a D}{} + \free{\cdf} \bml^a + \bmk^{a}{}_m \bml^m + \bmk^{a}{}_m \spif.*{m D}{} + e^{\beta \phi} \chi^a \, \Fg*[2] \label{Rwtad} \\
+  & \quad + \left( \beta \chi^a \, \df\phi + \free{\cdf} \chi^a + \bmk^a{}_m \chi^m - \psi^a{}_m \, \spif.*{m D}{} - \psi^a{}_m \, \bml^m \right) \vif*{D}, \notag 
+\end{align}
+
+\section[Toward a Kaluza--Klein reduction on S1]{Toward a Kaluza--Klein reduction on $S^1$}
+
+Consider the Einstein--Cartan action in $(D+1)$ dimensions,
+\begin{equation}
+  S_{\text{\textsc{ec}}} = \frac{1}{2 k^2} \int \frac{1}{(D-1)!} \epsilon_{ \hat{a}_0 \cdots \hat{a}_{D} } \, \rif*{\hat{a}_0 \hat{a}_1}{} \vif*{\hat{a}_2} \cdots \vif*{\hat{a}_D}.
+\end{equation}
+In order to find the effective lower-dimensional action, the first step is to split the indices,
+\begin{equation}
+  S_{\text{\textsc{ec}}} = \frac{1}{2 k^2} \int \left( \tfrac{\epsilon_{ {a}_0 \cdots {a}_{D-1} D }}{(D-2)!}  \, \rif*{{a}_0 {a}_1}{} \vif*{{a}_2} \cdots \vif*{{a}_{D-1}} \vif*{D} + \tfrac{2 \epsilon_{ D {a}_0 \cdots {a}_{D-1} }}{(D-1)!}  \, \rif*{D {a}_0}{} \vif*{{a}_1} \cdots \vif*{{a}_{D-1}} \right).
+\end{equation}
+
+Now, one notices that the structure of the curvature two-form restricts the possible contributions to the effective action. For the sake of simplicity, one could separate the curvature two-form into components lying on the $D$-dimensional spacetime ---which hereon will be called the base manifold---, and component along the extra dimension ---or fibre---,
+\begin{align}
+  \rif*{a b}{} &= \BM*^{ab} + \BN*^{ab} \vif*{D}, \\
+  \rif*{a D}{} &= \BP*^{a} + \BQ*^{a} \vif*{D}.
+\end{align}
+Notice that from Eqs.~\eqref{Rwtab} and~\eqref{Rwtad} explicit form for $\BM*^{ab}$, $\BN*^{ab}$, $\BP*^a$ and $\BQ*^a$. Nonetheless, a subtle point is to remember that in this decomposition both $\rif.*{a b}{}$ and $\rif.*{a D}{}$, posses components on the base and the fibre.
+
+From the above decomposition, it follows that
+\begin{align}
+  S_{\text{\textsc{ec}}} = \frac{1}{2 k^2} \int \left( \tfrac{\epsilon_{ {a}_0 \cdots {a}_{D-1} D }}{(D-2)!}  \, \BM*^{ a_0 a_1} \vif*{a_2} \cdots \vif*{a_{D-1}} \vif*{D} + \tfrac{2 \epsilon_{ {a}_0 \cdots {a}_{D-1} D }}{(D-1)!}  \, \BQ*^{a_0} \vif*{{a}_1} \cdots \vif*{{a}_{D-1}} \vif*{D} \right)
 \end{align}
 
 
